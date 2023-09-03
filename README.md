@@ -1,4 +1,4 @@
-# Torquay Sunday League
+# Ascension
 
 MAIN IMAGE
 
@@ -18,7 +18,7 @@ The web application allows the creator to create more listings in the products s
 
 <img src="https://img.shields.io/github/issues-raw/ryanmcnally93/project-four-ascension" style="max-width: 100%; height: 20px margin-right: 10px;" alt="Open issues">
 
-<img src="https://img.shields.io/github/last-commit/ryanmcnally93/project-fopur-ascension?color=green&style=for-the-badge" style="max-width: 100%; height: 20px; margin-left: 10px;" alt="GitHub last commit">
+<img src="https://img.shields.io/github/last-commit/ryanmcnally93/project-four-ascension?color=green&style=for-the-badge" style="max-width: 100%; height: 20px; margin-left: 10px;" alt="GitHub last commit">
 
 </p>
 
@@ -49,8 +49,6 @@ My requirements.txt hadn't created an instance for the 'requests' module which n
 To allow users to book sessions in either the studio and/or the rehearsal rooms, whilst also giving them the option to order small parts from a small online store.
 
 #### Business and Developer Goals
-
-
 
 - list of goals
 
@@ -233,9 +231,9 @@ What other music studios are there in Birmingham?
 
 This roadmap indicates the importance and viability of specific opportunities.
 
-| Opportunities/Problems         | Importance | Viability |
-| ------------------------------ | ---------- | --------- |
-| Item 1                   | 0          | 0         |
+| Opportunities/Problems | Importance | Viability |
+| ---------------------- | ---------- | --------- |
+| Item 1                 | 0          | 0         |
 
 ## Features
 
@@ -243,21 +241,21 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 #### Navigation Bar
 
-- 
+-
 
 #### Footer
 
-- 
+-
 
 #### Logo
 
-- 
+-
 
 ### Features Left to Implement
 
 #### Idea 1
 
-- 
+-
 
 ## Testing
 
@@ -265,7 +263,7 @@ You can view all testing in [this document.]()
 
 ### Fixed Bugs
 
-1). 
+1).
 
 ### Unfixed Bugs
 
@@ -275,11 +273,11 @@ An image and description.
 
 #### Ipad Air screen resolution
 
-- 
+-
 
 #### IPhone 5/SE screen resolution
 
-- 
+-
 
 ### API Integration
 
@@ -297,19 +295,19 @@ Explanation
 
 ### Code
 
-- 
+-
 
 ### Web Tools
 
-- 
+-
 
 ### Media
 
-- 
+-
 
 ### Acknowledgements
 
-- 
+-
 
 This readme.md will be spellchecked using the spell checker extension for Chrome.
 
