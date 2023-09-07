@@ -148,6 +148,35 @@ The website needs to look professional and high tech, we want customers to feel 
 
 ### Wireframes
 
+I created these wireframes using [Balsamiq Wireframes](https://balsamiq.com/wireframes/).
+
+<img src="/media/readme-images/index-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/record-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/rehearse-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/shop-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/about-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/engineer-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/login-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+<img src="/media/readme-images/products-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/product-info-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/manage-items-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/profile-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/bag-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/checkout-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
+<img src="/media/readme-images/successful-checkout-wireframe.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
 ### Prototype
 
 ### Q and A of Potential Users
@@ -294,7 +323,7 @@ Con's
 
 - There is a div on the rehearsals page that doesn't resize with the text, meaning at certain sizes some of the text isn't visible.
 
-<!-- IMAGE -->
+<img src="/media/readme-images/oxygen-con.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
 
 - The socials link in the navbar doesn't list socials, but instead takes the user to Instagram without any indication that it is about to do so. The user is no longer on the Oxygen Rooms website.
 
@@ -314,17 +343,17 @@ Pro's
 
 - The equipment information is extensive.
 
-<!-- IMAGE -->
+<img src="/media/readme-images/pirate-pro-1.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
 
 - The booking system is effective and works well.
 
-<!-- IMAGE -->
+<img src="/media/readme-images/pirate-pro-2.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
 
 Con's
 
 - The images and styling of the site are not very professional.
 
-<!-- IMAGE -->
+<img src="/media/readme-images/pirate-con.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
 
 - The links don't have hover qualities, and some don't change the cursor to a pointer, so it's not certain what you are clicking on.
 
@@ -350,7 +379,7 @@ Con's
 
 - The first thing I noticed is the navbar and header are not responsive. This is the same with every element throughout the site.
 
-<!-- IMAGE -->
+<img src="/media/readme-images/robannas-con-1.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
 
 - The use of colours and the image of the girls make the website seem on first impression to be for kids, it;'s not very professional for a recording studio to have parties.
 
