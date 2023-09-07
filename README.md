@@ -179,6 +179,10 @@ I created these wireframes using [Balsamiq Wireframes](https://balsamiq.com/wire
 
 ### Prototype
 
+This prototype of the index page was made using [Figma.com](https://www.figma.com).
+
+<img src="/media/readme-images/prototype-index.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
+
 ### Q and A of Potential Users
 
 I've asked the following questions to:
@@ -381,7 +385,7 @@ Con's
 
 <img src="/media/readme-images/robannas-con-1.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
 
-- The use of colours and the image of the girls make the website seem on first impression to be for kids, it;'s not very professional for a recording studio to have parties.
+- The use of colours and the image of the girls make the website seem on first impression to be for kids, it's not very professional for a recording studio to have parties.
 
 - The footer information is off-screen.
 - None of the links have hover attributes.
