@@ -50,32 +50,85 @@ To allow users to book sessions in either the studio and/or the rehearsal rooms,
 
 #### Business and Developer Goals
 
-- list of goals
+As the business owner I want users to believe in both our studio's and engineer's capabilities. I want the site to look "record label level" professional. I want users to be able to easily navigate through the three main site pages and be drawn in by the use of imagery and ease of use. I want them to be able to purchase or hire easily, and for bookings and stock to change when this happens.
 
-<!-- | Goals                                            | How are they achieved?                                                                                                                                                                                                                                                         |
-| :----------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Create an account, which I can log in and out of | User register, login and logout pages have been created, logging in creates a session cookie which is deleted when logged out.                                                                                                                                                 |
-|          |                                                                                                 |
-|           |                                                                                                                                                         |
-|                |                                                                                                                                                                               | -->
+I also need to be able to add, change and delete items myself.
 
-#### Musician/Band Goals
+- To create a site that has user authentication.
+- To create a site that updates when products are bought/hired.
+- To promote a professional looking studio and capable engineers.
+- To have a site with complete ease of use.
+- To have complete CRUD functionality over the products I am offering.
+
+| Goals                                                        | How are they achieved? |
+| :----------------------------------------------------------- | :--------------------- |
+| Site that has user authentication.                           |                        |
+| Site that updates when products are bought/hired.            |                        |
+| Promote professional looking studios and engineers.          |                        |
+| Site with complete ease of use.                              |                        |
+| Complete CRUD functionality over the products I am offering. |                        |
+
+#### Recording Musician Goals
+
+As a professional recording musician, I want to know that the engineer is friendly, easy going, and has a vast amount of knowledge and experience. I want the studio to be professional and clean, with high quality equipment. I want the site to invoke confidence of these expectations being met.
+
+- Information on experienced engineers.
+- Images of the studio and it's equipment.
+- Proof of achievements on other songs.
+- Ease of use with booking.
+
+| Goals                                    | How are they achieved? |
+| :--------------------------------------- | :--------------------- |
+| Information on experienced engineers.    |                        |
+| Images of the studio and it's equipment. |                        |
+| Proof of achievements on other songs.    |                        |
+| Ease of use with booking.                |                        |
+
+#### Band Member Goals
+
+As a band member I want to know what equipment is in the rehearsal room I'm hiring. I want images to show a clean, tidy room with decent equipment. I want the booking system to be easy to navigate through.
+
+- Information on equipment provided in each room.
+- Images of equipment and room.
+- Ease of use with booking.
+
+| Goals                                           | How are they achieved? |
+| :---------------------------------------------- | :--------------------- |
+| Information on equipment provided in each room. |                        |
+| Images of equipment and room.                   |                        |
+| Ease of use with booking.                       |                        |
 
 #### Sound Engineer Goals
 
-#### Developer and Business Goals
+As a soung engineer, I want my achievements to be there for users to see. I want my details to be friendly, welcoming and professional. I want my best equipment to be on show so musicians know they are getting value for money and high quality of service. I also want them to know me by name and face so they can spread the word about me as an engineer.
+
+- Detailed section about me including image.
+- Information on my achievements.
+- Images of my studio.
+
+| Goals                                      | How are they achieved? |
+| :----------------------------------------- | :--------------------- |
+| Detailed section about me including image. |                        |
+| Information on my achievements.            |                        |
+| Images of my studio.                       |                        |
 
 ### User Stories
 
 #### Unregistered User
 
-Table of journey and options required
+<!-- Information of journey and options available to this user. -->
 
 #### Musician One
 
-#### Musician Two>
+<!-- Information of journey and options available to this user. -->
+
+#### Musician Two
+
+<!-- Information of journey and options available to this user. -->
 
 #### Administrator
+
+<!-- Information of journey and options available to this user. -->
 
 ### Design Choices
 
@@ -223,9 +276,90 @@ What other music studios are there in Birmingham?
 
 #### The Oxygen Rooms
 
-#### Studio 2
+The [Oxygen Rooms](https://theoxygenrooms.com/) are a studio located on Barr St in Hockley, on the edge of Birmingham City Centre.
 
-#### Studio 3
+Pro's
+
+- The website is very professional, showcasing fantastic equipment in it's images.
+
+- The header and footer makes the site easy to navigate.
+
+- The contact info is reasonably sized, responsive and informative.
+
+Con's
+
+- The first thing I noticed is there is no favicon, seems like a small issue but this it what also appers on google search, which looks like an illegitimate site.
+
+- Then I noticed the colour scheme throughout the site. All of it is black and white. Although this does look professional it's limiting itself on how welcoming it can be and how it could stand out with colour.
+
+- There is a div on the rehearsals page that doesn't resize with the text, meaning at certain sizes some of the text isn't visible.
+
+<!-- IMAGE -->
+
+- The socials link in the navbar doesn't list socials, but instead takes the user to Instagram without any indication that it is about to do so. The user is no longer on the Oxygen Rooms website.
+
+- You cannot book or hire online at all.
+
+- There is no information about the engineers provided.
+
+#### Pirate.com
+
+[Pirate Studios](https://pirate.com/en/locations/birmingham/) is located on Upper Trinity St in Birmingham.
+
+Pro's
+
+- There are lots of welcoming videos and images showcasing the capabilities of the studios.
+
+- There is a lot of information on this website for the user.
+
+- The equipment information is extensive.
+
+<!-- IMAGE -->
+
+- The booking system is effective and works well.
+
+<!-- IMAGE -->
+
+Con's
+
+- The images and styling of the site are not very professional.
+
+<!-- IMAGE -->
+
+- The links don't have hover qualities, and some don't change the cursor to a pointer, so it's not certain what you are clicking on.
+
+- The use of colour is very strange. Most of the text areas are black and white, and then there are rendom areas of the site with completely random colours thrown in, no scheme at all.
+
+- Really long events and workshops page, no back to top button.
+
+- Navbar is very complicated, there are way too many subchoices.
+
+#### Robannas Studios Birmingham
+
+[Robannas Studios Birmingham](https://www.robannas-studios.co.uk/) is located on Cliveland St, Birmingham.
+
+Pro's
+
+- They have a meet the team section which is friendly looking.
+
+- They have a section explaining some of the celebrities they've worked with, which adds to their credibility.
+
+- Lots of information on really cool looking previous projects.
+
+Con's
+
+- The first thing I noticed is the navbar and header are not responsive. This is the same with every element throughout the site.
+
+<!-- IMAGE -->
+
+- The use of colours and the image of the girls make the website seem on first impression to be for kids, it;'s not very professional for a recording studio to have parties.
+
+- The footer information is off-screen.
+- None of the links have hover attributes.
+
+- Random social links to the right of the navbar.
+
+- Some of the navbar links take you to a completely different site without warning.
 
 ### Roadmap
 
