@@ -3,7 +3,7 @@ function mouseOver() {
 }
   
 function mouseOut() {
-    document.getElementById('my-account').style.borderBottomColor = '#343a40';
+    document.getElementById('my-account').style.borderBottomColor = '#282C2E';
 }
 
 function mouseOverCart() {
@@ -11,5 +11,5 @@ function mouseOverCart() {
 }
   
 function mouseOutCart() {
-    document.getElementById('cart').style.borderBottomColor = '#343a40';
+    document.getElementById('cart').style.borderBottomColor = '#282C2E';
 }
