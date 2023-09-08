@@ -30,30 +30,35 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Asecnsion {% block extra_title %}{% endblock %}</title>
+    <title>Ascension {% block extra_title %}{% endblock %}</title>
   </head>
 
   <body>
 
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
+        <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex border-bottom">
             <div class="col-12 col-lg-4"></div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <h1 class="logo text-center">Ascension</h1>
+            <div class="col-12 col-lg-4 py-1 py-lg-0 my-1">
+                <a class="logo" href="#">
+                    <h1 class="text-center">ASCENSION</h1>
+                </a>
             </div>
-            <!-- <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <div class="col-12 col-lg-4 my-auto">
+                <ul class="text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
+                        <a class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-user fa-lg text-white"></i>
+                            {% if request.user.is_authenticated %}
+                                <p class="my-0 text-white">{{ request.user.username }}</p>
+                            {% else %}
+                                <p class="my-0 text-white">My Account</p>
+                            {% endif %}
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-dark rounded-0" aria-labelledby="user-options">
+                            <!-- Use jquery to make this slide down -->
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="#" class="dropdown-item">Product Management</a>
+                                    <a href="#" class="dropdown-item">Manage Products</a>
                                 {% endif %}
                                 <a href="#" class="dropdown-item">My Profile</a>
                                 <a href="#" class="dropdown-item">Logout</a>
@@ -64,21 +69,19 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        $0.00
-                                    {% endif %}
-                                </p>
-                            </div>
+                        <a class="nav-link text-center" href="#">
+                            <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
+                            <p class="my-0 text-white">
+                                {% if grand_total %}
+                                    £{{ grand_total|floatformat:2 }}
+                                {% else %}
+                                    £0.00
+                                {% endif %}
+                            </p>
                         </a>
                     </li>
                 </ul>
-            </div> -->
+            </div>
         </div>
     </header>
     {% if messages %}
@@ -93,6 +96,22 @@
 
     {% block postloadjs %}
     {% endblock %}
+
+    <footer class="container-fluid fixed-bottom">
+        <div id="footer" class="row bg-dark pt-2 d-flex border-top">
+            <div class="col-12 col-lg-4">
+                <p class="text-white footer-p">22 Ludgate Hill<br>Birmingham<br>B3 1DX</p>
+            </div>
+            <div class="col-12 col-lg-4 footer-p">
+                <p class="text-white footer-p text-center">Copyright @ 2023 Ascension. All rights reserved.<br>0121 533 1234</p>
+            </div>
+            <div class="col-12 col-lg-4 text-white text-lg-right">
+                <i class="fa-brands fa-facebook socials nav-link"></i>
+                <i class="fa-brands fa-x-twitter socials nav-link"></i>
+                <i class="fa-brands fa-instagram socials nav-link"></i>
+            </div>
+        </div>
+    </footer>
 
   </body>
 </html>
