@@ -1,3 +1,34 @@
 .logo {
     color: white;
+    width: fit-content;
+    display: block;
+    margin: auto;
+}
+
+.logo:hover {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.dropdown-menu {
+    margin: 0.125rem -23px 0;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+#footer {
+    height: 72px;
+}
+
+.footer-p {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.socials {
+    font-size: 32px;
 }
