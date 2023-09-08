@@ -26,11 +26,11 @@ body {
 }
 
 .footer-link {
-    border-bottom: 2px solid #343a40;
+    border-bottom: 2px solid #282C2E;
 }
 
 #my-account, #cart {
-    border-bottom: 2px solid #343a40;
+    border-bottom: 2px solid #282C2E;
 }
 
 .footer-link:hover {
@@ -48,5 +48,17 @@ body {
 }
 
 .socials {
+    font-size: 32px;
+}
+
+.bg-dark-electric-blue {
+    background-color: #033A54;
+}
+
+.border-deb {
+    border: 1px solid #033A54;
+}
+
+.fa-bars {
     font-size: 32px;
 }
