@@ -25,6 +25,7 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/2e8f9e537f.js" crossorigin="anonymous"></script>
+        <script rel="text/javascript" src="{% static 'js/base.js' %}"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -46,12 +47,12 @@
             <div class="col-12 col-lg-4 my-auto">
                 <ul class="text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a onmouseover="mouseOver()" onmouseout="mouseOut()" class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa-solid fa-user fa-lg text-white"></i>
                             {% if request.user.is_authenticated %}
-                                <p class="my-0 text-white">{{ request.user.username }}</p>
+                                <p id="my-account" class="my-0 text-white">{{ request.user.username }}</p>
                             {% else %}
-                                <p class="my-0 text-white">My Account</p>
+                                <p id="my-account" class="my-0 text-white">My Account</p>
                             {% endif %}
                         </a>
                         <div class="dropdown-menu border-dark rounded-0" aria-labelledby="user-options">
@@ -69,9 +70,9 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="nav-link text-center" href="#">
+                        <a onmouseover="mouseOverCart()" onmouseout="mouseOutCart()" class="nav-link text-center" href="#">
                             <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
-                            <p class="my-0 text-white">
+                            <p id="cart" class="my-0 text-white">
                                 {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                 {% else %}
@@ -106,9 +107,9 @@
                 <p class="text-white footer-p text-center">Copyright @ 2023 Ascension. All rights reserved.<br>0121 533 1234</p>
             </div>
             <div class="col-12 col-lg-4 text-white text-lg-right">
-                <i class="fa-brands fa-facebook socials nav-link"></i>
-                <i class="fa-brands fa-x-twitter socials nav-link"></i>
-                <i class="fa-brands fa-instagram socials nav-link"></i>
+                <i class="fa-brands fa-facebook-f socials nav-link footer-link"></i>
+                <i class="fa-brands fa-x-twitter socials nav-link footer-link"></i>
+                <i class="fa-brands fa-instagram socials nav-link footer-link"></i>
             </div>
         </div>
     </footer>
