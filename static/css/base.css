@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Raleway:wght@300;400;500;600;700&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Raleway';
 }
@@ -52,13 +56,60 @@ body {
 }
 
 .bg-dark-electric-blue {
-    background-color: #033A54;
+    background-color: #033A54 !important;
 }
 
 .border-deb {
-    border: 1px solid #033A54;
+    border: 1px solid #033A54 !important;
 }
 
 .fa-bars {
     font-size: 32px;
+}
+
+#record-link:hover,
+#rehearse-link:hover,
+#shop-link:hover,
+#offers-link:hover,
+#about-link:hover {
+    background-color: white;
+    color: #033A54 !important;
+}
+
+#about-link,
+#record-link,
+#rehearse-link,
+#shop-link,
+#offers-link {
+    padding-top: 16px;
+    height: 56px;
+}
+
+.navbar {
+    height: 56px;
+    padding: 0;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        height: 72px;
+    }
+    #cart-a, #user-options {
+        padding-top: 10px;
+    }
+    #mobile-top-navbar {
+        background-color: #282C2E !important;
+    }
+    .list-inline-item:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .index-button-box {
+        width: 100px !important;
+        font-size: 16px !important;
+        height: 50px !important;
+        padding-top: 3px;
+    }
 }
