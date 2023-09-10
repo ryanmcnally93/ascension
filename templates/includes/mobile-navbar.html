@@ -1,0 +1,37 @@
+<li class="list-inline-item">
+    <a onmouseover="mouseOverCart()" onmouseout="mouseOutCart()" class="d-block d-lg-none nav-link text-center" href="#">
+        <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
+        <p id="cart" class="my-0 text-white">
+            {% if grand_total %}
+                £{{ grand_total }}
+            {% else %}
+                £0.00
+            {% endif %}
+        </p>
+    </a>
+</li>
+<li class="list-inline-item dropdown">
+    <a onmouseover="mouseOver()" onmouseout="mouseOut()" class="d-block d-lg-none nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa-solid fa-user fa-lg text-white"></i>
+        <!-- Change this to the profile image similar to what was done in last project, was really effective -->
+        <!-- Make same width and height as cart icon and text -->
+        {% if request.user.is_authenticated %}
+            <p id="my-account" class="my-0 text-white">{{ request.user.username }}</p>
+        {% else %}
+            <p id="my-account" class="my-0 text-white">My Account</p>
+        {% endif %}
+    </a>
+    <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
+        <!-- Use jquery to make this slide down -->
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+                <a href="#" class="dropdown-item">Manage Products</a>
+            {% endif %}
+            <a href="#" class="dropdown-item">My Profile</a>
+            <a href="#" class="dropdown-item">Logout</a>
+        {% else %}
+            <a href="#" class="dropdown-item">Register</a>
+            <a href="#" class="dropdown-item">Login</a>
+        {% endif %}
+    </div>
+</li>
