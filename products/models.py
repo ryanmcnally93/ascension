@@ -25,6 +25,7 @@ class Product(models.Model):
     amount_sold = models.IntegerField(null=True, blank=True)
     amount_of_reviews = models.IntegerField(null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    main_image = models.ImageField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     image_2 = models.ImageField(null=True, blank=True)
     image_3 = models.ImageField(null=True, blank=True)

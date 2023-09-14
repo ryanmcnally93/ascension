@@ -1,0 +1,32 @@
+.product-image-box {
+    height: 300px;
+}
+
+.product-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.card {
+    height: 480px;
+    overflow: hidden;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.product-info, .product-title {
+    color: black;
+    text-decoration: none;
+}
+
+.product-title:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}

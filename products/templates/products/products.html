@@ -2,22 +2,49 @@
 {% load static %}
 
 {% block extra_css %}
+    <link rel="stylesheet" href="{% static '/products/css/products.css' %}">
 {% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <hr id="top-hr">
+                <div id="page-heading" class="col text-center">PRODUCTS</div>
+            <hr>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-<div class="container header-container">
+<div class="container">
     <div class="row">
-        <div class="col">
-            {{ products }}
-        </div>
+        {% for product in products %}
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a href="#" class="card my-2">
+                    {% if product.main_image %}
+                        <div class="product-image-box px-auto mx-auto">
+                            <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.main_image }}" alt="{{ product.name }}">
+                        </div>
+                    {% elif product.image %}
+                        <div class="product-image-box px-auto mx-auto">
+                            <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.image }}" alt="{{ product.name }}">
+                        </div>
+                    {% else %}
+                    {% endif %}
+                    <div class="product-title px-3">
+                        {{ product.name }}
+                    </div>
+                    <div class="product-info px-3">
+                        <br>
+                        {{ product.category.friendly_name }}
+                        <br>
+                        Price: £{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}
+                        <br>
+                        Rating: {{ product.rating }} ({{ product.amount_of_reviews }})
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
