@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static '/products/css/products.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <hr id="top-hr">
+                <div id="page-heading" class="col text-center">PRODUCT INFO</div>
+            <hr>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container row">
+    <div class="col">
+        <a class="btn bg-dark rounded-0 text-white" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+    </div>
+</div>
+<div class="container col-8">
+    <div class="row">
+            <a href="#" class="my-2 col-6 justify-content-center product-image-box">
+                {% if product.main_image %}
+                    <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.main_image }}" alt="{{ product.name }}">
+                {% elif product.image %}
+                    <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.image }}" alt="{{ product.name }}">
+                {% else %}
+                {% endif %}
+            </a>
+            <div class="product-infopage-info px-3 col-6">
+                {{ product.name }}
+                <br>
+                {{ product.category.friendly_name }}
+                <br>
+                <h3>£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</h3>
+                Rating: {{ product.rating }}/5 ({{ product.amount_of_reviews }})
+                <br>
+                <p class="my-2">{{ product.description }}</p>
+                <br>
+                Amount Sold: {{ product.amount_sold }}
+                <br>
+                (QUANTITY BOX)
+                <br>
+                    <a class="btn bg-dark-electric-blue rounded-0 text-white mb-3">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

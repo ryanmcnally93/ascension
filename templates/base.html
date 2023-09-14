@@ -37,77 +37,83 @@
 
   <body>
 
-    <header class="container-fluid fixed-top">
-        <div id="top-head-bar" class="row bg-dark pt-lg-2 d-none d-lg-flex border-bottom">
-            <div class="col-12 col-lg-4"></div>
-            <div class="col-12 col-lg-4 py-1 py-lg-0 my-1">
-                <a class="logo m-auto" href="#">
-                    <h1 class="text-center mb-0">A S C E N S I O N</h1>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto">
-                <ul class="text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a onmouseover="mouseOver()" onmouseout="mouseOut()" class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa-solid fa-user fa-lg text-white"></i>
-                            <!-- Change this to the profile image similar to what was done in last project, was really effective -->
-                            {% if request.user.is_authenticated %}
-                                <p id="my-account" class="my-0 text-white">{{ request.user.username }}</p>
-                            {% else %}
-                                <p id="my-account" class="my-0 text-white">My Account</p>
-                            {% endif %}
+    <div id="wrap">
+        <div id="main">
+
+            <header class="container-fluid fixed-top">
+                <div id="top-head-bar" class="row bg-dark pt-lg-2 d-none d-lg-flex border-bottom">
+                    <div class="col-12 col-lg-4"></div>
+                    <div class="col-12 col-lg-4 py-1 py-lg-0 my-1">
+                        <a class="logo m-auto" href="{% url 'home' %}">
+                            <h1 class="text-center mb-0">A S C E N S I O N</h1>
                         </a>
-                        <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
-                            <!-- Use jquery to make this slide down -->
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="#" class="dropdown-item">Manage Products</a>
-                                {% endif %}
-                                <a href="#" class="dropdown-item">My Profile</a>
-                                <a href="#" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="#" class="dropdown-item">Register</a>
-                                <a href="#" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a onmouseover="mouseOverCart()" onmouseout="mouseOutCart()" id="cart-a" class="nav-link text-center" href="#">
-                            <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
-                            <p id="cart" class="my-0 text-white">
-                                {% if grand_total %}
-                                    £{{ grand_total }}
-                                {% else %}
-                                    £0.00
-                                {% endif %}
-                            </p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    </div>
+                    <div class="col-12 col-lg-4 my-auto">
+                        <ul class="text-lg-right my-0">
+                            <li class="list-inline-item dropdown">
+                                <a onmouseover="mouseOver()" onmouseout="mouseOut()" class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-user fa-lg text-white"></i>
+                                    <!-- Change this to the profile image similar to what was done in last project, was really effective -->
+                                    {% if request.user.is_authenticated %}
+                                        <p id="my-account" class="my-0 text-white">{{ request.user.username }}</p>
+                                    {% else %}
+                                        <p id="my-account" class="my-0 text-white">My Account</p>
+                                    {% endif %}
+                                </a>
+                                <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
+                                    <!-- Use jquery to make this slide down -->
+                                    {% if request.user.is_authenticated %}
+                                        {% if request.user.is_superuser %}
+                                            <a href="#" class="dropdown-item">Manage Products</a>
+                                        {% endif %}
+                                        <a href="#" class="dropdown-item">My Profile</a>
+                                        <a href="#" class="dropdown-item">Logout</a>
+                                    {% else %}
+                                        <a href="#" class="dropdown-item">Register</a>
+                                        <a href="#" class="dropdown-item">Login</a>
+                                    {% endif %}
+                                </div>
+                            </li>
+                            <li class="list-inline-item">
+                                <a onmouseover="mouseOverCart()" onmouseout="mouseOutCart()" id="cart-a" class="nav-link text-center" href="#">
+                                    <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
+                                    <p id="cart" class="my-0 text-white">
+                                        {% if grand_total %}
+                                            £{{ grand_total }}
+                                        {% else %}
+                                            £0.00
+                                        {% endif %}
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="mobile-top-navbar" class="row bg-dark-electric-blue border-bottom">
+                    <nav class="navbar navbar-expand-lg w-100">
+                        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#mainnavbar" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars text-white"></i>
+                        </button>
+                        {% include 'includes/mobile-navbar.html' %}
+                        {% include 'includes/mainnavbar.html' %}
+                    </nav>
+                </div>
+            </header>
+            {% if messages %}
+                <div class="message-container"></div>
+            {% endif %}
+        
+            {% block page_header %}
+            {% endblock %}
+        
+            {% block content %}
+            {% endblock %}
+        
+            {% block postloadjs %}
+            {% endblock %}
+
         </div>
-        <div id="mobile-top-navbar" class="row bg-dark-electric-blue border-bottom">
-            <nav class="navbar navbar-expand-lg w-100">
-                <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#mainnavbar" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa-solid fa-bars text-white"></i>
-                </button>
-                {% include 'includes/mobile-navbar.html' %}
-                {% include 'includes/mainnavbar.html' %}
-            </nav>
-        </div>
-    </header>
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-    {% block postloadjs %}
-    {% endblock %}
+    </div>
 
     <footer class="container-fluid">
         <div id="footer" class="row bg-dark pt-2 d-flex border-top">

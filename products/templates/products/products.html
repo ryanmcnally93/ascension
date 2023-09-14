@@ -20,7 +20,7 @@
     <div class="row">
         {% for product in products %}
             <div class="col-sm-6 col-lg-4 col-xl-3">
-                <a href="#" class="card my-2">
+                <a href="{% url 'product_information' product_id=product.pk %}" class="card my-2 rounded-0">
                     {% if product.main_image %}
                         <div class="product-image-box px-auto mx-auto">
                             <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.main_image }}" alt="{{ product.name }}">
@@ -38,9 +38,8 @@
                         <br>
                         {{ product.category.friendly_name }}
                         <br>
-                        Price: £{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}
-                        <br>
-                        Rating: {{ product.rating }} ({{ product.amount_of_reviews }})
+                        <h3>£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</h3>
+                        {{ product.rating }}/5 ({{ product.amount_of_reviews }})
                     </div>
                 </a>
             </div>
