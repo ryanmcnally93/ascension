@@ -17,9 +17,9 @@
             <div class="dropdown-menu border-0" aria-labelledby="record-link">
                 <a href="#" class="dropdown-item">Record Main</a>
                 <a href="#" class="dropdown-item">Meet the Engineers</a>
-                <a href="{% url 'products' %}?category=studio" class="dropdown-item">Studio by Rating</a>
+                <a href="#" class="dropdown-item">Studio by Rating</a>
                 <a href="#" class="dropdown-item">Studio by Price</a>
-                <a href="#" class="dropdown-item">All Studios</a>
+                <a href="{% url 'products' %}?category=studios" class="dropdown-item">All Studios</a>
             </div>
         </li>
 
@@ -31,7 +31,7 @@
                 <a href="#" class="dropdown-item">Rehearsals Main</a>
                 <a href="#" class="dropdown-item">Rooms by Rating</a>
                 <a href="#" class="dropdown-item">Rooms by Price</a>
-                <a href="#" class="dropdown-item">All Rooms</a>
+                <a href="{% url 'products' %}?category=rehearsal_rooms" class="dropdown-item">All Rooms</a>
             </div>
         </li>
 
