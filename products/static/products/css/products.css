@@ -1,5 +1,7 @@
 .product-image-box {
-    height: 300px;
+    height: 260px;
+    align-items: center;
+    display: flex;
 }
 
 .product-image {
@@ -29,4 +31,34 @@
 
 a:hover {
     text-decoration: none;
+}
+
+.product-infopage-info {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+a.bg-dark:hover {
+    background-color: white !important;
+    color: #282C2E !important;
+    border: 1px solid #282C2E;
+}
+
+a.bg-dark-electric-blue:hover {
+    background-color: white !important;
+    color: #033A54 !important;
+    border: 1px solid #033A54;
+}
+
+a.bg-dark-electric-blue, a.bg-dark {
+    border: 1px solid white;
+}
+
+a.bg-dark-electric-blue {
+    width: 150px;
+}
+
+#back {
+    vertical-align: middle;
 }

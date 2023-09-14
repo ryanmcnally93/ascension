@@ -1,8 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Raleway:wght@300;400;500;600;700&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
 
-html {
+/* STICKY FOOTER https://stackoverflow.com/questions/18739937/how-to-keep-footer-at-bottom-of-screen */
+
+html, body {
     height: 100%;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 72px;
+}
+  
+#footer {
+    position: relative;
+    margin-top: -72px;
+    clear: both;
+}
+
+/* END OF STICKY FOOTER */
 
 body {
     font-family: 'Raleway';
