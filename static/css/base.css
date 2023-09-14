@@ -59,12 +59,25 @@ body {
     background-color: #033A54 !important;
 }
 
+#top-hr {
+    margin-top: 140px;
+}
+
+hr {
+    width: 100%;
+    color: black;
+}
+
 .border-deb {
     border: 1px solid #033A54 !important;
 }
 
 .fa-bars {
     font-size: 32px;
+}
+
+#page-heading {
+    /*Nothing yet*/
 }
 
 #record-link:hover,
