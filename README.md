@@ -438,7 +438,11 @@ You can view all testing in [this document.]()
 
 ### Fixed Bugs
 
-1).
+1). The first issue I had was linking my products CSS stylesheet. I wrote the URL for the static CSS file but could not locate it, I kept receiving a 404 error.
+
+I contacted tutor support and before they had a chance to help me I reloaded my workspace and the URL worked. I believe that Code Anywhere must have timed out in some way without letting me know, as refrshing the workspace completely fixed the issue.
+
+2). I had an issue when creating the select element on the products page. Initially I attempted to change the content of the page only using javascript, but struggled with understanding how to find the sort and direction values and enter them into the URL. I fixed this by going back over the lessons and finding the tutorial on the postload js for the products page.
 
 ### Unfixed Bugs
 
