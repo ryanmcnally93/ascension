@@ -29,6 +29,7 @@
 .shop-buttons {
     padding-top: 11px;
     font-size: 16px;
+    border: 2px solid #033A54;
 }
 
 .shop-buttons:hover {

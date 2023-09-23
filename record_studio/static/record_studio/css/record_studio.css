@@ -26,11 +26,32 @@
     font-size: 16px;
 }
 
+.small-button-box {
+    border: 2px solid white;
+    width: 150px;
+    height: 50px;
+    background-color: #033A54;
+    font-size: 16px;
+}
+
 #engineer-button {
     padding-top: 11px;
+    border: 2px solid #033A54;
 }
 
 #engineer-button:hover {
+    text-decoration: none;
+    color: #033A54 !important;
+    background-color: white;
+    border: 2px solid #033A54;
+}
+
+#small-engineer-button {
+    padding-top: 2px;
+    border: 2px solid #033A54;
+}
+
+#small-engineer-button:hover {
     text-decoration: none;
     color: #033A54 !important;
     background-color: white;
@@ -44,6 +65,28 @@
     flex-direction: column;
 }
 
+#adam {
+    margin-left: -20px;
+}
+
+#john {
+    margin-left: -20px;
+}
+
+#alicia {
+    margin-left: -70px;
+}
+
 .artist {
     width: 300px;
+}
+
+.engineers {
+    height: 300px;
+}
+
+.image-box {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
 }
