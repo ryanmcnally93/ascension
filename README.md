@@ -185,6 +185,12 @@ This prototype of the index page was made using [Figma.com](https://www.figma.co
 
 <img src="/media/readme-images/prototype-index.png" width="50%" alt="Homepage Wireframe" style="display: inherit; ">
 
+### App Setup
+
+Originally, I wanted to have the products within their allocated app (Rehearse, Record and Shop), I was thinking of having the products html's display in different colours when accessed through these different apps. I later decided against this as the colours would not go well with the rest of the sites design and having all the products accessible through one app is so much simpler and easier.
+
+This means that like the home app: the record, rehearse and shop apps serve as homes for their respective templates only. With the record app containing 'Meet the Engineers' too.
+
 ### Q and A of Potential Users
 
 I've asked the following questions to:
