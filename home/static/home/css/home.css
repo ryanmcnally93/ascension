@@ -20,6 +20,11 @@
 
 .ls-logo {
     width: 200px;
+    border: 2px solid #033A54;
+}
+
+.ls-logo:hover {
+    background-color: white;
 }
 
 .index-button-box {
