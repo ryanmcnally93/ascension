@@ -2,22 +2,45 @@
 {% load static %}
 
 {% block extra_css %}
-{% endblock %}
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <hr id="top-hr">
-                <div id="page-heading" class="col text-center">REHEARSE</div>
-            <hr>
-        </div>
-    </div>
+    <link rel="stylesheet" href="{% static '/rehearse/css/rehearse.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="col">
-
+    <div class="background-image">
+        <div class="container header-container">
+            <div class="row">
+                <hr class="white-hr" id="top-hr">
+                    <div id="page-heading" class="col text-center text-white">REHEARSE</div>
+                <hr class="white-hr">
+            </div>
+        </div>
+        <div id="about-box" class="container col-8 text-center pt-3">
+            <div class="row text-white ml-1 mr-1">
+                <p>As music lovers ourselves, we understand the constant battle with finding the right place to practice and travel to, our rooms have all the equipment you'll ever need, regardless of your number of band members!</p>
+                <p>Our booking system ensures we are never double booked and email confirmations are sent straight away.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container header-container">
+        <div class="row">
+            <hr>
+                <div id="page-heading" class="col text-center">BOOK TODAY</div>
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p>Get familiar with our easy-to-use booking system that allows users to book themselves in for an hour of rehearsal for up to two weeks in advance.</p>
+            <img src="#" alt="Our booking system in use">
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-4 text-center h-100">
+            <div class="index-button-box mx-auto mb-3">
+                <a href="{% url 'products' %}?category=rehearsal_rooms" class="h-100 w-100 d-block text-white" id="engineer-button">
+                    <p class="mb-2 pt-2">Rehearsal Rooms</p>
+                </a>
+            </div>
         </div>
     </div>
 {% endblock %}
