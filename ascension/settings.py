@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'products',
     'record_studio',
     'rehearse',
+    'shop',
 ]
 
 MIDDLEWARE = [
