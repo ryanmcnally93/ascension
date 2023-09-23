@@ -2,22 +2,69 @@
 {% load static %}
 
 {% block extra_css %}
-{% endblock %}
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <hr id="top-hr">
-                <div id="page-heading" class="col text-center">RECORD</div>
-            <hr>
-        </div>
-    </div>
+    <link rel="stylesheet" href="{% static '/record_studio/css/record_studio.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="col">
-
+    <div class="background-image">
+        <div class="container header-container">
+            <div class="row">
+                <hr class="white-hr" id="top-hr">
+                    <div id="page-heading" class="col text-center text-white">RECORD</div>
+                <hr class="white-hr">
+            </div>
+        </div>
+        <div id="about-box" class="container col-8 text-center pt-3">
+            <div class="row text-white ml-1 mr-1">
+                <p>Our studios come with the latest in modern technology and are capable of recording vocals, acoustic instrument, digital equipment, MIDI and much much more!</p>
+                <p>Each studio is a completely sound-proof haven for you and our engineering team to extract dream to reality.</p>
+                <p>Feel free to access our Meet the Engineers page for information including our team, services and equipment.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-4 text-center h-100">
+                <div class="index-button-box m-auto">
+                    <a href="{% url 'meet_the_engineers' %}" class="h-100 w-100 d-block text-white" id="engineer-button">
+                        <p class="mb-2 pt-2">Meet the Engineers</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container header-container">
+        <div class="row">
+            <hr>
+                <div id="page-heading" class="col text-center">Artists We've Worked With</div>
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 p-3 rounded-0">
+                <img class="artist float-right" src="{{ MEDIA_URL }}call_me_unique.webp" alt="Call Me Unique">
+            </div>
+            <div class="col-6 p-3">
+                <p>Call Me Unique</p>
+                <p>Singer, songwriter & guitarist; Call Me Unique infuses the sounds of jazz, soul, futurebeats, and scat-singing. Influenced by the sounds of Lauryn Hill, Ed Sheeran, Ella Fitzgerald & Lisa "Left-Eye" Lopes. Renowned for her love of scatting and eclectic performance approach, her vibe truly is "unique".  </p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="artist-two" class="col-6 p-3">
+                <p>Lady Sanity</p>
+                <p>With influences from multiple genre’s Lady Sanity takes inspiration from the greats such as Lauryn Hill, MC Lyte and Missy Elliot.<br>In 2014, positive responses to her debut mix-tape, Construction, and support from the BBC, encouraged the rapper to establish herself further in the music industry.</p>
+            </div>
+            <div class="col-6 p-3 rounded-0">
+                <img class="artist" src="{{ MEDIA_URL }}/lady_sanity.webp" alt="Lady Sanity">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 p-3 rounded-0">
+                <img class="artist float-right mb-3" src="{{ MEDIA_URL }}/yatez.webp" alt="Yatez">
+            </div>
+            <div class="col-6 p-3">
+                <p>Yatez</p>
+                <p>Priding himself on the deeper workings of his music, including the instrumentation and production, Yatez's audio output offers a masterclass in how to create a timeless record. But don't take our word for it, listen to Birmingham Crew on Spotify today.</p>
+            </div>
         </div>
     </div>
 {% endblock %}
