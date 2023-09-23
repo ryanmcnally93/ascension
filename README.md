@@ -142,6 +142,8 @@ The website needs to look professional and high tech, we want customers to feel 
 
 #### Styling
 
+- Feel of the site is electric blue, sharp edges and sparky feel to it.
+
 #### Backgrounds
 
 #### Images
