@@ -11,6 +11,12 @@ def products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
 
+        if 'shop' in request.GET:
+            products = products.filter(is_hire_room=False)
+
+        if 'sale' in request.GET:
+            products = products.filter(is_offers_item=True)
+
     context = {
         'products': products,
     }
