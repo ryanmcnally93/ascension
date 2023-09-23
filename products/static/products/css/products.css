@@ -11,6 +11,11 @@
     max-height: 90%;
 }
 
+#select_container {
+    height: 30px;
+    padding-right: 30px;
+}
+
 .card {
     height: 480px;
     overflow: hidden;

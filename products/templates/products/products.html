@@ -16,6 +16,18 @@
 {% endblock %}
 
 {% block content %}
+<div class="container" id="select_container">
+    <div class="row float-right">
+        <select class="rounded-0">
+            <option id="default_filter" value="no_filter">Choose Filter</option>
+            <option value="price_high_to_low">Price High to Low</option>
+            <option value="price_low_to_high">Price Low to High</option>
+            <option value="rating_high_to_low">Rating High to Low</option>
+            <option value="rating_low_to_high">Rating Low to High</option>
+            <option value="all">All Products</option>
+        </select>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         {% for product in products %}
