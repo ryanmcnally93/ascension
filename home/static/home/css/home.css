@@ -44,6 +44,10 @@
     font-size: 20px;
 }
 
+.main-buttons {
+    border: 2px solid #033A54;
+}
+
 .main-buttons:hover {
     text-decoration: none;
     color: #033A54 !important;
