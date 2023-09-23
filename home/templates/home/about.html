@@ -2,22 +2,42 @@
 {% load static %}
 
 {% block extra_css %}
-{% endblock %}
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <hr id="top-hr">
-                <div id="page-heading" class="col text-center">ABOUT US</div>
-            <hr>
-        </div>
-    </div>
+    <link rel="stylesheet" href="{% static '/home/css/about.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="col">
-            <h1 id="contact-us">CONTACT US</h1>
+    <div class="background-image">
+        <div class="container header-container">
+            <div class="row">
+                <hr class="white-hr" id="top-hr">
+                    <div id="page-heading" class="col text-center text-white">ABOUT US</div>
+                <hr class="white-hr">
+            </div>
+        </div>
+        <div id="about-box" class="container col-8 text-center pt-3">
+            <div class="row text-white ml-1 mr-1">
+                <p>Molded by the dreams of a group of local Birmingham music enthusiasts, ASCENSION aspires to be the much needed middle ground for songwriters and bands, aspiring to become household known artists.</p>
+                <p>We not only provide a ground for pracicing artists to rehearse, but an array of music studios and engineers unparelleled in quality within Birmingham.</p>
+                <p>We also offer advice through our contact form below, and have links to multiple local promoters and music tutors, like Little Strings.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container header-container">
+        <div class="row">
+            <hr>
+                <div id="page-heading" class="col text-center">CONTACT US</div>
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <iframe id="location" class="col-6 mb-3 p-0" title="Ascension Studios" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.7217617814003!2d-1.906360723331249!3d52.48417333888139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bc8d64cbd9d9%3A0x343f39e66d46da06!2sLudgate%20Hill%2C%20Birmingham!5e0!3m2!1sen!2suk!4v1695477319711!5m2!1sen!2suk"></iframe>
+            <div id="contact-details" class="col-6 p-3">
+                <p>Phone Number: 07123456789</p>
+                <p>Address: 22 Ludgate Hill, Birmingham, B3 1DX</p>
+                <p>Email: contact@ascension.co.uk</p>
+                <p>Opening Hours: 10:00 - 16:00</p>
+            </div>
         </div>
     </div>
 {% endblock %}
