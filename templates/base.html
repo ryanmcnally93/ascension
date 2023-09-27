@@ -75,11 +75,11 @@
                                 </div>
                             </li>
                             <li class="list-inline-item">
-                                <a onmouseover="mouseOverCart()" onmouseout="mouseOutCart()" id="cart-a" class="nav-link text-center" href="#">
+                                <a onmouseover="mouseOverCart()" onmouseout="mouseOutCart()" id="cart-a" class="nav-link text-center" href="{% url 'view_cart' %}">
                                     <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
                                     <p id="cart" class="my-0 text-white">
-                                        {% if grand_total %}
-                                            £{{ grand_total }}
+                                        {% if total %}
+                                            £{{ total }}
                                         {% else %}
                                             £0.00
                                         {% endif %}
