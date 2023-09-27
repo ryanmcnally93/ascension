@@ -41,6 +41,16 @@
                 <br>
                 <p class="my-2">{{ product.description }}</p>
                 <br>
+            </div>
+            {% if product.is_hire_room == True %}
+                <div class="timeline">
+                    <!--If session is taken-->
+                        <button class="timeline-button" disabled>10:00</button>
+                    <!--If not-->
+                        <button class="timeline-button enabled-timeline-button">10:00</button>
+                </div>
+            {% endif %}
+            <div class="product-infopage-info px-3 col-6">
                 Amount Sold: {{ product.amount_sold }}
                 <br>
                 (QUANTITY BOX)
