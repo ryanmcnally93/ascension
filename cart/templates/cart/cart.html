@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+{% endblock %}
+
+{% block content %}
+    <div class="container header-container">
+        <div class="row">
+            <hr class="white-hr" id="top-hr">
+                <div id="page-heading" class="col text-center">MY CART</div>
+            <hr class="white-hr">
+        </div>
+    </div>
+    {% if bag_items %}
+        <p>Bag Items!</p>
+    {% else %}
+        <p>No bag items!</p>
+    {% endif %}
+
+{% endblock %}

@@ -26,4 +26,5 @@ urlpatterns = [
     path('record_studio/', include('record_studio.urls')),
     path('rehearse/', include('rehearse.urls')),
     path('shop/', include('shop.urls')),
+    path('cart/', include('cart.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

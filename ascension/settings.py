@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'record_studio',
     'rehearse',
     'shop',
+    'cart',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +77,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'cart.contexts.cart_contents',
             ],
         },
     },
