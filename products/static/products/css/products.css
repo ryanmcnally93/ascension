@@ -16,6 +16,27 @@
     padding-right: 30px;
 }
 
+.timeline-button {
+    padding: 5px 10px;
+}
+
+.enabled-timeline-button {
+    border: 2px solid #033A54;
+    color: #033A54;
+    background-color: white;
+}
+
+.timeline {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.enabled-timeline-button:hover {
+    border: 2px solid white;
+    color: white;
+    background-color: #033A54;
+}
+
 .card {
     height: 480px;
     overflow: hidden;
