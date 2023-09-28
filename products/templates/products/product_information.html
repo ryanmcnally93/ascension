@@ -37,26 +37,44 @@
                 {{ product.category.friendly_name }}
                 <br>
                 <h3>£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</h3>
-                Rating: {{ product.rating }}/5 ({{ product.amount_of_reviews }})
+                Rating: {{ product.rating }}/5 ({{ product.amount_of_reviews }}) Sold: {{ product.amount_sold }}
                 <br>
                 <p class="my-2">{{ product.description }}</p>
                 <br>
-            </div>
             {% if product.is_hire_room == True %}
                 <div class="timeline">
                     <!--If session is taken-->
                         <button class="timeline-button" disabled>10:00</button>
                     <!--If not-->
                         <button class="timeline-button enabled-timeline-button">10:00</button>
+                    <!--Endif-->
                 </div>
-            {% endif %}
-            <div class="product-infopage-info px-3 col-6">
-                Amount Sold: {{ product.amount_sold }}
-                <br>
-                (QUANTITY BOX)
-                <br>
-                    <a class="btn bg-dark-electric-blue rounded-0 text-white mb-3">Add to Cart</a>
+                    <!--If there are hours selected, enable-->
+                    <!--Else-->
+                        <button class="btn bg-dark-electric-blue rounded-0 text-white mb-3 mt-2" disabled>Add to Cart</button>
+                    <!--Endif-->
             </div>
+            {% else %}
+                <form action="{% url 'add_to_cart' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        {% if stringed_product_id in request.session.cart.keys %}
+                        <div class="input-group-prepend mb-3"><i class="fas fa-minus"></i></div>
+                        <input class="quantity-box mb-3" value="{{ item_quantity }}" type="number" min="1" max="99" name="quantity">
+                        <!--Removed data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}-->
+                        <div class="input-group-append mb-3"><i class="fas fa-plus"></i></div>
+                    </div>
+                </form>
+                        {% else %}
+                        <br>
+                        <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
+                        <button type="submit" class="btn bg-dark-electric-blue rounded-0 text-white mb-3 mt-2 add">Add<p id="to-cart"> to cart</p></button>
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
