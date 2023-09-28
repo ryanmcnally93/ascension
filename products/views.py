@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product
+from cart.contexts import cart_contents
 
 
 def products(request):
@@ -38,7 +39,16 @@ def products(request):
 
 def product_information(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
+
+    stringed_product_id = str(product.id)
+
+    if stringed_product_id in request.session['cart']:
+        item_quantity = request.session['cart'][stringed_product_id]
+
     context = {
         'product': product,
+        'stringed_product_id': stringed_product_id,
+        'item_quantity': item_quantity
     }
     return render(request, 'products/product_information.html', context)
+    
