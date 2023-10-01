@@ -4,6 +4,7 @@
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static '/cart/css/cart.css' %}">
+    <link rel="stylesheet" href="{% static '/cart/js/cart.js' %}">
 {% endblock %}
 
 {% block content %}
@@ -19,8 +20,9 @@
             <tr>
                 <th>Image</th>
                 <th>Name</th>
-                <th>Quantity</th>
                 <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub-Total</th>
             </tr>
             {% for item in cart_products %}
             <tr>
@@ -33,19 +35,25 @@
                     <p>{{ item.product.name }}</p>
                     <p>{{ item.product.category.friendly_name }}</p>
                 </td>
+                <td class="cart-price">
+                    {% if item.product.is_offers_item %}
+                        <p class="mb-1">£{{ item.product.price }}</p>
+                        <p class="mb-0"><strike>£{{ item.product.striked_price }}</strike></p>
+                    {% else %}
+                        <p class="mb-0 prices">£{{ item.product.price }}</p>
+                    {% endif %}
+                </td>
                 <td>
-                    <div class="quantity-box mb-3">
+                    <div class="quantity-box">
                         <div class="input-group-prepend"><i class="fas fa-minus"></i></div>
                         <input class="quantity-middle pl-2" value="{% find_quantity cart_products item.product.id %}" type="number" min="1" max="99" name="quantity" data-product_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                         <div class="input-group-append"><i class="fas fa-plus"></i></div>
                     </div>
                 </td>
                 <td>
-                    {% if item.product.is_offers_item %}
-                        <p>{{ item.product.striked_price }}</p>
-                    {% else %}
-                        <p>{{ item.product.price }}</p>
-                    {% endif %}
+                    <div>
+                        <p class="total-price"></p>
+                    </div>
                 </td>
             </tr>
             {% endfor %}
