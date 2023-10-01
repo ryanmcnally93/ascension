@@ -21,11 +21,14 @@
     width: 70%;
     flex-direction: row;
     display: flex;
-    margin: auto;
 }
 
 .quantity-middle {
     width: 100%;
+}
+
+.cart-price {
+    vertical-align: middle;
 }
 
 /* Remove Arrows on Input box */
