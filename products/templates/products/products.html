@@ -48,11 +48,9 @@
                         {{ product.name }}
                     </div>
                     <div class="product-info px-3">
-                        <br>
-                        {{ product.category.friendly_name }}
-                        <br>
+                        <p class="mb-0 category">{{ product.category.friendly_name }}</p>
                         <h3>£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</h3>
-                        {{ product.rating }}/5 ({{ product.amount_of_reviews }})
+                        <p>{{ product.rating }}/5 ({{ product.amount_of_reviews }})</p>
                     </div>
                     <br>
                     <form action="{% url 'add_to_cart' product.id %}" method="POST" class="products-add">

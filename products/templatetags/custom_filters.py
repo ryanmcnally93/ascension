@@ -14,3 +14,10 @@ def find_quantity(item_list, item_id):
         if str(item.get('item_id')) == str(item_id):
             return item.get('quantity')
     return 0
+
+@register.simple_tag(name='find_item_subtotal')
+def find_item_subtotal(item_list, item_id):
+    for item in item_list:
+        if str(item.get('item_id')) == str(item_id):
+            return item.get('item_subtotal')
+    return 0
