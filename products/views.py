@@ -44,11 +44,18 @@ def product_information(request, product_id):
 
     if stringed_product_id in request.session['cart']:
         item_quantity = request.session['cart'][stringed_product_id]
+    else:
+        item_quantity = ""
+
+    sessions = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00"]
+    booked_sessions = ["10:00"]
 
     context = {
         'product': product,
         'stringed_product_id': stringed_product_id,
-        'item_quantity': item_quantity
+        'item_quantity': item_quantity,
+        'sessions': sessions,
+        'booked_sessions': booked_sessions,
     }
     return render(request, 'products/product_information.html', context)
     

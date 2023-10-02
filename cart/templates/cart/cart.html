@@ -16,7 +16,7 @@
         </div>
     </div>
     {% if cart_products %}
-        <table class="col-10 justify-content-center m-auto">
+        <table class="col-10 justify-content-center m-auto mb-2">
             <tr>
                 <th>Image</th>
                 <th>Name</th>
@@ -33,7 +33,7 @@
                 </td>
                 <td>
                     <p>{{ item.product.name }}</p>
-                    <p>{{ item.product.category.friendly_name }}</p>
+                    <p class="mb-0">{{ item.product.category.friendly_name }}</p>
                 </td>
                 <td class="cart-price">
                     {% if item.product.is_offers_item %}
@@ -52,12 +52,25 @@
                 </td>
                 <td>
                     <div>
-                        <p class="total-price"></p>
+                        <p class="total-price mb-0">£{% find_item_subtotal cart_products item.product.id %}</p>
                     </div>
                 </td>
             </tr>
             {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total grand-total">Total:</td>
+                <td class="grand-total">£{{ total }}</td>
+            </tr>
         </table>
+        <div class="col-10 fifty-mb">
+            <div class="d-inline float-right cart-buttons mt-3 mb-3">
+                <a class="btn bg-dark rounded-0 text-white" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+                <a class="btn bg-dark-electric-blue rounded-0 text-white" href="#"><p class="d-inline">Secure Payment</p></a>
+            </div>
+        </div>
     {% else %}
         <p>There are currently no products in your cart.</p>
     {% endif %}

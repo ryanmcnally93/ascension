@@ -17,6 +17,7 @@ def cart_contents(request):
                 'item_id': item_id,
                 'quantity': quantity,
                 'product': product,
+                'item_subtotal': quantity * product.price,
             })
 
     context = {

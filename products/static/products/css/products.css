@@ -50,15 +50,29 @@
     padding-left: 5px;
 }
 
+.category {
+    font-style: italic;
+}
+
 .quantity-box {
     width: 70%;
     flex-direction: row;
     display: flex;
     margin: auto;
+    padding-bottom: 5px;
+}
+
+.quantity-box-information {
+    width: 100px;
+    flex-direction: row;
+    display: flex;
+    margin: auto;
+    margin-left: 5px;
 }
 
 .quantity-middle {
     width: 100%;
+    padding-left: 5px;
 }
 
 /* Remove Arrows on Input box */
