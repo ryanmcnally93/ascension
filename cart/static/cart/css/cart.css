@@ -13,8 +13,16 @@
 
 .input-group-prepend, .input-group-append {
     border: 1px solid #033A54;
-    padding: 5px;
+    padding: 0;
     color: #033A54;
+}
+
+.fa-minus, .fa-plus {
+    margin: auto;
+}
+
+.btn-sm {
+    padding: 0.15rem 0.3rem !important;
 }
 
 #back {
@@ -79,7 +87,6 @@ input[type=number] {
 
 .input-group-prepend:hover, .input-group-append:hover {
     border: 1px solid white;
-    padding: 5px;
     background-color: #033A54;
     color: white;
     cursor: pointer;

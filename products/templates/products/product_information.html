@@ -36,25 +36,26 @@
                 <br>
                 <p class="my-2">{{ product.description }}</p>
             {% if product.is_hire_room == True %}
-                <div>
-                    <p>Book Session</p>
-                    <input id="date" class="mb-2" type="date">
+                <form action="{% url 'add_to_cart' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div>
+                        <p>Book Session</p>
+                        <input id="date-time" class="mb-2" type="date">
+                    </div>
+                    <div class="timeline">
+                        {% for time in sessions %}
+                            {% if time in booked_sessions %}
+                                <input class="radio" type="radio" name="time" variable="1" disabled><p class="timeline-button mb-0 d-inline"><strike> {{ time }}</strike></p>
+                            {% else %}
+                                <input class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0 d-inline"> {{ time }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
+                        <button type="submit" class="btn bg-dark-electric-blue rounded-0 text-white mb-3 mt-2">Add to Cart</button>
                 </div>
-                <div class="timeline">
-                    {% for time in sessions %}
-                        {% if time in booked_sessions %}
-                            <button class="timeline-button" disabled>{{ time }}</button>
-                        {% else %}
-                            <button class="timeline-button enabled-timeline-button">{{ time }}</button>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-                    <!--If there are hours selected, enable-->
-                        <button class="btn bg-dark-electric-blue rounded-0 text-white mb-3 mt-2 d-none">Add to Cart</button>
-                    <!--Else-->
-                        <button class="btn bg-dark-electric-blue rounded-0 text-white mb-3 mt-2" disabled>Add to Cart</button>
-                    <!--Endif-->
-            </div>
+            </form>
             {% else %}
                 <form action="{% url 'add_to_cart' product.id %}" method="POST">
                     {% csrf_token %}
@@ -82,4 +83,29 @@
         </div>
     </div>
 </div>
+<!-- <script>
+function setDate() {
+    var date = document.getElementById('date-time').value;
+    if (date != "") {
+        document.getElementById('tenam').innerHTML = date{{ time }};
+    }
+}
+onchange="setDate()"
+</script> -->
+<input type="hidden" id="refreshed" value="false">
+<script type="text/javascript">
+    $(window).load(function(){
+        if ($('#refreshed').val() == "false") {
+          $('#refreshed').val("true"); 
+        }
+        else {
+          $('#refreshed').val("false");
+          location.reload();
+        }
+      });
+</script>
+
+{% endblock %}
+
+{% block postloadjs %}
 {% endblock %}
