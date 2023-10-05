@@ -86,6 +86,7 @@
 {% endblock %}
 
 {% block postloadjs %}
+{{ block.super }}
     <script rel="text/javascript" src="{% static '/products/js/products.js' %}"></script>
     <script type="text/javascript">
         $(window).on('load', function(){

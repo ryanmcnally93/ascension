@@ -47,7 +47,6 @@ def alter_cart(request, product_id):
     if 'remove_all_of_item_product_info' in request.POST:
         if product_id in cart:
             cart.pop(product_id)
-            print('I AM SUCCESSFULLY RUNNING CORRECT CODE!')
             request.session['cart'] = cart
             return redirect('product_information', product_id=product_id)
         else: 
