@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 from django.http import HttpResponse
+from products.models import Product
 
 
 def view_cart(request):
@@ -7,15 +9,20 @@ def view_cart(request):
 
 
 def alter_cart(request, product_id):
-    # redirect_url = request.POST.get('redirect_url')
+    redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
-    quantity = int(request.POST.get('quantity'))
-    
-    #THIS IS WHERE THE PROBLEM IS
-    # date = ""
-    # if request.POST.get('date-time') == "":
-    #     print('YES')
-    #PROBLEM
+    quantity = int(request.POST.get('quantity'))  
+    date = ""
+
+    product = Product.objects.get(pk=product_id)
+
+    if 'date' in request.POST:
+        date = request.POST.get('date')
+        # NEEDS TO BE THE SELECTED TIME
+        time = request.POST.get('time')
+        print(date)
+        print(time)
+        # UPDATE BOOKED SESSIONS?
 
     if 'increase-quantity' in request.POST:
         cart[product_id] += 1
@@ -35,6 +42,7 @@ def alter_cart(request, product_id):
             cart[product_id] += quantity
         else:
             cart[product_id] = quantity
+            messages.success(request, f'Added {product.name} to your bag')
 
     if 'remove_all_of_item_product_info' in request.POST:
         if product_id in cart:
@@ -57,4 +65,5 @@ def alter_cart(request, product_id):
 
     request.session['cart'] = cart
     print(request.session['cart'])
-    return HttpResponse('<script>history.back();</script>')
+    return redirect(redirect_url)
+    # HttpResponse('<script>history.back();</script>')

@@ -40,22 +40,22 @@
                     {% csrf_token %}
                     <div>
                         <p>Book Session</p>
-                        <input id="date-time" class="mb-2" type="date">
+                        <input name="date" id="date" class="mb-2" type="date">
                     </div>
                     <div class="timeline">
                         {% for time in sessions %}
                             {% if time in booked_sessions %}
-                                <input class="radio" type="radio" name="time" variable="1" disabled><p class="timeline-button mb-0 d-inline"><strike> {{ time }}</strike></p>
+                                <input class="radio" type="radio" name="time" variable="1" disabled><p class="timeline-button mb-0"><strike> {{ time }}</strike></p>
                             {% else %}
-                                <input class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0 d-inline"> {{ time }}</p>
+                                <input class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p>
                             {% endif %}
                         {% endfor %}
+                        <p id="no-radios">Please choose a date.</p>
                     </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
-                        <button type="submit" class="btn bg-dark-electric-blue rounded-0 text-white mb-3 mt-2">Add to Cart</button>
-                </div>
-            </form>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
+                    <button type="submit" class="btn bg-dark-electric-blue rounded-0 text-white mb-3 mt-2">Add to Cart</button>
+                </form>
             {% else %}
                 <form action="{% url 'alter_cart' product.id %}" method="POST">
                     {% csrf_token %}
@@ -87,29 +87,55 @@
         </div>
     </div>
 </div>
-<!-- <script>
-function setDate() {
-    var date = document.getElementById('date-time').value;
-    if (date != "") {
-        document.getElementById('tenam').innerHTML = date{{ time }};
-    }
-}
-onchange="setDate()"
-</script> -->
 <input type="hidden" id="refreshed" value="false">
 <script type="text/javascript">
-    $(window).load(function(){
+    $(window).on('load', function(){
         if ($('#refreshed').val() == "false") {
-          $('#refreshed').val("true"); 
+        $('#refreshed').val("true"); 
         }
         else {
-          $('#refreshed').val("false");
-          location.reload();
+        $('#refreshed').val("false");
+        location.reload(true);
         }
-      });
+    });
 </script>
 
 {% endblock %}
 
 {% block postloadjs %}
+<!-- Written by me! -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        radioUpdate();
+    });
+    document.addEventListener("change", function () {
+        radioUpdate();
+    });
+    function radioUpdate() {
+        if (document.getElementById('date').value == "") {
+            let times = document.getElementsByClassName('radio')
+            for (i = 0; i < times.length; i++) {
+                times[i].style.display = 'none';
+            }
+            let para = document.getElementsByClassName('timeline-button')
+            for (i = 0; i < para.length; i++) {
+                para[i].style.display = 'none';
+            }
+            let noRadios = document.getElementById('no-radios')
+            noRadios.style.display = 'block';
+        } else if (document.getElementById('date').value != "") {
+            let times = document.getElementsByClassName('radio')
+            for (i = 0; i < times.length; i++) {
+                times[i].style.display = 'inline';
+            }
+            let para = document.getElementsByClassName('timeline-button')
+            for (i = 0; i < para.length; i++) {
+                para[i].style.display = 'inline';
+            }
+            let noRadios = document.getElementById('no-radios')
+            noRadios.style.display = 'none';
+        }
+    }
+</script>
+
 {% endblock %}

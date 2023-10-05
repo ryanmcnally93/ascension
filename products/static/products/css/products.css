@@ -22,6 +22,10 @@
     color: #033A54;
 }
 
+#no-radios {
+    display: none;
+}
+
 .products-add {
     display: flex;
     width: 100%;
@@ -112,6 +116,7 @@ input[type=number] {
 
 .timeline-button {
     margin: 0 5px 0 0;
+    display: inline;
 }
 
 .radio {
