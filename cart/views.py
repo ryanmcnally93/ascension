@@ -26,20 +26,23 @@ def alter_cart(request, product_id):
 
     if 'increase-quantity' in request.POST:
         cart[product_id] += 1
+        messages.success(request, f'X {cart[product_id]}')
 
     if 'decrease-quantity' in request.POST:
         if product_id in cart:
             if cart[product_id] == 1:
                 cart.pop(product_id)
+                messages.success(request, 'Successfully removed item from bag')
             else:
                 cart[product_id] -= 1
+                messages.success(request, f'X {cart[product_id]}')
         else:
-            # This is an issue! Reload issue causing this.
-            print('This item isnt in the cart!')
+            messages.error(request, 'This item isnt in the cart!')
 
     if 'add-quantity' in request.POST:
         if product_id in list(cart.keys()):
             cart[product_id] += quantity
+            messages.success(request, f'X {cart[product_id]}')
         else:
             cart[product_id] = quantity
             messages.success(request, f'Added {product.name} to your bag')
@@ -48,19 +51,19 @@ def alter_cart(request, product_id):
         if product_id in cart:
             cart.pop(product_id)
             request.session['cart'] = cart
+            messages.success(request, 'Successfully removed item from bag')
             return redirect('product_information', product_id=product_id)
         else: 
-            # This is an issue! Reload issue causing this.
-            print('This item isnt in the cart!')
+            messages.error(request, 'This item isnt in the cart!')
 
     if 'remove_all_of_item_cart' in request.POST:
         if product_id in cart:
             cart.pop(product_id)
             request.session['cart'] = cart
+            messages.success(request, 'Successfully removed item from bag')
             return redirect('view_cart')
-        else: 
-            # This is an issue! Reload issue causing this.
-            print('This item isnt in the cart!')
+        else:
+            messages.error(request, 'This item isnt in the cart!')
 
     request.session['cart'] = cart
     print(request.session['cart'])
