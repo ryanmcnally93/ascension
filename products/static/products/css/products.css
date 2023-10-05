@@ -95,6 +95,21 @@ input[type=number] {
     cursor: pointer;
 }
 
+#remove_all_of_item_product_info {
+    background-color: white;
+    color: red;
+    border: none;
+    margin: auto;
+    font-size: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 418px;
+}
+
+#remove_all_of_item_product_info:hover {
+    text-decoration: underline;
+}
+
 .timeline-button {
     margin: 0 5px 0 0;
 }

@@ -21,6 +21,21 @@
     margin: auto;
 }
 
+#remove_all_of_item_cart {
+    background-color: white;
+    color: red;
+    border: none;
+    margin: auto;
+    font-size: 10px;
+    position: absolute;
+    bottom: -15px;
+    left: 28px;
+}
+
+#remove_all_of_item_cart:hover {
+    text-decoration: underline;
+}
+
 .btn-sm {
     padding: 0.15rem 0.3rem !important;
 }

@@ -44,7 +44,7 @@
                     {% endif %}
                 </td>
                 <td>
-                    <form action="{% url 'add_to_cart' item.product.id %}" method="POST" class="products-add">
+                    <form action="{% url 'alter_cart' item.product.id %}" method="POST" class="products-add">
                         {% csrf_token %}
                         <div class="input-group">
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -57,6 +57,7 @@
                                     <i class="fas fa-plus"></i>
                                 </button>
                             </div>
+                            <button id="remove_all_of_item_cart" name="remove_all_of_item_cart">Remove all</button>
                         </div>
                     </form>
                 </td>

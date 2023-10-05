@@ -53,7 +53,7 @@
                         <p>{{ product.rating }}/5 ({{ product.amount_of_reviews }})</p>
                     </div>
                     <br>
-                    <form action="{% url 'add_to_cart' product.id %}" method="POST" class="products-add">
+                    <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add">
                         {% csrf_token %}
                         <div class="input-group">
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
