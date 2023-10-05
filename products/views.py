@@ -39,7 +39,7 @@ def products(request):
 
 def product_information(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
-
+            
     stringed_product_id = str(product.id)
 
     if stringed_product_id in request.session['cart']:
