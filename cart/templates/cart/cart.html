@@ -87,6 +87,10 @@
     {% endif %}
 
     <input type="hidden" id="refreshed" value="false">
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
     <script type="text/javascript">
         $(window).on('load', function(){
             if ($('#refreshed').val() == "false") {

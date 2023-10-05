@@ -45,6 +45,20 @@ html, body {
 
 .toast {
     opacity: 1;
+    border: 1px solid #282C2E;
+    border-top: 1px solid white;
+}
+
+.close {
+    opacity: 1;
+}
+
+.close:not(:disabled):not(.disabled):hover {
+    opacity: 1;
+}
+
+.close:hover {
+    text-decoration: underline;
 }
 
 /* END OF STICKY FOOTER */
