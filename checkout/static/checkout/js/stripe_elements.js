@@ -37,11 +37,6 @@ card.addEventListener('change', function (event) {
 // Handle form submit
 var form = document.getElementById('payment_form');
 
-// THIS EVENT LISTENER DOESN'T WORK AT THE MOMENT
-// ROUTES ME BACK TO HOMEPAGE
-// SAYS PAYMENT METHOD WAS NOT GIVEN
-// CONSOLE LOG WITHIN EVENT LISTENER DOESNT GET CHANCE TO RUN
-
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
