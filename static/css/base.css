@@ -61,7 +61,7 @@ html, body {
     text-decoration: underline;
 }
 
-.cart-notification-wrapper {
+.cart-notifications {
     max-height: 150px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -69,6 +69,27 @@ html, body {
 
 .fa-check {
     color: #28a745;
+    left: 0;
+    margin: 0 56% 0 0;
+    font-size: 18px;
+}
+
+.fa-xmark {
+    color: #dc3545;
+    left: 0;
+    margin: 0 56% 0 0;
+    font-size: 18px;
+}
+
+.fa-info {
+    color: #17a2b8;
+    left: 0;
+    margin: 0 56% 0 0;
+    font-size: 18px;
+}
+
+.fa-exclamation {
+    color: #ffc107;
     left: 0;
     margin: 0 56% 0 0;
     font-size: 18px;

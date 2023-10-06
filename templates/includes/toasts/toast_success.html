@@ -7,7 +7,7 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="toast-body bg-white">
+    <div class="p-3 bg-white">
         <div class="row">
             <div class="col">
                 {{ message }}
@@ -17,8 +17,8 @@
             </div>
         </div>
         {% if total %}
-            <p class="bg-white text-black py-1 mb-2"> {{ product_count }} Cart Products</p>
-            <div class="cart-notification-wrapper">
+            <p class="bg-white py-1 mb-2"> {{ product_count }} Cart Products</p>
+            <div class="cart-notifications">
                 {% for item in cart_products %}
                     <div class="row">
                         <div class="col-3 my-1">
