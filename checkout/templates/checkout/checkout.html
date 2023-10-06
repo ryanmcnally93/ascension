@@ -86,7 +86,7 @@
                 <!--Back to Cart and Submit Buttons-->
                 <div class="text-right mt-4 mb-3">
                     <a class="btn bg-dark rounded-0 text-white" href="{% url 'view_cart' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Cart <i class="ml-1 fas fa-shopping-cart"></i></p></a>
-                    <button id="submit-button"><a class="btn bg-dark-electric-blue rounded-0 text-white m-auto" href="{% url 'account_login' %}">Complete Order <i class="ml-1 fas fa-lock"></i></a></button>
+                    <button type="submit" id="submit-button"><a class="btn bg-dark-electric-blue rounded-0 text-white m-auto">Complete Order <i class="ml-1 fas fa-lock"></i></a></button>
                     <p class="small text-danger my-0 mt-1"><i class="small fas fa-exclamation-circle"></i>Your card will be charged <strong>£{{ total|floatformat:2 }}</strong></p>
                 </div>
             </form>
