@@ -8,6 +8,34 @@
     margin-right: 3.3%;
 }
 
-.product-image-box {
-    
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid #033A54;
+  border-radius: 0px;
+  background-color: white;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+    border: 1px solid #dc3545;
+}
+
+.StripeElement--complete {
+    border: 1px solid #28a745;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #BDEFCB !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
 }
