@@ -61,6 +61,19 @@ html, body {
     text-decoration: underline;
 }
 
+.cart-notification-wrapper {
+    max-height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.fa-check {
+    color: #28a745;
+    left: 0;
+    margin: 0 56% 0 0;
+    font-size: 18px;
+}
+
 /* Toast arrow */
 
 .arrow-up {
