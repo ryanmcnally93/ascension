@@ -26,6 +26,20 @@ html, body {
     clear: both;
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.stripe-style-input {
+    border-radius: 0;
+}
+
 /* Messages */
 
 .message-container {
@@ -59,6 +73,18 @@ html, body {
 
 .close:hover {
     text-decoration: underline;
+}
+
+a.bg-dark:hover {
+    background-color: white !important;
+    color: #282C2E !important;
+    border: 1px solid #282C2E;
+}
+
+a.bg-dark-electric-blue:hover, button.bg-dark-electric-blue:hover {
+    background-color: white !important;
+    color: #033A54 !important;
+    border: 1px solid #033A54;
 }
 
 .cart-notifications {

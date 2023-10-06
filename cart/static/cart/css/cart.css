@@ -49,18 +49,6 @@
     padding-left: 50px;
 }
 
-a.bg-dark:hover {
-    background-color: white !important;
-    color: #282C2E !important;
-    border: 1px solid #282C2E;
-}
-
-a.bg-dark-electric-blue:hover, button.bg-dark-electric-blue:hover {
-    background-color: white !important;
-    color: #033A54 !important;
-    border: 1px solid #033A54;
-}
-
 .grand-total {
     font-weight: 700;
 }
