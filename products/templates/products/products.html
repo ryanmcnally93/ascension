@@ -43,6 +43,9 @@
                             <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.image }}" alt="{{ product.name }}">
                         </div>
                     {% else %}
+                        <div class="product-image-box px-auto mx-auto">
+                            <img class="product-image my-1" src="{{ MEDIA_URL }}/nomedia.png" alt="{{ product.name }}">
+                        </div>
                     {% endif %}
                     <div class="product-title px-3">
                         {{ product.name }}

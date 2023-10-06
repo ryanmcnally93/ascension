@@ -20,21 +20,36 @@
             <hr class="white-hr">
 
             {% for item in cart_products %}
-                <p class="ml-3">{{ item.product.name }}</p>
-                <!-- if item.product.image
-                else
-                {{ media_url }}noimage.png
-                endif
-                name
-                hours
-                quantity
-                Subtotal
-                Total -->
+                <div class="d-inline-flex">
+                    {% if item.product.main_image %}
+                        <div class="col-3">
+                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}/{{ item.product.main_image }}" alt="{{ product.name }}">
+                        </div>
+                    {% elif item.product.image %}
+                        <div class="col-3">
+                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}/{{ item.product.image }}" alt="{{ product.name }}">
+                        </div>
+                    {% else %}
+                        <div class="col-3">
+                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}nomedia.png" alt="{{ product.name }}">
+                        </div>
+                    {% endif %}
+                    <span class="col-6">{{ item.product.name }}<br><p class="small text-muted">Qty: {{ item.quantity }}<br>Rating: {{ item.product.rating }}</p></span>
+                    <span class="col-3 mx-auto">£{{ item.item_subtotal|floatformat:2 }}<br><p class="small text-muted">£{{ item.product.price|floatformat:2 }} each</p></span>
+                </div>
             {% endfor %}
-
+            <div class="d-inline-flex w-100">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <strong><p>Total:</p></strong>
+                </div>
+                <div class="col-3">
+                    <strong><p>£{{ total|floatformat:2 }}</p></strong>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-muted ml-3">Contact Information</p>
+            <p class="ml-3">Contact Information</p>
             <hr class="white-hr">
             <p class="ml-3">Please fill out the form below to complete your order.</p>
             <p class="ml-3">Also note as we are only a small business that specializes in recording and rehearsals, that we do not offer delivery. You can collect your order from our shop on your next visit.</p>
