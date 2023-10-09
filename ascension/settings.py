@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'products',
     'record_studio',
     'rehearse',
-    'shop',
     'cart',
     'checkout',
     'crispy_forms',

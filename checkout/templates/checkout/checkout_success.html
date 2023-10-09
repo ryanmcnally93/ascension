@@ -2,16 +2,51 @@
 {% load static %}
 
 {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="container header-container">
-        <div class="row">
-            <hr class="white-hr" id="top-hr">
-                <div id="page-heading" class="col text-center">CHECKOUT SUCCESS</div>
-            <hr class="white-hr">
+    <div class="background-image">
+        <div class="container header-container">
+            <div class="row">
+                <hr class="white-hr" id="top-hr">
+                    <div id="page-heading" class="col text-center text-white">THANKS FOR YOUR ORDER!</div>
+                <hr class="white-hr">
+            </div>
+        </div>
+
+        <div id="about-box" class="container col-8 text-center pt-3">
+            <div class="row text-white ml-1 mr-1 justify-content-center flex-column">
+                <p class="mb-2 m-auto">Your order number is <strong>{{ order.order_number }}</strong>.</p>
+                <p class="mb-2">A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                <a id="successful-back-to" class="btn bg-dark rounded-0 text-white mb-3" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+            </div>
         </div>
     </div>
-<!-- NOT NULL constraint failed: checkout_orderlineitem.line_item_total -->
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <p class="mt-2">{{ date }}</p>
+            <p>Customer Details:</p>
+            <p class="mb-0">{{ order.full_name }}</p>
+            <p class="mb-0">{{ order.street_address1 }},</p>
+            {% if order.street_address2 %}
+                <p class="mb-0">{{ order.street_address2 }},</p>
+            {% endif %}
+            <p class="mb-0">{{ order.town_or_city }},</p>
+            <p>{{ order.postcode }},</p>
+            <p>Order:</p>
+            <div class="d-block">
+                {% for item in order.lineitems.all %}
+                    <p class="mb-0 d-inline">{{ item.product.name }} x {{ item.quantity }}</p><p class="mb-0 float-right d-inline">{{ item.line_item_total }}</p>
+                {% endfor %}
+            </div>
+            <div class="d-block mt-2">
+                <p class="d-inline"><strong>Total cost: </strong></p><p class="d-inline float-right"><strong>{{ order.total_cost }}</strong></p>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
    
 {% endblock %}
