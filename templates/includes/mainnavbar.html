@@ -40,11 +40,11 @@
                 Shop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="shop-link">
-                <a href="{% url 'shop_home' %}" class="dropdown-item">Shop Main</a>
                 <a href="{% url 'products' %}?category=guitar_strings" class="dropdown-item">Strings</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc&shop" class="dropdown-item">By Rating</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc&shop" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?shop" class="dropdown-item">All Shop Items</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -54,7 +54,6 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="offers-link">
                 <a href="{% url 'products' %}?sale" class="dropdown-item">Sale Items</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
     </ul>
