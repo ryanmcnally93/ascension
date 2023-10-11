@@ -1,4 +1,10 @@
 from django.http import HttpResponse
+
+from .models import Order, OrderLineItem
+from products.models import Product
+
+import json
+import time
 import stripe
 
 
@@ -30,31 +36,43 @@ class StripeWH_Handler:
                 billing_details.address[field] = None
 
         order_exists = False
-        try:
-            order = Order.objects.get(
-                full_name__iexact=billing_details.name,
-                email__iexact=billing_details.email,
-                phone_number__iexact=billing_details.phone,
-                postcode__iexact=billing_details.postal_code,
-                town_or_city__iexact=billing_details.city,
-                street_address1__iexact=billing_details.line1,
-                street_address2__iexact=billing_details.line2,
-                total__iexact=total,
-                )
-            order_exists = True
+        attempt = 1
+        while attempt <= 5:
+            try:
+                order = Order.objects.get(
+                    full_name__iexact=billing_details.name,
+                    email__iexact=billing_details.email,
+                    phone_number__iexact=billing_details.phone,
+                    postcode__iexact=billing_details.address.postal_code,
+                    town_or_city__iexact=billing_details.address.city,
+                    street_address1__iexact=billing_details.address.line1,
+                    street_address2__iexact=billing_details.address.line2,
+                    total_cost__iexact=total,
+                    original_cart=cart,
+                    stripe_pid=pid,
+                    )
+                order_exists = True
+                break
+            except Order.DoesNotExist:
+                attempt += 1
+                time.sleep(1)
+        if order_exists:
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
-        except Order.DoesNotExist:
+        else:
+            order = None
             try:
                 order = Order.objects.create(
                     full_name=billing_details.name,
                     email=billing_details.email,
                     phone_number=billing_details.phone,
-                    postcode=billing_details.postal_code,
-                    town_or_city=billing_details.city,
-                    street_address1=billing_details.line1,
-                    street_address2=billing_details.line2,
+                    postcode=billing_details.address.postal_code,
+                    town_or_city=billing_details.address.city,
+                    street_address1=billing_details.address.line1,
+                    street_address2=billing_details.address.line2,
+                    original_cart=cart,
+                    stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(cart).items():
                     product = Product.objects.get(id=item_id)
@@ -72,7 +90,7 @@ class StripeWH_Handler:
                     status=500)
 
         return HttpResponse(
-            content=f'Webhook received: {event["type"]}',
+            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
