@@ -31,7 +31,7 @@ def alter_cart(request, product_id):
         if product_id in cart:
             if cart[product_id] == 1:
                 cart.pop(product_id)
-                messages.success(request, 'Successfully removed item from bag')
+                messages.success(request, 'Successfully removed item from cart')
             else:
                 cart[product_id] -= 1
                 messages.success(request, f'Updated {product.name} quantity to {cart[product_id]}')
@@ -44,14 +44,14 @@ def alter_cart(request, product_id):
             messages.success(request, f'Updated {product.name} quantity to {cart[product_id]}')
         else:
             cart[product_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
+            messages.success(request, f'Added {product.name} to your cart')
 
     if 'remove_all_of_item_product_info' in request.POST:
         try:
             if product_id in cart:
                 cart.pop(product_id)
                 request.session['cart'] = cart
-                messages.success(request, 'Successfully removed item from bag')
+                messages.success(request, 'Successfully removed item from cart')
                 return redirect('product_information', product_id=product_id)
             else: 
                 messages.error(request, 'This item isnt in the cart!')
@@ -64,7 +64,7 @@ def alter_cart(request, product_id):
             if product_id in cart:
                 cart.pop(product_id)
                 request.session['cart'] = cart
-                messages.success(request, 'Successfully removed item from bag')
+                messages.success(request, 'Successfully removed item from cart')
                 return redirect('view_cart')
             else:
                 messages.error(request, 'This item isnt in the cart!')
@@ -75,4 +75,3 @@ def alter_cart(request, product_id):
     request.session['cart'] = cart
     print(request.session['cart'])
     return redirect(redirect_url)
-    # HttpResponse('<script>history.back();</script>')
