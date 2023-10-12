@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profiles.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container header-container">
+        <div class="row">
+            <hr class="white-hr" id="top-hr">
+                <div id="page-heading" class="col text-center">MY PROFILE</div>
+            <hr class="white-hr">
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+{% endblock %}
