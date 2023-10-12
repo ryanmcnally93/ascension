@@ -11,6 +11,18 @@ html, body {
     padding: 0;
 }
 
+#div_id_login, #div_id_password {
+    width: 50%;
+}
+
+#id_login, #id_password {
+    border-radius: 0;
+}
+
+label.requiredField {
+    display: none;
+}
+
 #wrap {
     min-height: 100%;
 }
