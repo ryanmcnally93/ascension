@@ -19,7 +19,11 @@
             <div class="row text-white ml-1 mr-1 justify-content-center flex-column">
                 <p class="mb-2 m-auto">Your order number is <strong>{{ order.order_number }}</strong>.</p>
                 <p class="mb-2">A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
-                <a id="successful-back-to" class="btn bg-dark rounded-0 text-white mb-3" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+                {% if from_profile %}
+                    <a id="successful-back-to" class="btn bg-dark rounded-0 text-white mb-3" href="{% url 'profile' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Profile</p></a>
+                {% else %}
+                    <a id="successful-back-to" class="btn bg-dark rounded-0 text-white mb-3" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+                {% endif %}
             </div>
         </div>
     </div>

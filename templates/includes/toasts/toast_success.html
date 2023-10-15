@@ -16,7 +16,7 @@
                 {% endif %}
             </div>
         </div>
-        {% if total %}
+        {% if total and not on_profile_page %}
             <p class="bg-white py-1 mb-2"> {{ product_count }} Cart Products</p>
             <div class="cart-notifications">
                 {% for item in cart_products %}
