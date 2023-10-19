@@ -24,6 +24,7 @@
                 {% elif product.image %}
                     <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.image }}" alt="{{ product.name }}">
                 {% else %}
+                    <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}/no-image.png" alt="{{ product.name }}">
                 {% endif %}
             </a>
             <div class="product-infopage-info px-3 col-6">

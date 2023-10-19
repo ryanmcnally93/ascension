@@ -73,8 +73,10 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
+            # If this code runs, the save-info input contains a bug!
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
+            return redirect('view_cart')
     else:
         cart = request.session.get('cart', {})
         if not cart:
@@ -92,23 +94,22 @@ def checkout(request):
 
         order_form = OrderForm()
 
-    if request.user.is_authenticated:
-        try:
-            profile = UserProfile.objects.get(user=request.user)
-            order_form = OrderForm(initial={
-                'full_name': profile.full_name,
-                'email': profile.user.email,
-                'phone_number': profile.default_phone_number,
-                'street_address1': profile.default_street_address1,
-                'street_address2': profile.default_street_address2,
-                'town_or_city': profile.default_town_or_city,
-                'postcode': profile.default_postcode,
-            })
-            print(profile.user.get_full_name())
-        except UserProfile.DoesNotExist:
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    'full_name': profile.full_name,
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'town_or_city': profile.default_town_or_city,
+                    'postcode': profile.default_postcode,
+                })
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
             order_form = OrderForm()
-    else:
-        order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
