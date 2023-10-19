@@ -1,0 +1,17 @@
+Thank you {{ order.full_name }}!
+
+This is a confirmation of your Ascension order, we have received payment and your details are as follows:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Order Total: £{{ order.total }}
+
+As mentioned on the checkout page we do not offer delivery as our shop is only a small part of what we do!
+
+Please show your order number to one of our members of staff on your next visit to obtain your purchases.
+
+Thanks again and please don't hesitate to contact us on {{ contact_email }} if there are any issues,
+
+Sincerely,
+
+ASCENSION
