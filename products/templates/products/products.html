@@ -81,7 +81,7 @@
                     {% endif %}
                 </a>
                 {% if request.user.is_superuser %}
-                    <small class="d-flex justify-content-center">
+                    <small class="d-flex justify-content-center products-small">
                         <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
                         <a class="delete-button ml-2" href="{% url 'delete_product' product_id=product.id %}">Delete</a>
                     </small>
