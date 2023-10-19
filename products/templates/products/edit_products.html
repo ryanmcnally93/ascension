@@ -16,7 +16,7 @@
 
     <form method="POST" action="{% url 'edit_product' %}">
         {% csrf_token %}
-        <select name="product-id" id="product-id">
+        <select name="product-id" id="product-id" class="ml-3 mb-3 mr-2">
             <option value="None">Pick an item</option>
             {% for item in products %}
                 <option value="{{ item.name }}">{{ item.name }}</option>
@@ -41,8 +41,9 @@
 {{ block.super }}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    if (document.getElementById('id_sku').value != "") {
+    if (document.getElementById('id_name').value != "") {
         document.getElementById('invisible-form').style.display = "block";
+        document.getElementById('product-id').value = document.getElementById('id_name').value
     } else {
         document.getElementById('invisible-form').style.display = "none";
     }

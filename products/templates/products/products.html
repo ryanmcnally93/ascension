@@ -53,7 +53,7 @@
                     <div class="product-info px-3">
                         <p class="mb-0 category">{{ product.category.friendly_name }}</p>
                         <h3>£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</h3>
-                        <p>{{ product.rating }}/5 ({{ product.amount_of_reviews }})</p>
+                        <p class="mb-0">{{ product.rating }}/5 ({{ product.amount_of_reviews }})</p>
                     </div>
                     <br>
                     <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add">
@@ -79,7 +79,13 @@
                         </div>
                     </form>
                     {% endif %}
-            </a>
+                </a>
+                {% if request.user.is_superuser %}
+                    <small class="d-flex justify-content-center">
+                        <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
+                        <a class="delete-button ml-2" href="{% url 'delete_product' product_id=product.id %}">Delete</a>
+                    </small>
+                {% endif %}
             </div>
         {% endfor %}
     </div>

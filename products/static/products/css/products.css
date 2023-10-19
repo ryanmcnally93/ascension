@@ -11,6 +11,18 @@
     max-height: 90%;
 }
 
+.edit-button {
+    color: blue;
+}
+
+.edit-button:hover, .delete-button:hover {
+    text-decoration: underline;
+}
+
+.delete-button {
+    color: red;
+}
+
 #select_container {
     height: 30px;
     padding-right: 30px;
@@ -150,10 +162,12 @@ a:hover {
     text-decoration: none;
 }
 
-.product-infopage-info {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+small {
+    width: 100%;
+    position: absolute;
+    bottom: 68px;
+    padding-right: 30px;
+    z-index: 999;
 }
 
 a.bg-dark:hover {
