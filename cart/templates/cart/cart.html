@@ -27,7 +27,13 @@
             <tr>
                 <td>
                     <div class="product-image-box px-auto mx-auto">
-                        <img class="product-image my-1" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ item.product.name }}">
+                        {% if item.product.main_image %}
+                            <img class="product-image m-auto my-1" src="{{ MEDIA_URL }}{{ item.product.main_image }}" alt="{{ item.product.name }}">
+                        {% elif item.product.image %}
+                            <img class="product-image m-auto my-1" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ item.product.name }}">
+                        {% else %}
+                            <img class="product-image m-auto my-1" src="{{ MEDIA_URL }}no-image.png" alt="{{ item.product.name }}">
+                        {% endif %}
                     </div>
                 </td>
                 <td>

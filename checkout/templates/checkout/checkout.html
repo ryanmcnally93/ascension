@@ -31,11 +31,11 @@
                         </div>
                     {% else %}
                         <div class="col-3">
-                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}nomedia.png" alt="{{ product.name }}">
+                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
                         </div>
                     {% endif %}
-                    <span class="col-6">{{ item.product.name }}<br><p class="small text-muted">Qty: {{ item.quantity }}<br>Rating: {{ item.product.rating }}</p></span>
-                    <span class="col-3 mx-auto">£{{ item.item_subtotal|floatformat:2 }}<br><p class="small text-muted">£{{ item.product.price|floatformat:2 }} each</p></span>
+                    <span class="col-6 my-auto">{{ item.product.name }}<br><p class="small text-muted">Qty: {{ item.quantity }}<br>Rating: {{ item.product.rating }}</p></span>
+                    <span class="col-3 my-auto">£{{ item.item_subtotal|floatformat:2 }}<br><p class="small text-muted">£{{ item.product.price|floatformat:2 }} each</p></span>
                 </div>
             {% endfor %}
             <div class="d-inline-flex w-100">
