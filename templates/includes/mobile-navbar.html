@@ -25,7 +25,8 @@
         <!-- Use jquery to make this slide down -->
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="#" class="dropdown-item">Manage Products</a>
+                <a href="{% url 'add_product' %}" class="dropdown-item">Add a Product</a>
+                <a href="{% url 'edit_product' %}" class="dropdown-item">Edit a Product</a>
             {% endif %}
             <a href="#" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>

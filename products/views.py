@@ -44,8 +44,11 @@ def product_information(request, product_id):
     product = get_object_or_404(Product, pk=product_id)       
     stringed_product_id = str(product.id)
 
-    if stringed_product_id in request.session['cart']:
-        item_quantity = request.session['cart'][stringed_product_id]
+    if 'cart' in request.session:
+        if stringed_product_id in request.session['cart']:
+            item_quantity = request.session['cart'][stringed_product_id]
+        else:
+            item_quantity = ""
     else:
         item_quantity = ""
 
@@ -77,6 +80,43 @@ def add_product(request):
     template = 'products/add_products.html'
     context = {
         'form': form,
+        'on_profile_page': True,
+    }
+
+    return render(request, template, context)
+
+
+def edit_product(request):
+    products = Product.objects.all()
+    product = None
+    form = ProductForm()
+
+    if 'product-id' in request.POST:
+        product_id = request.POST.get('product-id', False)
+        if product_id == "None":
+            messages.error(request, 'You need to select an item to edit.')
+            return redirect('edit_product')
+        else:
+            product = get_object_or_404(Product, name=product_id)
+            form = ProductForm(instance=product)
+
+    if request.method == "POST" and 'product-id' not in request.POST:
+        id_name = request.POST.get('name', False)
+        product = get_object_or_404(Product, name=id_name)
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('product_information', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+
+    template = 'products/edit_products.html'
+    context = {
+        'form': form,
+        'on_profile_page': True,
+        'product': product,
+        'products': products,
     }
 
     return render(request, template, context)
