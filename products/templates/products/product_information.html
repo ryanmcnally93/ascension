@@ -27,6 +27,10 @@
                     <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}/no-image.png" alt="{{ product.name }}">
                 {% endif %}
             </a>
+            <small id="product-information-small" class="d-flex justify-content-center">
+                <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
+                <a class="delete-button ml-2" href="{% url 'delete_product' product_id=product.id %}">Delete</a>
+            </small>
             <div class="product-infopage-info px-3 col-6">
                 {{ product.name }}
                 <br>

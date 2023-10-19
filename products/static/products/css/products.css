@@ -162,12 +162,18 @@ a:hover {
     text-decoration: none;
 }
 
-small {
+.products-small {
     width: 100%;
     position: absolute;
     bottom: 68px;
     padding-right: 30px;
     z-index: 999;
+}
+
+#product-information-small {
+    width: 50%;
+    position: absolute;
+    top: 268px;
 }
 
 a.bg-dark:hover {
