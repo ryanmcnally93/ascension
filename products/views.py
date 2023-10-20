@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Product
 from cart.contexts import cart_contents
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .forms import ProductForm
 
@@ -65,7 +66,12 @@ def product_information(request, product_id):
     return render(request, 'products/product_information.html', context)
     
 
+@login_required
 def add_product(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -86,7 +92,12 @@ def add_product(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_product(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     products = Product.objects.all()
     product = None
     form = ProductForm()
@@ -116,8 +127,6 @@ def edit_product(request):
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
 
-    
-
     template = 'products/edit_products.html'
     context = {
         'form': form,
@@ -129,7 +138,12 @@ def edit_product(request):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, product_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+        
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
