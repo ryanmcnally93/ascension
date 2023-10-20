@@ -1,15 +1,16 @@
 {% if widget.is_initial %}
-    <p>{{ widget.initial_text }}: </p>
     <a href="{{ widget.value.url }}">
-        <img src="{{ widget.value.url }}" width="86" height="96" alt="Product Image" class="rounded-0">
+        <img src="{{ widget.value.url }}" width="86" height="96" alt="Product Image" class="rounded-0 mb-2">
     </a>
         {% if not widget.required %}
             <input type="checkbox" name="{{ widget.checkbox_name }}" id="{{ widget.checkbox_id }}"{% if widget.attrs.disabled %} disabled{% endif %}>
-            <label for="{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }}</label>
+            <label class="pointer" for="{{ widget.checkbox_id }}">{{ widget.clear_checkbox_label }}</label>
         {% endif %}
     <br>
-    {{ widget.input_text }}:
+    {{ widget.input_text }}
+    <input type="button" id="loadFileXml" value="Change Image" class="main-button px-1" onclick="document.getElementById('{{ widget.name }}').click();">
+    <input type="{{ widget.type }}" class="hide-input-behind-custom-input" name="{{ widget.name }}" id="{{ widget.name }}">
+{% else %}
+    <input type="button" id="loadFileXml" value="Upload Image" class="main-button px-1" onclick="document.getElementById('{{ widget.name }}').click();">
+    <input type="{{ widget.type }}" class="hide-upload-input-behind-custom-input" name="{{ widget.name }}" id="{{ widget.name }}">
 {% endif %}
-<span>
-    Select Image: <input type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
-</span>

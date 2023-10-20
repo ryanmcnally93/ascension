@@ -307,3 +307,31 @@ hr {
         padding-top: 3px;
     }
 }
+
+.main-button {
+    padding-top: 11px;
+    font-size: 16px;
+    border: 2px solid #033A54;
+    color: white;
+}
+
+.main-button:hover {
+    text-decoration: none;
+    color: #033A54 !important;
+    background-color: white;
+    border: 2px solid #033A54;
+}
+
+.other-button {
+    padding-top: 11px;
+    font-size: 16px;
+    border: 2px solid #282C2E;
+    color: white;
+}
+
+.other-button:hover {
+    text-decoration: none;
+    color: #282C2E !important;
+    background-color: white;
+    border: 2px solid #282C2E;
+}
