@@ -1,3 +1,43 @@
 label.requiredField {
     display: block;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.hide-input-behind-custom-input {
+    position: absolute;
+    left: 36px;
+    z-index: -1;
+    height: 26px;
+}
+
+.hide-upload-input-behind-custom-input {
+    position: absolute;
+    left: 32px;
+    z-index: -1;
+    height: 26px;
+}
+
+#loadFileXml {
+    border-radius: 0;
+    border: 2px solid #033A54;
+}
+
+.main-button {
+    background-color: #033A54;
+    padding-top: 0;
+}
+
+.other-button {
+    background-color: #282C2E;
+    padding-top: 0;
+    height: 28px;
+    display: inline-block;
+}
+
+#invisible-toggler {
+    padding-top: 1.25px;
+    padding-bottom: 1.25px
+}

@@ -16,13 +16,13 @@
 
     <form method="POST" action="{% url 'edit_product' %}">
         {% csrf_token %}
-        <select name="product-id" id="product-id" class="ml-3 mb-3 mr-2">
+        <select name="product-id" id="product-id" class="ml-3 mb-3 mr-2 p-1 rounded-0">
             <option value="None">Pick an item</option>
             {% for item in products %}
                 <option value="{{ item.name }}">{{ item.name }}</option>
             {% endfor %}
         </select>
-        <button type="submit" id="invisible-toggler">Search</button>
+        <button type="submit" id="invisible-toggler" class="main-button px-1">Search</button>
     </form>
 
     <div class="row" id="invisible-form">
@@ -30,8 +30,8 @@
             <form method="POST" action="{% url 'edit_product' %}" enctype="multipart/form-data" class="mb-3">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <a href="{% url 'products' %}">Cancel</a>
-                <button type="submit">Edit Product</button>
+                <a href="{% url 'products' %}" class="other-button px-1">Cancel</a>
+                <button type="submit" class="main-button px-1">Edit Product</button>
             </form>
         </div>
     </div>
