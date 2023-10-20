@@ -16,13 +16,15 @@
 
     <form method="POST" action="{% url 'edit_product' %}">
         {% csrf_token %}
-        <select name="product-id" id="product-id" class="ml-3 mb-3 mr-2 p-1 rounded-0">
-            <option value="None">Pick an item</option>
-            {% for item in products %}
-                <option value="{{ item.name }}">{{ item.name }}</option>
-            {% endfor %}
-        </select>
-        <button type="submit" id="invisible-toggler" class="main-button px-1">Search</button>
+        <div class="col-6">
+            <select name="product-id" id="product-id" class="mb-3 p-1 rounded-0 col-10">
+                <option value="None">Pick an item</option>
+                {% for item in products %}
+                    <option value="{{ item.name }}">{{ item.name }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" id="invisible-toggler" class="main-button px-1">Search</button>
+        </div>
     </form>
 
     <div class="row" id="invisible-form">
@@ -41,12 +43,12 @@
 {{ block.super }}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    if (document.getElementById('id_name').value != "") {
-        document.getElementById('invisible-form').style.display = "block";
-        document.getElementById('product-id').value = document.getElementById('id_name').value
-    } else {
-        document.getElementById('invisible-form').style.display = "none";
-    }
-});
+        if (document.getElementById('id_name').value != "") {
+            document.getElementById('invisible-form').style.display = "block";
+            document.getElementById('product-id').value = document.getElementById('id_name').value
+        } else {
+            document.getElementById('invisible-form').style.display = "none";
+        }
+    });
 </script>
 {% endblock %}
