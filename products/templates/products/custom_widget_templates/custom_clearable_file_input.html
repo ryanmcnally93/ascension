@@ -8,9 +8,9 @@
         {% endif %}
     <br>
     {{ widget.input_text }}
-    <input type="button" id="loadFileXml" value="Change Image" class="main-button px-1" onclick="document.getElementById('{{ widget.name }}').click();">
+    <input type="button" id="loadFileXml" value="Change Image" class="bg-darkblue px-1" onclick="document.getElementById('{{ widget.name }}').click();">
     <input type="{{ widget.type }}" class="hide-input-behind-custom-input" name="{{ widget.name }}" id="{{ widget.name }}">
 {% else %}
-    <input type="button" id="loadFileXml" value="Upload Image" class="main-button px-1" onclick="document.getElementById('{{ widget.name }}').click();">
+    <input type="button" id="loadFileXml" value="Upload Image" class="bg-darkblue px-1" onclick="document.getElementById('{{ widget.name }}').click();">
     <input type="{{ widget.type }}" class="hide-upload-input-behind-custom-input" name="{{ widget.name }}" id="{{ widget.name }}">
 {% endif %}

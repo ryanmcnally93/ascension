@@ -3,8 +3,8 @@
     width: 100%;
     height: 700px;
     border-bottom: 1px solid white;
-    padding-top: 500px;
-}
+    padding-top: 35%;
+} 
 
 #ls-logo {
     height: 200px;
@@ -30,27 +30,18 @@
 .index-button-box {
     border: 2px solid white;
     width: 200px;
-    height: 70px;
-    background-color: #033A54;
     font-size: 32px;
 }
 
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
+@media (max-width: 767px) {
+    .index-button-box {
+        width: 100px !important;
+        font-size: 16px !important;
+        padding-top: 3px;
+    }
+}
 
 .index-message-box {
     background-color: rgb(3, 58, 84, 0.8);
     font-size: 20px;
-}
-
-.main-buttons {
-    border: 2px solid #033A54;
-}
-
-.main-buttons:hover {
-    text-decoration: none;
-    color: #033A54 !important;
-    background-color: white;
-    border: 2px solid #033A54;
 }

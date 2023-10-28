@@ -2,7 +2,7 @@
     height: 260px;
     align-items: center;
     display: flex;
-}
+} 
 
 .product-image {
     width: auto;
@@ -17,6 +17,10 @@
     color: #033A54;
 }
 
+.input-group {
+    width: 90%;
+}
+
 .fa-minus, .fa-plus {
     margin: auto;
 }
@@ -27,9 +31,7 @@
     border: none;
     margin: auto;
     font-size: 10px;
-    position: absolute;
     bottom: -15px;
-    left: 28px;
 }
 
 #remove_all_of_item_cart:hover {
@@ -62,13 +64,15 @@
 }
 
 .quantity-box {
-    width: 70%;
+    width: 80%;
     flex-direction: row;
     display: flex;
+    margin: auto;
 }
 
 .quantity-middle {
     width: 100%;
+    text-align: center;
 }
 
 .cart-price {
