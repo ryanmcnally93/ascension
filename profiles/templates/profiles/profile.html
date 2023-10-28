@@ -12,13 +12,33 @@
                 <div id="page-heading" class="col text-center">MY PROFILE</div>
             <hr class="white-hr">
         </div>
-    </div>
-    <div class="col-6">
-        <form action="{% url 'profile' %}" method="POST">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button type="submit">Submit</button>
-        </form>
+        <div class="row">
+            <div class="col-lg-6">
+                <form action="{% url 'profile' %}" method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="bg-darkblue p-1 px-2 mb-4" type="submit">Update Information</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <table class="w-100">
+                    <tr>
+                        <th class="col-4 p-0">Order Number</th>
+                        <th class="col-4 p-0">Order Cost</th>
+                        <th class="col-4 p-0">Order Date</th>
+                    </tr>
+                    {% for order in orders %}
+                    <tr>
+                        <td class="col-4 p-0"><a href="{% url 'order_history' order.order_number %}">{{ order.order_number|truncatechars:8 }}</a></td>
+                        <td class="col-4 p-0">£{{ order.total_cost }}</td>
+                        <td class="col-4 p-0">{{ order.date.date }}</td>
+                    </tr>
+                    {% for item in order.lineitems.all %}
+                    {% endfor %}
+                {% endfor %}
+                </table>
+            </div>
+        </div>
     </div>
 
 
