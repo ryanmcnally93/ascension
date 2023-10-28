@@ -88,6 +88,20 @@
                 {% endif %}
             </div>
         {% endfor %}
+        {% if request.user.is_superuser %}
+            <div class="col-sm-6 col-lg-4 col-xl-3 product">
+                <a href="{% url 'add_product' %}" class="card my-2 rounded-0">
+                    <div class="product-image-box px-auto mx-auto">
+                        <div id="add-product" class="product-image my-1 pb-4" alt="Add a product">
+                            <i id="add-product-plus" class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="product-title px-3 w-100 justify-content-center d-flex">
+                        Add a product
+                    </div>
+                </a>
+            </div>
+        {% endif %}
     </div>
 </div>
 <input type="hidden" id="refreshed" value="false">

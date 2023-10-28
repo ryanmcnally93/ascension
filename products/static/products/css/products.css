@@ -23,6 +23,29 @@
     color: red;
 }
 
+#add-product {
+    border-radius: 50%;
+    width: 150px;
+    background-color: #033A54;
+    height: 150px;
+    padding: 47px;
+    border: 1px solid #033A54;
+    color: white;
+}
+
+#add-product:hover {
+    color: #033A54;
+    background-color: white;
+}
+
+.product-title.d-flex {
+    font-size: 32px;
+}
+
+#add-product-plus {
+    font-size: 56px;
+}
+
 #select_container {
     height: 30px;
     padding-right: 30px;
@@ -154,7 +177,7 @@ input[type=number] {
 }
 
 .product-title:hover {
-    color: blue;
+    color: #033A54;
     text-decoration: underline;
 }
 
