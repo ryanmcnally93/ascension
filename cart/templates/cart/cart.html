@@ -57,7 +57,7 @@
                                 <button class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <input class="quantity-middle pl-2" value="{% find_quantity cart_products item.product.id %}" type="number" min="1" max="99" name="quantity" data-product_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <input class="quantity-middle" value="{% find_quantity cart_products item.product.id %}" type="number" min="1" max="99" name="quantity" data-product_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                 <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -83,8 +83,8 @@
         </table>
         <div class="col-10 fifty-mb">
             <div class="d-inline float-right cart-buttons mt-3 mb-3">
-                <a class="btn bg-dark rounded-0 text-white" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
-                <a class="btn bg-dark-electric-blue rounded-0 text-white" href="{% url 'checkout' %}"><p class="d-inline">Secure Payment</p></a>
+                <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+                <a class="btn bg-darkblue rounded-0 p-1 px-2" href="{% url 'checkout' %}"><p class="d-inline">Secure Payment</p></a>
             </div>
         </div>
     {% else %}

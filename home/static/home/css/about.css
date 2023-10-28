@@ -4,19 +4,7 @@
     height: 700px;
     border-bottom: 1px solid white;
     background-size: 100%;
-}
-
-.white-hr {
-    color: white !important;
-    border-top: 1px solid rgb(255,255,255,0.1) !important;
-}
-
-#about-box {
-    margin-top: 120px;
-    background-color: rgb(3, 58, 84, 0.8);
-    border: none;
-    border-radius: 0;
-}
+} 
 
 #location {
     height: 350px;

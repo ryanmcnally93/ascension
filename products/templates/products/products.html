@@ -61,12 +61,12 @@
                         <div class="input-group">
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% if cart_products|is_item_id_in_list:product.id %}
-                            <div class="quantity-box mb-3"> 
-                                <button class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
+                            <div id="products-quantity" class="quantity-box mb-3"> 
+                                <button id="products-prepend" class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <input class="quantity-middle pl-2 qty_input" value="{% find_quantity cart_products product.id %}" type="number" min="1" max="99" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                                <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
+                                <input class="quantity-middle qty_input" value="{% find_quantity cart_products product.id %}" type="number" min="1" max="99" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <button id="products-append" class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
                                     <i class="fas fa-plus"></i>
                                 </button>
                             </div>
@@ -75,7 +75,7 @@
                             {% else %}
                             <br>
                             <input value="1" class="products-add-button d-none" type="number" min="1" max="99" name="quantity">
-                            <button name="add-quantity" type="submit" class="btn bg-dark-electric-blue rounded-0 text-white mb-3 mt-2 add">Add<p id="to-cart"> to cart</p></button>
+                            <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 mb-3 mt-2 add">Add<p id="to-cart"> to cart</p></button>
                         </div>
                     </form>
                     {% endif %}
@@ -100,7 +100,7 @@
                                   <p>Are you sure you want to delete this product?</p><p>This action cannot be undone.</p>
                                 </div>
                                 <div class="modal-footer">
-                                  <button type="button" class="btn bg-dark rounded-0 text-white" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn bg-black rounded-0" data-dismiss="modal">Close</button>
                                   <a class="delete-inmodal-button ml-2" href="{% url 'delete_product' product_id=product.id %}">Delete</a>
                                 </div>
                               </div>

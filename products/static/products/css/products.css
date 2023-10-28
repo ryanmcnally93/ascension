@@ -9,7 +9,7 @@
     height: auto;
     max-width: 100%;
     max-height: 90%;
-}
+} 
 
 .edit-button {
     color: blue;
@@ -59,7 +59,7 @@
 
 .input-group-prepend, .input-group-append {
     border: 1px solid #033A54;
-    padding: 11px;
+    padding: 9.5px;
     color: #033A54;
 }
 
@@ -112,11 +112,23 @@
     display: flex;
     margin: auto;
     margin-left: 5px;
+    height: 34px;
+}
+
+#products-quantity {
+    height: 38px !important;
+}
+
+#products-append,
+#products-prepend,
+#products-append:hover,
+#products-prepend:hover {
+    padding: 11px !important;
 }
 
 .quantity-middle {
     width: 100%;
-    padding-left: 5px;
+    text-align: center;
 }
 
 /* Remove Arrows on Input box */
@@ -134,7 +146,7 @@ input[type=number] {
 
 .input-group-prepend:hover, .input-group-append:hover {
     border: 1px solid white;
-    padding: 11px;
+    padding: 9.5px;
     background-color: #033A54;
     color: white;
     cursor: pointer;
@@ -204,12 +216,6 @@ a:hover {
     top: 268px;
 }
 
-a.bg-dark:hover, button.bg-dark:hover {
-    background-color: white !important;
-    color: #282C2E !important;
-    border: 1px solid #282C2E;
-}
-
 .delete-inmodal-button {
     background-color: #033A54 !important;
     color: white !important;
@@ -224,19 +230,9 @@ a.bg-dark:hover, button.bg-dark:hover {
     border: 1px solid red;
 }
 
-a.bg-dark-electric-blue:hover, button.bg-dark-electric-blue:hover {
-    background-color: white !important;
-    color: #033A54 !important;
-    border: 1px solid #033A54;
-}
-
 #no-hover-button {
     background-color: #033A54 !important;
     color: white !important;
-    border: 1px solid white;
-}
-
-a.bg-dark-electric-blue, a.bg-dark {
     border: 1px solid white;
 }
 

@@ -11,7 +11,7 @@ label.requiredField {
     left: 36px;
     z-index: -1;
     height: 26px;
-}
+} 
 
 .hide-upload-input-behind-custom-input {
     position: absolute;
@@ -25,23 +25,12 @@ label.requiredField {
     border: 2px solid #033A54;
 }
 
-.main-button {
-    background-color: #033A54;
-    padding-top: 0;
-}
-
-.other-button {
-    background-color: #282C2E;
-    padding-top: 0;
-    height: 28px;
-    display: inline-block;
+#loadFileXml:hover {
+    border: 2px solid #033A54 !important;
 }
 
 #invisible-toggler {
-    padding-top: 1.25px;
-    padding-bottom: 1.25px;
     float: right;
-    margin-top: 2px;
 }
 
 select {
