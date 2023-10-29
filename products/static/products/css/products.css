@@ -16,6 +16,12 @@
     border: 1px solid #033A54;
 }
 
+.redirect {
+    position: absolute;
+    top: -600px;
+    z-index: -1;
+}
+
 .studios-hr {
     border-top: 1px solid rgb(255, 215, 0, .9);
 }

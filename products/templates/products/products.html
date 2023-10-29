@@ -92,7 +92,7 @@
                     <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add">
                         {% csrf_token %}
                         <div class="input-group">
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <input type="text" class="redirect" id="{{ product.id }}redirect" name="redirect_url" value="{{ request.path }}#{{ product.id }}redirect">
                             {% if cart_products|is_item_id_in_list:product.id %}
                             <div id="products-quantity" class="quantity-box mb-3"> 
                                 <button id="products-prepend" class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
@@ -174,7 +174,7 @@
             }
             else {
             $('#refreshed').val("false");
-            location.reload(true);
+            location.reload();
             }
         });
         $('#myModal').on('shown.bs.modal', function () {
