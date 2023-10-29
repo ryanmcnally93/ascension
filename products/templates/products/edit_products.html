@@ -12,31 +12,36 @@
                 <div id="page-heading" class="col text-center">EDIT A PRODUCT</div>
             <hr>
         </div>
-    </div>
-
-    <form method="POST" action="{% url 'edit_product' %}">
-        {% csrf_token %}
-        <div class="col-6">
-            <select name="product-id" id="product-id" class="mb-3 p-1 rounded-0 col-10">
-                <option value="None">Pick an item</option>
-                {% for item in products %}
-                    <option value="{{ item.name }}">{{ item.name }}</option>
-                {% endfor %}
-            </select>
-            <button type="submit" id="invisible-toggler" class="bg-darkblue p-1 px-2">Search</button>
-        </div>
-    </form>
-
-    <div class="row" id="invisible-form">
-        <div class="col-6">
-            <form method="POST" action="{% url 'edit_product' %}" enctype="multipart/form-data" class="mb-3">
+        <div class="row">
+            <form method="POST" action="{% url 'edit_product' %}" class="w-100">
                 {% csrf_token %}
-                {{ form | crispy }}
-                <a href="{% url 'products' %}" class="bg-black p-1 px-2">Cancel</a>
-                <button type="submit" class="bg-darkblue p-1 px-2">Edit Product</button>
+                <div class="col-6">
+                    <select name="product-id" id="product-id" class="mb-3 p-1 rounded-0 col-10">
+                        <option value="None">Pick an item</option>
+                        {% for item in products %}
+                            <option value="{{ item.name }}">{{ item.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" id="invisible-toggler" class="bg-darkblue p-1 px-2">Search</button>
+                </div>
             </form>
         </div>
+        <div class="row" id="invisible-form">
+            <div class="col-lg-6">
+                <form method="POST" action="{% url 'edit_product' %}" enctype="multipart/form-data" class="mb-3">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <a href="{% url 'products' %}" class="bg-black p-1 px-2">Cancel</a>
+                    <button type="submit" class="bg-darkblue p-1 px-2">Edit Product</button>
+                </form>
+            </div>
+            <div class="col-lg-6 mb-4" id="manage-products-image-box">
+                <img id="manage-image-one" src="{{ MEDIA_URL }}/add-product-one.webp" class="w-100 mb-2" alt="Headphones on a microphone">
+                <img id="manage-image-two" src="{{ MEDIA_URL }}/add-product-two.webp" class="w-100 mt-2" alt="Headphones on a microphone">
+            </div>
+        </div>
     </div>
+
 {% endblock %}
 
 {% block postloadjs %}
@@ -44,7 +49,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         if (document.getElementById('id_name').value != "") {
-            document.getElementById('invisible-form').style.display = "block";
+            document.getElementById('invisible-form').style.display = "flex";
             document.getElementById('product-id').value = document.getElementById('id_name').value
         } else {
             document.getElementById('invisible-form').style.display = "none";

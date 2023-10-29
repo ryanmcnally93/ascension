@@ -89,7 +89,7 @@
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
-                    <button type="submit" class="btn bg-darkblue rounded-0 mb-3 mt-2">Add to Cart</button>
+                    <button type="submit" class="btn bg-darkblue rounded-0 mb-5 mt-2">Add to Cart</button>
                 </form>
             {% else %}
                 <form action="{% url 'alter_cart' product.id %}" method="POST">
@@ -97,8 +97,8 @@
                     <div class="mt-1 mb-3 float-right pr-3 d-flex">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% if stringed_product_id in request.session.cart.keys %}
-                        <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
-                        <div class="quantity-box-information">
+                        <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2 mb-4" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+                        <div class="quantity-box-information mb-4">
                             <button class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
                                 <i class="fas fa-minus"></i>
                             </button>
@@ -112,8 +112,8 @@
                 </form>
                         {% else %}
                         <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
-                        <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
-                        <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 ml-1 p-1 px-2">Add<p id="to-cart"> to cart</p></button>
+                        <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2 mb-4" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+                        <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 ml-1 p-1 px-2 mb-4">Add<p id="to-cart"> to cart</p></button>
                     </div>
                 </form>
                 {% endif %}
