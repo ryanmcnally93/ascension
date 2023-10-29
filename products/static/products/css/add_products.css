@@ -13,6 +13,14 @@ label.requiredField {
     height: 26px;
 } 
 
+#manage-products-image-box {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .hide-upload-input-behind-custom-input {
     position: absolute;
     left: 32px;

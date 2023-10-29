@@ -12,16 +12,19 @@
                 <div id="page-heading" class="col text-center">ADD A PRODUCT</div>
             <hr>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-6">
-            <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data" class="mb-3">
-                {% csrf_token %}
-                {{ form | crispy }}
-                <a class="bg-black p-1 px-2" href="{% url 'products' %}">Cancel</a>
-                <button class="bg-darkblue p-1 px-2" type="submit">Add Product</button>
-            </form>
+        <div class="row">
+            <div class="col-lg-6">
+                <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data" class="mb-3">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <a class="bg-black p-1 px-2" href="{% url 'products' %}">Cancel</a>
+                    <button class="bg-darkblue p-1 px-2" type="submit">Add Product</button>
+                </form>
+            </div>
+            <div class="col-lg-6 mb-4" id="manage-products-image-box">
+                <img id="manage-image-one" src="{{ MEDIA_URL }}/add-product-one.webp" class="w-100 mb-2" alt="Headphones on a microphone">
+                <img id="manage-image-two" src="{{ MEDIA_URL }}/add-product-two.webp" class="w-100 mt-2" alt="Headphones on a microphone">
+            </div>
         </div>
     </div>
 {% endblock %}
