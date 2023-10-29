@@ -4,6 +4,30 @@
     display: flex;
 }
 
+.studios {
+    border: 2px solid gold;
+}
+
+.rehearsals {
+    border: 2px solid lightblue;
+}
+
+.normal {
+    border: 1px solid #033A54;
+}
+
+.studios-hr {
+    border-top: 1px solid rgb(255, 215, 0, .9);
+}
+
+.rehearsals-hr {
+    border-top: 1px solid rgb(173, 216, 230, .9);
+}
+
+.normal-hr {
+    border-top: 1px solid rgb(3, 58, 84, .3);
+}
+
 .product-image {
     width: auto;
     height: auto;
@@ -129,6 +153,7 @@
 .quantity-middle {
     width: 100%;
     text-align: center;
+    border: 1px solid #033A54;
 }
 
 /* Remove Arrows on Input box */

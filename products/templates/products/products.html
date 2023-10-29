@@ -8,10 +8,32 @@
 
 {% block page_header %}
     <div class="container header-container">
-        <div class="row">
-            <hr id="top-hr">
-                <div id="page-heading" class="col text-center">PRODUCTS</div>
-            <hr>
+        <div class="row" id="top-row">
+            {% if category == 'STUDIOS' %}
+                <hr class="studios-hr">
+                {% if category != None %}
+                    <div id="page-heading" class="col text-center">{{ category }}</div>
+                {% else %}
+                    <div id="page-heading" class="col text-center">PRODUCTS</div>
+                {% endif %}
+                <hr class="studios-hr">
+            {% elif category == 'REHEARSAL ROOMS' %}
+                <hr id="top-hr" class="rehearsals-hr">
+                {% if category != None %}
+                    <div id="page-heading" class="col text-center">{{ category }}</div>
+                {% else %}
+                    <div id="page-heading" class="col text-center">PRODUCTS</div>
+                {% endif %}
+                <hr class="rehearsals-hr">
+            {% else %}
+                <hr id="top-hr" class="normal-hr">
+                {% if category != None %}
+                    <div id="page-heading" class="col text-center">{{ category }}</div>
+                {% else %}
+                    <div id="page-heading" class="col text-center">PRODUCTS</div>
+                {% endif %}
+                <hr class="normal-hr">
+            {% endif %}
         </div>
     </div>
 {% endblock %}
@@ -30,10 +52,21 @@
     </div>
 </div>
 <div class="container">
-    <div class="row">
+    <div class="row mb-5">
         {% for product in products %}
-            <div class="col-sm-6 col-lg-4 col-xl-3 product">
-                <a href="{% url 'product_information' product_id=product.pk %}" class="card my-2 rounded-0">
+            <!-- This result will always produce three items, so on XL screens we need to make sure they are still centered-->
+            {% if category != None and not request.user.is_superuser %}
+                <div class="col-sm-6 col-lg-4 product">
+            {% else %}
+                <div class="col-sm-6 col-lg-4 col-xl-3 product">
+            {% endif %}
+                {% if category == 'STUDIOS' %}
+                    <a href="{% url 'product_information' product_id=product.pk %}" class="card studios my-2 rounded-0">
+                {% elif category == 'REHEARSAL ROOMS' %}
+                    <a href="{% url 'product_information' product_id=product.pk %}" class="card rehearsals my-2 rounded-0">
+                {% else %}
+                    <a href="{% url 'product_information' product_id=product.pk %}" class="card normal my-2 rounded-0">
+                {% endif %}
                     {% if product.main_image %}
                         <div class="product-image-box px-auto mx-auto">
                             <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.main_image }}" alt="{{ product.name }}">

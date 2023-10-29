@@ -7,8 +7,8 @@
 
 {% block page_header %}
     <div class="container header-container">
-        <div class="row">
-            <hr id="top-hr">
+        <div class="row" id="top-row">
+            <hr>
                 <div id="page-heading" class="col text-center">PRODUCT INFO</div>
             <hr>
         </div>
@@ -63,10 +63,18 @@
                 <br>
                 <p class="my-2">{{ product.description }}</p>
             {% if product.is_hire_room == True %}
+                {% if product.id == 27 %}
+                    <a class="bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-1">Equipment Provided</a>
+                {% elif product.id == 28 %}
+                    <a class="bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-2">Equipment Provided</a>
+                {% elif product.id == 29 %}
+                    <a class="bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-3">Equipment Provided</a>
+                {% else %}
+                {% endif %}
                 <form action="{% url 'alter_cart' product.id %}" method="POST">
                     {% csrf_token %}
                     <div>
-                        <p>Book Session</p>
+                        <p class="mb-1 mt-3">Book Session</p>
                         <input name="date" id="date" class="mb-2" type="date">
                     </div>
                     <div class="timeline">

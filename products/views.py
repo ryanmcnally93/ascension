@@ -12,11 +12,13 @@ def products(request):
     categories = None
     sort = None
     direction = None
+    category = None
 
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
+            category = request.GET['category'].upper().replace('_', ' ')
 
         if 'sort' in request.GET:
             sort = request.GET['sort']
@@ -37,6 +39,7 @@ def products(request):
     context = {
         'products': products,
         'current_sort': current_sort,
+        'category': category,
     }
     return render(request, 'products/products.html', context)
 
