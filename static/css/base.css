@@ -323,8 +323,8 @@ body {
     font-size: 32px;
 }
 
-#top-hr {
-    margin-top: 140px;
+#top-row {
+    padding-top: 135px;
 }
 
 hr {
@@ -334,7 +334,11 @@ hr {
 
 .white-hr {
     color: white !important;
-    border-top: 1px solid rgb(255,255,255,0.1) !important;
+    border-top: 1px solid rgb(255,255,255,0.7) !important;
+}
+
+.white-heading {
+    background-color: rgb(0, 0, 0, 0.3);
 }
 
 .fa-bars {

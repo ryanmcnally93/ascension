@@ -73,6 +73,7 @@
 .quantity-middle {
     width: 100%;
     text-align: center;
+    border: 1px solid #033A54;
 }
 
 .cart-price {

@@ -8,14 +8,14 @@
 {% block content %}
     <div class="background-image">
         <div class="container header-container">
-            <div class="row">
-                <hr class="white-hr" id="top-hr">
-                    <div id="page-heading" class="col text-center text-white">REHEARSE</div>
+            <div class="row" id="top-row">
+                <hr class="white-hr">
+                    <div id="page-heading" class="col text-center text-white white-heading">REHEARSE</div>
                 <hr class="white-hr">
             </div>
         </div>
         <div id="about-box" class="container col-8 text-center pt-3">
-            <div class="row text-white ml-1 mr-1">
+            <div class="row text-white ml-1 mr-1" id="r-r-1">
                 <p>As music lovers ourselves, we understand the constant battle with finding the right place to practice and travel to, our rooms have all the equipment you'll ever need, regardless of your number of band members!</p>
                 <p>Our booking system ensures we are never double booked and email confirmations are sent straight away.</p>
             </div>
@@ -24,22 +24,70 @@
     <div class="container header-container">
         <div class="row">
             <hr>
-                <div id="page-heading" class="col text-center">BOOK TODAY</div>
+                <div id="page-heading" class="col text-center">DIFFERENT TYPES OF ROOMS</div>
             <hr>
         </div>
     </div>
     <div class="container">
-        <div class="row">
-            <p>Get familiar with our easy-to-use booking system that allows users to book themselves in for an hour of rehearsal for up to two weeks in advance.</p>
-            <img src="#" alt="Our booking system in use">
+        <div class="row mb-2" id="r-r-2">
+            <div class="col-lg-6 m-auto">
+                <p>Rehearsal Room 1</p>
+                <p>Great for vocal or acoustic rehearsals</p>
+                <p>Equipment provided:</p>
+                <ul class="mb-0">
+                    <li>2 x Stagg XLR Cables</li>
+                    <li>2 x Boom Microphone Stands</li>
+                    <li>2 x Pioneer XPRS122 Speakers</li>
+                    <li>Alto Live 1202 12 channel Mixer</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 justify-content-center align-items-center d-flex">
+                <img src="{{ MEDIA_URL }}/rehearsal-1.webp" alt="Rehearsal Room 1" class="rehearsal-image">
+            </div>
         </div>
-    </div>
-    <div class="row justify-content-center mt-3">
-        <div class="col-4 text-center h-100">
-            <div class="rehearse-button-box mx-auto mb-3">
-                <a href="{% url 'products' %}?category=rehearsal_rooms" class="h-100 w-100 d-block bg-darkblue">
-                    <p class="mb-2 pt-2">Rehearsal Rooms</p>
-                </a>
+        <div class="row mb-2">
+            <div class="col-lg-6 m-auto">
+                <p>Rehearsal Room 2</p>
+                <p>Perfect for small bands!</p>
+                <p>Equipment provided:</p>
+                <ul class="mb-0">
+                    <li>2 x Stagg Guitar Jack Cables</li>
+                    <li>2 x Stagg XLR Cables</li>
+                    <li>2 x Boom Microphone Stands</li>
+                    <li>2 x Pioneer XPRS122 Speakers</li>
+                    <li>Marshall 1960A 4x12 300w Guitar Cab Amplifier</li>
+                    <li>Marshall MG100HFX 120w Guitar Head Amplifier</li>
+                    <li>Alto Live 1202 12 channel Mixer</li>
+                    <li>Mapex 5 piece Drum Kit + hardware + stool + foot pedal</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 justify-content-center align-items-center d-flex">
+                <img src="{{ MEDIA_URL }}/rehearsal-2-main.webp" alt="Rehearsal Room 2" class="rehearsal-image">
+            </div>
+        </div>
+        <div class="row mb-4" id="r-r-3">
+            <div class="col-lg-6 m-auto">
+                <p>Rehearsal Room 3</p>
+                <p>Vocal Rehearsals</p>
+                <p>Equipment provided:</p>
+                <ul class="mb-0">
+                    <li>Comfort Sofa</li>
+                    <li>Extra floor space</li>
+                    <li>2 x Pioneer XPRS122 Speakers</li>
+                    <li>Unlimited Stagg Guitar Jack Cables (Ask if you need more than 3)</li>
+                    <li>Unlimited Stagg XLR Cables (Ask if you need more than 3)</li>
+                    <li>Unlimited Boom Microphone Stands (Ask if you need more than 3)</li>
+                    <li>Marshall 1960A 4x12 300w Guitar Cab Amplifier</li>
+                    <li>Marshall MG100HFX 120w Guitar Head Amplifier</li>
+                    <li>Alto Live 1202 12 channel Mixer</li>
+                    <li>Ashdown RM-500-EVO 500w Bass Head</li>
+                    <li>Ashdown ABM-410H-EVO IV 650w Bass Cab</li>
+                    <li>Mapex 5 piece Drum Kit + hardware + stool + foot pedal</li>
+                </ul>
+                
+            </div>
+            <div class="col-lg-6 justify-content-center align-items-center d-flex">
+                <img src="{{ MEDIA_URL }}/rehearsal-3-main.webp" alt="Rehearsal Room 3" class="rehearsal-image">
             </div>
         </div>
     </div>
