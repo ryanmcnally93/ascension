@@ -17,6 +17,34 @@
     color: #033A54;
 }
 
+#empty_cart {
+    background-color: red;
+    color: white;
+}
+
+.modal-empty {
+    height: 38px;
+}
+
+#empty_cart {
+    background-color: red !important;
+    color: white !important;
+    border: 1px solid red;
+}
+
+a#empty_cart {
+    height: 34px;
+    display: inline-block;
+}
+
+a#empty_cart:hover,
+button#empty_cart:hover {
+    background-color: white !important;
+    color: red !important;
+    border: 1px solid red;
+    text-decoration: none;
+}
+
 .input-group {
     width: 90%;
 }
@@ -53,10 +81,6 @@
 
 .grand-total {
     font-weight: 700;
-}
-
-.cart-buttons {
-    margin-right: -90px;
 }
 
 .fifty-mb {

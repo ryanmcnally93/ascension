@@ -75,3 +75,20 @@ def alter_cart(request, product_id):
     request.session['cart'] = cart
     print(request.session['cart'])
     return redirect(redirect_url)
+
+
+def empty_cart(request):
+    cart = request.session.get('cart', {})
+    if 'empty_cart' in request.POST:
+        try:
+            cart.clear()
+            request.session['cart'] = cart
+            messages.success(request, 'Successfully emptied the cart')
+            return redirect('view_cart')
+        except Exception as e:
+            messages.error(request, f'Error emptying cart {e}')
+            return HttpResponse(status=500)
+    
+    request.session['cart'] = cart
+    print(request.session['cart'])
+    return redirect('view_cart')
