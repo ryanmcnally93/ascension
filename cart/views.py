@@ -16,9 +16,6 @@ def alter_cart(request, product_id):
     quantity = int(request.POST.get('quantity'))  
     product = get_object_or_404(Product, pk=product_id)
 
-    if 'date' in request.POST:
-        print('WATCH VIDEOS ON ADDING SIZES FOR ADDING HOURS')
-
     #     datetime = f'{date}{time}'
     #     if product_id in booked_sessions:
     #         booked_sessions[product_id] += [f'{date}/{time}']
@@ -47,6 +44,9 @@ def alter_cart(request, product_id):
             messages.error(request, 'This item isnt in the cart!')
 
     if 'add-quantity' in request.POST:
+        if 'date' in request.POST:
+                print('WATCH VIDEOS ON ADDING SIZES FOR ADDING HOURS, THIS ITEM WAS ALREADY IN CART')
+
         if product_id in list(cart.keys()):
             cart[product_id] += quantity
             messages.success(request, f'Updated {product.name} quantity to {cart[product_id]}')
