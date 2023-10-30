@@ -8,45 +8,50 @@
 {% block content %}
     <div class="background-image">
         <div class="container header-container">
+
             <div class="row" id="top-row">
                 <hr class="white-hr">
                     <div id="page-heading" class="col text-center text-white white-heading">REHEARSE</div>
                 <hr class="white-hr">
             </div>
-        </div>
-        <div id="about-box" class="container col-8 text-center pt-3">
-            <div class="row text-white ml-1 mr-1" id="r-r-1">
-                <p>As music lovers ourselves, we understand the constant battle with finding the right place to practice and travel to, our rooms have all the equipment you'll ever need, regardless of your number of band members!</p>
-                <p>Our booking system ensures we are never double booked and email confirmations are sent straight away.</p>
+        
+
+            <div id="rehearse-row" class="row justify-content-center position-relative align-items-center">
+                <div id="rehearse-box" class="pt-3 col-12 col-md-8 text-center text-white mx-auto pb-3">
+                    <p>As music lovers ourselves, we understand the constant battle with finding the right place to practice and travel to, our rooms have all the equipment you'll ever need, regardless of your number of band members!</p>
+                    <p id="r-r-1">Our booking system ensures we are never double booked and email confirmations are sent straight away.</p>
+                </div>
             </div>
+
         </div>
     </div>
-    <div class="container header-container">
+
+    <div class="container">
         <div class="row">
             <hr>
-                <div id="page-heading" class="col text-center">DIFFERENT TYPES OF ROOMS</div>
+                <div id="page-heading" class="col text-center">Different Types Of Rooms</div>
             <hr>
         </div>
-    </div>
-    <div class="container">
-        <div class="row mb-2" id="r-r-2">
-            <div class="col-lg-6 m-auto">
+
+        <div class="row mb-3 box">
+            <div class="col-lg-6 studio-bio justify-content-center align-items-center d-flex flex-column">
                 <p>Rehearsal Room 1</p>
                 <p>Great for vocal or acoustic rehearsals</p>
                 <p>Equipment provided:</p>
-                <ul class="mb-0">
+                <ul class="mb-0" id="r-r-2">
                     <li>2 x Stagg XLR Cables</li>
                     <li>2 x Boom Microphone Stands</li>
                     <li>2 x Pioneer XPRS122 Speakers</li>
                     <li>Alto Live 1202 12 channel Mixer</li>
                 </ul>
             </div>
-            <div class="col-lg-6 justify-content-center align-items-center d-flex">
+            <div class="col-lg-6 studio-image justify-content-center align-items-center d-flex">
                 <img src="{{ MEDIA_URL }}/rehearsal-1.webp" alt="Rehearsal Room 1" class="rehearsal-image">
             </div>
         </div>
-        <div class="row mb-2">
-            <div class="col-lg-6 m-auto">
+
+        <div class="row box">
+            <div class="col-lg-6 justify-content-center studio-bio align-items-center d-flex flex-column">
                 <p>Rehearsal Room 2</p>
                 <p>Perfect for small bands!</p>
                 <p>Equipment provided:</p>
@@ -61,14 +66,15 @@
                     <li>Mapex 5 piece Drum Kit + hardware + stool + foot pedal</li>
                 </ul>
             </div>
-            <div class="col-lg-6 justify-content-center align-items-center d-flex">
+            <div class="studio-image col-lg-6 justify-content-center align-items-center d-flex">
                 <img src="{{ MEDIA_URL }}/rehearsal-2-main.webp" alt="Rehearsal Room 2" class="rehearsal-image">
             </div>
         </div>
-        <div class="row mb-4" id="r-r-3">
-            <div class="col-lg-6 m-auto">
+
+        <div class="row mb-4 mt-3 box" id="r-r-3">
+            <div class="col-lg-6 justify-content-center align-items-center studio-bio d-flex flex-column">
                 <p>Rehearsal Room 3</p>
-                <p>Vocal Rehearsals</p>
+                <p>The ultimate rehearsal experience!</p>
                 <p>Equipment provided:</p>
                 <ul class="mb-0">
                     <li>Comfort Sofa</li>
@@ -87,9 +93,10 @@
                 </ul>
                 
             </div>
-            <div class="col-lg-6 justify-content-center align-items-center d-flex">
+            <div class="studio-image col-lg-6 justify-content-center align-items-center d-flex">
                 <img src="{{ MEDIA_URL }}/rehearsal-3-main.webp" alt="Rehearsal Room 3" class="rehearsal-image">
             </div>
         </div>
+
     </div>
 {% endblock %}
