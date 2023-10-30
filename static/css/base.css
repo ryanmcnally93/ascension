@@ -11,8 +11,23 @@ html, body {
     padding: 0;
 }
 
+.mobile-logo-box {
+    height: 60px;
+    margin-bottom: 2px;
+}
+
+#small-logo:hover {
+    background-color: white;
+}
+
 #id_login, #id_password {
     border-radius: 0;
+}
+
+@media (min-width: 992px) {
+    a#user-options {
+        padding-left: 0;
+    }
 }
 
 input {
@@ -163,9 +178,6 @@ button.bg-darkblue:hover,
     .navbar {
         height: 72px;
     }
-    #cart-a, #user-options {
-        padding-top: 10px;
-    }
     #mobile-top-navbar {
         background-color: #282C2E !important;
     }
@@ -295,7 +307,53 @@ body {
     border-bottom: 2px solid #282C2E;
 }
 
-#my-account, #cart {
+.fa-bars {
+    color: white;
+}
+
+@media (max-width: 991px) {
+    .footer-m {
+        font-size: 12px !important;
+        line-height: 15px !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .mobile-logo-box {
+        height: 50px;
+        margin-bottom: 0;
+    }
+    #user-options, #cart-a {
+        font-size: 12px;
+    }
+    .fa-bars {
+        font-size: 24px !important;
+    }
+    .socials {
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 0 5%;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-m {
+        text-align: center;
+    }
+}
+
+@media (min-widthL 768px) and (max-width: 991px) {
+    a#user-options {
+        padding-bottom: 10px;
+    }
+}
+
+#toggler:hover {
+    background-color: white;
+    border-radius: 0;
+}
+
+#my-account-lg, #cart-lg, #my-account-sm, #cart-sm {
     border-bottom: 2px solid #282C2E;
 }
 

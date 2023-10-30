@@ -18,7 +18,7 @@
 {% block content %}
 <div class="container col-8">
     <div class="row">
-            <a href="#" class="my-2 col-6 justify-content-center product-image-box">
+            <div class="my-2 col-6 justify-content-center product-image-box">
                 {% if product.main_image %}
                     <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.main_image }}" alt="{{ product.name }}">
                 {% elif product.image %}
@@ -26,7 +26,7 @@
                 {% else %}
                     <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}/no-image.png" alt="{{ product.name }}">
                 {% endif %}
-            </a>
+            </div>
             <small id="product-information-small" class="d-flex justify-content-center">
                 <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
                 <button type="button" class="delete-button ml-2" data-toggle="modal" data-target="#deleteProduct">

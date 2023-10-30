@@ -1,15 +1,39 @@
-function mouseOver() {
-    document.getElementById('my-account').style.borderBottomColor = 'white';
+function mouseOverLg() {
+    document.getElementById('my-account-lg').style.borderBottom = '2px solid white';
 }
   
-function mouseOut() {
-    document.getElementById('my-account').style.borderBottomColor = '#282C2E';
+function mouseOutLg() {
+    document.getElementById('my-account-lg').style.borderBottom = '2px solid #282C2E';
 }
 
-function mouseOverCart() {
-    document.getElementById('cart').style.borderBottomColor = 'white';
+function mouseOverSm() {
+    document.getElementById('my-account-sm').style.borderBottom = '2px solid white';
 }
   
-function mouseOutCart() {
-    document.getElementById('cart').style.borderBottomColor = '#282C2E';
+function mouseOutSm() {
+    document.getElementById('my-account-sm').style.borderBottom = '2px solid #282C2E';
+}
+
+function mouseOverCartLg() {
+    document.getElementById('cart-lg').style.borderBottom = '2px solid white';
+}
+  
+function mouseOutCartLg() {
+    document.getElementById('cart-lg').style.borderBottom = '2px solid #282C2E';
+}
+
+function mouseOverCartSm() {
+    document.getElementById('cart-sm').style.borderBottom = '2px solid white';
+}
+  
+function mouseOutCartSm() {
+    document.getElementById('cart-sm').style.borderBottom = '2px solid #282C2E';
+}
+
+function mouseOverTg() {
+    document.getElementById('bars').style.color = '#282C2E';
+}
+  
+function mouseOutTg() {
+    document.getElementById('bars').style.color = 'white';
 }

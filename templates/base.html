@@ -53,13 +53,13 @@
                     <div class="col-12 col-lg-3 my-auto">
                         <ul class="text-lg-right my-0">
                             <li class="list-inline-item dropdown">
-                                <a onmouseover="mouseOver()" onmouseout="mouseOut()" class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="closeToast()">
+                                <a onmouseover="mouseOverLg()" onmouseout="mouseOutLg()" class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="closeToast()">
                                     <i class="fa-solid fa-user fa-lg text-white"></i>
                                     <!-- Change this to the profile image similar to what was done in last project, was really effective -->
                                     {% if request.user.is_authenticated %}
-                                        <p id="my-account" class="my-0 text-white">{{ request.user.username }}</p>
+                                        <p id="my-account-lg" class="my-0 text-white">{{ request.user.username }}</p>
                                     {% else %}
-                                        <p id="my-account" class="my-0 text-white">My Account</p>
+                                        <p id="my-account-lg" class="my-0 text-white">My Account</p>
                                     {% endif %}
                                 </a>
                                 <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
@@ -78,9 +78,9 @@
                                 </div>
                             </li>
                             <li class="list-inline-item">
-                                <a onmouseover="mouseOverCart()" onmouseout="mouseOutCart()" id="cart-a" class="nav-link text-center" href="{% url 'view_cart' %}">
+                                <a onmouseover="mouseOverCartLg()" onmouseout="mouseOutCartLg()" id="cart-a" class="nav-link text-center" href="{% url 'view_cart' %}">
                                     <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
-                                    <p id="cart" class="my-0 text-white">
+                                    <p id="cart-lg" class="my-0 text-white">
                                         {% if total %}
                                             £{{ total }}
                                         {% else %}
@@ -94,9 +94,6 @@
                 </div>
                 <div id="mobile-top-navbar" class="row bg-darkblue border-bottom">
                     <nav class="navbar navbar-expand-lg w-100">
-                        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#mainnavbar" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fa-solid fa-bars text-white"></i>
-                        </button>
                         {% include 'includes/mobile-navbar.html' %}
                         {% include 'includes/mainnavbar.html' %}
                     </nav>
@@ -150,13 +147,13 @@
 
     <footer class="container-fluid">
         <div id="footer" class="row bg-black pt-2 d-flex border-top">
-            <div class="col-12 col-lg-3">
+            <div class="col-4 col-lg-3 d-none d-md-block">
                 <p class="text-white footer-p mb-0">22 Ludgate Hill<br>Birmingham<br>B3 1DX</p>
             </div>
-            <div class="col-12 col-lg-6">
-                <p class="text-white footer-m text-center mb-0">Copyright @ 2023 Ascension. All rights reserved.<br>0121 533 1234</p>
+            <div class="col-6 col-md-4 col-lg-6">
+                <p class="text-white footer-m mb-0">Copyright @ 2023 Ascension. All rights reserved.<br>0121 533 1234</p>
             </div>
-            <div class="col-12 col-lg-3 text-white text-lg-right">
+            <div class="col-6 col-md-4 col-lg-3 text-white text-right">
                 <i class="fa-brands fa-facebook-f socials nav-link footer-link"></i>
                 <i class="fa-brands fa-x-twitter socials nav-link footer-link"></i>
                 <i class="fa-brands fa-instagram socials nav-link footer-link"></i>
