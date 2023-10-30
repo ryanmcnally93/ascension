@@ -26,30 +26,8 @@
     width: 150px;
 }
 
-#adam {
-    margin-left: -20px;
-}
-
-#john {
-    margin-left: -20px;
-}
-
-#alicia {
-    margin-left: -70px;
-}
-
 .artist {
     width: 300px;
-}
-
-.engineers {
-    height: 300px;
-}
-
-.image-box {
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
 }
 
 #record-box {
@@ -70,14 +48,17 @@
 /* Laptop & Large Screens */
 
 @media (min-width: 768px) {
-    #sanity-info-box {
+    #record-two-info-box {
         display: flex;
         align-items: flex-end;
         flex-wrap: wrap;
         flex-direction: column;
     }
-    #unique, #yatez {
+    #record-one, #record-three {
         float: right;
+    }
+    .engineers {
+        height: 300px;
     }
 }
 
@@ -88,10 +69,10 @@
         justify-content: center;
         display: flex;
     }
-    .unique-row, .yatez-row {
+    .record-one-row, .record-three-row {
         flex-direction: column;
     }
-    .sanity-row {
+    .record-two-row {
         flex-direction: column-reverse;
     }
     .artist-name {
@@ -99,5 +80,11 @@
     }
     .record-button-box {
         font-size: 16px !important;
+    }
+    .engineer-button-box {
+        margin: auto;
+    }
+    .engineers {
+        width: 300px;
     }
 }
