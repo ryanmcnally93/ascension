@@ -79,17 +79,22 @@
                     </div>
                     <div class="timeline">
                         {% for time in sessions %}
-                            {% if time in booked_sessions %}
-                                <input class="radio" type="radio" name="time" variable="1" disabled><p class="timeline-button mb-0"><strike> {{ time }}</strike></p>
-                            {% else %}
-                                <input class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p>
-                            {% endif %}
+                             <!-- if booked_sessions.product.id is defined  -->
+                                <!-- if time in booked_sessions.product.id  -->
+                                    <!-- <input id="{{ time }}" class="radio" type="radio" name="time" variable="1" disabled><p class="timeline-button mb-0"><strike> {{ time }}</strike></p> -->
+                                <!-- else  -->
+                                    <!-- <input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p> -->
+                                <!-- endif  -->
+                            <!--  else  -->
+                                <input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p>
+                            <!-- endif  -->
                         {% endfor %}
                         <p id="no-radios">Please choose a date.</p>
                     </div>
+                    <input type="hidden" id="chosen-time" name="chosen-time" value="none">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
-                    <button type="submit" class="btn bg-darkblue rounded-0 mb-5 mt-2">Add to Cart</button>
+                    <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 ml-1 p-1 px-2 mb-4">Add<p id="to-cart"> to cart</p></button>
                 </form>
             {% else %}
                 <form action="{% url 'alter_cart' product.id %}" method="POST">
@@ -141,12 +146,18 @@
 <!-- Written by me! -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        radioUpdate();
+        radioShow();
     });
     document.addEventListener("change", function () {
-        radioUpdate();
+        radioShow();
     });
-    function radioUpdate() {
+    var radios = document.getElementsByClassName('radio');
+    for (let radio of radios) {
+        radio.addEventListener("click", function () {
+            document.getElementById('chosen-time').value = radio.id;
+        });
+    };
+    function radioShow() {
         if (document.getElementById('date').value == "") {
             let times = document.getElementsByClassName('radio')
             for (i = 0; i < times.length; i++) {

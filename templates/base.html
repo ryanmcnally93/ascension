@@ -53,7 +53,7 @@
                     <div class="col-12 col-lg-3 my-auto">
                         <ul class="text-lg-right my-0">
                             <li class="list-inline-item dropdown">
-                                <a onmouseover="mouseOver()" onmouseout="mouseOut()" class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a onmouseover="mouseOver()" onmouseout="mouseOut()" class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="closeToast()">
                                     <i class="fa-solid fa-user fa-lg text-white"></i>
                                     <!-- Change this to the profile image similar to what was done in last project, was really effective -->
                                     {% if request.user.is_authenticated %}
@@ -134,6 +134,14 @@
                             $('.toast').hide();
                         });
                     });
+                    /* This function acts in the event that the toast is open */
+                    /* and the user clicks on user-options, it closes the toast */
+                    /* making the dropdown visible */
+                    function closeToast() {
+                        if ($('toast').toast('show')) {
+                            $('.toast').hide();
+                        }
+                    }
                 </script>
             {% endblock %}
 

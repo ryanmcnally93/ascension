@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from products.models import Product
 
+from checkout.models import Order, OrderLineItem
+
 
 def view_cart(request):
     return render(request, 'cart/cart.html')
@@ -10,18 +12,24 @@ def view_cart(request):
 def alter_cart(request, product_id):
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
+    # booked_sessions = request.session.get('booked_sessions', {})
     quantity = int(request.POST.get('quantity'))  
-    date = ""
-
     product = get_object_or_404(Product, pk=product_id)
 
     if 'date' in request.POST:
-        date = request.POST.get('date')
-        # NEEDS TO BE THE SELECTED TIME
-        time = request.POST.get('time')
-        print(date)
-        print(time)
-        # UPDATE BOOKED SESSIONS?
+        print('WATCH VIDEOS ON ADDING SIZES FOR ADDING HOURS')
+
+    #     datetime = f'{date}{time}'
+    #     if product_id in booked_sessions:
+    #         booked_sessions[product_id] += [f'{date}/{time}']
+    #         request.session['booked_sessions'] = booked_sessions
+    #         print(booked_sessions)
+    #         return redirect('view_cart')
+    #     else:
+    #         booked_sessions[product_id] = [f'{date}/{time}']
+    #         request.session['booked_sessions'] = booked_sessions
+    #         print(booked_sessions)
+    #         return redirect('view_cart')
 
     if 'increase-quantity' in request.POST:
         cart[product_id] += 1
