@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container">
         <div class="row" id="top-row">
             <hr>
                 <div id="page-heading" class="col text-center">MEET THE ENGINEERS</div>
@@ -16,51 +16,49 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row mb-3 justify-content-center">
-        <div class="col-5">
-            <div class="image-box float-right">
-                <img id="adam" class="engineers" src="{{ MEDIA_URL }}adam-moore.webp" alt="Adam Moore" class="float-right">
+    <div class="container justify-content-center">
+        <div class="row col-12 record-one-row">
+            <div class="col-12 col-md-6 p-3 rounded-0 artist-image-box">
+                <img id="record-one" class="engineers" src="{{ MEDIA_URL }}adam-moore.webp" alt="Adam Moore">
+            </div>
+            <div class="col-12 col-md-6 p-3">
+                <p class="artist-name">Adam Moore</p>
+                <p>Book a session in studio 1 to work with award winning producer Adam Moore. Adam is best known for has work with artists such as Plan-C and Plain-White-Z's, who's partnerships have led to great commercial success.</p>
+                <div class="engineer-button-box text-center">
+                    <a href="{% url 'product_information' product_id=24 %}" class="h-100 w-100 d-block bg-darkblue">
+                        <p class="mb-2 pt-2">Studio 1</p>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="col-5">
-            <p>Adam Moore</p>
-            <p>Book a session in studio 1 to work with award winning producer Adam Moore. Adam is best known for has work with artists such as Plan-C and Plain-White-Z's, who's partnerships have led to great commercial success.</p>
-            <div class="engineer-button-box text-center">
-                <a href="{% url 'product_information' product_id=24 %}" class="h-100 w-100 d-block bg-darkblue">
-                    <p class="mb-2 pt-2">Studio 1</p>
-                </a>
+
+        <div class="row col-12 record-two-row">
+            <div id="record-two-info-box" class="col-12 col-md-6 p-3">
+                <p class="artist-name">John Polter</p>
+                <p>...is one of the best up-and-coming producers in Birmingham. Having proven his brilliant capabilities whilst a singer/songwriter himself, John joined the team in 2019 and has received perfect feedback so far.</p>
+                <div class="engineer-button-box text-center">
+                    <a href="{% url 'product_information' product_id=25 %}" class="h-100 w-100 d-block bg-darkblue">
+                        <p class="mb-2 pt-2">Studio 2</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 p-3 rounded-0 artist-image-box">
+                <img id="record-two" class="engineers" src="{{ MEDIA_URL }}john-polter.webp" alt="John Polter">
             </div>
         </div>
-    </div>
-    <div class="row mb-3 justify-content-center">
-        <div class="col-5" id="artist-two">
-            <p>John Polter</p>
-            <p>...is one of the best up-and-coming producers in Birmingham. Having proven his brilliant capabilities whilst a singer/songwriter himself, John joined the team in 2019 and has received perfect feedback so far.</p>
-            <div class="engineer-button-box text-center">
-                <a href="{% url 'product_information' product_id=25 %}" class="h-100 w-100 d-block bg-darkblue">
-                    <p class="mb-2 pt-2">Studio 2</p>
-                </a>
+
+        <div class="row col-12 record-three-row mb-3">
+            <div class="col-12 col-md-6 p-3 rounded-0 artist-image-box">
+                <img id="record-three" class="engineers" src="{{ MEDIA_URL }}alicia-green.webp" alt="Alicia Green">
             </div>
-        </div>
-        <div class="col-5">
-            <div class="image-box">
-                <img id="john" class="engineers" src="{{ MEDIA_URL }}john-polter.webp" alt="Adam Moore">
-            </div>
-        </div>
-    </div>
-    <div class="row mb-3 justify-content-center">
-        <div class="col-5">
-            <div class="image-box float-right">
-                <img id="alicia" class="engineers" src="{{ MEDIA_URL }}alicia-green.webp" alt="Adam Moore" class="float-right">
-            </div>
-        </div>
-        <div class="col-5">
-            <p>Alicia Green</p>
-            <p>Best known for her work with acoustic artists such as Ned Sheeran and James McArthur, Alicia has an extensive history of music production, working with this company since its origin back in 2015. Alicia's careful listening approach has made her one of the most favoured producers around.</p>
-            <div class="engineer-button-box text-center">
-                <a href="{% url 'product_information' product_id=26 %}" class="h-100 w-100 d-block bg-darkblue">
-                    <p class="mb-2 pt-2">Studio 3</p>
-                </a>
+            <div class="col-12 col-md-6 p-3">
+                <p class="artist-name">Alicia Green</p>
+                <p>Best known for her work with acoustic artists such as Ned Sheeran and James McArthur, Alicia has an extensive history of music production, working with this company since its origin back in 2015. Alicia's careful listening approach has made her one of the most favoured producers around.</p>
+                <div class="engineer-button-box text-center">
+                    <a href="{% url 'product_information' product_id=26 %}" class="h-100 w-100 d-block bg-darkblue">
+                        <p class="mb-2 pt-2">Studio 3</p>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
