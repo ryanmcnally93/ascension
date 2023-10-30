@@ -116,33 +116,36 @@
                 {% if request.user.is_superuser %}
                     <small class="d-flex justify-content-center products-small">
                         <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
-                        <button type="button" class="delete-button ml-2" data-toggle="modal" data-target="#deleteProduct">
+                        <button type="button" class="delete-button ml-2" data-toggle="modal" data-target="#delete{{ product.id }}">
                             Delete
                         </button>
-                        
-                        <div class="modal fade" id="deleteProduct" tabindex="-1" role="dialog" aria-labelledby="deleteProductLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h5 class="modal-title" id="deleteProductLabel">Delete Product</h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                </div>
-                                <div class="modal-body">
-                                  <p>Are you sure you want to delete this product?</p><p>This action cannot be undone.</p>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn bg-black rounded-0" data-dismiss="modal">Close</button>
-                                  <a class="delete-inmodal-button ml-2" href="{% url 'delete_product' product_id=product.id %}">Delete</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
 
                     </small>
                 {% endif %}
             </div>
+        {% endfor %}
+        {% for product in products %}
+
+        <div class="modal fade" id="delete{{ product.id }}" tabindex="-1" role="dialog" aria-labelledby="delete{{ product.id }}Label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="delete{{ product.id }}Label">Delete Product</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to delete {{ product.name }}?</p><p>This action cannot be undone.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn bg-black rounded-0" data-dismiss="modal">Close</button>
+                  <a class="delete-inmodal-button ml-2" href="{% url 'delete_product' product.id %}">Delete</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         {% endfor %}
         {% if request.user.is_superuser %}
             <div class="col-sm-6 col-lg-4 col-xl-3 product">
