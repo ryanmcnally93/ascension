@@ -1,3 +1,14 @@
+/* Extra Large Screens */
+
+@media (min-height: 821px) {
+    .background-image {
+        height: 900px;
+        padding-top: 480px;
+    }
+}
+
+/* Large Screens */
+
 .background-image {
     background: url('/media/index-main.webp') no-repeat center center;
     width: 100%;
@@ -5,13 +16,54 @@
     border-bottom: 1px solid white;
     padding-top: 380px;
     background-size: 1750px;
-} 
+}
+
+#ls-logo {
+    height: 200px;
+    position: absolute;
+    top: -38px;
+}
+
+.index-message-box {
+    background-color: rgb(3, 58, 84, 0.8);
+    font-size: 20px;
+}
+
+.little-strings {
+    height: 128px;
+    display: inherit;
+}
+
+.ls-logo {
+    width: 200px;
+    border: 2px solid #033A54;
+}
+
+.ls-logo:hover {
+    background-color: white;
+}
+
+.index-button-box {
+    border: 2px solid white;
+    width: 200px;
+    font-size: 32px;
+}
+
+@media (min-width: 992px) {
+    .little-strings {
+        justify-content: center;
+    }
+}
+
+/* Laptop Screens */
 
 @media (min-width: 768px) and (max-width: 991px) {
     #homepage-buttons {
         align-content: flex-end !important;
     }
 }
+
+/* Mobile Screens */
 
 @media (max-width: 991px) {
     .background-image {
@@ -37,49 +89,9 @@
     }
 }
 
-@media (min-width: 992px) {
-    .little-strings {
-        justify-content: center;
-    }
-}
-
-#ls-logo {
-    height: 200px;
-    position: absolute;
-    top: -38px;
-    /* Needs hover qualities */
-}
-
-.little-strings {
-    height: 128px;
-    display: inherit;
-}
-
-.ls-logo {
-    width: 200px;
-    border: 2px solid #033A54;
-}
-
-.ls-logo:hover {
-    background-color: white;
-}
-
-.index-button-box {
-    border: 2px solid white;
-    width: 200px;
-    font-size: 32px;
-}
-
 @media (max-width: 550px) {
     .index-button-box {
         width: 100% !important;
-    }
-}
-
-@media (min-height: 821px) {
-    .background-image {
-        height: 900px;
-        padding-top: 480px;
     }
 }
 
@@ -87,9 +99,4 @@
     .col-6.col-md-7.col-lg-4.text-center.h-100 {
         max-width: 70% !important;
     }
-}
-
-.index-message-box {
-    background-color: rgb(3, 58, 84, 0.8);
-    font-size: 20px;
 }

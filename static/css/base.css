@@ -1,14 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Raleway:wght@300;400;500;600;700&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
 
-/* STICKY FOOTER https://stackoverflow.com/questions/18739937/how-to-keep-footer-at-bottom-of-screen */
+/* Main CSS */
 
-html, body {
-    height: 100%; 
+body {
+    font-family: 'Raleway';
 }
 
-* {
-    margin: 0;
-    padding: 0;
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 72px;
+}
+
+/*  Navbar */
+
+.fa-bars {
+    color: white;
+}
+
+.logo {
+    color: white;
+    width: fit-content;
+    display: block;
+    text-shadow: 0 5px 3px rgba(255,255,255, 0.5)
+}
+
+.logo:hover {
+    border-bottom: 2px solid white;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    margin: 0.125rem -23px 0;
+    border: 1px solid #033A54;
+}
+
+.dropdown-item:hover {
+    color: white;
+    background-color: #033A54;
 }
 
 .mobile-logo-box {
@@ -20,8 +53,41 @@ html, body {
     background-color: white;
 }
 
-#id_login, #id_password {
+.navbar {
+    height: 56px;
+    padding: 0;
+}
+
+#toggler:hover {
+    background-color: white;
     border-radius: 0;
+}
+
+#my-account-lg, #cart-lg, #my-account-sm, #cart-sm {
+    border-bottom: 2px solid #282C2E;
+}
+
+.fa-bars {
+    font-size: 32px;
+}
+
+@media (max-width: 430px) {
+    .mobile-logo-box {
+        height: 50px;
+        margin-bottom: 0;
+    }
+    #user-options, #cart-a {
+        font-size: 12px;
+    }
+    .fa-bars {
+        font-size: 24px !important;
+    }
+}
+
+@media (min-width 768px) and (max-width: 991px) {
+    a#user-options {
+        padding-bottom: 10px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -29,6 +95,40 @@ html, body {
         padding-left: 0;
     }
 }
+
+@media (max-width: 991px) {
+    .navbar {
+        height: 72px;
+    }
+    #mobile-top-navbar {
+        background-color: #282C2E !important;
+    }
+    .list-inline-item:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+/* Page Headings */
+
+#top-row {
+    padding-top: 135px;
+}
+
+hr {
+    width: 100%;
+    color: black;
+}
+
+.white-hr {
+    color: white !important;
+    border-top: 1px solid rgb(255,255,255,0.7) !important;
+}
+
+.white-heading {
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+/* All Auth Pages */
 
 input {
     border-radius: 0 !important;
@@ -46,35 +146,6 @@ label.requiredField {
 #all-auth-image {
     top: -140px;
     position: absolute;
-}
-
-#wrap {
-    min-height: 100%;
-}
-
-#main {
-    overflow: auto;
-    padding-bottom: 72px;
-}
-  
-#footer {
-    position: relative;
-    margin-top: -72px;
-    clear: both;
-}
-
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.stripe-style-input {
-    border-radius: 0;
 }
 
 /* Messages */
@@ -115,95 +186,13 @@ label.requiredField {
     text-decoration: underline;
 }
 
-/* Main Buttons */
-
-.bg-black {
-    background-color: #282C2E !important;
-    color: white !important;
-    border: 1px solid #282C2E;
-}
-
-a.bg-black {
-    height: 34px;
-    display: inline-block;
-}
-
-a.bg-black:hover,
-button.bg-black:hover {
-    background-color: white !important;
-    color: #282C2E !important;
-    border: 1px solid #282C2E;
-    text-decoration: none;
-}
-
-.bg-darkblue {
-    background-color: #033A54 !important;
-    color: white !important;
-    border: 1px solid #033A54;
-}
-
-a.bg-darkblue:hover,
-button.bg-darkblue:hover,
-#loadFileXml:hover {
-    background-color: white !important;
-    color: #033A54 !important;
-    border: 1px solid #033A54;
-    text-decoration: none;
-}
-
-#record-link:hover,
-#rehearse-link:hover,
-#shop-link:hover,
-#offers-link:hover,
-#about-link:hover {
-    background-color: white;
-    color: #033A54 !important;
-}
-
-#about-link,
-#record-link,
-#rehearse-link,
-#shop-link,
-#offers-link {
-    padding-top: 16px;
-    height: 56px;
-}
-
-.navbar {
-    height: 56px;
-    padding: 0;
-}
-
-@media (max-width: 991px) {
-    .navbar {
-        height: 72px;
-    }
-    #mobile-top-navbar {
-        background-color: #282C2E !important;
-    }
-    .list-inline-item:not(:last-child) {
-        margin-right: 0;
-    }
-}
-
-/* Others */
-
-#back-to-products {
-    padding-top: 3px !important;
-}
-
-#about-box {
-    margin-top: 120px;
-    background-color: rgb(3, 58, 84, 0.8);
-    border: none;
-    border-radius: 0;
-}
-
 .cart-notifications {
     max-height: 150px;
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* Toast Icons */
 
 .fa-check {
     color: #28a745;
@@ -274,95 +263,66 @@ button.bg-darkblue:hover,
     border-bottom-color: #343a40 !important;
 }
 
-/* END OF STICKY FOOTER */
+/* Main Buttons */
 
-body {
-    font-family: 'Raleway';
+.bg-black {
+    background-color: #282C2E !important;
+    color: white !important;
+    border: 1px solid #282C2E;
 }
 
-.logo {
-    color: white;
-    width: fit-content;
-    display: block;
-    text-shadow: 0 5px 3px rgba(255,255,255, 0.5)
+a.bg-black {
+    height: 34px;
+    display: inline-block;
 }
 
-.logo:hover {
-    border-bottom: 2px solid white;
-    color: white;
+a.bg-black:hover,
+button.bg-black:hover {
+    background-color: white !important;
+    color: #282C2E !important;
+    border: 1px solid #282C2E;
     text-decoration: none;
 }
 
-.dropdown-menu {
-    margin: 0.125rem -23px 0;
+.bg-darkblue {
+    background-color: #033A54 !important;
+    color: white !important;
     border: 1px solid #033A54;
 }
 
-.dropdown-item:hover {
-    color: white;
-    background-color: #033A54;
+a.bg-darkblue:hover,
+button.bg-darkblue:hover,
+#loadFileXml:hover {
+    background-color: white !important;
+    color: #033A54 !important;
+    border: 1px solid #033A54;
+    text-decoration: none;
 }
 
-.footer-link {
-    border-bottom: 2px solid #282C2E;
-}
-
-.fa-bars {
-    color: white;
-}
-
-@media (max-width: 991px) {
-    .footer-m {
-        font-size: 12px !important;
-        line-height: 15px !important;
-    }
-}
-
-@media (max-width: 430px) {
-    .mobile-logo-box {
-        height: 50px;
-        margin-bottom: 0;
-    }
-    #user-options, #cart-a {
-        font-size: 12px;
-    }
-    .fa-bars {
-        font-size: 24px !important;
-    }
-    .socials {
-        font-size: 20px;
-        margin-top: 10px;
-        padding: 0 5%;
-    }
-}
-
-@media (min-width: 768px) {
-    .footer-m {
-        text-align: center;
-    }
-}
-
-@media (min-widthL 768px) and (max-width: 991px) {
-    a#user-options {
-        padding-bottom: 10px;
-    }
-}
-
-#toggler:hover {
+#record-link:hover,
+#rehearse-link:hover,
+#shop-link:hover,
+#offers-link:hover,
+#about-link:hover {
     background-color: white;
-    border-radius: 0;
+    color: #033A54 !important;
 }
 
-#my-account-lg, #cart-lg, #my-account-sm, #cart-sm {
-    border-bottom: 2px solid #282C2E;
+#about-link,
+#record-link,
+#rehearse-link,
+#shop-link,
+#offers-link {
+    padding-top: 16px;
+    height: 56px;
 }
 
-.footer-link:hover {
-    border-bottom: 2px solid white;
-    cursor: pointer;
-}
-
+/* Footer */
+  
 #footer {
+    position: relative;
+    margin-top: -72px;
+    clear: both;
     height: 72px;
 }
 
@@ -380,28 +340,70 @@ body {
     font-size: 32px;
 }
 
-#top-row {
-    padding-top: 135px;
+.footer-link {
+    border-bottom: 2px solid #282C2E;
 }
 
-hr {
-    width: 100%;
-    color: black;
+.footer-link:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
 }
 
-.white-hr {
-    color: white !important;
-    border-top: 1px solid rgb(255,255,255,0.7) !important;
+@media (max-width: 430px) {
+    .socials {
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 0 5%;
+    }
 }
 
-.white-heading {
-    background-color: rgb(0, 0, 0, 0.3);
+@media (min-width: 768px) {
+    .footer-m {
+        text-align: center;
+    }
 }
 
-.fa-bars {
-    font-size: 32px;
+@media (max-width: 991px) {
+    .footer-m {
+        font-size: 12px !important;
+        line-height: 15px !important;
+    }
 }
 
-#page-heading {
-    /*Nothing yet*/
+/* Sticky Footer */
+
+html, body {
+    height: 100%; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Other */
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.stripe-style-input {
+    border-radius: 0;
+}
+
+#back-to-products {
+    padding-top: 3px !important;
+}
+
+#about-box {
+    margin-top: 120px;
+    background-color: rgb(3, 58, 84, 0.8);
+    border: none;
+    border-radius: 0;
 }
