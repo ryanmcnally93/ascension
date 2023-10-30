@@ -1,33 +1,29 @@
+/* Extra Large Screens */
+
+@media (min-width: 1501px) {
+    .background-image {
+        background-size: 100% !important;
+    }
+}
+
+/* Large Screens */
+
 .background-image {
     background: url('/media/recording-studio-main.webp') no-repeat center top;
     width: 100%;
     height: 700px;
     border-bottom: 1px solid white;
-    background-size: 100%;
+    background-size: 1500px;
 } 
 
 .record-button-box {
     border: 2px solid white;
-    width: 200px;
+    width: fit-content;
     font-size: 18px;
-}
-
-@media (max-width: 767px) {
-    .record-button-box {
-        width: 100px !important;
-        font-size: 16px !important;
-    }
 }
 
 .engineer-button-box {
     width: 150px;
-}
-
-#artist-two {
-    display: flex;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 
 #adam {
@@ -54,4 +50,54 @@
     height: 300px;
     width: 300px;
     overflow: hidden;
+}
+
+#record-box {
+    background-color: rgb(3, 58, 84, 0.8);
+    border: none;
+    border-radius: 0;
+    position: absolute;
+}
+
+#record-row {
+    height: 67.7% !important;
+}
+
+.header-container {
+    height: 700px;
+}
+
+/* Laptop & Large Screens */
+
+@media (min-width: 768px) {
+    #sanity-info-box {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #unique, #yatez {
+        float: right;
+    }
+}
+
+/* Mobile Screens */
+
+@media (max-width: 767px) {
+    .artist-image-box {
+        justify-content: center;
+        display: flex;
+    }
+    .unique-row, .yatez-row {
+        flex-direction: column;
+    }
+    .sanity-row {
+        flex-direction: column-reverse;
+    }
+    .artist-name {
+        text-align: center;
+    }
+    .record-button-box {
+        font-size: 16px !important;
+    }
 }
