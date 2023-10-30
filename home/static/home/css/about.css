@@ -2,7 +2,7 @@
 
 @media (min-width: 1501px) {
     .background-image {
-        background-size: 100%;
+        background-size: 100% !important;
     }
 }
 
@@ -30,19 +30,10 @@
 }
 
 #about-box {
-    margin-top: 120px;
     background-color: rgb(3, 58, 84, 0.8);
     border: none;
     border-radius: 0;
     position: absolute;
-}
-
-/* Laptop Screens */
-
-@media (max-width: 991px) {
-    #about-box {
-        margin-top: 60px;
-    }
 }
 
 /* Mobile Screens */
@@ -51,11 +42,5 @@
     #contact-row {
         flex-direction: column-reverse;
         display: flex;
-    }
-}
-
-@media (max-width: 369px) {
-    #about-box {
-        margin-top: 30px;
     }
 }
