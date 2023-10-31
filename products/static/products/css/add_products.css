@@ -1,3 +1,5 @@
+/* Large Screens */
+
 label.requiredField {
     display: block;
 }
@@ -12,6 +14,11 @@ label.requiredField {
     z-index: -1;
     height: 26px;
 } 
+
+#searchbar {
+    display: flex;
+    flex-direction: row;
+}
 
 #manage-products-image-box {
     overflow: hidden;
@@ -44,4 +51,26 @@ label.requiredField {
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+/* Laptop and Desktop Screens */
+
+@media (min-width: 768px) {
+    #search-button {
+        float: right;
+    }
+}
+
+/* Mobile Screens */
+
+@media (max-width: 767px) {
+    #searchbar {
+        flex-direction: column;
+    }
+    #product-id {
+        margin-bottom: 10px !important;
+    }
+    #search-button {
+        margin-bottom: 10px;
+    }
 }

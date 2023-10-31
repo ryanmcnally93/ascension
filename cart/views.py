@@ -44,15 +44,26 @@ def alter_cart(request, product_id):
             messages.error(request, 'This item isnt in the cart!')
 
     if 'add-quantity' in request.POST:
-        if 'date' in request.POST:
-                print('WATCH VIDEOS ON ADDING SIZES FOR ADDING HOURS, THIS ITEM WAS ALREADY IN CART')
-
         if product_id in list(cart.keys()):
             cart[product_id] += quantity
             messages.success(request, f'Updated {product.name} quantity to {cart[product_id]}')
         else:
             cart[product_id] = quantity
             messages.success(request, f'Added {product.name} to your cart')
+
+    # THIS IS THE VIEW FOR HIRE ROOM PURCHASE
+    if 'add-session' in request.POST:
+        if product_id in list(cart.keys()):
+            cart[product_id] += quantity
+            messages.success(request, f'Updated {product.name} quantity to {cart[product_id]}')
+            return redirect('view_cart')
+        else:
+            cart[product_id] = quantity
+            messages.success(request, f'Added {product.name} session to your cart')
+            return redirect('view_cart')
+
+    if 'book' in request.POST:
+        return redirect('product_information', product_id=product_id)
 
     if 'remove_all_of_item_product_info' in request.POST:
         try:

@@ -1,3 +1,5 @@
+/* Large Screens */
+
 .product-image-box {
     height: 260px;
     align-items: center;
@@ -114,12 +116,6 @@
     margin: none;
 }
 
-@media (min-width: 768px) {
-    #to-cart {
-        display: inline;
-    }
-}
-
 .products-add-button {
     width: 70%;
     padding-left: 5px;
@@ -175,6 +171,10 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+.eq {
+    width: fit-content;
+}
+
 .input-group-prepend:hover, .input-group-append:hover {
     border: 1px solid white;
     padding: 9.5px;
@@ -189,9 +189,12 @@ input[type=number] {
     border: none;
     margin: auto;
     font-size: 10px;
-    position: absolute;
-    bottom: 0px;
-    left: 418px;
+}
+
+.flex-quantity {
+    width: 100px;
+    flex-grow: 0;
+    padding: 0;
 }
 
 #remove_all_of_item_product_info:hover {
@@ -223,6 +226,10 @@ input[type=number] {
 .product-info, .product-title {
     color: black;
     text-decoration: none;
+}
+
+.span-no-break {
+    white-space: nowrap;
 }
 
 .product-title:hover {
@@ -269,4 +276,71 @@ a:hover {
 
 #back {
     vertical-align: middle;
+}
+
+.italic {
+    font-style: italic;
+}
+
+@media (min-width: 992px) {
+    .prod-info-btns {
+        float: right;
+        padding-right: 1rem !important;
+    }
+}
+
+/* Laptop & Desktop Screens */
+
+@media (min-width: 768px) {
+    #to-cart {
+        display: inline;
+    }
+}
+
+/* Laptop Screens */
+
+@media (max-width: 991px) {
+    .product-image-box {
+        margin-bottom: 20px !important;
+    }
+    #product-information-small {
+        width: 95%;
+    }
+    .product-small-central {
+        text-align: center !important;
+    }
+    .prod-info-btns {
+        justify-content: center;
+    }
+    #info-quantity {
+        margin: 0;
+    }
+    .hire-room {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Mobile Screens */
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .card {
+        height: 510px;
+    }
+}
+
+@media (max-width: 575px) {
+    .product {
+        margin: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .product {
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
 }
