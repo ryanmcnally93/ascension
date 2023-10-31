@@ -16,9 +16,9 @@
 {% endblock %}
 
 {% block content %}
-<div class="container col-8">
-    <div class="row">
-            <div class="my-2 col-6 justify-content-center product-image-box">
+<div class="container col-sm-8">
+    <div class="row prod-info-row">
+            <div class="my-2 col-12 col-lg-6 justify-content-center product-image-box">
                 {% if product.main_image %}
                     <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.main_image }}" alt="{{ product.name }}">
                 {% elif product.image %}
@@ -53,71 +53,76 @@
                     </div>
                   </div>
             </small>
-            <div class="product-infopage-info px-3 col-6">
-                {{ product.name }}
-                <br>
-                {{ product.category.friendly_name }}
-                <br>
-                <h3>£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</h3>
-                Rating: {{ product.rating }}/5 ({{ product.amount_of_reviews }}) Sold: {{ product.amount_sold }}
-                <br>
+            <div class="product-infopage-info px-3 col-12 col-lg-6">
+                <p class="product-small-central mb-0">{{ product.name }}</p>
+                <p class="mb-0 italic product-small-central">{{ product.category.friendly_name }}</p>
+                <h3 class="product-small-central">£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</h3>
+                <p class="product-small-central">Rating: {{ product.rating }}/5 ({{ product.amount_of_reviews }}) Sold: {{ product.amount_sold }}</p>
                 <p class="my-2">{{ product.description }}</p>
             {% if product.is_hire_room == True %}
-                {% if product.id == 27 %}
-                    <a class="bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-1">Equipment Provided</a>
-                {% elif product.id == 28 %}
-                    <a class="bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-2">Equipment Provided</a>
-                {% elif product.id == 29 %}
-                    <a class="bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-3">Equipment Provided</a>
-                {% else %}
-                {% endif %}
-                <form action="{% url 'alter_cart' product.id %}" method="POST">
-                    {% csrf_token %}
-                    <div>
-                        <p class="mb-1 mt-3">Book Session</p>
-                        <input name="date" id="date" class="mb-2" type="date">
-                    </div>
-                    <div class="timeline">
-                        {% for time in sessions %}
-                             <!-- if booked_sessions.product.id is defined  -->
-                                <!-- if time in booked_sessions.product.id  -->
-                                    <!-- <input id="{{ time }}" class="radio" type="radio" name="time" variable="1" disabled><p class="timeline-button mb-0"><strike> {{ time }}</strike></p> -->
-                                <!-- else  -->
-                                    <!-- <input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p> -->
+                <div class="hire-room">
+                    {% if product.id == 27 %}
+                        <a class="eq bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-1">Equipment Provided</a>
+                    {% elif product.id == 28 %}
+                        <a class="eq bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-2">Equipment Provided</a>
+                    {% elif product.id == 29 %}
+                        <a class="eq bg-darkblue p-1 px-2" href="{% url 'rehearse_home' %}#r-r-3">Equipment Provided</a>
+                    {% else %}
+                    {% endif %}
+                    <form action="{% url 'alter_cart' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <div>
+                            <p class="mb-1 mt-3">Book Session</p>
+                            <input name="date" id="date" class="mb-2" type="date">
+                        </div>
+                        <div class="timeline">
+                            {% for time in sessions %}
+                                <!-- if booked_sessions.product.id is defined  -->
+                                    <!-- if time in booked_sessions.product.id  -->
+                                        <!-- <input id="{{ time }}" class="radio" type="radio" name="time" variable="1" disabled><p class="timeline-button mb-0"><strike> {{ time }}</strike></p> -->
+                                    <!-- else  -->
+                                        <!-- <input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p> -->
+                                    <!-- endif  -->
+                                <!--  else  -->
+                                    <span class="span-no-break"><input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p></span>
                                 <!-- endif  -->
-                            <!--  else  -->
-                                <input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p>
-                            <!-- endif  -->
-                        {% endfor %}
-                        <p id="no-radios">Please choose a date.</p>
-                    </div>
-                    <input type="hidden" id="chosen-time" name="chosen-time" value="none">
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
-                    <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 ml-1 p-1 px-2 mb-4">Add<p id="to-cart"> to cart</p></button>
-                </form>
+                            {% endfor %}
+                            <p id="no-radios">Please choose a date.</p>
+                        </div>
+                        <input type="hidden" id="chosen-time" name="chosen-time" value="none">
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
+                        <button name="add-session" type="submit" class="btn bg-darkblue rounded-0 ml-1 p-1 px-2 mb-4">Add<p id="to-cart"> to cart</p></button>
+                    </form>
+                </div>
             {% else %}
                 <form action="{% url 'alter_cart' product.id %}" method="POST">
                     {% csrf_token %}
-                    <div class="mt-1 mb-3 float-right pr-3 d-flex">
+                    <div class="mt-2 mb-3 prod-info-btns d-flex">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% if stringed_product_id in request.session.cart.keys %}
-                        <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2 mb-4" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
-                        <div class="quantity-box-information mb-4">
-                            <button class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
-                                <i class="fas fa-minus"></i>
-                            </button>
-                            <input class="quantity-middle" value="{{ item_quantity }}" type="number" min="1" max="99" name="quantity">
-                            <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
-                                <i class="fas fa-plus"></i>
-                            </button>
+                        <a id="back-to-products" class="mr-2 btn bg-black rounded-0 p-1 px-2 mb-4" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back<p id="to-cart"> to products</p></p></a>
+                        <div class="col d-flex flex-column flex-quantity">
+                            <div class="row">
+                                <div id="info-quantity" class="quantity-box-information mb-2">
+                                    <button class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input class="quantity-middle" value="{{ item_quantity }}" type="number" min="1" max="99" name="quantity">
+                                    <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button id="remove_all_of_item_product_info" name="remove_all_of_item_product_info">Remove all</button>
+                            </div>
                         </div>
-                        <button id="remove_all_of_item_product_info" name="remove_all_of_item_product_info">Remove all</button>
                     </div>
                 </form>
                         {% else %}
                         <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
-                        <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2 mb-4" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
+                        <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2 mb-4" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back<p id="to-cart"> to products</p></p></a>
                         <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 ml-1 p-1 px-2 mb-4">Add<p id="to-cart"> to cart</p></button>
                     </div>
                 </form>

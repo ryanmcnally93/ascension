@@ -15,14 +15,16 @@
         <div class="row">
             <form method="POST" action="{% url 'edit_product' %}" class="w-100">
                 {% csrf_token %}
-                <div class="col-6">
-                    <select name="product-id" id="product-id" class="mb-3 p-1 rounded-0 col-10">
+                <div id="searchbar" class="col-12 col-lg-6">
+                    <select name="product-id" id="product-id" class="mb-3 p-1 rounded-0 col-12 col-md-10">
                         <option value="None">Pick an item</option>
                         {% for item in products %}
                             <option value="{{ item.name }}">{{ item.name }}</option>
                         {% endfor %}
                     </select>
-                    <button type="submit" id="invisible-toggler" class="bg-darkblue p-1 px-2">Search</button>
+                    <div class="col-12 col-md-2 pr-0 pl-0">
+                        <button type="submit" id="search-button" class="bg-darkblue p-1 px-2">Search</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -36,8 +38,8 @@
                 </form>
             </div>
             <div class="col-lg-6 mb-4" id="manage-products-image-box">
-                <img id="manage-image-one" src="{{ MEDIA_URL }}/add-product-one.webp" class="w-100 mb-2" alt="Headphones on a microphone">
-                <img id="manage-image-two" src="{{ MEDIA_URL }}/add-product-two.webp" class="w-100 mt-2" alt="Headphones on a microphone">
+                <img id="manage-image-one" src="{{ MEDIA_URL }}/add-product-one.webp" class="w-100 mb-2 d-none d-lg-block" alt="Headphones on a microphone">
+                <img id="manage-image-two" src="{{ MEDIA_URL }}/add-product-two.webp" class="w-100 mt-2 d-none d-lg-block" alt="Headphones on a microphone">
             </div>
         </div>
     </div>

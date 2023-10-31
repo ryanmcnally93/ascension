@@ -56,9 +56,9 @@
         {% for product in products %}
             <!-- This result will always produce three items, so on XL screens we need to make sure they are still centered-->
             {% if category != None and not request.user.is_superuser %}
-                <div class="col-sm-6 col-lg-4 product">
+                <div class="col-10 col-sm-6 col-lg-4 product">
             {% else %}
-                <div class="col-sm-6 col-lg-4 col-xl-3 product">
+                <div class="col-10 col-sm-6 col-lg-4 col-xl-3 product">
             {% endif %}
                 {% if category == 'STUDIOS' %}
                     <a href="{% url 'product_information' product_id=product.pk %}" class="card studios my-2 rounded-0">
@@ -108,7 +108,11 @@
                             {% else %}
                             <br>
                             <input value="1" class="products-add-button d-none" type="number" min="1" max="99" name="quantity">
-                            <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 mb-3 mt-2 add">Add<p id="to-cart"> to cart</p></button>
+                            {% if product.is_hire_room == True %}
+                                <button name="book" type="submit" class="btn bg-darkblue rounded-0 mb-3 mt-2 add">Book</button>
+                            {% else %}
+                                <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 mb-3 mt-2 add">Add<p id="to-cart"> to cart</p></button>
+                            {% endif %}
                         </div>
                     </form>
                     {% endif %}
