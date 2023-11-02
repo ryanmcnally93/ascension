@@ -2,7 +2,7 @@
 
 MAIN IMAGE
 
-This is a Django web application for Ascension, a music studio based in Birmingham. Languages used include HTML, CSS, JavaScript and Python, created using <!-- list -->.
+This is a Django web application for Ascension, a music studio based in Birmingham. Languages used include HTML, CSS, JavaScript and Python, created using Django Crispy Forms, All Auth, Stripe, Pillow & Bootstrap.
 
 Thie project allows users to book studio time with engineers or rehearsal rooms for practicing musicians/bands. It also has a small shop which is situated in the foyer, where musicians can buy strings, capos, and other small instrument parts.
 
@@ -62,11 +62,11 @@ I also need to be able to add, change and delete items myself.
 
 | Goals                                                        | How are they achieved? |
 | :----------------------------------------------------------- | :--------------------- |
-| Site that has user authentication.                           |                        |
-| Site that updates when products are bought/hired.            |                        |
-| Promote professional looking studios and engineers.          |                        |
-| Site with complete ease of use.                              |                        |
-| Complete CRUD functionality over the products I am offering. |                        |
+| Site that has user authentication.                           | Using all auth templates and creating session cookies. |
+| Site that updates when products are bought/hired.            | Add to card buttons and quantity buttons add and subtract from cart cookie. |
+| Promote professional looking studios and engineers.          | Shadp edges, blues and dark silvers used, looks slick. |
+| Site with complete ease of use.                              | Every page has a choice of navbar options, back forward and back buttons. |
+| Complete CRUD functionality over the products I am offering. | Administrator can add, edit and delete products. User can add edit and delete cart products. |
 
 #### Recording Musician Goals
 
@@ -79,10 +79,10 @@ As a professional recording musician, I want to know that the engineer is friend
 
 | Goals                                    | How are they achieved? |
 | :--------------------------------------- | :--------------------- |
-| Information on experienced engineers.    |                        |
-| Images of the studio and it's equipment. |                        |
-| Proof of achievements on other songs.    |                        |
-| Ease of use with booking.                |                        |
+| Information on experienced engineers.    | Information on meet the engineers page |
+| Images of the studio and it's equipment. | This information is on the rehearsals homepage, and there are links available in the product information pages. |
+| Proof of achievements on other songs.    | Artists we've worked with section is available on the record studio homepage. |
+| Ease of use with booking.                | Clicking a date gives time options, clicking that and adding to cart creates a cart object with the relevant date and time. |
 
 #### Band Member Goals
 
@@ -94,9 +94,9 @@ As a band member I want to know what equipment is in the rehearsal room I'm hiri
 
 | Goals                                           | How are they achieved? |
 | :---------------------------------------------- | :--------------------- |
-| Information on equipment provided in each room. |                        |
-| Images of equipment and room.                   |                        |
-| Ease of use with booking.                       |                        |
+| Information on equipment provided in each room. | This is with the rehearsals page. |
+| Images of equipment and room.                   | Within products, product information and rehearsals. |
+| Ease of use with booking.                       | Click date, time and add to cart. |
 
 #### Sound Engineer Goals
 
@@ -108,27 +108,34 @@ As a soung engineer, I want my achievements to be there for users to see. I want
 
 | Goals                                      | How are they achieved? |
 | :----------------------------------------- | :--------------------- |
-| Detailed section about me including image. |                        |
-| Information on my achievements.            |                        |
-| Images of my studio.                       |                        |
+| Detailed section about me including image. | All on the meet the engineers page. |
+| Information on my achievements.            | Meet the engineers offers some insight, maybe this can be built on in a future section. |
+| Images of my studio.                       | Within the product and product information. |
 
 ### User Stories
 
 #### Unregistered User
 
-<!-- Information of journey and options available to this user. -->
+- Should be able to view products and pages as norma.
+- User-options should be 'login' or 'register' only.
+- Should be able to add to cart as normal.
+- Typing url for disallowed pages should take user to the login page.
+- Checkout page requires URL to assure unregistered user cannot make purchases.
 
-#### Musician One
+#### Logged in User
 
-<!-- Information of journey and options available to this user. -->
-
-#### Musician Two
-
-<!-- Information of journey and options available to this user. -->
+- Should extend all the same privileges as the unregistered user.
+- Should still not allow you to accees the Add and Edit product pages.
+- Should be able to checkout using test card data.
+- Should be able to access Profile page, with order history.
+- Should be able to save billing info.
 
 #### Administrator
 
-<!-- Information of journey and options available to this user. -->
+- Should extend all the same privileges as the logged in user.
+- Should have access to add and edit products pages.
+- Should be able to edit and delete products on products page and product information pages.
+- Should be able to delete products.
 
 ### Design Choices
 
@@ -136,17 +143,38 @@ The website needs to look professional and high tech, we want customers to feel 
 
 #### Fonts
 
+- I decided to use the 'Raleway' font as it has character in lowercase but has a very professional look in uppercase. This has been used across the whole web-application.
+
 #### Icons
 
+- The user icon is used within the navbar for the user options, from logging in to viewing your profile.
+- The cart has a shopping-cart icon, as does the back to cart button on the checkout page.
+- The social media icone are within the footer, with the same styling as the rest of the site.
+- Secure payment and complete order have the safety lock icon. So users know this is secure.
+- The toast messages have relevant ticks, x's, and warning and information icons.
+
 #### Colours
+
+- I wanted to use an electric blue initially, to give the page a more digital look. I settled in the end for a dark turqoise.
+- The main colours are #282C2E, a dark grey colour, and #033A54 the dark turqoise.
+- The navbar is turqoise and the footer grey, with the mobile navbar also being grey.
+- The primary buttons are turqoise and the secondary buttons are grey, the hover qualities change the buttons main colors with white and the white test to the main color. This is the same throughout.
 
 #### Styling
 
 - Feel of the site is electric blue, sharp edges and sparky feel to it.
 
-#### Backgrounds
+#### Backgrounds & Images
 
-#### Images
+- The background images have hints to what the page is about, as well as being musically themed.
+- The cover image is that of a studio in use.
+- The record homepage is another studio shot.
+- The rehearsals homepage is an image of someone enjoying a major performance.
+- The checkout success is someone using a loop pedal, this represents another successful purchase.
+- The sign in page is the first thing a vocalist sees when they enter the room, headphones rested on a microphone.
+- The register button is someone about to start a long journey.
+- And the log out button is guitar that has been put away, resting on its stand.
+- The product images are all relevant to what they are advertising.
 
 ### Wireframes
 
@@ -190,6 +218,8 @@ This prototype of the index page was made using [Figma.com](https://www.figma.co
 Originally, I wanted to have the products within their allocated app (Rehearse, Record and Shop), I was thinking of having the products html's display in different colours when accessed through these different apps. I later decided against this as the colours would not go well with the rest of the sites design and having all the products accessible through one app is so much simpler and easier.
 
 This means that like the home app: the record, rehearse and shop apps serve as homes for their respective templates only. With the record app containing 'Meet the Engineers' too.
+
+The products page can detect whether the user has arrived at the page through one of the apps, and displays the page differently with either a gold or lightblue border and specific page title.
 
 ### Q and A of Potential Users
 
@@ -408,7 +438,13 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 | Opportunities/Problems | Importance | Viability |
 | ---------------------- | ---------- | --------- |
-| Item 1                 | 0          | 0         |
+| Information on engineers | 4          | 5         |
+| Information on rehearsal room equipment | 5          | 5         |
+| Artists worked with section | 4          | 5         |
+| Products page with respective filters and sorts | 5          | 5         |
+| Previous order information | 3          | 4         |
+| Videos promoting studio | 5          | 0         |
+| List of equipment used in studio itself | 3          | 3         |
 
 ## Features
 
@@ -428,9 +464,12 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 ### Features Left to Implement
 
+- Videos promoting the studio in use.
+- Engineers accomplishments and songs they've worked on.
+
 #### Idea 1
 
--
+- Specific information of engineers achievements and songs they've worked on.
 
 ## Testing
 
@@ -491,18 +530,6 @@ I contacted tutor support and before they had a chance to help me I reloaded my 
 - Used the same layout on record page and engineer page for three engineers and artists. This kept things simple when made smaller, no changed needed to be made.
 - Page information has been contained in rows, and I've made the length of header container to 700px to contain main images and centralised the rows.
 - Added maximum width on message container for mobile devices.
-
-### API Integration
-
-Description
-
-#### Process
-
-Explanation
-
-#### Issues
-
-Explanation
 
 ## Credits
 
