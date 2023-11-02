@@ -53,7 +53,7 @@ select {
     -moz-appearance: none;
 }
 
-/* Laptop and Desktop Screens */
+/* Medium and Large Screens */
 
 @media (min-width: 768px) {
     #search-button {

@@ -40,7 +40,7 @@
     height: 700px;
 }
 
-/* Mobile & Laptop Screens */
+/* Mobile & Medium Screens */
 
 @media (max-width: 991px) {
     .studio-image {

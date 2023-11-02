@@ -15,7 +15,7 @@
         </div>
         {% if cart_products %}
             <table class="col-12 justify-content-center m-auto mb-2">
-                <tr>
+                <tr class="headings-tr">
                     <th>Image</th>
                     <th>Name</th>
                     <th>Price</th>
@@ -35,20 +35,19 @@
                             {% endif %}
                         </div>
                     </td>
-                    <td>
-                        <p>{{ item.product.name }}</p>
-                        <p class="mb-0">{{ item.product.category.friendly_name }}</p>
+                    <td class="medium-padding">
+                        <p class="small-centralisation name-small">{{ item.product.name }}</p>
+                        <p class="mb-0 small-centralisation cat-small">{{ item.product.category.friendly_name }}</p>
                     </td>
-                    <td class="cart-price">
+                    <td class="cart-price small-centralisation">
                         {% if item.product.is_offers_item %}
                             <p class="mb-1">£{{ item.product.price }}</p>
                             <p class="mb-0"><strike>£{{ item.product.striked_price }}</strike></p>
                         {% else %}
                             <p class="mb-0 prices">£{{ item.product.price }}</p>
                         {% endif %}
-                    </td>
-                    <td>
-                        <form action="{% url 'alter_cart' item.product.id %}" method="POST" class="products-add">
+                        <p class="d-md-none ml-2">x</p>
+                        <form action="{% url 'alter_cart' item.product.id %}" method="POST" class="products-add d-md-none">
                             {% csrf_token %}
                             <div class="input-group">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
@@ -66,13 +65,31 @@
                         </form>
                     </td>
                     <td>
-                        <div>
-                            <p class="total-price mb-0">£{% find_item_subtotal cart_products item.product.id %}</p>
+                        <form action="{% url 'alter_cart' item.product.id %}" method="POST" class="products-add d-none d-md-block">
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <div class="quantity-box">
+                                    <button class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input class="quantity-middle" value="{% find_quantity cart_products item.product.id %}" type="number" min="1" max="99" name="quantity" data-product_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <button id="remove_all_of_item_cart" name="remove_all_of_item_cart">Remove all</button>
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-center">
+                            <p class="d-md-none mr-2">Subtotal: </p><p class="total-price mb-0 small-centralisation">£{% find_item_subtotal cart_products item.product.id %}</p>
                         </div>
                     </td>
                 </tr>
                 {% endfor %}
-                <tr>
+                <tr class="total-row">
                     <td></td>
                     <td></td>
                     <td></td>
