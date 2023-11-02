@@ -289,7 +289,7 @@ a:hover {
     }
 }
 
-/* Laptop & Desktop Screens */
+/* Medium & Large Screens */
 
 @media (min-width: 768px) {
     #to-cart {
