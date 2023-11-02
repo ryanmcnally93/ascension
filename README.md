@@ -1,6 +1,6 @@
 # Ascension
 
-MAIN IMAGE
+<!-- IMAGE -->
 
 This is a Django web application for Ascension, a music studio based in Birmingham. Languages used include HTML, CSS, JavaScript and Python, created using Django Crispy Forms, All Auth, Stripe, Pillow & Bootstrap.
 
@@ -145,6 +145,8 @@ The website needs to look professional and high tech, we want customers to feel 
 
 - I decided to use the 'Raleway' font as it has character in lowercase but has a very professional look in uppercase. This has been used across the whole web-application.
 
+<img src="/media/readme-images/fonts.webp" width="50%" alt="The fonts used" style="display: inherit; ">
+
 #### Icons
 
 - The user icon is used within the navbar for the user options, from logging in to viewing your profile.
@@ -153,6 +155,10 @@ The website needs to look professional and high tech, we want customers to feel 
 - Secure payment and complete order have the safety lock icon. So users know this is secure.
 - The toast messages have relevant ticks, x's, and warning and information icons.
 
+<img src="/media/readme-images/icons-1.webp" width="50%" alt="Navbar Icons" style="display: inherit; ">
+
+<img src="/media/readme-images/icons-2.webp" width="50%" alt="Footer Icons" style="display: inherit; ">
+
 #### Colours
 
 - I wanted to use an electric blue initially, to give the page a more digital look. I settled in the end for a dark turqoise.
@@ -160,9 +166,13 @@ The website needs to look professional and high tech, we want customers to feel 
 - The navbar is turqoise and the footer grey, with the mobile navbar also being grey.
 - The primary buttons are turqoise and the secondary buttons are grey, the hover qualities change the buttons main colors with white and the white test to the main color. This is the same throughout.
 
+<img src="/media/readme-images/colours.webp" width="50%" alt="Primary and Secondary coloured buttons" style="display: inherit; ">
+
 #### Styling
 
 - Feel of the site is electric blue, sharp edges and sparky feel to it.
+
+<img src="/media/readme-images/styling.webp" width="50%" alt="Styling used" style="display: inherit; ">
 
 #### Backgrounds & Images
 
@@ -175,6 +185,8 @@ The website needs to look professional and high tech, we want customers to feel 
 - The register button is someone about to start a long journey.
 - And the log out button is guitar that has been put away, resting on its stand.
 - The product images are all relevant to what they are advertising.
+
+<img src="/media/readme-images/backgrounds.webp" width="50%" alt="Example of a background used" style="display: inherit; ">
 
 ### Wireframes
 
@@ -452,24 +464,129 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 #### Navigation Bar
 
--
+- The navbar is made of three mini navbars. Two for the main logo, user-options and cart bar, and one for the five main links.
+- The first main logo navbar is for big screens, and contains the longer logo, and the two icons anchors to the right.
+- The second main logo navbar contains four small icons with similar width, height and hover attributes. Clicking on the user-options ensures the toasts are closed.
+
+<img src="/media/readme-images/navbar-1.webp" width="50%" alt="The Navbar" style="display: inherit; ">
+
+<img src="/media/readme-images/navbar-2.webp" width="50%" alt="The Navbar" style="display: inherit; ">
 
 #### Footer
 
--
+- The left part of the footer contains the address of the studio
+- The middle is the copyright information and contact telephone.
+- The right contains the three main social media links.
+
+<img src="/media/readme-images/footer.webp" width="50%" alt="The Footer" style="display: inherit; ">
 
 #### Logo
 
--
+- The larger Ascension logo has spaces between the letters to make it more grand and spacey.
+- The smaller one is the same Raleway font and Styling, with a circular black background.
+- Both logos have a slight font shadow beneath.
+
+<img src="/media/readme-images/logo-large.webp" width="50%" alt="Larger Logo" style="display: inherit; ">
+
+<img src="/media/logo-small.png" width="50%" alt="Smaller Logo" style="display: inherit; ">
+
+#### Index Features
+
+- The homepage contains a main message for any user unsure about what the company does, the messgges explains the relation to music and how tihs application can be used to help elevate your music career.
+- The three main buttons allow the user to visit the homepage of the three main apps, record, rehearse and products.
+- The Little Strings section contains a link to my previous project, which is also musically themed.
+
+<img src="/media/readme-images/index.webp" width="50%" alt="Index Page" style="display: inherit; ">
+
+#### About Us
+
+- Main paragraph is within a turqoise container on the main image, this contains information of the origin of the company.
+- The contact us section contains the opening hours, email, phone number and address aswell as giving a visual image via iframe of where the studio is.
+
+<img src="/media/readme-images/about-us.webp" width="50%" alt="About Us Page" style="display: inherit; ">
+
+#### Record Main
+
+- Turqoise section same layout as about us information on about us page.
+- Artists we've worked with contains a little bio of three local-to-Birmingham artists, which re-organises when opened on mobile into a singular column design.
+- The meet the engineers page contains images of the three engineers and a bio with the same layout as the artists previously mentioned.
+
+<img src="/media/readme-images/record-main.webp" width="50%" alt="Record Page" style="display: inherit; ">
+
+#### Rehearsal Main
+
+- Turqoise section same layout as about us information on about us page.
+- Different types of rooms section contains information on the equipment provided in each room, aswell as an image of each one.
+
+<img src="/media/readme-images/rehearsals-main-1.webp" width="50%" alt="Rehearsals Page" style="display: inherit; ">
+
+#### Products page
+
+- Each product has their own card, creating using a for loop these cards contain all the relevant information aswell as links to edit and delete them and add them to cart. The quantity boxes allow the user to select more or less of the same item.
+- The filters allow the user to list the same items currently being shown in a different order, by price or rating.
+- Entering this page from the links created accross the site views the page in different ways. For example, clicking record and then all studios will give the same products page with studios only. The page title will be STUDIOS and the colour will be gold. CLicking rehearsals instead provides lightblue and the relevant title. Arriving using the strings link will change the title but not the colours of the page.
+
+<img src="/media/readme-images/products.webp" width="50%" alt="Products Page" style="display: inherit; ">
+
+#### Product Information
+
+- On larger screens the image is on the left and the information and buttons on the right.
+- On mobile, there again is a singular column, the image above the information above the buttons, all centralised.
+- On hire room pages there is also a datepicker which triggers five radio buttons with hour long slots attached.
+
+<img src="/media/readme-images/product-information.webp" width="50%" alt="Products Information Page" style="display: inherit; ">
+
+#### Add a product form
+
+- The form within this page is created using the forms.py.
+- The image file fields generate the image name automatically but aren't easy to style. So I've hidden them behind easy to style ones and added event listeners so when you click the top button it triggers the underneath button.
+- There are two relevant images to the right of the form, they disappear on smaller screens.
+
+<img src="/media/readme-images/add-product.webp" width="50%" alt="Add a Product Form" style="display: inherit; ">
+
+#### Edit a product
+
+- The edit page is very similar to the add a product page, except the javascript keeps the information invisible until an option is selected and searched, meaning the form only shows on this page if it contains information.
+- Coming to this page from a products description will automatically contain that products information.
+
+<img src="/media/readme-images/edit-product-1.webp" width="50%" alt="Edit Product Page" style="display: inherit; ">
+
+<img src="/media/readme-images/edit-product-2.webp" width="50%" alt="Edit Product Page" style="display: inherit; ">
+
+#### Cart page
+
+- The product image is on the left, reading right we then have the line item information and quantity along with a subtotal. This is displayed in a singular column on mobile devices.
+- This page also has an empty cart button, which first displays a modal ensuring you want to empty your cart.
+- There are buttons to take you back to products and take you to the checkout page.
+
+<img src="/media/readme-images/cart.webp" width="50%" alt="Cart Page" style="display: inherit; ">
+
+#### Checkout page
+
+- The checkout page displays the pre-filled billing info on the right. If there is no pre-written info, updating this and selecting the radio at the bottom will store this information to the user.
+- The Order Summary section contains all the products you are about to order, along with the quantites.
+
+<img src="/media/readme-images/checkout.webp" width="50%" alt="Checkout Page" style="display: inherit; ">
+
+#### Checkout Success
+
+- There is a loading spinner that is displayed whilst the payment is going through.
+- The about section is similar to what has been used before, turqoise background on an image.
+- Order information is displayed below, when we arrive here from the profile page, the toast message lets the user know this is an old order.
+
+<img src="/media/readme-images/check-succ.webp" width="50%" alt="Checkout Success Page" style="display: inherit; ">
+
+#### Profile page
+
+- Billing information is included on the left, previous orders on the right.
+- The order numbers are truncated so they don't take up too much uneccessary space, and they are links to the checkout success page for that order.
+
+<img src="/media/readme-images/profile.webp" width="50%" alt="User Profile Page" style="display: inherit; ">
 
 ### Features Left to Implement
 
-- Videos promoting the studio in use.
+- Videos promoting the studio in use. This would be powerful on the index page and it wouldn't be difficult to get great images from a professional music studio.
 - Engineers accomplishments and songs they've worked on.
-
-#### Idea 1
-
-- Specific information of engineers achievements and songs they've worked on.
 
 ## Testing
 
@@ -491,6 +608,8 @@ I contacted tutor support and before they had a chance to help me I reloaded my 
 
 - I created a smaller logo and gave it and the toggler specific hover qualities so the user knows when they are about to click something important.
 - I removed padding left from user-options to prevent moving to next line.
+
+<img src="/media/readme-images/navbar-responsiveness.webp" width="50%" alt="Navbar responsiveness" style="display: inherit; ">
 
 #### Footer
 
@@ -524,6 +643,8 @@ I contacted tutor support and before they had a chance to help me I reloaded my 
 #### Checkout Page
 
 - Similar to cart, make into a singular column, centralise information, Image size changes.
+
+<img src="/media/readme-images/checkout-responsiveness.webp" width="50%" alt="Checkout responsiveness" style="display: inherit; ">
 
 #### Other Pages
 
