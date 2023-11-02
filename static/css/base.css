@@ -6,6 +6,14 @@ body {
     font-family: 'Raleway';
 }
 
+footer {
+    border-top: 1px solid white !important;
+}
+
+header {
+    border-bottom: 1px solid white !important;
+}
+
 #wrap {
     min-height: 100%;
 }
@@ -15,10 +23,27 @@ body {
     padding-bottom: 72px;
 }
 
+@media (max-width: 991px) {
+    #navbar-nav {
+        width: 105px;
+        background-color: white;
+        padding: 0;
+        margin-left: 5px !important;
+        border: 1px solid #282C2E;
+    }
+}
+
 /*  Navbar */
 
 .fa-bars {
     color: white;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 60px;
+    }
 }
 
 .logo {
@@ -36,6 +61,15 @@ body {
 
 p#my-account-sm {
     white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+    .dropdown-menu-right {
+        position: absolute !important;
+        left: 126px;
+        top: 0;
+        width: fit-content;
+    }
 }
 
 a#small-logo {
@@ -61,6 +95,20 @@ a#small-logo:hover {
 .mobile-logo-box {
     height: 55px;
     margin-bottom: 2px;
+}
+
+@media (min-width: 992px) {
+    .mobile-link {
+        color: white;
+    }
+}
+
+@media (max-width: 991px) {
+    .mobile-link {
+        color: #033A54;
+        width: 100%;
+        padding-left: 5px !important;
+    }
 }
 
 .navbar {
@@ -165,6 +213,12 @@ label.requiredField {
     top: 72px;
     right: 15px;
     z-index: 99999999999;
+}
+
+@media (max-width: 767px) {
+    .message-container {
+        max-width: 290px;
+    }
 }
 
 .custom-toast {
@@ -309,13 +363,25 @@ button.bg-darkblue:hover,
     text-decoration: none;
 }
 
-#record-link:hover,
-#rehearse-link:hover,
-#shop-link:hover,
-#offers-link:hover,
-#about-link:hover {
-    background-color: white;
-    color: #033A54 !important;
+@media (max-width: 991px) {
+    #record-link:hover,
+    #rehearse-link:hover,
+    #shop-link:hover,
+    #offers-link:hover,
+    #about-link:hover {
+        background-color: #033A54;
+        color: white !important;
+    }
+}
+@media (min-width: 992px) {
+    #record-link:hover,
+    #rehearse-link:hover,
+    #shop-link:hover,
+    #offers-link:hover,
+    #about-link:hover {
+        background-color: white;
+        color: #033A54 !important;
+    }
 }
 
 #about-link,
@@ -409,4 +475,8 @@ html, body {
 
 #back-to-products {
     padding-top: 3px !important;
+}
+
+.secondary-items {
+    padding-left: 10px !important;
 }
