@@ -24,6 +24,11 @@
     z-index: -1;
 }
 
+.back-mark {
+    display: inline;
+    margin: -1px 3px 0 0;
+}
+
 .studios-hr {
     border-top: 1px solid rgb(255, 215, 0, .9);
 }

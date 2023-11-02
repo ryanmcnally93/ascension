@@ -155,13 +155,7 @@ label.requiredField {
 }
 
 #all-auth-image-box {
-    height: 500px;
     overflow: hidden;
-}
-
-#all-auth-image {
-    top: -140px;
-    position: absolute;
 }
 
 /* Messages */
@@ -284,7 +278,7 @@ label.requiredField {
 .bg-black {
     background-color: #282C2E !important;
     color: white !important;
-    border: 1px solid #282C2E;
+    border: 1px solid #282C2E !important;
 }
 
 a.bg-black {
@@ -296,14 +290,14 @@ a.bg-black:hover,
 button.bg-black:hover {
     background-color: white !important;
     color: #282C2E !important;
-    border: 1px solid #282C2E;
+    border: 1px solid #282C2E !important;
     text-decoration: none;
 }
 
 .bg-darkblue {
     background-color: #033A54 !important;
     color: white !important;
-    border: 1px solid #033A54;
+    border: 1px solid #033A54 !important;
 }
 
 a.bg-darkblue:hover,
@@ -311,7 +305,7 @@ button.bg-darkblue:hover,
 #loadFileXml:hover {
     background-color: white !important;
     color: #033A54 !important;
-    border: 1px solid #033A54;
+    border: 1px solid #033A54 !important;
     text-decoration: none;
 }
 
