@@ -186,7 +186,7 @@ The website needs to look professional and high tech, we want customers to feel 
 - And the log out button is guitar that has been put away, resting on its stand.
 - The product images are all relevant to what they are advertising.
 
-<img src="/media/readme-images/backgrounds.webp" width="50%" alt="Example of a background used" style="display: inherit; ">
+<img src="/media/readme-images/backgrounds.webp" width="70%" alt="Example of a background used" style="display: inherit; ">
 
 ### Wireframes
 
@@ -468,9 +468,9 @@ This roadmap indicates the importance and viability of specific opportunities.
 - The first main logo navbar is for big screens, and contains the longer logo, and the two icons anchors to the right.
 - The second main logo navbar contains four small icons with similar width, height and hover attributes. Clicking on the user-options ensures the toasts are closed.
 
-<img src="/media/readme-images/navbar-1.webp" width="50%" alt="The Navbar" style="display: inherit; ">
+<img src="/media/readme-images/navbar-1.webp" width="100%" alt="The Navbar" style="display: inherit; ">
 
-<img src="/media/readme-images/navbar-2.webp" width="50%" alt="The Navbar" style="display: inherit; ">
+<img src="/media/readme-images/navbar-2.webp" width="10%" alt="The Navbar" style="display: inherit; ">
 
 #### Footer
 
@@ -478,7 +478,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 - The middle is the copyright information and contact telephone.
 - The right contains the three main social media links.
 
-<img src="/media/readme-images/footer.webp" width="50%" alt="The Footer" style="display: inherit; ">
+<img src="/media/readme-images/footer.webp" width="100%" alt="The Footer" style="display: inherit; ">
 
 #### Logo
 
@@ -566,7 +566,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 - The checkout page displays the pre-filled billing info on the right. If there is no pre-written info, updating this and selecting the radio at the bottom will store this information to the user.
 - The Order Summary section contains all the products you are about to order, along with the quantites.
 
-<img src="/media/readme-images/checkout.webp" width="50%" alt="Checkout Page" style="display: inherit; ">
+<img src="/media/readme-images/checkout.webp" width="70%" alt="Checkout Page" style="display: inherit; ">
 
 #### Checkout Success
 
@@ -581,7 +581,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 - Billing information is included on the left, previous orders on the right.
 - The order numbers are truncated so they don't take up too much uneccessary space, and they are links to the checkout success page for that order.
 
-<img src="/media/readme-images/profile.webp" width="50%" alt="User Profile Page" style="display: inherit; ">
+<img src="/media/readme-images/profile.webp" width="70%" alt="User Profile Page" style="display: inherit; ">
 
 ### Features Left to Implement
 
@@ -609,7 +609,7 @@ I contacted tutor support and before they had a chance to help me I reloaded my 
 - I created a smaller logo and gave it and the toggler specific hover qualities so the user knows when they are about to click something important.
 - I removed padding left from user-options to prevent moving to next line.
 
-<img src="/media/readme-images/navbar-responsiveness.webp" width="50%" alt="Navbar responsiveness" style="display: inherit; ">
+<img src="/media/readme-images/navbar-responsive.webp" width="70%" alt="Navbar responsiveness" style="display: inherit; ">
 
 #### Footer
 
@@ -644,7 +644,7 @@ I contacted tutor support and before they had a chance to help me I reloaded my 
 
 - Similar to cart, make into a singular column, centralise information, Image size changes.
 
-<img src="/media/readme-images/checkout-responsiveness.webp" width="50%" alt="Checkout responsiveness" style="display: inherit; ">
+<img src="/media/readme-images/checkout-responsive.webp" width="50%" alt="Checkout responsiveness" style="display: inherit; ">
 
 #### Other Pages
 
