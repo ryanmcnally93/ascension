@@ -1,59 +1,59 @@
 <div class="collapse navbar-collapse" id="mainnavbar">
-    <ul class="navbar-nav m-auto">
+    <ul id="navbar-nav" class="navbar-nav m-auto">
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-white mr-5" href="#" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold mobile-link nav-link mr-5" href="#" id="about-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 About
             </a>
-            <div class="dropdown-menu rounded-0" aria-labelledby="about-link">
-                <a href="{% url 'about' %}" class="dropdown-item">About Us</a>
-                <a href="{% url 'about' %}#footer" class="dropdown-item">Contact Us</a>
+            <div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="about-link">
+                <a href="{% url 'about' %}" class="dropdown-item secondary-items">About Us</a>
+                <a href="{% url 'about' %}#footer" class="dropdown-item secondary-items">Contact Us</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-white mr-5" href="#" id="record-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold mobile-link nav-link mr-5" href="#" id="record-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Record
             </a>
-            <div class="dropdown-menu rounded-0" aria-labelledby="record-link">
-                <a href="{% url 'record_studio_home' %}" class="dropdown-item">Record Main</a>
-                <a href="{% url 'meet_the_engineers' %}" class="dropdown-item">Meet the Engineers</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc&category=studios" class="dropdown-item">Studio by Rating</a>
-                <a href="{% url 'products' %}?sort=price&direction=asc&category=studios" class="dropdown-item">Studio by Price</a>
-                <a href="{% url 'products' %}?category=studios" class="dropdown-item">All Studios</a>
+            <div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="record-link">
+                <a href="{% url 'record_studio_home' %}" class="dropdown-item secondary-items">Record Main</a>
+                <a href="{% url 'meet_the_engineers' %}" class="dropdown-item secondary-items">Meet the Engineers</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc&category=studios" class="dropdown-item secondary-items">Studio by Rating</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc&category=studios" class="dropdown-item secondary-items">Studio by Price</a>
+                <a href="{% url 'products' %}?category=studios" class="dropdown-item secondary-items">All Studios</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-white mr-5" href="#" id="rehearse-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold mobile-link nav-link mr-5" href="#" id="rehearse-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Rehearse
             </a>
-            <div class="dropdown-menu rounded-0" aria-labelledby="rehearse-link">
-                <a href="{% url 'rehearse_home' %}" class="dropdown-item">Rehearsals Main</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc&category=rehearsal_rooms" class="dropdown-item">Rooms by Rating</a>
-                <a href="{% url 'products' %}?sort=price&direction=asc&category=rehearsal_rooms" class="dropdown-item">Rooms by Price</a>
-                <a href="{% url 'products' %}?category=rehearsal_rooms" class="dropdown-item">All Rooms</a>
+            <div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="rehearse-link">
+                <a href="{% url 'rehearse_home' %}" class="dropdown-item secondary-items">Rehearsals Main</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc&category=rehearsal_rooms" class="dropdown-item secondary-items">Rooms by Rating</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc&category=rehearsal_rooms" class="dropdown-item secondary-items">Rooms by Price</a>
+                <a href="{% url 'products' %}?category=rehearsal_rooms" class="dropdown-item secondary-items">All Rooms</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-white mr-5" href="#" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold mobile-link nav-link mr-5" href="#" id="shop-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Shop
             </a>
-            <div class="dropdown-menu rounded-0" aria-labelledby="shop-link">
-                <a href="{% url 'products' %}?category=guitar_strings" class="dropdown-item">Strings</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc&shop" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?sort=price&direction=asc&shop" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?shop" class="dropdown-item">All Shop Items</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            <div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="shop-link">
+                <a href="{% url 'products' %}?category=guitar_strings" class="dropdown-item secondary-items">Strings</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc&shop" class="dropdown-item secondary-items">By Rating</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc&shop" class="dropdown-item secondary-items">By Price</a>
+                <a href="{% url 'products' %}?shop" class="dropdown-item secondary-items">All Shop Items</a>
+                <a href="{% url 'products' %}" class="dropdown-item secondary-items">All Products</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link text-white" href="#" id="offers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold mobile-link nav-link" href="#" id="offers-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Offers
             </a>
-            <div class="dropdown-menu rounded-0" aria-labelledby="offers-link">
-                <a href="{% url 'products' %}?sale" class="dropdown-item">Sale Items</a>
+            <div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="offers-link">
+                <a href="{% url 'products' %}?sale" class="dropdown-item secondary-items">Sale Items</a>
             </div>
         </li>
     </ul>

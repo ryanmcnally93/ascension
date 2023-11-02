@@ -448,15 +448,49 @@ I contacted tutor support and before they had a chance to help me I reloaded my 
 
 ### Responsive Design
 
-An image and description.
+#### Navbar
 
-#### Ipad Air screen resolution
+- I created a smaller logo and gave it and the toggler specific hover qualities so the user knows when they are about to click something important.
+- I removed padding left from user-options to prevent moving to next line.
 
--
+#### Footer
 
-#### IPhone 5/SE screen resolution
+-  I made the middle writing smaller, eventually left-aligning it and making the writing on the left disappear.
+- Initially the social media icons were too large when 430px, and the small logo and user-options collided. Buttons got too small for their text, sorted I fixed those.
 
--
+#### Product Information
+
+- I've made the information a flex-column on small and medium devices. Adding a section for the hire-rooms' specific information and centralised the contents on smaller devices.
+
+#### Product Page
+
+- I made the page slightly longer to account for text spilling over, and changed the card width’s so not too wide or thin on mobile devices.
+
+#### Add & Edit Products Pages
+
+- I made images disappear on smaller devices, and made the search bar col-12 on smaller devices with the button underneath, so you can read more of the product name.
+
+#### Profile Page
+
+- Added margin bottom to longer page and gave custom margin bottom so order history and billing was in line.
+
+#### Cart Page
+
+- Added padding to product name on medium screens as before it was touching the image.
+- Changed flex-direction on mobile.
+- Placed quantity box and price on same line and subtotal title to that price so it’s clear as to what is happening.
+- Total box has width limit so the border looks more in line with objects above.
+- Centralised buttons at bottom of page.
+
+#### Checkout Page
+
+- Similar to cart, make into a singular column, centralise information, Image size changes.
+
+#### Other Pages
+
+- Used the same layout on record page and engineer page for three engineers and artists. This kept things simple when made smaller, no changed needed to be made.
+- Page information has been contained in rows, and I've made the length of header container to 700px to contain main images and centralised the rows.
+- Added maximum width on message container for mobile devices.
 
 ### API Integration
 
