@@ -101,7 +101,7 @@
                     <div class="mt-2 mb-3 prod-info-btns d-flex">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% if stringed_product_id in request.session.cart.keys %}
-                        <a id="back-to-products" class="mr-2 btn bg-black rounded-0 p-1 px-2 mb-4" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back<p id="to-cart"> to products</p></p></a>
+                        <a id="back-to-products" class="bg-black rounded-0 p-1 px-2 d-flex mr-1" href="{% url 'products' %}"><p class="mb-1 back-mark">&#60;</p> <p id="back" class="d-inline mb-0">Back </p><p class="mb-0 d-none d-md-inline ml-1">to Products</p></a>
                         <div class="col d-flex flex-column flex-quantity">
                             <div class="row">
                                 <div id="info-quantity" class="quantity-box-information mb-2">
@@ -122,7 +122,7 @@
                 </form>
                         {% else %}
                         <input value="1" class="quantity-box d-none" type="number" min="1" max="99" name="quantity">
-                        <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2 mb-4" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back<p id="to-cart"> to products</p></p></a>
+                        <a id="back-to-products" class="bg-black rounded-0 p-1 px-2 d-flex mr-1" href="{% url 'products' %}"><p class="mb-1 back-mark">&#60;</p> <p id="back" class="d-inline mb-0">Back </p><p class="mb-0 d-none d-md-inline ml-1">to Products</p></a>
                         <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 ml-1 p-1 px-2 mb-4">Add<p id="to-cart"> to cart</p></button>
                     </div>
                 </form>

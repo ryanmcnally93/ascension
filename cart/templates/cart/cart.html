@@ -20,7 +20,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Quantity</th>
-                    <th>Sub-Total</th>
+                    <th class="sub">Sub-Total</th>
                 </tr>
                 {% for item in cart_products %}
                 <tr>
@@ -89,7 +89,7 @@
                     </td>
                 </tr>
                 {% endfor %}
-                <tr class="total-row">
+                <tr class="total-row py-1">
                     <td></td>
                     <td></td>
                     <td></td>
@@ -128,9 +128,9 @@
 
             </div>
             <div class="col-12 fifty-mb">
-                <div class="d-inline float-right mt-3 mb-3">
-                    <a id="back-to-products" class="btn bg-black rounded-0 p-1 px-2" href="{% url 'products' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline">Back to Products</p></a>
-                    <a class="btn bg-darkblue rounded-0 p-1 px-2" href="{% url 'checkout' %}"><p class="d-inline">Secure Payment</p></a>
+                <div class="d-flex float-right mt-3 mb-3 flex-row">
+                    <a id="back-to-products" class="bg-black rounded-0 p-1 px-2 d-flex mr-1" href="{% url 'products' %}"><p class="mb-1 back-mark">&#60;</p> <p id="back" class="d-inline mb-0">Back </p><p class="mb-0 d-none d-md-inline ml-1">to Products</p></a>
+                    <a class="btn bg-darkblue rounded-0 p-1 px-2 ml-1" href="{% url 'checkout' %}"><p class="mb-0 d-none d-md-inline">Secure</p> <p class="d-inline mb-0">Payment </p><i class="ml-1 fas fa-lock"></i></a>
                 </div>
             </div>
         {% else %}

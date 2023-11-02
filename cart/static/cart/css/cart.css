@@ -126,11 +126,19 @@ input[type=number] {
     cursor: pointer;
 }
 
+.back-mark {
+    display: inline;
+    margin: -1px 3px 0 0;
+}
+
 /* Medium Screens */
 
 @media (min-width: 768px) and (max-width: 991px) {
     .medium-padding {
         padding-left: 10px;
+    }
+    th.sub {
+        width: 75px;
     }
 }
 
@@ -176,5 +184,24 @@ input[type=number] {
         border-bottom: 1px solid #033A54;
         width: 50%;
         margin: auto;
+    }
+    .row.d-flex.flex-row-reverse {
+        justify-content: center;
+    }
+    .fifty-mb {
+        justify-content: center;
+        display: flex;
+        margin-bottom: 20px
+    }
+    #empty_cart {
+        margin: 15px 0 0 0 !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .product-image-box {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
     }
 }

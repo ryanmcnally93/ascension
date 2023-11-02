@@ -14,7 +14,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <h3 class="mb-3">Default Billing</h3>
+                <p class="mb-3 font-weight-bold">Default Billing</p>
                 <form action="{% url 'profile' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
@@ -22,7 +22,7 @@
                 </form>
             </div>
             <div class="col-lg-6">
-                <h3 class="hist">Order History</h3>
+                <p class="hist font-weight-bold">Order History</p>
                 <table class="w-100 mb-4">
                     <tr>
                         <th class="col-4 p-0">Order Number</th>
