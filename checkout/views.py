@@ -9,6 +9,7 @@ from products.models import Product
 from cart.contexts import cart_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
+from django.contrib.auth.decorators import login_required
 
 import stripe
 import json
@@ -32,6 +33,7 @@ def cache_checkout_data(request):
         return HttpResponse(content=e, status=400)
 
 
+@login_required
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
