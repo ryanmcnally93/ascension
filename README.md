@@ -736,6 +736,8 @@ I instead have just allowed users to checkout with the selected dates and times 
 
 - I used this Slack Overflow solution by [Jezen Thomas](https://stackoverflow.com/questions/18739937/how-to-keep-footer-at-bottom-of-screen) to produce a sticky footer that stays at the bottom of the page.
 
+- I used the second solution on [this Stack Overflow page](https://stackoverflow.com/questions/16041232/django-delete-filefield) to install django cleanup, which deletes a file if it is removed from a form, like the images that are installed when adding and editing a product. It also deletes the image from the project roots when you delete the product. 
+
 ### Web Tools
 
 - I used [Contrast Checker](https://webaim.org/resources/contrastchecker/) to make sure my headings were visible against their background colours.
