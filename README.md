@@ -728,11 +728,20 @@ I instead have just allowed users to checkout with the selected dates and times 
 
 ### Code
 
-- (https://stackoverflow.com/questions/44570965/django-error-could-not-parse-the-remainder-y-m-d-from-post-datedate)
+- On my checkout success page I needed to render the date in a smaller format for smaller screens. Unfortunately I couldn't find a way to udse strftime within Jinja, but found this alternate solution on [Stack Overflow](https://stackoverflow.com/questions/44570965/django-error-could-not-parse-the-remainder-y-m-d-from-post-datedate) - Author 'Daniel Roseman'.
+
+- I used [W3Schools](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) to remove arrows on the searchbar as they had no hover quality and looked messy.
+
+- I used this slack post by [Richard Ash](https://app.slack.com/client/T0L30B202/search?cdn_fallback=2) to close toasts when user-options is selected.
+
+- I used this Slack Overflow solution by [Jezen Thomas](https://stackoverflow.com/questions/18739937/how-to-keep-footer-at-bottom-of-screen) to produce a sticky footer that stays at the bottom of the page.
 
 ### Web Tools
 
--
+- I used [Contrast Checker](https://webaim.org/resources/contrastchecker/) to make sure my headings were visible against their background colours.
+- I used [Re-Sizing Images](https://www.simpleimageresizer.com/upload) to re-size images that were unnecessarily large.
+- I used this [Webp Converter](https://ezgif.com/png-to-webp) to convert all images to webp format.
+- And then this [Image Compresser](https://tinypng.com/) to make their file size smaller.
 
 ### Media
 
@@ -774,6 +783,8 @@ The following descriptions were written by me, these links are to the images onl
 - SP27 - [Acoustic Booth - Studio Box](https://www.acousticbooth-studiobox.com/soundproof-practice-booth.html)
 - SP28 & SP29 - [Pirate Studios](https://pirate.com/en/rehearsal-studios/)
 
+- No media image obtained from [ncenet.](https://www.ncenet.com/no-image-png-2)
+
 #### Artist Descriptions and Images
 
 - Call Me Unique's description - [Call Me Unique.](https://www.callmeunique.com/about)
@@ -789,9 +800,24 @@ These images were obtained from pexels.com.
 - Adam Moore image author - Tyler Sherrington
 - John Polter imag author - Simon Robben
 
+#### Title Background Images
+
+- Index-main Image obtained from [Yelp](https://www.yelp.com/biz_photos/soundxtreem-studios-atlanta-2?select=xRsIAvaYhLXXWbyZEoJ_MQ) - SoundXtreem Studios Credited.
+- About-main image obtained from [Pexels](https://www.pexels.com/) - Author 'Cottonbro Studio'.
+- Shop-main image obtained from [Pexels](https://www.pexels.com/) - Author 'Cottonbro Studio'.
+- Record-studio-main image obtained from [Pexels](https://www.pexels.com/) - Author 'Pixabay'.
+- Rehearsals-main image obtained from [Pexels](https://www.pexels.com/) - Author 'Wendy-Wei'.
+- Login page image obtained from [Pexels](https://www.pexels.com/) - Author 'WallaceChuck'.
+- Logout page image obtained from [Pexels](https://www.pexels.com/) - Author 'Cottonbro Studio'.
+- Register page image obtained from [Pexels](https://www.pexels.com/) - Author 'Eduardo Dutra'.
+- Add a product image one obtained from [Pexels](https://www.pexels.com/) - Author 'Caleb Oquendo'.
+- Add a product image two obtained from [Pexels](https://www.pexels.com/) - Author 'Cottonbro Studio'.
+
 ### Acknowledgements
 
-- 
+- I'd like to thank my tutors from City of Bristol College, Ben Smith and Pasquale Fasulo for their support.
+- Jubril Akolade for mentoring me through the three stages of completion.
+- The Code Institute technical team for their help with some of the bigger issues I faced.
 
 This readme.md will be spellchecked using the spell checker extension for Chrome.
 
