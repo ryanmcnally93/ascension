@@ -122,19 +122,6 @@ def edit_product(request):
         product = get_object_or_404(Product, name=name)
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
-
-            # if form.picture.data:
-            #     print("An image has been changed!")
-                # Deletes last image
-                # if currentteam.profile_picture != "default_squad.webp":
-                #     os.remove(
-                #         os.path.join(
-                #             app.root_path,
-                #             "static/images/profile_pics",
-                #             currentteam.profile_picture,
-                #         )
-                #     )
-
             form.save()
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_information', args=[product.id]))
