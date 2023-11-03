@@ -12,21 +12,8 @@ def view_cart(request):
 def alter_cart(request, product_id):
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
-    # booked_sessions = request.session.get('booked_sessions', {})
     quantity = int(request.POST.get('quantity'))  
     product = get_object_or_404(Product, pk=product_id)
-
-    #     datetime = f'{date}{time}'
-    #     if product_id in booked_sessions:
-    #         booked_sessions[product_id] += [f'{date}/{time}']
-    #         request.session['booked_sessions'] = booked_sessions
-    #         print(booked_sessions)
-    #         return redirect('view_cart')
-    #     else:
-    #         booked_sessions[product_id] = [f'{date}/{time}']
-    #         request.session['booked_sessions'] = booked_sessions
-    #         print(booked_sessions)
-    #         return redirect('view_cart')
 
     if 'increase-quantity' in request.POST:
         cart[product_id] += 1
@@ -63,6 +50,7 @@ def alter_cart(request, product_id):
             return redirect('view_cart')
 
     if 'book' in request.POST:
+        # Handle Hire Room Bookings
         return redirect('product_information', product_id=product_id)
 
     if 'remove_all_of_item_product_info' in request.POST:

@@ -77,15 +77,7 @@
                         </div>
                         <div class="timeline">
                             {% for time in sessions %}
-                                <!-- if booked_sessions.product.id is defined  -->
-                                    <!-- if time in booked_sessions.product.id  -->
-                                        <!-- <input id="{{ time }}" class="radio" type="radio" name="time" variable="1" disabled><p class="timeline-button mb-0"><strike> {{ time }}</strike></p> -->
-                                    <!-- else  -->
-                                        <!-- <input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p> -->
-                                    <!-- endif  -->
-                                <!--  else  -->
                                     <span class="span-no-break"><input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p></span>
-                                <!-- endif  -->
                             {% endfor %}
                             <p id="no-radios">Please choose a date.</p>
                         </div>

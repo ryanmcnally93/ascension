@@ -47,7 +47,6 @@ def products(request):
 def product_information(request, product_id):
     product = get_object_or_404(Product, pk=product_id)       
     stringed_product_id = str(product.id)
-    # booked_sessions = request.session.get('booked_sessions', {})
 
     if 'cart' in request.session:
         if stringed_product_id in request.session['cart']:
@@ -59,19 +58,11 @@ def product_information(request, product_id):
 
     sessions = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00"]
 
-    # if str(product_id) in booked_sessions:
-    #     id = str(product_id)
-    #     sesh = ['']
-    #     for session in booked_sessions[id]:
-    #         sesh.append(session.split("/"))
-
     context = {
         'product': product,
         'stringed_product_id': stringed_product_id,
         'item_quantity': item_quantity,
         'sessions': sessions,
-        # 'booked_sessions': booked_sessions,
-        # 'session': sesh,
     }
     return render(request, 'products/product_information.html', context)
     
@@ -83,10 +74,6 @@ def add_product(request):
         return redirect(reverse('home'))
 
     if request.method == "POST":
-
-        # Gain image names
-        # Check database for image names and make sure not uploaded
-
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()

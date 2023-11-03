@@ -600,7 +600,79 @@ I contacted tutor support and before they had a chance to help me I reloaded my 
 
 2). I had an issue when creating the select element on the products page. Initially I attempted to change the content of the page only using javascript, but struggled with understanding how to find the sort and direction values and enter them into the URL. I fixed this by going back over the lessons and finding the tutorial on the postload js for the products page.
 
+3). One of the biggest challenges I gave myself really was with the add to cart button functionality on the product page.
+
+<img src="/media/readme-images/bug-3.webp" width="80%" alt="The add to cart and quantity buttons" style="display: inherit; ">
+
+I needed the page to know which product specifically I was increasing the quantity of. I also needed the page to either stay where it was or when it loads, quickly travel back to where the user was to add a bit of smoothness to the site.
+
+To achieve this I altered the redirect URL to include the product's specific ID so when the page loads again it takes the user back to the product.
+
+I also added an invisible field with the name 'quantity' and the value '1', which is only accessible when the quantity box (also called quantity) is not available. By doing this the view will always have access to a quantity value. By setting the invisible one to '1', the view will simply add this 1 to the cart when it runs the 'cart*procuct_id* = quantity' piece of code.
+
+The increase and decrease buttons also have their own names, which trigger different actions in the view for adding to the quantity and taking away. Once the product is in the cart it won't call on the invisible quantity box again until returned to 0.
+
+4). I could not access the cart variable in jinja to see whether the product was already inside.
+
+I tried adding cart_list to product_information views.py so I could access it as a list, as the list() function didn’t work in jinja. This returned [‘2’]. As I attempted to check that against my product.id, it wouldn't work as they were different types. I attempted product.id|string but this failed to work too.
+
+With help of a tutor we realised that the product id was integer but the dictionary values in cart_list were string. I created a string version of my product.id in product information.html which I then used in the html document.
+
+This helped with the product_information.html but not the product.html.
+
+As I was using a for loop to go through all the products, I tried to create a function that returns the product id’s needed but this didn’t work. With help again from a tutor I created a custom_filters.py which accomplishes what I was trying to achieve within the earlier function.
+
+This Custom Filters document lives in the product apps template tags and helps the page search through the current cart for information like item_id, quantity and subtotal.
+
+5). At one point my toasts were not rendering. This took me an hour to find the cause of the issue, annoyingly, the Bootstrap toast class was adding opacity: 0.
+
+6). I noticed that if toasts were open and the user clicked on user-options, it opened up behind the toast, when it should really also close the toast.
+
+I found a piece of code by Richard Ash on Slack, that closes the toast and placed this within a function that is called when the user-options anchor is clicked.
+
+7). When creating the add and edit product management pages, I had the following error.
+
+<img src="/media/readme-images/bug-7.webp" width="80%" alt="The template could not be found" style="display: inherit; ">
+
+Bootstrap4/uni_form.html template does not exist, after a lot of online searching I found the solution was to install 'bootstrap4crispyforms' and add it to installed apps, which worked.
+
+8). When setting up Stripe payments, I had the payments going through succesffully on the night, but the next day, they refused to work. I spent hours messing with the code and trying to work out why my payment intents and payment success webhooks were coming back with a red X rather than a green tick.
+
+<img src="/media/readme-images/bug-8.webp" width="70%" alt="Payments failing in Stripe" style="display: inherit; ">
+
+I tried setting env.py variables rather than importing and exporting into my terminal and deleting and rewriting webhooks, looking at differences in documents.
+
+I eventually asked for the support of a tutor, who showed me the port was not public so stripe couldn’t access the web hook. I had made it public the night before but completely forgotten about needing to do it the next day, needless to say this mistake won't happen twice!
+
+9). I had an issue with the info toasts displaying as success toasts. I tried looking at the views messages and there were no spelling errors, the toasts html documents contained the correct information too.
+
+I realised it was the if statement within the base.hmtl that had the messages success.html loading, which I changed and fixed the issue.
+
+<img src="/media/readme-images/bug-9.webp" width="70%" alt="The if statement that was wrong initially" style="display: inherit; ">
+
+10). I had an issue where if you added an item to cart, then signed in, it showed the items in your cart within the success toast that is only mentioning the successful sign in.
+
+I made 'on_profile_page' true on index page as I couldn't think of a scenario where the quantities of an item will change when entering the index page, this information is not important so doesn't need to be shown.
+
+11). I realised that items with the ID of 'my-account' and 'cart' are in the page twice, one is hidden and one isn’t, so I had to rewrite javascript to target the specific elements with the hover qualities desired.
+
+12). I spent a lot of time trying to format the order.date in Jinja. 
+
+I tried .strftime, |strftime and strftime('&d-&m-&Y'), along with changing variables within views.py. As the order was being created using a for loop, this couldn't be solved in views.py.
+
+I finally managed to find a way to format date in Jinja2, using 'order.date|date: "Y-m-d"'.
+
 ### Unfixed Bugs
+
+1). ried to create a sessino with booked sessions inside, this created massive issues. I had to save the product id, date and time within a dictionary and then try and access and manipulate this date throughout.
+
+<img src="/media/readme-images/unfixed-1.webp" width="70%" alt="The code I used" style="display: inherit; ">
+
+I quickly realised this approach wouldn’t be practical in the real world as this data would need to be saved onto a database rather than within a local session which would be deleted.
+
+<img src="/media/readme-images/unfixed-2.webp" width="70%" alt="The code I used" style="display: inherit; ">
+
+I instead have just allowed users to checkout with the selected dates and times added to their products, without checking for availability, but this would be a necessary future feature.
 
 ### Responsive Design
 
@@ -656,7 +728,7 @@ I contacted tutor support and before they had a chance to help me I reloaded my 
 
 ### Code
 
--
+- (https://stackoverflow.com/questions/44570965/django-error-could-not-parse-the-remainder-y-m-d-from-post-datedate)
 
 ### Web Tools
 
