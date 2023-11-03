@@ -18,7 +18,10 @@
                 <form action="{% url 'profile' %}" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="bg-darkblue p-1 px-2 mb-4" type="submit">Update Information</button>
+                    <div class="profile-buttons">
+                        <a class="bg-black p-1 px-2 mb-4" href="{% url 'socialaccount_connections' %}">Connected Accounts</a>
+                        <button id="update" class="bg-darkblue p-1 px-2" type="submit">Update Information</button>
+                    </div>
                 </form>
             </div>
             <div class="col-lg-6">

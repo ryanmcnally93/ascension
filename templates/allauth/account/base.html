@@ -2,8 +2,12 @@
 
 {% block content %}
     <div class="container header-container">
-        <div class="row flex-column" id="top-row">
-            <hr class="white-hr">
+        <div class="row" id="top-row">
+            <hr>
+            <div id="page-heading" class="col text-center">{% block all_auth_header %}{% endblock %}</div>
+            <hr>
+        </div>
+        <div class="row">
             {% block inner_content %}
             {% endblock %}
         </div>

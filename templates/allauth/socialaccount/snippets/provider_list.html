@@ -1,4 +1,5 @@
 {% load socialaccount %}
+{% load static %}
 
 {% get_providers as socialaccount_providers %}
 
@@ -13,8 +14,15 @@
 </li>
 {% endfor %}
 {% endif %}
-<li class="no-bullets">
-  <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}" 
-     href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">{{provider.name}}</a>
-</li>
+<div class="my-2">
+    <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}" 
+       href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
+       <img 
+        src="
+       {% with 'social_all_auth_images/'|add:provider.name|add:'.png' as image %}
+        {% static image %}
+       {% endwith %}
+       " alt="{{ provider.name }}" height="50" width="300" class="facebook-sign-in"/>
+       </a>
+  </div>
 {% endfor %}
