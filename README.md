@@ -736,11 +736,62 @@ I instead have just allowed users to checkout with the selected dates and times 
 
 ### Media
 
--
+#### Product Descriptions and Images
+
+- Shop Products 1-5 (SP01-SP05) - Descriptions obtained from [Gak](https://www.gak.co.uk/)
+- SP01 Image - Obtained from [Amazon](https://www.amazon.co.uk/Ernie-Ball-Regular-Slinky-Nickel/dp/B00CAV0TRQ/ref=sr_1_5?keywords=Ernie-Ball&qid=1694685948&sr=8-5&th=1)
+- SP02 Image - Obtained from [Amazon](https://www.amazon.co.uk/Ernie-Ball-Skinny-Bottom-String/dp/B0002PBS68)
+- SP03 Image - Obtained from [Amazon](https://www.amazon.co.uk/Ernie-Ball-Electric-Guitar-Strings/dp/B0002M6CW6?th=1)
+- SP04 Image - Obtained from [Strings Direct](https://www.stringsdirect.co.uk/products/ernie-ball-2213-mega-slinky-10-5-48-electric-guitar-strings)
+- SP05 Image - Obtained from [Amazon](https://www.amazon.co.uk/Ernie-Ball-Skinny-Electric-Strings/dp/B083LML2N3?th=1)
+
+- Descriptions and Images were obtained from the following links
+- SP06 & SP07 - [Gear4Music](https://www.gear4music.com/Guitar-and-Bass/Electric-Guitar-Strings-by-Gear4music/2UN?utm_campaign=surfaces_across_google&srsltid=AfmBOooFs_A2IJIAhgymYyYleBEBTgKCYifp_OqIr6OIaCCyGNooOwDTRto)
+- SP08 - [Google Shop](https://www.google.com/search?q=Gear4music+Light-Heavy+Strings+10-52&sa=X&sca_esv=564766799&biw=1242&bih=821&tbm=shop&sxsrf=AM9HkKkQtiEg6S4b77i6SWF65EMNDOeZ_A%3A1694544401167&ei=EbIAZfDgCKKohbIPw56rqA0&ved=0ahUKEwiwrdjo3aWBAxUiVEEAHUPPCtUQ4dUDCAg&uact=5&oq=Gear4music+Light-Heavy+Strings+10-52&gs_lp=Egtwcm9kdWN0cy1jYyIkR2VhcjRtdXNpYyBMaWdodC1IZWF2eSBTdHJpbmdzIDEwLTUyMgUQIRigAUiOAlAAWABwAHgAkAEAmAFxoAFxqgEDMC4xuAEDyAEA-AEC-AEBiAYB&sclient=products-cc#spd=1257663784045161876)
+- SP09 - [Gear4Music](https://www.gear4music.com/Guitar-and-Bass/3-Pack-of-Bass-Guitar-Strings-Set-by-Gear4music/312E?origin=product-ads&gclid=Cj0KCQjwmICoBhDxARIsABXkXlKJ2aT0vzqAYwfu2NUPfQ17tI36fkPQieIm0K9O5foQ-DLbQfh5fbYaAq1nEALw_wcB)
+- SP10 - [Amazon](https://www.amazon.co.uk/Tiger-Music-GACAPO2-Capo-Guitar/dp/B004PA5T5M?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A3P5ROKL5A1OLE&th=1)
+- SP11 - [Strings Direct](https://www.stringsdirect.co.uk/products/shubb-c1-electric-acoustic-guitar-capo-nickel?variant=45003259150630&currency=GBP&utm_source=google&utm_medium=cpc&utm_term=&gad=1&gclid=CjwKCAjw3oqoBhAjEiwA_UaLtiGg_2E9QSM_BykjuOj__voE1lRAVrudXN2hnnL1O5EUxQ9zBmw2BRoCIS8QAvD_BwE)
+- SP12 - [Gear4Music](https://www.gear4music.com/Drums-and-Percussion/5A-Wood-Tip-Drumsticks/WD?utm_campaign=surfaces_across_google&srsltid=AfmBOor9aOPKz97FXgxta1N2v1gz78yyqYT5ET4WvzElqkbMhFFiil4zeVI)
+- SP13 - [ADCDrums](https://adcdrums.co.uk/products/bopworks-40s-swing-classic-drumsticks/?utm_source=Google+Shopping&utm_medium=cpc&utm_campaign=GMerchant)
+- SP14 - [Gear4Music](https://www.gear4music.com/G4M/Stagg-SMC10-10m-XLR-to-XLR-Microphone-Cable-Black/1W46?origin=product-ads&gclid=CjwKCAjw3oqoBhAjEiwA_UaLtmOJQ_gZ1F_Qj40cH5zuTxYPaXyRow1-S6nP5IyVQRASTnHD6EnP_xoCQIkQAvD_BwE)
+- SP15 - [Amazon](https://www.amazon.co.uk/Urbanphonics-Microphone-Balanced-Recording-Amplification/dp/B08BFKM22Z/ref=asc_df_B08BFKM22Z/?tag=&linkCode=df0&hvadid=427962886940&hvpos=&hvnetw=g&hvrand=16882899087854239772&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007136&hvtargid=pla-930750179222&ref=&adgrpid=99954789552&th=1)
+- SP16 - [Music Room](https://www.musicroom.com/fender-deluxe-10-straight-angle-instrument-cable-tweed-fnd0990820091?glid=gb&CAWELAID=120075890000278513&gclid=CjwKCAjw3oqoBhAjEiwA_UaLtuoPSVUlAUTxbAbGEK5Piq2b6g9pwG2L5rLElgEPmMowvz_PAF8K9RoCs2cQAvD_BwE)
+- SP17 - [Global Audio Store](https://www.global-audio-store.fr/en/31184-ibanez-si20-jack-guitar-cable-2-straight-jacks-6-10m.html?gclid=CjwKCAjw3oqoBhAjEiwA_UaLtg7yFn2-DqoBOnQgDYEW31mNYW0mfb81gQKcQHP8TlhXaYWa5WTeZRoCq8oQAvD_BwE)
+- SP18 - [Gear Geek](https://geargeek.co.uk/aux-cable-1m/?sku=AUX_CABLE_1M/EAU-42291&utm_source=googleshopping&utm_medium=cse&srsltid=AfmBOoqw8O2QFOhTUOklzoyoSsWSw3-dWIpTwBj0E7VS5xpOYmmlMlZUL0M)
+- SP19 - [Music Room](https://www.musicroom.com/dunlop-standard-0-6mm-plectrum-12-pack-jd418p60?glid=gb&CAWELAID=120075890000278072&gclid=CjwKCAjw3oqoBhAjEiwA_UaLtrj-Qm6woSDqRudrhKSFVrlkAyvueFlzFTS2lUEfRKUIVOyIZsCQJBoC1SIQAvD_BwE)
+- SP20 - [Reverb](https://reverb.com/uk/p/fender-celluloid-shape-medley-picks-medium-8?hfid=35452792&utm_source=google&utm_medium=cpc&utm_campaign=18354914807&utm_content=campaignid=18354914807_adgroupid=_productpartitionid==merchantid=134269987_productid=35452792_keyword=_device=c_adposition=_matchtype=_creative=&gclid=CjwKCAjw3oqoBhAjEiwA_UaLtpc87w6KYxJQJsh9-DQaH2WSTSzSi7NWPTABiEGd09l9sl1ed5Y4GhoC44QQAvD_BwE)
+- SP21 - Image only [Ebay](https://www.ebay.co.uk/itm/404433500745?chn=ps&_trkparms=ispr%3D1&amdata=enc%3A1t4io50yvRNSYez1iIz9mCg2&norover=1&mkevt=1&mkrid=710-134428-41853-0&mkcid=2&mkscid=101&itemid=404433500745&targetid=1647205088280&device=c&mktype=pla&googleloc=9045502&poi=&campaignid=19926849521&mkgroupid=147378848803&rlsatarget=aud-1415330310908:pla-1647205088280&abcId=9311021&merchantid=5077338291&gclid=Cj0KCQjwtJKqBhCaARIsAN_yS_nu5AH8tdyslRaPYhP4d--WK8Hp7OKQ-ar1q2VQcHrRN7ks4r95e6oaAswwEALw_wcB)
+- SP22 - [Amazon](https://www.amazon.co.uk/Cristal-Original-Ballpoint-Medium-Point/dp/B000I5ZK2U/ref=asc_df_B000I5ZK2U/?tag=googshopuk-21&linkCode=df0&hvadid=207961469242&hvpos=&hvnetw=g&hvrand=2487639748670704103&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007136&hvtargid=pla-406179071418&th=1)
+- SP23 - [Staples](https://www.staples.co.uk/office-supplies/writing-supplies/ballpoint-pens/black-medium-ballpoint-pens-pack-of-50-0052501-nb/?gclid=CjwKCAjw3oqoBhAjEiwA_UaLtkjbFprEykNyPWOIjRvVbY8IUCIFxmfIH2HW8w9C9SMOeDb89vR0PxoCzaQQAvD_BwE)
+
+The following hire rooms images were obtained from these links, along with some of the descriptions, which I have altered to tailor to my fake products.
+- SP24 - [Milco Studios](https://milocostudios.com/studios/summerfield-studios/image-gallery/)
+- SP25 - Image 1 - [Milco Studios](https://milocostudios.com/studios/jbj-studio/overview/)
+- SP25 - Image 2 - [Milco Studios](https://milocostudios.com/studios/jbj-studio/image-gallery/)
+- SP26 - [Milco Studios](https://milocostudios.com/studios/decoy-studios/studio-gallery/)
+
+The following descriptions were written by me, these links are to the images only.
+- SP27 - [Acoustic Booth - Studio Box](https://www.acousticbooth-studiobox.com/soundproof-practice-booth.html)
+- SP28 & SP29 - [Pirate Studios](https://pirate.com/en/rehearsal-studios/)
+
+#### Artist Descriptions and Images
+
+- Call Me Unique's description - [Call Me Unique.](https://www.callmeunique.com/about)
+- Call Me Unique's Image - [PRS Foundation](https://prsfoundation.com/grantees/women-make-music-call-me-unique/) - No credited author.
+- Lady Sanity's description - [PRS Foundation](https://prsfoundation.com/grantees/women-make-music-lady-sanity/)
+- Lady Sanity's Image - [Birmingham Mail](https://www.birminghammail.co.uk/whats-on/music-nightlife-news/who-lady-sanity-brummie-rap-14514351) - No credited author, although Neil Elkes was mentioned on earlier image.
+- I wrote Yatez's description, but the image was obtained from [Linktr](https://linktr.ee/yatez).
+
+#### Engineer Images
+
+These images were obtained from pexels.com.
+- Alicia Green image author - Tarzine Jackson.
+- Adam Moore image author - Tyler Sherrington
+- John Polter imag author - Simon Robben
 
 ### Acknowledgements
 
--
+- 
 
 This readme.md will be spellchecked using the spell checker extension for Chrome.
 
