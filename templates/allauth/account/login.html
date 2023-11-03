@@ -5,7 +5,7 @@
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
-{% block inner_content %}
+{% block all_auth_header %}
 <div class="row">
     <div class="col-lg-6">
         <h1>{% trans "Sign In" %}</h1>
@@ -15,13 +15,13 @@
         {% if socialaccount_providers %}
         <p>{% blocktrans with site.name as site_name %}Please sign in with one
         of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-        for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+        for an <strong>Ascension</strong> account and sign in below:{% endblocktrans %}</p>
 
         <div class="socialaccount_ballot">
         <ul class="socialaccount_providers">
             {% include "socialaccount/snippets/provider_list.html" with process="login" %}
         </ul>
-        <div class="login-or">{% trans 'or' %}</div>
+        <div class="login-or mb-3">{% trans 'or' %}</div>
         </div>
 
         {% include "socialaccount/snippets/login_extra.html" %}

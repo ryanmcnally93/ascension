@@ -106,7 +106,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 2
-
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'

@@ -10,8 +10,14 @@ footer {
     border-top: 1px solid white !important;
 }
 
-.no-bullets {
-    list-style-type: none;
+.facebook-sign-in {
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.facebook-sign-in:hover {
+    border: 2px solid #282C2E;
+    border-radius: 6px;
 }
 
 header {

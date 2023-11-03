@@ -1,1 +1,17 @@
 {% extends "account/base.html" %}
+
+{% block content %}
+    <div class="container header-container">
+        <div class="row" id="top-row">
+            <hr>
+            <div id="page-heading" class="col text-center">{% block all_auth_header %}{% endblock %}</div>
+            <hr>
+        </div>
+        <div class="row">
+            {% block inner_content %}
+            {% endblock %}
+        </div>
+        {% block connections %}
+        {% endblock %}
+    </div>
+{% endblock %}
