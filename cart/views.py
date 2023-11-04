@@ -3,7 +3,7 @@ from django.contrib import messages
 from products.models import Product
 
 from checkout.models import Order, OrderLineItem
-from datetime import datetime
+import datetime
 
 
 def view_cart(request):
@@ -17,6 +17,7 @@ def alter_cart(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     date = None
     time = None
+    present = datetime.datetime.now()
 
     if 'increase-quantity' in request.POST:
         cart[product_id] += 1
@@ -57,7 +58,18 @@ def alter_cart(request, product_id):
     # This code only run's if the product is a hire room
     if 'add-session' in request.POST:
         if request.POST.get('chosen-time') != 'none':
-            date_as_date = datetime.strptime(request.POST.get('date'), '%Y-%m-%d').date()
+            date_as_date = datetime.datetime.strptime(request.POST.get('date'), '%Y-%m-%d').date()
+
+            # This only allowsa users to pick a future date
+            if present.date() > date_as_date:
+                messages.error(request, 'You cannot select a date in the past')
+                return redirect('product_information', product_id=product_id)
+
+            # This only allows users to pick up to two weeks in advance
+            if datetime.datetime.strptime(request.POST.get('date'), '%Y-%m-%d') > present + datetime.timedelta(days=14):
+                messages.error(request, 'You can only book up to 2 weeks in advance')
+                return redirect('product_information', product_id=product_id)
+
             date = date_as_date.strftime('%d-%m-%Y')
             time = request.POST.get('chosen-time')
             # This is checking that the product is already in the bag
