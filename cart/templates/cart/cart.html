@@ -14,6 +14,10 @@
             <hr>
         </div>
         {% if cart_products %}
+        <!-- cart_products 
+        <br>
+        <br>
+        request.session.cart  -->
             <table class="col-12 justify-content-center m-auto mb-2">
                 <tr class="headings-tr">
                     <th>Image</th>
@@ -37,7 +41,36 @@
                     </td>
                     <td class="medium-padding">
                         <p class="small-centralisation name-small">{{ item.product.name }}</p>
-                        <p class="mb-0 small-centralisation cat-small">{{ item.product.category.friendly_name }}</p>
+                        <p class="mb-1 small-centralisation cat-small">{{ item.product.category.friendly_name }}</p>
+                        {% if item.product.is_hire_room %}
+                            <div class="row flex-row">
+                                <div class="col-5-5 col-md-2 text-center text-md-left p-0">
+                                    <p class="text-right text-md-left mb-0">Date: </p>
+                                </div>
+                                <div class="col-6-5 col-md-10">
+                                    <p class="mb-0">{{ item.date }}</p>
+                                </div>
+                            </div>
+                            <div class="row flex-row">
+                                {% if item.time|length == 1 %}
+                                    <div class="col-5-5 col-md-2 text-center text-md-left p-0">
+                                        <p class="text-right text-md-left">Time: </p>
+                                    </div>
+                                    <div class="col-6-5 col-md-10">
+                                        <p class="mb-0">{% for time in item.time %}{{ time }}{% endfor %}</p>
+                                    </div>
+                                {% else %}
+                                    <div class="col-5-5 col-md-2 text-center text-md-left p-0">
+                                        <p class="text-right text-md-left">Times: </p>
+                                    </div>
+                                    <div class="col-6-5 col-md-10 mb-2 mb-md-0">
+                                        {% for time in item.time %}
+                                        <p class="mb-0">{{ time }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endif %}
                     </td>
                     <td class="cart-price small-centralisation">
                         {% if item.product.is_offers_item %}
@@ -56,9 +89,15 @@
                                         <i class="fas fa-minus"></i>
                                     </button>
                                     <input class="quantity-middle" value="{% find_quantity cart_products item.product.id %}" type="number" min="1" max="99" name="quantity" data-product_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                                    <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
+                                    {% if item.product.is_hire_room %}
+                                        <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity" disabled>
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    {% else %}
+                                        <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    {% endif %}
                                 </div>
                                 <button id="remove_all_of_item_cart" name="remove_all_of_item_cart">Remove all</button>
                             </div>
@@ -74,9 +113,15 @@
                                         <i class="fas fa-minus"></i>
                                     </button>
                                     <input class="quantity-middle" value="{% find_quantity cart_products item.product.id %}" type="number" min="1" max="99" name="quantity" data-product_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                                    <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
+                                    {% if item.product.is_hire_room %}
+                                        <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity" disabled>
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    {% else %}
+                                        <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    {% endif %}
                                 </div>
                                 <button id="remove_all_of_item_cart" name="remove_all_of_item_cart">Remove all</button>
                             </div>
