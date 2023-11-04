@@ -6,6 +6,10 @@
     display: flex;
 }
 
+#date {
+    padding-left: 5px;
+}
+
 .studios {
     border: 2px solid gold;
 }
@@ -98,6 +102,13 @@
     border: 1px solid #033A54;
     padding: 9.5px;
     color: #033A54;
+}
+
+.input-group-append:disabled:hover {
+    border: 1px solid #033A54;
+    color: #033A54;
+    background-color: white;
+    cursor: default;
 }
 
 #no-radios {
