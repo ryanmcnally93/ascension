@@ -14,10 +14,10 @@
             <hr>
         </div>
         {% if cart_products %}
-        {{ cart_products }}
+        <!--  cart_products 
         <br>
         <br>
-        {{ request.session.cart }}
+         request.session.cart  -->
             <table class="col-12 justify-content-center m-auto mb-2">
                 <tr class="headings-tr">
                     <th>Image</th>
@@ -31,16 +31,24 @@
                     <td>
                         <div class="product-image-box px-auto mx-auto">
                             {% if item.product.main_image %}
-                                <img class="product-image m-auto my-1" src="{{ MEDIA_URL }}{{ item.product.main_image }}" alt="{{ item.product.name }}">
+                                <a class="product-image m-auto my-1" href="{% url 'product_information' product_id=item.product.pk %}">
+                                    <img class="product-img" src="{{ MEDIA_URL }}{{ item.product.main_image }}" alt="{{ item.product.name }}">
+                                </a>
                             {% elif item.product.image %}
-                                <img class="product-image m-auto my-1" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ item.product.name }}">
+                                <a class="product-image m-auto my-1" href="{% url 'product_information' product_id=item.product.pk %}">
+                                    <img class="product-img" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ item.product.name }}">
+                                </a>
                             {% else %}
-                                <img class="product-image m-auto my-1" src="{{ MEDIA_URL }}no-image.png" alt="{{ item.product.name }}">
+                                <a class="product-image m-auto my-1" href="{% url 'product_information' product_id=item.product.pk %}">
+                                    <img class="product-img" src="{{ MEDIA_URL }}no-image.png" alt="{{ item.product.name }}">
+                                </a>
                             {% endif %}
                         </div>
                     </td>
                     <td class="medium-padding">
-                        <p class="small-centralisation name-small">{{ item.product.name }}</p>
+                        <a class="product-image m-auto my-1" href="{% url 'product_information' product_id=item.product.pk %}">
+                            <p class="product-name-target small-centralisation name-small">{{ item.product.name }}</p>
+                        </a>
                         <p class="mb-1 small-centralisation cat-small">{{ item.product.category.friendly_name }}</p>
                         {% if item.product.is_hire_room %}
                             <div class="row flex-row">
