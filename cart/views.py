@@ -15,7 +15,6 @@ def alter_cart(request, product_id):
     cart = request.session.get('cart', {})
     quantity = int(request.POST.get('quantity'))  
     product = get_object_or_404(Product, pk=product_id)
-    date = None
     time = None
     present = datetime.datetime.now()
 
@@ -25,25 +24,26 @@ def alter_cart(request, product_id):
 
     if 'decrease-quantity' in request.POST:
         if product_id in cart:
-            if cart[product_id] == 1:
+            if product.is_hire_room:
+                date = list(cart[product_id]['session_datetime'].keys())[0]
+                if len(cart[product_id]['session_datetime'][date]) == 1:
+                    # Sometimes we have more than one cart product with the same ID
+                    # This is to nail down the date of the product and delete the right one
+                    cart[product_id]['session_datetime'].pop(date)
+                    request.session["cart"] = cart
+                    request.session.modified = True
+                    messages.success(request, 'Successfully removed item from cart')
+                else:
+                    cart[product_id]['session_datetime'][date].popitem()
+                    request.session["cart"] = cart
+                    request.session.modified = True
+                    messages.success(request, f'Updated {product.name} {date} quantity')
+            elif cart[product_id] == 1:
                 cart.pop(product_id)
                 messages.success(request, 'Successfully removed item from cart')
             else:
-                if cart[product_id]['session_datetime']:
-                    date = list(cart[product_id]['session_datetime'].keys())[0]
-                    if len(cart[product_id]['session_datetime'][date]) == 1:
-                        cart.pop(product_id)
-                        request.session["cart"] = cart
-                        request.session.modified = True
-                        messages.success(request, 'Successfully removed item from cart')
-                    else:
-                        cart[product_id]['session_datetime'][date].popitem()
-                        request.session["cart"] = cart
-                        request.session.modified = True
-                        messages.success(request, f'Updated {product.name} quantity to {cart[product_id]}')
-                else:
-                    cart[product_id] -= 1
-                    messages.success(request, f'Updated {product.name} quantity to {cart[product_id]}')
+                cart[product_id] -= 1
+                messages.success(request, f'Updated {product.name} quantity to {cart[product_id]}')
         else:
             messages.error(request, 'This item isnt in the cart!')
 
@@ -60,7 +60,7 @@ def alter_cart(request, product_id):
         if request.POST.get('chosen-time') != 'none':
             date_as_date = datetime.datetime.strptime(request.POST.get('date'), '%Y-%m-%d').date()
 
-            # This only allowsa users to pick a future date
+            # This only allows users to pick a future date
             if present.date() > date_as_date:
                 messages.error(request, 'You cannot select a date in the past')
                 return redirect('product_information', product_id=product_id)
@@ -86,7 +86,7 @@ def alter_cart(request, product_id):
                         cart[product_id]['session_datetime'][date][time] = quantity
                 else:
                     print('This product is in bag but not date')
-                    cart[product_id]['session_datetime'][date][time] = quantity
+                    cart[product_id]['session_datetime'][date] = {time: 1}
             else:
                 print('This is the first of this product and date')
                 cart[product_id] = {'session_datetime': {date: {time: 1}}}

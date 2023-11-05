@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var currentUrl = new URL(window.location);
             var selectedValue = this.value;
             
-            if(selectedValue != 'all') {
+            if (selectedValue == 'no_filter') {
+                console.log('No filter has been given')
+            } else if (selectedValue != 'all') {
                 var sort = selectedValue.split("_")[0];
                 var direction = selectedValue.split("_")[1];
 

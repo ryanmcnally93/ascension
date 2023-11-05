@@ -58,11 +58,22 @@ def product_information(request, product_id):
 
     sessions = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00"]
 
+    images = []
+    if product.main_image:
+        images.append(product.main_image)
+    if product.image:
+        images.append(product.image)
+    if product.image_2:
+        images.append(product.image_2)
+    if product.image_3:
+        images.append(product.image_3)
+
     context = {
         'product': product,
         'stringed_product_id': stringed_product_id,
         'item_quantity': item_quantity,
         'sessions': sessions,
+        'images': images,
     }
     return render(request, 'products/product_information.html', context)
     
@@ -81,6 +92,11 @@ def add_product(request):
             return redirect(reverse('product_information', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+
+        striked_price = request.POST.get('striked_price')
+        if striked_price:
+            product.is_offers_item = True
+
     else:
         form = ProductForm()
 
@@ -121,7 +137,12 @@ def edit_product(request):
         name = request.POST.get('name', False)
         product = get_object_or_404(Product, name=name)
         form = ProductForm(request.POST, request.FILES, instance=product)
+        striked_price = request.POST.get('striked_price')
         if form.is_valid():
+            if striked_price:
+                product.is_offers_item = True
+            else:
+                product.is_offers_item = False
             form.save()
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_information', args=[product.id]))

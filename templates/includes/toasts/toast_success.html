@@ -44,10 +44,24 @@
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             {% if item.product.is_hire_room %}
                                 <p class="my-0 small text-muted">Date: {{ item.date }}</p>
-                                <p class="my-0 small text-muted">Time: {{ item.time }}</p>
+                                
+                                    {% if item.time|length == 1 %}
+                                        {% for time in item.time %}
+                                        <p class="my-0 small text-muted">Time: {{ time }}</p>{% endfor %}
+                                    {% else %}
+                                        <p class="my-0 small text-muted">Times: 
+                                        {% for time in item.time %}
+                                            {% if forloop.counter == item.time|length %}
+                                                {{ time }}
+                                            {% else %}
+                                                {{ time }}, 
+                                            {% endif %}
+                                        {% endfor %}
+                                        </p>
+                                    {% endif %}
                             {% else %}
                                 <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                            {% endif %}
+                            {% endif %} 
                         </div>
                     </div>
                 {% endfor %}
