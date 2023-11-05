@@ -13,6 +13,15 @@
     max-height: 90%;
 }
 
+.product-img {
+    height: 234px;
+}
+
+.product-name-target {
+    color: #033A54;
+    text-decoration: none;
+}
+
 .input-group-prepend, .input-group-append {
     border: 1px solid #033A54;
     padding: 0;
