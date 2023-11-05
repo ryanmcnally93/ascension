@@ -19,10 +19,35 @@
 <div class="container col-sm-8">
     <div class="row prod-info-row">
             <div class="my-2 col-12 col-lg-6 justify-content-center product-image-box">
-                {% if product.main_image %}
-                    <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.main_image }}" alt="{{ product.name }}">
-                {% elif product.image %}
-                    <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.image }}" alt="{{ product.name }}">
+
+                {% if images %}
+                    <div class="slideshow-container">
+                    {% for image in images %}
+                        <div class="mySlides fade">
+                            <img src="{{ MEDIA_URL }}/{{ image }}" class="slideshow-image" alt="{{ product.name }}">
+                        </div>
+                    {% endfor %}
+                    {% if images|length == 1 %}
+                        </div>
+                        <br>
+                    {% else %}
+                            <!-- Left and Right Buttons -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                        <br>
+                    {% endif %}
+
+                    <!-- Dots -->
+                    {% if images|length == 1 %}
+                    {% else %}
+                        <div class="text-center dots">
+                            {% for image in images %}
+                                    <span class="dot" onclick="currentSlide({{forloop.counter}})"></span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                        
                 {% else %}
                     <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}/no-image.png" alt="{{ product.name }}">
                 {% endif %}
@@ -178,6 +203,35 @@
             let noRadios = document.getElementById('no-radios')
             noRadios.style.display = 'none';
         }
+    }
+    // Taken from W3Schools
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "flex";
+    dots[slideIndex-1].className += " active";
     }
 </script>
 

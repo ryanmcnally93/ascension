@@ -98,7 +98,7 @@
                                 <button id="products-prepend" class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
                                     <i class="fas fa-minus"></i>
                                 </button>
-                                <input class="quantity-middle qty_input" value="{% find_quantity cart_products product.id %}" type="number" min="1" max="99" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <input class="quantity-middle qty_input" value="{% find_quantity cart_products product.id none none %}" type="number" min="1" max="99" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                 {% if product.is_hire_room %}
                                     <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity" disabled>
                                         <i class="fas fa-plus"></i>
