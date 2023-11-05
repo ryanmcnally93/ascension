@@ -10,17 +10,19 @@ def is_item_id_in_list(item_list, item_id):
 
 @register.simple_tag(name='find_quantity')
 def find_quantity(item_list, item_id, date, time):
+    products = 0
     for item in item_list:
         if str(item.get('item_id')) == str(item_id):
             if int(item_id) > 23:
                 if str(item.get('date')) == str(date):
-                    print(len(time))
                     return len(time)
+                elif date == "":
+                    products += item.get('quantity')
                 else:
                     continue
             else:
                 return item.get('quantity')
-    return 0 
+    return products
 
 @register.simple_tag(name='find_item_subtotal')
 def find_item_subtotal(item_list, item_id):

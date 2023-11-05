@@ -108,13 +108,14 @@
                         <form action="{% url 'alter_cart' item.product.id %}" method="POST" class="products-add d-none d-md-block">
                             {% csrf_token %}
                             <div class="input-group">
+                                <input type="hidden" name="date" value="{{ item.date }}">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 <div class="quantity-box">
                                     <button class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
                                         <i class="fas fa-minus"></i>
                                     </button>
                                     {% if item.product.is_hire_room %}
-                                    <input class="quantity-middle" value="{% find_quantity cart_products item.product_id item.date item.time %}" type="number" min="1" max="99" name="quantity" data-product_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <input class="quantity-middle" value="{% find_quantity cart_products item.product.id item.date item.time %}" type="number" min="1" max="99" name="quantity" data-product_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                         <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity" disabled>
                                             <i class="fas fa-plus"></i>
                                         </button>
