@@ -738,6 +738,8 @@ I instead have just allowed users to checkout with the selected dates and times 
 
 - I used the second solution on [this Stack Overflow page](https://stackoverflow.com/questions/16041232/django-delete-filefield) to install django cleanup, which deletes a file if it is removed from a form, like the images that are installed when adding and editing a product. It also deletes the image from the project roots when you delete the product. 
 
+- I used this code from Stack Overflow by [Constantin](https://stackoverflow.com/questions/58352814/how-to-change-formatting-of-stripe-card-element-based-on-viewport-size) to target the Stripe card element when screen size changes through an event listener in JavaScript.
+
 ### Web Tools
 
 - I used [Contrast Checker](https://webaim.org/resources/contrastchecker/) to make sure my headings were visible against their background colours.

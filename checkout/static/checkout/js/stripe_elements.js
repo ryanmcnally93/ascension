@@ -28,38 +28,6 @@ if (window.innerWidth < 767) {
     };
 };
 
-window.addEventListener('resize', function(event) {
-    if (window.innerWidth < 767) {
-        card.style = {
-            base: {
-                color: '#000',
-                fontSize: '0.9em',
-                '::placeholder': {
-                    color: '#aab7c4'
-                }
-            },
-            invalid: {
-                color: '#dc3545',
-                iconColor: '#dc3545'
-            }
-        };
-    } else {
-        card.style = {
-            base: {
-                color: '#000',
-                fontSize: '16px !important',
-                '::placeholder': {
-                    color: '#aab7c4'
-                }
-            },
-            invalid: {
-                color: '#dc3545',
-                iconColor: '#dc3545'
-            }
-        };
-    };
-});
-
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);
@@ -67,6 +35,14 @@ var elements = stripe.elements();
 
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
+
+window.addEventListener('resize', function(event) {
+    if (window.innerWidth < 767) {
+      card.update({style: {base: {fontSize: '0.9em'}}});
+    } else {
+      card.update({style: {base: {fontSize: '16px'}}});
+    }
+  });
 
 // Handle realtime validation errors on the card element
 card.addEventListener('change', function (event) {
