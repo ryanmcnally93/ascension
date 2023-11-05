@@ -13,18 +13,6 @@
     max-height: 90%;
 }
 
-.col-6-5 {
-    -ms-flex: 0 0 54%;
-    flex: 0 0 54%;
-    max-width: 54%;
-}
-
-.col-5-5 {
-    -ms-flex: 0 0 46%;
-    flex: 0 0 46%;
-    max-width: 46%;
-}
-
 .input-group-prepend, .input-group-append {
     border: 1px solid #033A54;
     padding: 0;
@@ -221,6 +209,17 @@ input[type=number] {
     }
     #empty_cart {
         margin: 15px 0 0 0 !important;
+    }
+    .col-6-5 {
+        -ms-flex: 0 0 54%;
+        flex: 0 0 54%;
+        max-width: 54%;
+    }
+    
+    .col-5-5 {
+        -ms-flex: 0 0 46%;
+        flex: 0 0 46%;
+        max-width: 46%;
     }
 }
 
