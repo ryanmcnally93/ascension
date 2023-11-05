@@ -37,7 +37,7 @@ label.requiredField {
 
 #loadFileXml {
     border-radius: 0;
-    border: 2px solid #033A54;
+    border: 2px solid #033A54 !important;
 }
 
 #loadFileXml:hover {

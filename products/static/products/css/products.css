@@ -215,7 +215,8 @@
     color: #033A54;
 }
 
-.input-group-append:disabled:hover {
+.input-group-append:disabled:hover,
+.input-group-prepend:disabled:hover {
     border: 1px solid #033A54;
     color: #033A54;
     background-color: white;
