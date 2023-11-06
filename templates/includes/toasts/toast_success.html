@@ -24,11 +24,11 @@
                         <div class="col-3 my-1">
                             {% if item.product.is_hire_room %}
                                 {% if item.product.main_image %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}/{{ item.product.main_image }}" alt="{{ item.product.name }}">
+                                    <img class="w-100" src="{{ MEDIA_URL }}{{ item.product.main_image }}" alt="{{ item.product.name }}">
                                 {% elif item.product.image %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}/{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                    <img class="w-100" src="{{ MEDIA_URL }}{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                 {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}/no-image.png" alt="{{ item.product.name }}">
+                                    <img class="w-100" src="{{ MEDIA_URL }}no-image.png" alt="{{ item.product.name }}">
                                 {% endif %}
                             {% else %}
                                 {% if item.product.main_image %}
@@ -36,7 +36,7 @@
                                 {% elif item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                 {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}/no-image.png" alt="{{ item.product.name }}">
+                                    <img class="w-100" src="{{ MEDIA_URL }}no-image.png" alt="{{ item.product.name }}">
                                 {% endif %}
                             {% endif %}
                         </div>

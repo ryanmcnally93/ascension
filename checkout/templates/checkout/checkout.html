@@ -23,11 +23,11 @@
                 <div class="checkout-products">
                     {% if item.product.main_image %}
                         <div class="col-6 col-md-3 mb-2 img-col">
-                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}/{{ item.product.main_image }}" alt="{{ product.name }}">
+                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}{{ item.product.main_image }}" alt="{{ product.name }}">
                         </div>
                     {% elif item.product.image %}
                         <div class="col-6 col-md-3 mb-2 img-col">
-                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}/{{ item.product.image }}" alt="{{ product.name }}">
+                            <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ product.name }}">
                         </div>
                     {% else %}
                         <div class="col-6 col-md-3 mb-2 img-col">

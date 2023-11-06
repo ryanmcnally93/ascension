@@ -69,15 +69,15 @@
                 {% endif %}
                     {% if product.main_image %}
                         <div class="product-image-box px-auto mx-auto">
-                            <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.main_image }}" alt="{{ product.name }}">
+                            <img class="product-image my-1" src="{{ MEDIA_URL }}{{ product.main_image }}" alt="{{ product.name }}">
                         </div>
                     {% elif product.image %}
                         <div class="product-image-box px-auto mx-auto">
-                            <img class="product-image my-1" src="{{ MEDIA_URL }}/{{ product.image }}" alt="{{ product.name }}">
+                            <img class="product-image my-1" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
                         </div>
                     {% else %}
                         <div class="product-image-box px-auto mx-auto">
-                            <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}/no-image.png" alt="{{ product.name }}">
+                            <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
                         </div>
                     {% endif %}
                     <div class="product-title px-3 w-100">
