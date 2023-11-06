@@ -24,13 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'fakestring')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-ALLOWED_HOSTS = ['ascension-music-e0c178d908f4.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['ascension-music-e0c178d908f4.herokuapp.com', 'localhost', '8000-ryanmcnally93-project-fo-jzagfoqlhn.us2.codeanyapp.com']
 
 # Application definition
 
