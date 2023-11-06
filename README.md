@@ -1,6 +1,6 @@
 # Ascension
 
-<!-- IMAGE -->
+<img src="/media/readme-images/main-image-ascension.webp" width="100%" alt="Ascension, on multiple devices" style="display: inherit; ">
 
 This is a Django web application for Ascension, a music studio based in Birmingham. Languages used include HTML, CSS, JavaScript and Python, created using Django Crispy Forms, All Auth, Stripe, Pillow & Bootstrap.
 
