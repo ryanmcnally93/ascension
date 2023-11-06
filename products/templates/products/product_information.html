@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static '/products/css/products.css' %}">
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
 {% block page_header %}
@@ -43,7 +43,7 @@
                     {% else %}
                         <div class="text-center dots">
                             {% for image in images %}
-                                    <span class="dot" onclick="currentSlide({{forloop.counter}})"></span>
+                                    <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
                             {% endfor %}
                         </div>
                     {% endif %}
