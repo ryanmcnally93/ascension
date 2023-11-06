@@ -24,23 +24,21 @@ The web application allows the creator to create more listings in the products s
 
 ## Deployment
 
-<!-- To deploy my first Heroku project, I followed the steps set by Code Institute.
+To deploy my Heroku project, I followed the steps set by Code Institute.
 
+- Create an account on Heroku
 - Create an account on ElephantSQL
 - Create new instance and copy database URL
 - Create a Procfile and requirements.txt file
-- Add an if statement to ensure SQLAlchemy can read my external database.
-- Create new app on Heroku
-- Enter config vars, including the copied URL
+- Setup hosting for static and media files with Amazon Web Services - S3 (Simple Storage Service)
+- Create AWS Groups, Policies and Users
+- Enter config vars, including the copied URL, Stripe payment variables, and email variables.
+- Setup email if statement in settings.py that sends emails to me
 - Click on deploy, connect to github, find the repository
 - Click Deploy Branch
 - Once that is done, click more, and run console.
 
-It was importing the database from torquay_sunday_league that first provided issues.
-
-My requirements.txt hadn't created an instance for the 'requests' module which needed to be installed. I checked the version I had and provided it in the file.
-
-- I tried again and it worked, after this I opened the app and entered the teams data into the database. -->
+An issue I had when the site was deployed was removing the correct forward slashes from the URL's of images and links, but this has since been resolved.
 
 ## UX
 
@@ -590,7 +588,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 ## Testing
 
-You can view all testing in [this document.]()
+You can view all testing in [this document.](https://github.com/ryanmcnally93/project-four-ascension/blob/main/testing.md)
 
 ### Fixed Bugs
 
