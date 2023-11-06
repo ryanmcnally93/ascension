@@ -1,0 +1,1 @@
+web: gunicorn ascension.wsgi:application
