@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-#7!vk5-i8t5@uae@ei=4npe^2o8uqw@%c(joq41+w0n8*t(k+0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ascension-music.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['ascension-music-e0c178d908f4.herokuapp.com', 'localhost']
 
 # Application definition
 
