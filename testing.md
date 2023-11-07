@@ -350,17 +350,117 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
-|  |  |  |  | Pass |
+| Room types boxes | View content as a column on smaller screens | Opened on Mobile | All the data was centered in a column | Pass |
 
 ### Products page
 
+#### Filter
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Price High to Low Select | Page refrshes, products view from highest price to lowest | Selected option | The page reloaded, with the correct sort and direction | Pass |
+| Price Low to High | Page refrshes, products view from lowest price to highest | Selected option | The page reloaded, with the correct sort and direction | Pass |
+| Rating Low to High Select | Page refrshes, products view from lowest rating to highest | Selected option | The page reloaded, with the correct sort and direction | Pass |
+| Rating High to Low Select | Page refrshes, products view from highest rating to lowest | Selected option | The page reloaded, with the correct sort and direction | Pass |
+| All Products Select | Page refrshes, all products view | Selected option | The page reloaded, with all products on | Pass |
+| Choose Filter select | Nothing happens | Selected option | Nothing happened | Pass |
+
+#### Cards
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Card | Whole card acts as an anchor and takes user to product-information | Hover and click | Cursor is pointer, clicking within the card takes user to product-information page for that item | Pass |
+| Text and Button | Both have hover qualities | Hover | The text changes colour and underlines, the button has the bg-darkblue class which changes to white | Pass |
+| Button | Clicking add to cart adds to the quantity and places item in cart | Click on add to cart | Item is added to cart, button changes to quantity box | Pass |
+| Quantity Box | Clicking increase adds another of the same item | Click on plus symbol | Another of the same item is in the cart | Pass |
+| Quantity Box | Decrease button works too | Click on minus button | Takes one of that item out of the cart, if last item, deletes the item from cart and original button is back | Pass |
+| Page reload | Clicking on the various card buttons reloads the aage, but directs user back to item they were just looking at | Click add to cart on several items | Kept returning back to that product | Pass |
+| Hire Room button | Takes user to product-information | Click book | Takes user to product-information for that item | Pass |
+
+<img src="/media/readme-images/product-testing.webp" width="100%" alt="The Product page on desktop screens" style="display: inherit; ">
+
 ### Product Information page
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Layout | Information lists in a column on small screens | Open on mobile | All the product information is listed within a single column | Pass |
+| Edit Button | Takes user to Edit product page with this products infommation inserted, hover CSS change on text | Hover and click on edit | Underlines text, takes user to edit a product, information is pre-populated for that item | Pass |
+| Delete Button | Opens a modal making sure the user is aware of this decision, hover CSS changes | Hover and click on Delete | Text is underlined, opens up modal | Pass |
+| Edit Button | Unregistered users cannot open page | Click on button | Clicked on button, received error on toast | Pass |
+| Delete Button | Doesn't allow users who aren't superusers to open the modal to delete | Click delete | Opened up the modal | FAIL |
+* This will have to be rectified.
+
+| Back to Products button | Takes user back to products, hover CSS changes | Hover and click on back to products | Colours change and link takes user back to products | Pass |
+| Add to cart Button | Clicking add to cart adds to the quantity and places item in cart, hover CSS change | Hover and click on add to cart | Hover works, item is added to cart, button changes to quantity box | Pass |
+| Quantity Box | Clicking increase adds another of the same item | Click on plus symbol | Another of the same item is in the cart | Pass |
+| Quantity Box | Decrease button works too | Click on minus button | Takes one of that item out of the cart, if last item, deletes the item from cart and original button is back | Pass |
+
+#### Hire Rooms
+
+| Different elements for Hire Rooms | Includes equipment provided, datepicker and text asking user to pick date | Open page for hire room | Relevant elements available | Pass |
+| Equipment Provided | Hover CSS changes, takes user to rehearsal page with product equipment information | Hover and click on button | Takes user to desired location, hover CSS changes | Pass |
+| Datepicker | Choosing a date returns the times available for that date | Click on a date | Five time slots become available, from 10am to 3pm | Pass |
+| Datepicker | Cannot choose past date | Click on past date, enter time and click add to cart | Error message displayed in toasts | Pass |
+| Datepicker | Cannot pick date more than two weeks into future | Click on date too far into future | Error message displayed in toasts | Pass |
+| Timepicker | Clicking on one radio takes focus off another | Click on a sequence of radio buttons | Each one removes the focus from the last | Pass |
+| Both Datepicker and Timepicker | Cannot POST form without picking both a date and a time | Attempted to add to cart without date first, then with date but without time | Error message displayed in toasts on both occasions | Pass |
+| Add to Cart | Hover CSS changes, adds session to cart | Pick date and time, hover over button and click | Hover CSS changes, session added to cart | Pass |
 
 ### Add a Product Page
 
+####
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Category Dropdown | Lists all categories | Click on dropdown | All categories displayed | Pass |
+| SKU, name, description and price | Form cannot be submitted by omitting one of these items | Attempted to POST form without each of these items individually | None of them POSTed | Pass |
+| Price limit of characters | Cannot add more than six digits to price | Typed 957738 into price and submitted form | Form did not POST, error message provided | Pass |
+| Striked Price | Makes item an offers item | Added Striked price when adding product | Item did not list in sales items |FAIL |
+
+- I added some JavaScript to the is_offers_item field which is invisible to make the item list as an offers item.
+
+| Hire Room Dropdown | Contains Yes and No options | Clicked |  | Pass |
+| Hire Room Dropdown | Makes product a hire room | Added product as a hire room, viewed product-information page | Page displays as a hire room | Pass |
+| Image uploaders | Hover CSS changes, opens up an image uploader box, clicking on an image reveals the name on the webpage so you know which item you are uploading | Hovered over and clicked on image button, selected image and clicked open | Image name was visible on page | Pass |
+| Giving no image | Creates product with default no-media image | Added product without image | Was redirected to product-information, product had default no-media image | Pass |
+| Images | Not available on mobile devices | Opened page on mobile | Images were not visible | Pass |
+
 ### Edit a Product page
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Edit a product form | Should react the same way as the add a product form | Tested all tests previously mentioned in add a product form | All tests passed | Pass |
+| Searchbar | Cannot find an item if none is selected | Searched for 'pick an item' | Error message shows | Pass |
+| Searchbar | Clicking on any item reveals that items current settings | Clicked on first guitar strings product | The form filled with the data of that product | Pass |
+
 ### Cart page
+
+#### Empty
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Whole Page | Gives relevant message when cart is empty | Clicked onto page with empty cart | Message displayed | Pass |
+
+#### Buttons
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Remove all button | Hover CSS changes and removes all of that item | Hovered and clicked on remove all | All of that item removed | Pass |
+| Quantity Add | Button is disabled if it is on a session item, ad they need a date and time added | Hovered over the quantity add button, attempted to click | No hover qualities, click did not work | Pass |
+| Quantity Add | Able to add an item that is not session | Click on quantity plus on regular product | Item is added to cart | Pass |
+| Quantity Minus | Takes item from cart, including sessions | Hover and click on quantity minus | Hover CSS changes, product is taken from cart, if same date but different time, last time added is taken away | Pass |
+| Empty Cart | Opens modal | Hover and click on empty cart | Hover CSS changes, modal opens | Pass |
+| Back to Products | Hover CSS changes and takes user back to products | Hovered and clicked on back to products | Hover CSS changes, user taken back to products | Pass |
+| Secure Payment | Hover CSS changes and takes user to checkout page | Hovered and clicked on Secure Payment | Hover CSS changes, taken to checkout page | Pass |
+
+<img src="/media/readme-images/cart-testing.webp" width="100%" alt="The Cart page on desktop screens" style="display: inherit; ">
+
+#### Products
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Same Date Sessions | Quantity for that date increases, quantity for that overall item on products page increases, time added to string on the cart item | Added two times with the same date and product | All desired outcomes met | Pass |
+| Different Date, Same Item | Two instances of same item in cart | Added same product, different date | Two items in cart, quantity of item on products page equals two though | Pass |
 
 ### Checkout page
 
