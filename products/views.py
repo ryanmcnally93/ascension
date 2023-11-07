@@ -93,10 +93,6 @@ def add_product(request):
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
 
-        striked_price = request.POST.get('striked_price')
-        if striked_price:
-            product.is_offers_item = True
-
     else:
         form = ProductForm()
 

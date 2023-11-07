@@ -9,7 +9,7 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = ('category', 'sku', 'name', 'description',
             'main_image', 'image', 'image_2', 'image_3',
-            'is_hire_room', 'striked_price', 'price')
+            'is_hire_room', 'is_offers_item', 'striked_price', 'price')
 
     main_image = forms.ImageField(label='Main Image', required=False, widget=CustomClearableFileInput)
     image = forms.ImageField(label='Image 1', required=False, widget=CustomClearableFileInput)
