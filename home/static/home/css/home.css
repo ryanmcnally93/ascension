@@ -22,6 +22,11 @@
     height: 200px;
     position: absolute;
     top: -38px;
+    border: 1px solid #033A54;
+}
+
+#ls-logo:hover {
+    border: 1px solid white;
 }
 
 .index-message-box {
@@ -37,10 +42,6 @@
 .ls-logo {
     width: 200px;
     border: 2px solid #033A54;
-}
-
-.ls-logo:hover {
-    background-color: white;
 }
 
 .index-button-box {
@@ -63,8 +64,6 @@
     }
 }
 
-/* Mobile Screens */
-
 @media (max-width: 991px) {
     .background-image {
         padding-top: 100px;
@@ -86,6 +85,32 @@
     }
     #ls-logo {
         position: relative !important;
+    }
+}
+
+/* Mobile Screens */
+
+@media (max-width: 767px) {
+    .index-button-box {
+        width: 100px;
+        font-size: 20px;
+    }
+    #partnership {
+        font-size: 20px;
+    }
+    .ls-logo {
+        display: flex;
+        justify-content: center;
+    }
+    #ls-logo {
+        height: 150px;
+    }
+    #ls-logo:hover {
+        border: 1px solid #033A54;
+    }
+    .ls-logo:hover {
+        border-bottom: 1px solid white;
+        height: 90px;
     }
 }
 

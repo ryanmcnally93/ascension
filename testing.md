@@ -269,53 +269,88 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Social media icons | Hover and links work on other two sizes | Opened on two dev simulators and hovered and clicked | Underlines added, links correct | Pass |
 | Footer | Writing on left disappears, middle text is on left | Opened webpage on smaller device | Information displays ass desired | Pass |
 
+<img src="/media/readme-images/footer-testing.webp" width="100%" alt="The Footer on smaller screens" style="display: inherit; ">
+
 #### Toggler
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
-| All three socials | White underline adds on hover | Hovered over all three icons | Underline was added on each | Pass |
-
-<img src="/media/readme-images/footer-testing.webp" width="100%" alt="The Footer on smaller screens" style="display: inherit; ">
+| Toggler | Only available on Medium and smaller devices | Opened on all three devices | Could only access on IPad and IPhone | Pass |
+| Toggler | Hovering CSS change and opens and closes on click  | Hovered over and clicked | Opens and closes, CSS changes text and background colours (I also added Jquery to slide up and down rather than just appear) | Pass |
 
 ### Homepage
 
 #### Background
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Background Image | Stays Central when extending image on large screens | Opened on desktop, dragged window wider | Image stayed central, opened up wider and revealed more | Pass |
+
 #### Main Buttons and text div
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Three main buttons | Hover CSS changes and links work | Hovered over buttons and clicked | Colours changed, links work | Pass |
+| Text div | Stays central and lifts up on Mobile | View on multiple devices | Is at top op page on mobile, middle for other devices, central on all | Pass |
+| Three main buttons | Smaller buttons listed as column on small devices | Open on mobile | Buttons are smaller and in a column | Pass |
 
 #### Little Strings Section
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Little strings Logo | Hover CSS changes and link works | Hover over logo and click | White left and right border is added and link works | Pass |
+| Little strings Logo | Hover CSS changes and link works | Hover over logo and click on mobile | White bottom border is added and link works | Pass |
+
 ### About Us
 
-#### Background
+#### Background (Same test performed on Record & Rehearsal Pages)
 
-#### Header and text div
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Background | Keeps relevant height and width on multiple devices | Open page on all devices | More height on large screens, centralised on all, can still make out image on smallest screens | Pass |
+
+<img src="/media/readme-images/about-testing.webp" width="100%" alt="The About Us page on desktop screens" style="display: inherit; ">
+
+#### Header and text div (Same test performed on Record & Rehearsal Pages)
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Header | Stays underneath navbars | Open on multiple devices | Stays at the top of the page | Pass |
+| Text Div | Font size smaller on smaller pages, text div stays in center | Opened in dev tools, changed size smaller and larger to watch div move | Stays in center, font-size remains relevant to screen size | Pass |
 
 #### Contact Us Section
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Header | Stays underneath image | Move window wider and smaller on dev tools | Stays in correct position | Pass |
+| IFrame | Moves underneath text on smaller devices | Opened on mobile | Correct position | Pass |
+| IFrame | Controls all work | click on all clickable links | Google links work, zoom in and out works by mouse and buttons, satelitte view works | Pass |
+
 ### Record Main
 
-#### Background
+#### Engineers Button and Artists Section
 
-#### Header and text div
-
-#### Engineers Button
-
-#### Artists Section
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Engineers Button | Hover CSS changes and link works | Hover over and click on button | CSS changes, link works | Pass |
+| Artists Section | Views as a column on smaller devices | Open on mobile | Displays as column, Lady Sanity box is reverse so it displays the same | Pass |
 
 ### Meet The Engineers Page
 
-#### Engineer Information
+#### Engineer Information and Buttons
 
-#### Main Three Buttons
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Images, buttons and text | Centralise on smaller screens, place either left or right on large | Open on multiple devices | CSS changes, exactly how I want | Pass |
+| Buttons | Hover CSS changes and link works | Hover over and click on buttons | CSS changes, links work | Pass |
 
 ### Rehearsals Main
 
-#### Background
-
-#### Header and text div
-
 #### Different Types of Rooms Section
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+|  |  |  |  | Pass |
 
 ### Products page
 
@@ -334,5 +369,7 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 ### Toast Messages
 
 ### Modals
+
+### All Auth???
 
 This readme.md will be spellchecked using the spell checker extension for Chrome.
