@@ -388,8 +388,11 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Delete Button | Opens a modal making sure the user is aware of this decision, hover CSS changes | Hover and click on Delete | Text is underlined, opens up modal | Pass |
 | Edit Button | Unregistered users cannot open page | Click on button | Clicked on button, received error on toast | Pass |
 | Delete Button | Doesn't allow users who aren't superusers to open the modal to delete | Click delete | Opened up the modal | FAIL |
-* This will have to be rectified.
 
+- This will have to be rectified.
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Back to Products button | Takes user back to products, hover CSS changes | Hover and click on back to products | Colours change and link takes user back to products | Pass |
 | Add to cart Button | Clicking add to cart adds to the quantity and places item in cart, hover CSS change | Hover and click on add to cart | Hover works, item is added to cart, button changes to quantity box | Pass |
 | Quantity Box | Clicking increase adds another of the same item | Click on plus symbol | Another of the same item is in the cart | Pass |
@@ -397,6 +400,8 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 
 #### Hire Rooms
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Different elements for Hire Rooms | Includes equipment provided, datepicker and text asking user to pick date | Open page for hire room | Relevant elements available | Pass |
 | Equipment Provided | Hover CSS changes, takes user to rehearsal page with product equipment information | Hover and click on button | Takes user to desired location, hover CSS changes | Pass |
 | Datepicker | Choosing a date returns the times available for that date | Click on a date | Five time slots become available, from 10am to 3pm | Pass |
@@ -408,8 +413,6 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 
 ### Add a Product Page
 
-####
-
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Category Dropdown | Lists all categories | Click on dropdown | All categories displayed | Pass |
@@ -419,6 +422,8 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 
 - I added some JavaScript to the is_offers_item field which is invisible to make the item list as an offers item.
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Hire Room Dropdown | Contains Yes and No options | Clicked |  | Pass |
 | Hire Room Dropdown | Makes product a hire room | Added product as a hire room, viewed product-information page | Page displays as a hire room | Pass |
 | Image uploaders | Hover CSS changes, opens up an image uploader box, clicking on an image reveals the name on the webpage so you know which item you are uploading | Hovered over and clicked on image button, selected image and clicked open | Image name was visible on page | Pass |
