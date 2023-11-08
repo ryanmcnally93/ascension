@@ -484,29 +484,45 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Order number | Visible within text div | Checkout | Order number available in text div | Pass |
+| Hire Room line items | Display separate items for different dates | Add two sessions with different dates but same product and checkout | Two line items created, font-size smaller and break added to make look better | Pass |
+| Back to products button | Hover CSS changes and link takes user to products page | Hover and click on button | CSS changes, link works | Pass |
 
 ### Profile page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
-|  |  |  |  | Pass |
+| Update information | Changing data and clicking button changes data permanently | Changed name and clicked button | Data updates | Pass |
+| Two buttons at bottom of form | Both have hover qualities, connected accounts takes user to correct page | Hovered over two buttons, clicked on connected accounts | Hover CSS changes, link works | Pass |
+| All data | Displays as a column on smaller screens | Opened on mobile | Displays as column | Pass |
+| Order Number links | Underline should be added, links to old checkout success page | Hover and click on link | Hover and link works | Pass |
 
 ### Toast Messages
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
-|  |  |  |  | Pass |
+| Success template | When on profile page, images cart products do not show | Perform successful login with items in cart | Items not shown | Pass |
+| Success template | Items in cart shown when adding them to cart and changing quantities | Click add to cart twice on a product | Success message contains relevant images and quantities | Pass |
+| Information template | Displays with different colour and icon | Click on previous order number from profile page | Previous order shown, and information box is blue with 'i' icon for information | Pass |
+| Warning template | Test should reveal correct colour and warning icon | Changed messages.info to messages.warning and triggered | Colour is yellow and warning icon shows, can use when needed | Pass |
+| Error template | Check colour and icon | Add incorrect date into datepicker, don't add time and add to cart | Colour is red, icon is 'x' | Pass |
 
 ### Modals
+Both modals tested
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
-|  |  |  |  | Pass |
+| Delete button | If not superuser, should return error message | Not logged in, type URL for delete product | Messages error shown, delete not completed | Pass |
+| Delete button | Removes product from list of products | As superuser, click delete product on modal | Test product deleted | Pass |
+| Both buttons | Hover qualities work, cancel button closes modal | Hover over two buttons, click cancel | Hover CSS changes, modal closes | Pass |
+| Close buttons | Both modals can be closed using close button | Open both modals and click 'x' in corner |  | Pass |
 
 ### Various All Auth Pages
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
-|  |  |  |  | Pass |
+| Login page | User should login | Type in superuser credentials | User logged in | Pass |
+| Logout page | Both buttons have CSS qualities and links work | Hover and click on both buttons | No takes user to index, yes logs out user and also directs to index | Pass |
+| Register page | Adds test user | Type testytest@test.com, username testytest, password = testpassword | Sends email successfully | Pass |
+| Register page | Displays as column on smaller screens | Test page on mobile screens | Page displays in column | Pass |
 
 This readme.md will be spellchecked using the spell checker extension for Chrome.
