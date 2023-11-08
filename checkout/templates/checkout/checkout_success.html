@@ -44,7 +44,13 @@
             <p>Order:</p>
             <div class="d-block">
                 {% for item in order.lineitems.all %}
-                    <p class="mb-0 d-inline">{{ item.product.name }} x {{ item.quantity }}</p><p class="mb-0 float-right d-inline">{{ item.line_item_total }}</p>
+                    {% if item.product.is_hire_room %}
+                        <div class="col-12 p-0">
+                            <p class="mb-0 product-tiny d-inline">{{ item.product.name }} <br class="d-md-none"> {{ item.date }} x {{ item.quantity }}</p><p class="mb-0 float-right product-tiny d-inline">{{ item.line_item_total }}</p>
+                        </div>
+                    {% else %}
+                        <p class="mb-0 d-inline">{{ item.product.name }} x {{ item.quantity }}</p><p class="mb-0 float-right d-inline">{{ item.line_item_total }}</p>
+                    {% endif %}
                 {% endfor %}
             </div>
             <div class="d-block mt-2">

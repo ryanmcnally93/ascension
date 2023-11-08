@@ -420,7 +420,7 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Price limit of characters | Cannot add more than six digits to price | Typed 957738 into price and submitted form | Form did not POST, error message provided | Pass |
 | Striked Price | Makes item an offers item | Added Striked price when adding product | Item did not list in sales items |FAIL |
 
-- I added some JavaScript to the is_offers_item field which is invisible to make the item list as an offers item.
+- I added some JavaScript to the is_offers_item field which is invisible to make the item list as an offers item. This test now passes.
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
@@ -466,15 +466,47 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Same Date Sessions | Quantity for that date increases, quantity for that overall item on products page increases, time added to string on the cart item | Added two times with the same date and product | All desired outcomes met | Pass |
 | Different Date, Same Item | Two instances of same item in cart | Added same product, different date | Two items in cart, quantity of item on products page equals two though | Pass |
+| Products | Display as a column on small screens | Opened site on mobile | The items are all centrally aligned | Pass |
+| Product image and name | Cursor changes to pointer, takes user to relevant product-information page | Hovered and clicked on image, then on name | The links work and the cursor changes | Pass |
 
 ### Checkout page
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Whole page | Unregistered user is unable to load the page | logged out and attempted to secure payment | Taken back to login page | Pass |
+| Save info radio button | Information should save to profile page | Click button, fill in form | Billing information saves to profile. | Pass |
+| Payment | test card data sends through fake payment | Added fake dard details '4242 4242 4242 4242' to the card information and proceeded with payment | Payment went through | Pass |
+| Two buttons | Hover CSS changes and buttons work | Hover and click on both buttons | CSS changes for both, user taken to cart on first, and payment info sent on second | Pass |
+| Products and form | Display in a single column on smaller devices | Open page on mobile | Products first, the form underneath, all in a column | Pass |
+
 ### Checkout Success page
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+| Order number | Visible within text div | Checkout | Order number available in text div | Pass |
+
+### Profile page
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+|  |  |  |  | Pass |
 
 ### Toast Messages
 
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+|  |  |  |  | Pass |
+
 ### Modals
 
-### All Auth???
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+|  |  |  |  | Pass |
+
+### Various All Auth Pages
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
+|  |  |  |  | Pass |
 
 This readme.md will be spellchecked using the spell checker extension for Chrome.
