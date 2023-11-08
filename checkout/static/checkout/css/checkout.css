@@ -188,6 +188,9 @@
     #successful-back-to {
         height: 28px;
     }
+    .product-tiny {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 450px) {

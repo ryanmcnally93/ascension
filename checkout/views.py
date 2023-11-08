@@ -60,12 +60,22 @@ def checkout(request):
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                    order_line_item.save()
+                    if product.is_hire_room:
+                        for keys in item_data['session_datetime']:
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                                date=keys,
+                                quantity=len(item_data['session_datetime'].values())
+                            )
+                            order_line_item.save()
+                    else:
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your cart wasn't found in our \
