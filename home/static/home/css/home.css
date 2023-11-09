@@ -1,9 +1,9 @@
 /* Extra Large Screens */
 
-@media (min-height: 821px) {
+@media (min-height: 825px) {
     .background-image {
-        height: 900px;
-        padding-top: 480px;
+        height: 900px !important;
+        padding-top: 480px !important;
     }
 }
 
