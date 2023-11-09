@@ -157,11 +157,14 @@
 }
 
 .product-image {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 90%;
+    width: 202.95px;
+    height: 233.99px;
 } 
+
+.no-image {
+    width: 169.63px;
+    height: 233.99px;
+}
 
 .edit-button {
     color: blue;
