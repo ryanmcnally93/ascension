@@ -102,67 +102,71 @@ I have tested all my JavaScript code using JSHint
 
 ### Lighthouse
 
-- <!-- ISSUES? -->
-
-##### Base
-
-- <!--Errors?-->
-
 ##### Index
 
-- <!--Errors?-->
+<img src="/media/readme-images/index-desktop.png" width="100%" alt="Index lighthouse score on desktop" style="display: inherit; ">
 
 ##### Various All Auth Pages
 
-- <!--Errors?-->
+- Login Page
+
+<img src="/media/readme-images/login-desktop.png" width="100%" alt="Login lighthouse score on desktop" style="display: inherit; ">
+
+- Logout Page
+
+<img src="/media/readme-images/logout-desktop.png" width="100%" alt="Logout lighthouse score on desktop" style="display: inherit; ">
+
+- Register Page
+
+<img src="/media/readme-images/register-desktop.png" width="100%" alt="Register lighthouse score on desktop" style="display: inherit; ">
 
 ##### About
 
-- <!--Errors?-->
+<img src="/media/readme-images/about-desktop.png" width="100%" alt="About lighthouse score on desktop" style="display: inherit; ">
 
 ##### Rehearse
 
-- <!--Errors?-->
+<img src="/media/readme-images/rehearse-main-desktop.png" width="100%" alt="Rehearse lighthouse score on desktop" style="display: inherit; ">
 
 ##### Meet the Engineers
 
-- <!--Errors?-->
+<img src="/media/readme-images/engineers-desktop.png" width="100%" alt="Meet the engineers lighthouse score on desktop" style="display: inherit; ">
 
 ##### Record
 
-- <!--Errors?-->
+<img src="/media/readme-images/record-main-desktop.png" width="100%" alt="Record page lighthouse score on desktop" style="display: inherit; ">
 
 ##### Profile Page
 
-- <!--Errors?-->
+<img src="/media/readme-images/profile-desktop.png" width="100%" alt="Profile page lighthouse score on desktop" style="display: inherit; ">
 
 ##### Products Page
 
-- <!--Errors?-->
+<img src="/media/readme-images/products-desktop.png" width="100%" alt="Products lighthouse score on desktop" style="display: inherit; ">
 
 ##### Product Information
 
-- <!--Errors?-->
+<img src="/media/readme-images/product-information-desktop.png" width="100%" alt="Product information page lighthouse score on desktop" style="display: inherit; ">
 
 ##### Add Product
 
-- <!--Errors?-->
+<img src="/media/readme-images/add-product-desktop.png" width="100%" alt="Add product page lighthouse score on desktop" style="display: inherit; ">
 
 ##### Edit Product
 
-- <!--Errors?-->
+<img src="/media/readme-images/edit-product-desktop.png" width="100%" alt="Edit a product page lighthouse score on desktop" style="display: inherit; ">
 
 ##### Checkout
 
-- <!--Errors?-->
+<img src="/media/readme-images/checkout-desktop.png" width="100%" alt="Checkout page lighthouse score on desktop" style="display: inherit; ">
 
 ##### Checkout Success
 
-- <!--Errors?-->
+<img src="/media/readme-images/checkout-success-desktop.png" width="100%" alt="Checkout success lighthouse score on desktop" style="display: inherit; ">
 
 ##### Cart
 
-- <!--Errors?-->
+<img src="/media/readme-images/cart-desktop.png" width="100%" alt="Cart lighthouse score on desktop" style="display: inherit; ">
 
 ### Lighthouse Mobile
 
