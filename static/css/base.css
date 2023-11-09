@@ -144,7 +144,7 @@ a#small-logo:hover {
         height: 50px;
         margin-bottom: 0;
     }
-    #user-options, #cart-a {
+    #user-options, #cart-a, #cart-a-sm {
         font-size: 12px;
     }
     .fa-bars {
