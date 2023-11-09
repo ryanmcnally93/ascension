@@ -24,3 +24,8 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'rounded-0'
+            if field_name == 'sku' or field_name == 'name' or field_name == 'description':
+                field.widget.attrs['pattern'] = '[a-zA-Z0-9 ]+'
+                field.widget.attrs['minlength'] = '4'
+            elif field_name == 'price' or field_name == 'striked_price':
+                field.widget.attrs['type'] = 'number'

@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.template.defaultfilters import truncatechars
@@ -16,6 +16,11 @@ def profile(request):
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
+            # This code means the user cannot enter just spaces and save
+            for field in form:
+                if len(field.value().lstrip(' ')) == 0:
+                    messages.error(request, 'Please do not leave fields empty')
+                    return redirect('profile')
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
