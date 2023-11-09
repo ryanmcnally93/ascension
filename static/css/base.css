@@ -247,7 +247,14 @@ label.requiredField {
 
 @media (max-width: 767px) {
     .message-container {
-        max-width: 290px;
+        max-width: 200px;
+    }
+    .message-itself {
+        font-size: 12px;
+    }
+    .message-body {
+        max-height: 130px;
+        overflow: scroll;
     }
 }
 

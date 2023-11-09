@@ -53,10 +53,12 @@
                 {% endif %}
             </div>
             <small id="product-information-small" class="d-flex justify-content-center">
+                {% if request.user.is_superuser %}
                 <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
                 <button type="button" class="delete-button ml-2" data-toggle="modal" data-target="#deleteProduct">
                     Delete
                 </button>
+                {% endif %}
                 
                 <div class="modal fade" id="deleteProduct" tabindex="-1" role="dialog" aria-labelledby="deleteProductLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
