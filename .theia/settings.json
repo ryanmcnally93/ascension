@@ -1,5 +1,6 @@
 {
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "python.pythonPath": "/home/codeany/.pyenv/shims/python"
 }

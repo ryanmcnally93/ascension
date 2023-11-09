@@ -14,7 +14,7 @@ import os
 import dj_database_url
 from pathlib import Path
 if os.path.exists("env.py"):
-  import env 
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'fakestring')
 DEBUG = True
 
 ALLOWED_HOSTS = ['ascension-music-e0c178d908f4.herokuapp.com', 'localhost',
-                 '8000-ryanmcnally93-project-fo-v43rwjwria.us2.codeanyapp.com']
+                 '8000-ryanmcnally93-project-fo-8diahml5kg.us2.codeanyapp.com']
 
 # Application definition
 
@@ -143,7 +143,7 @@ else:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
- }
+    }
 
 
 # Password validation

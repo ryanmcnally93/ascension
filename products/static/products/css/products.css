@@ -31,7 +31,8 @@
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -54,8 +55,9 @@
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -94,7 +96,8 @@
     opacity: 1;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
     background-color: #717171;
 }
 
@@ -105,8 +108,13 @@
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* Large Screens */
@@ -158,8 +166,7 @@
 
 .product-image {
     width: 202.95px;
-    height: 233.99px;
-} 
+}
 
 .no-image {
     width: 169.63px;
@@ -170,7 +177,8 @@
     color: blue;
 }
 
-.edit-button:hover, .delete-button:hover {
+.edit-button:hover,
+.delete-button:hover {
     text-decoration: underline;
 }
 
@@ -218,7 +226,8 @@
     padding-right: 30px;
 }
 
-.input-group-prepend, .input-group-append {
+.input-group-prepend,
+.input-group-append {
     border: 1px solid #033A54;
     padding: 9.5px;
     color: #033A54;
@@ -312,7 +321,8 @@ input[type=number] {
     width: fit-content;
 }
 
-.input-group-prepend:hover, .input-group-append:hover {
+.input-group-prepend:hover,
+.input-group-append:hover {
     border: 1px solid white;
     padding: 9.5px;
     background-color: #033A54;
@@ -360,7 +370,8 @@ input[type=number] {
     flex-wrap: wrap;
 }
 
-.product-info, .product-title {
+.product-info,
+.product-title {
     color: black;
     text-decoration: none;
 }
@@ -440,18 +451,23 @@ a:hover {
     .product-image-box {
         margin-bottom: 20px !important;
     }
+
     #product-information-small {
         width: 95%;
     }
+
     .product-small-central {
         text-align: center !important;
     }
+
     .prod-info-btns {
         justify-content: center;
     }
+
     #info-quantity {
         margin: 0;
     }
+
     .hire-room {
         align-items: center;
         text-align: center;
@@ -467,12 +483,12 @@ a:hover {
         padding-top: 20px;
         height: 180px;
     }
-    
+
     .product-image {
         width: auto;
         height: 120px;
     }
-    
+
     .card {
         height: 440px;
     }
@@ -480,7 +496,7 @@ a:hover {
     #product-information-small {
         top: 200px;
     }
-    
+
     .product-infopage-info {
         padding-top: 20px
     }
