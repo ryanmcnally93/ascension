@@ -204,6 +204,12 @@
     font-size: 56px;
 }
 
+.product-price {
+    Font-size: 1.75rem;
+    Font-weight: 500;
+    Margin-bottom: 0.5rem;
+}
+
 #select_container {
     height: 30px;
     padding-right: 30px;

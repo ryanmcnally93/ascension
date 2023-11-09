@@ -42,12 +42,12 @@
 <div class="container" id="select_container">
     <div class="row float-right">
         <select class="rounded-0" id="products-filter">
-            <option value="no_filter" {% if current_sort == 'None_None' %}selected{% endif %}>Choose Filter</option>
-            <option value="price_high_to_low" {% if current_sort == '-price_desc' %}selected{% endif %}>Price High to Low</option>
-            <option value="price_low_to_high" {% if current_sort == 'price_asc' %}selected{% endif %}>Price Low to High</option>
-            <option value="rating_high_to_low" {% if current_sort == '-rating_desc' %}selected{% endif %}>Rating High to Low</option>
-            <option value="rating_low_to_high" {% if current_sort == 'rating_asc' %}selected{% endif %}>Rating Low to High</option>
-            <option value="all">All Products</option>
+            <option aria-label="no_filter" value="no_filter" {% if current_sort == 'None_None' %}selected{% endif %}>Choose Filter</option>
+            <option aria-label="price_high_to_low" value="price_high_to_low" {% if current_sort == '-price_desc' %}selected{% endif %}>Price High to Low</option>
+            <option aria-label="price_low_to_high" value="price_low_to_high" {% if current_sort == 'price_asc' %}selected{% endif %}>Price Low to High</option>
+            <option aria-label="rating_high_to_low" value="rating_high_to_low" {% if current_sort == '-rating_desc' %}selected{% endif %}>Rating High to Low</option>
+            <option aria-label="rating_low_to_high" value="rating_low_to_high" {% if current_sort == 'rating_asc' %}selected{% endif %}>Rating Low to High</option>
+            <option aria-label="all" value="all">All Products</option>
         </select>
     </div>
 </div>
@@ -85,32 +85,32 @@
                     </div>
                     <div class="product-info px-3">
                         <p class="mb-0 category">{{ product.category.friendly_name }}</p>
-                        <h3>£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</h3>
+                        <p class="product-price">£{{ product.price }}{% if product.striked_price %} (<s>{{ product.striked_price }}</s>) {% endif %}</p>
                         <p class="mb-0">{{ product.rating }}/5 ({{ product.amount_of_reviews }})</p>
                     </div>
                     <br>
                     <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add">
                         {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" class="redirect" id="{{ product.id }}redirect" name="redirect_url" value="{{ request.path }}#{{ product.id }}redirect">
+                            <input type="text" class="redirect" id="{{ product.id }}redirect" name="redirect_url" value="{{ request.path }}#{{ product.id }}redirect" aria-label="{{ product.name }}">
                             {% if cart_products|is_item_id_in_list:product.id %}
                             <div id="products-quantity" class="quantity-box mb-3"> 
                                 {% if product.is_hire_room %}
-                                    <button id="products-prepend" class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity" disabled>
+                                    <button aria-label="decrease quantity" id="products-prepend" class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity" disabled>
                                         <i class="fas fa-minus"></i>
                                     </button>
                                 {% else %}
-                                    <button id="products-prepend" class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
+                                    <button aria-label="decrease quantity" id="products-prepend" class="input-group-prepend btn btn-sm btn-black rounded-0" name="decrease-quantity">
                                         <i class="fas fa-minus"></i>
                                     </button>
                                 {% endif %}
-                                <input class="quantity-middle qty_input" value="{% find_quantity cart_products product.id none none %}" type="number" min="1" max="99" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <input aria-label="quantity" class="quantity-middle qty_input" value="{% find_quantity cart_products product.id none none %}" type="number" min="1" max="99" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                 {% if product.is_hire_room %}
-                                    <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity" disabled>
+                                    <button aria-label="increase quantity" class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity" disabled>
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 {% else %}
-                                    <button class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
+                                    <button aria-label="increase quantity" class="input-group-append btn btn-sm btn-black rounded-0" name="increase-quantity">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 {% endif %}

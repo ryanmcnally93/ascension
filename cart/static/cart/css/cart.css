@@ -64,7 +64,7 @@ button#empty_cart:hover {
     margin: auto;
 }
 
-#remove_all_of_item_cart {
+.remove_all_of_item_cart {
     background-color: white;
     color: red;
     border: none;
@@ -73,7 +73,7 @@ button#empty_cart:hover {
     bottom: -15px;
 }
 
-#remove_all_of_item_cart:hover {
+.remove_all_of_item_cart:hover {
     text-decoration: underline;
 }
 
@@ -186,7 +186,7 @@ input[type=number] {
         width: 120px;
         margin: auto;
     }
-    #remove_all_of_item_cart {
+    .remove_all_of_item_cart {
         margin-top: 5px;
     }
     .cart-price {

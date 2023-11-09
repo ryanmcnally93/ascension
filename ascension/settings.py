@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'fakestring')
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-ALLOWED_HOSTS = ['ascension-music-e0c178d908f4.herokuapp.com', 'localhost', '8000-ryanmcnally93-project-fo-jzagfoqlhn.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['ascension-music-e0c178d908f4.herokuapp.com', 'localhost',
+                 '8000-ryanmcnally93-project-fo-v43rwjwria.us2.codeanyapp.com']
 
 # Application definition
 
