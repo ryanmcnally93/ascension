@@ -557,5 +557,7 @@ Both modals tested
 | Logout page | Both buttons have CSS qualities and links work | Hover and click on both buttons | No takes user to index, yes logs out user and also directs to index | Pass |
 | Register page | Adds test user | Type testytest@test.com, username testytest, password = testpassword | Sends email successfully | Pass |
 | Register page | Displays as column on smaller screens | Test page on mobile screens | Page displays in column | Pass |
+| Register Form | Will not accept spaces in username | Put name with space in between and POST | Did not accept, displayed error message | Pass |
+| Register page | Should not accept symbols in username | Tried to add '//' | Did not accept | Pass |
 
 This readme.md will be spellchecked using the spell checker extension for Chrome.
