@@ -439,6 +439,17 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Image uploaders | Hover CSS changes, opens up an image uploader box, clicking on an image reveals the name on the webpage so you know which item you are uploading | Hovered over and clicked on image button, selected image and clicked open | Image name was visible on page | Pass |
 | Giving no image | Creates product with default no-media image | Added product without image | Was redirected to product-information, product had default no-media image | Pass |
 | Images | Not available on mobile devices | Opened page on mobile | Images were not visible | Pass |
+| Form | Should not POST without Name | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
+| Form | Should not POST without Decsription | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
+| Form | Should not POST without SKU | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
+| Form | Should not POST without Price | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
+| Form | Shouldn't be able to add antyhing other than text and numbers in field | Added pattern in forms.py, attempting to add '//' in field and POST | Did not accept | Pass |
+| Form | Shouldn't be able to POST with just spaces | Added pattern in forms.py, attempting to add four spaces in field and POST | Did not accept | Pass |
+| Form | Shouldn't be able to POST with less than 4 characters | Added minlength in forms.py, attempting to add three characters in fields and POST | Did not accept | Pass |
+| Form | Two price fields should no  accept anything other than numbers with a potential decimal | Attempted to add other letters, also attempted three digits after decimal | Could not enter anything other than numbers and one decimal, three digit input gave error and didn't POST | Pass |
+| Form | Changing category should change the is hire room | Made is hire room display and changed category to studio room and back, then rehearsals and back | JavaScript manages to update the input box correctly | Pass |
+
+- These same form tests were completed on the Edit a Product page.
 
 ### Edit a Product page
 
@@ -488,6 +499,13 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Payment | test card data sends through fake payment | Added fake dard details '4242 4242 4242 4242' to the card information and proceeded with payment | Payment went through | Pass |
 | Two buttons | Hover CSS changes and buttons work | Hover and click on both buttons | CSS changes for both, user taken to cart on first, and payment info sent on second | Pass |
 | Products and form | Display in a single column on smaller devices | Open page on mobile | Products first, the form underneath, all in a column | Pass |
+| Form | Only numbers should be able to be in phone_number field | Attempted to type letters and symbols into phone_number input | Could not type anything other than numbers | Pass |
+| Form | Email field should only accept valid emails | Attempted to POST with words and no @ symbol | Could not POST with incorrect format | Pass |
+| Form | Phone number should not accept any input that isn't 11 characters long | Attempted 10 and 12 characters | Could not POST | Pass |
+| Form | Should not be able to POST without required information | Attempted to send form without each required field set | Form wouldn't POST | Pass |
+| Form | Should not be able to POST with symbols in fields | Attempted to sdd // and "" from field to field | Form wouldn't POST | Pass |
+| Form | Should not accept (in fields that aren't phone number and email) less than 4 characters | Attempted to add 3 characters to relevant fields | Form wouldn't POST | Pass |
+| Form | Should not be able to enter just spaces | Type 4 spaces into full name field and POST | Error message displays| Pass |
 
 ### Checkout Success page
 
@@ -505,6 +523,11 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Two buttons at bottom of form | Both have hover qualities, connected accounts takes user to correct page | Hovered over two buttons, clicked on connected accounts | Hover CSS changes, link works | Pass |
 | All data | Displays as a column on smaller screens | Opened on mobile | Displays as column | Pass |
 | Order Number links | Underline should be added, links to old checkout success page | Hover and click on link | Hover and link works | Pass |
+| Form | Should not save symbols in fields | Attempted to type '//' and '**' and save | Would not save information | Pass |
+| Form | Should not be able to set phone number to character length that isn't 11 | Attempted 10 and 12 characters | Would not save information | Pass |
+| Form | Should not be able to type anything other than numbers into phone number field | Attempt letters | Could not type anything other than numbers | Pass |
+| Form | Should not be able to save if fields are less than 4 characters long | Type eee and hit save | Would not save information | Pass |
+| Form | Should not be able to enter just spaces | Type 4 spaces into full name field and POST | Error message displays| Pass |
 
 ### Toast Messages
 

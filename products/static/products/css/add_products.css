@@ -8,7 +8,8 @@ label.requiredField {
     cursor: pointer;
 }
 
-#div_id_is_offers_item {
+#div_id_is_offers_item,
+#div_id_is_hire_room {
     display: none;
 }
 

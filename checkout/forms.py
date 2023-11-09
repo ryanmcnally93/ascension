@@ -43,3 +43,12 @@ class OrderForm(forms.ModelForm):
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
+            self.fields['phone_number'].widget.attrs['type'] = 'number'
+        for field_name, field in self.fields.items():
+            if field_name == 'phone_number':
+                field.widget.attrs['minlength'] = '11'
+                field.widget.attrs['maxlength'] = '11'
+                field.widget.attrs['pattern'] = '[0-9]+'
+            elif field_name != 'email':
+                field.widget.attrs['pattern'] = '[a-zA-Z0-9 ]+'
+                field.widget.attrs['minlength'] = '4'

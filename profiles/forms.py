@@ -38,3 +38,11 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'rounded-0'
             self.fields[field].label = False
+        for field_name, field in self.fields.items():
+            if field_name == 'default_phone_number':
+                field.widget.attrs['minlength'] = '11'
+                field.widget.attrs['maxlength'] = '11'
+                field.widget.attrs['pattern'] = '[0-9]+'
+            else:
+                field.widget.attrs['minlength'] = '4'
+                field.widget.attrs['pattern'] = '[a-zA-Z0-9 ]+'

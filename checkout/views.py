@@ -50,6 +50,11 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
         }
+        # This code means the user cannot enter just spaces and save
+        for field in form_data.values():
+            if len(field.lstrip(' ')) == 0:
+                messages.error(request, 'Please do not leave fields empty')
+                return redirect('checkout')
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)

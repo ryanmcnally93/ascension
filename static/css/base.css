@@ -52,7 +52,17 @@ header {
         border: 1px solid #282C2E;
     }
 }
+/* Get rid of arrows on number field */
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
 /*  Navbar */
 
 .fa-bars {
