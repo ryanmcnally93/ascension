@@ -28,7 +28,7 @@
     color: #033A54;
 }
 
-#empty_cart {
+.empty_cart {
     background-color: red;
     color: white;
 }
@@ -37,19 +37,19 @@
     height: 38px;
 }
 
-#empty_cart {
+.empty_cart {
     background-color: red !important;
     color: white !important;
     border: 1px solid red;
 }
 
-a#empty_cart {
+a.empty_cart {
     height: 34px;
     display: inline-block;
 }
 
-a#empty_cart:hover,
-button#empty_cart:hover {
+a.empty_cart:hover,
+button.empty_cart:hover {
     background-color: white !important;
     color: red !important;
     border: 1px solid red;
@@ -216,7 +216,7 @@ input[type=number] {
         display: flex;
         margin-bottom: 20px
     }
-    #empty_cart {
+    .empty_cart {
         margin: 15px 0 0 0 !important;
     }
     .col-6-5 {
