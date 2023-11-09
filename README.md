@@ -660,9 +660,21 @@ I tried .strftime, |strftime and strftime('&d-&m-&Y'), along with changing varia
 
 I finally managed to find a way to format date in Jinja2, using 'order.date|date: "Y-m-d"'.
 
+13). I realised on checkout success that the order line items for hire rooms needed to increase when the date was different but product ID the same.
+
+The quantity also returned 0. In order to fix these issues I needed to save the line items differently in the view for items with product.is_hire_room equal to true.
+
+I made quantity equal to the 'length' or amount of the dictionary's values. The date is equal to the item's key.
+
+14). Custom Filters on the product and cart pages were returning the incorrect quantities. This was incredibly hard to figure out but I did in the end find a solution.
+
+I first had to decipher if the product was a hire room, then find the amount of times there were to the date that had been passed in. This worked for the cart page.
+
+On the products page I needed to add that quantity to the other cases of the same product_id. This meant that on products page it showed the quantity of all the cases of this item currently in the cart.
+
 ### Unfixed Bugs
 
-1). ried to create a sessino with booked sessions inside, this created massive issues. I had to save the product id, date and time within a dictionary and then try and access and manipulate this date throughout.
+1). I tried to create a session with booked sessions inside, this created massive issues. I had to save the product id, date and time within a dictionary and then try and access and manipulate this date throughout.
 
 <img src="/media/readme-images/unfixed-1.webp" width="70%" alt="The code I used" style="display: inherit; ">
 
@@ -725,6 +737,8 @@ I instead have just allowed users to checkout with the selected dates and times 
 ## Credits
 
 ### Code
+
+- The HTML, CSS and JS code for the slideshows on the Product Information pages were originally taken from [W3Schools.](https://www.w3schools.com/howto/howto_js_slideshow.asp) I later changed the styling and layout to better suit the site.
 
 - On my checkout success page I needed to render the date in a smaller format for smaller screens. Unfortunately I couldn't find a way to udse strftime within Jinja, but found this alternate solution on [Stack Overflow](https://stackoverflow.com/questions/44570965/django-error-could-not-parse-the-remainder-y-m-d-from-post-datedate) - Author 'Daniel Roseman'.
 
