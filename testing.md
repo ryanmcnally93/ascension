@@ -170,65 +170,71 @@ I have tested all my JavaScript code using JSHint
 
 ### Lighthouse Mobile
 
-##### Base
-
-- <!--Errors?-->
-
 ##### Index
 
-- <!--Errors?-->
+<img src="/media/readme-images/index-mobile.png" width="100%" alt="Index lighthouse score on mobile" style="display: inherit; ">
 
 ##### Various All Auth Pages
 
-- <!--Errors?-->
+- Login Page
+
+<img src="/media/readme-images/login-mobile.png" width="100%" alt="Login lighthouse score on mobile" style="display: inherit; ">
+
+- Logout Page
+
+<img src="/media/readme-images/logout-mobile.png" width="100%" alt="Logout lighthouse score on mobile" style="display: inherit; ">
+
+- Register Page
+
+<img src="/media/readme-images/register-mobile.png" width="100%" alt="Register lighthouse score on mobile" style="display: inherit; ">
 
 ##### About
 
-- <!--Errors?-->
+<img src="/media/readme-images/about-mobile.png" width="100%" alt="About lighthouse score on mobile" style="display: inherit; ">
 
 ##### Rehearse
 
-- <!--Errors?-->
+<img src="/media/readme-images/rehearse-main-mobile.png" width="100%" alt="Rehearse lighthouse score on mobile" style="display: inherit; ">
 
 ##### Meet the Engineers
 
-- <!--Errors?-->
+<img src="/media/readme-images/engineers-mobile.png" width="100%" alt="Meet the engineers lighthouse score on mobile" style="display: inherit; ">
 
 ##### Record
 
-- <!--Errors?-->
+<img src="/media/readme-images/record-main-mobile.png" width="100%" alt="Record page lighthouse score on mobile" style="display: inherit; ">
 
 ##### Profile Page
 
-- <!--Errors?-->
+<img src="/media/readme-images/profile-mobile.png" width="100%" alt="Profile page lighthouse score on mobile" style="display: inherit; ">
 
 ##### Products Page
 
-- <!--Errors?-->
+<img src="/media/readme-images/products-mobile.png" width="100%" alt="Products lighthouse score on mobile" style="display: inherit; ">
 
 ##### Product Information
 
-- <!--Errors?-->
+<img src="/media/readme-images/product-information-mobile.png" width="100%" alt="Product information page lighthouse score on mobile" style="display: inherit; ">
 
 ##### Add Product
 
-- <!--Errors?-->
+<img src="/media/readme-images/add-product-mobile.png" width="100%" alt="Add product page lighthouse score on mobile" style="display: inherit; ">
 
 ##### Edit Product
 
-- <!--Errors?-->
+<img src="/media/readme-images/edit-product-mobile.png" width="100%" alt="Edit a product page lighthouse score on mobile" style="display: inherit; ">
 
 ##### Checkout
 
-- <!--Errors?-->
+<img src="/media/readme-images/checkout-mobile.png" width="100%" alt="Checkout page lighthouse score on mobile" style="display: inherit; ">
 
 ##### Checkout Success
 
-- <!--Errors?-->
+<img src="/media/readme-images/checkout-success-mobile.png" width="100%" alt="Checkout success lighthouse score on mobile" style="display: inherit; ">
 
 ##### Cart
 
-- <!--Errors?-->
+<img src="/media/readme-images/cart-mobile.png" width="100%" alt="Cart lighthouse score on mobile" style="display: inherit; ">
 
 ## Manual Testing
 
