@@ -26,7 +26,7 @@ if (window.innerWidth < 767) {
             iconColor: '#dc3545'
         }
     };
-};
+}
 
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
@@ -116,5 +116,5 @@ form.addEventListener('submit', function(ev) {
         });
     }).fail(function () {
         location.reload();
-    })
+    });
 });

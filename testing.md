@@ -86,21 +86,21 @@ The [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) came
 
 I have tested all my JavaScript code using JSHint.
 
-- [base.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/js/base.js)
+- [base.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/js/base.js) returned no errors.
 
-- [base_extra.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/js/base_extra.js)
+- [base_extra.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/js/base_extra.js) returned no errors.
 
-- [products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/products.js)
+- [products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/products.js) was missing semicolons in five positions, these are now in position.
 
-- [product_information.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/product_information.js)
+- [product_information.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/product_information.js) returned no errors.
 
-- [add_products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/add_products.js)
+- [add_products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/add_products.js) returned no errors.
 
-- [edit_products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/edit_products.js)
+- [edit_products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/edit_products.js) had one missing semicolon.
 
-- [cart.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/static/cart/js/cart.js)
+- [cart.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/static/cart/js/cart.js) returned no errors.
 
-- [stripe_elements.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/static/checkout/js/stripe_elements.js)
+- [stripe_elements.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/static/checkout/js/stripe_elements.js) returned some missing and uneccesary semicolons.
 
 #### Python Validation
 
