@@ -1,6 +1,6 @@
 /* Extra Large Screens */
 
-@media (min-height: 825px) {
+@media (min-height: 825px) and (min-width: 991px) {
     .background-image {
         height: 900px !important;
         padding-top: 480px !important;

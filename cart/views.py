@@ -94,6 +94,7 @@ def alter_cart(request, product_id):
             else:
                 print('This is the first of this product and date')
                 cart[product_id] = {'session_datetime': {date: {time: 1}}}
+                print(cart)
 
             request.session["cart"] = cart
             request.session.modified = True

@@ -752,6 +752,29 @@ I instead have just allowed users to checkout with the selected dates and times 
 
 - I used this code from Stack Overflow by [Constantin](https://stackoverflow.com/questions/58352814/how-to-change-formatting-of-stripe-card-element-based-on-viewport-size) to target the Stripe card element when screen size changes through an event listener in JavaScript.
 
+#### Code Institute's Boutique Ado
+
+Due to the fact I learnt how to integrate Stripe and create an E-Commerce site from Code Institute's lessons on their project 'Boutique Ado', there are a number of similarities and in some cases, the same code.
+
+- Navbar design has similarities.
+- The if statement within base.html that renders the 'messages' is the same.
+- Toasts are setup the same, although there are changes I have made.
+- Products Category Model is the same.
+- Products admin.py is similar.
+- Sort and Direction in products views.py & JavaScript to make it work almost identical.
+- The for loop in cart contexts is similar to their 'bag contexts' loop.
+- The Checkout apps models functions are similar.
+- Checkout signals.py identical.
+- Checkout template has exact code in places
+- Views forms and admin for checkout.
+- The Stripe Elements.js in the checkout app. This JavaScript was originally copied and pasted, differences have since been made.
+- Checkout_success view almost same.
+- Webhook handler has been copied and pasted.
+- Webhooks.py has been copied and pasted.
+- The profiles model is very similar.
+- Profiles forms.py is almost the same.
+- Products forms.py is very similar, with changes.
+
 ### Web Tools
 
 - I used [Contrast Checker](https://webaim.org/resources/contrastchecker/) to make sure my headings were visible against their background colours.
