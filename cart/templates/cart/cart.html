@@ -326,14 +326,5 @@
 {% endblock %}
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
-  $(window).on("load", function () {
-    if ($("#refreshed").val() == "false") {
-      $("#refreshed").val("true");
-    } else {
-      $("#refreshed").val("false");
-      location.reload(true);
-    }
-  });
-</script>
+<script rel="text/javascript" src="{% static 'cart/js/cart.js' %}"></script>
 {% endblock %}
