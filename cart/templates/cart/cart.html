@@ -26,7 +26,7 @@
         <div class="product-image-box px-auto mx-auto">
           {% if item.product.main_image %}
           <a
-            class="product-image m-auto my-1"
+            class="product-image image-cont m-auto my-1"
             href="{% url 'product_information' product_id=item.product.pk %}">
             <img
               class="product-img"
@@ -35,7 +35,7 @@
           </a>
           {% elif item.product.image %}
           <a
-            class="product-image m-auto my-1"
+            class="product-image image-cont m-auto my-1"
             href="{% url 'product_information' product_id=item.product.pk %}">
             <img
               class="product-img"
@@ -44,7 +44,7 @@
           </a>
           {% else %}
           <a
-            class="product-image m-auto my-1"
+            class="product-image image-cont m-auto my-1"
             href="{% url 'product_information' product_id=item.product.pk %}">
             <img
               class="product-img"
@@ -111,6 +111,7 @@
           class="products-add d-md-none">
           {% csrf_token %}
           <div class="input-group">
+            <input type="hidden" name="date" value="{{ item.date }}">
             <input
               type="hidden"
               name="redirect_url"

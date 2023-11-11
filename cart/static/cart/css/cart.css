@@ -13,6 +13,14 @@
     max-height: 90%;
 }
 
+@media (max-width: 767px) {
+    .image-cont {
+        overflow: hidden;
+        justify-content: center;
+        display: flex;
+    }
+}
+
 .product-img {
     height: 234px;
 }
