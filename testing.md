@@ -88,7 +88,14 @@ I have tested all my JavaScript code using JSHint
 
 #### JSHint
 
-<!-- - The main [script.js](/torquay_sunday_league/static/js/script.js) file returned 9 warnings that were letting me know that "const" and "let" are available in ES6. No other errors were found. -->
+- [base.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/js/base.js)
+- [base_extra.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/js/base_extra.js)
+- [products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/products.js)
+- [product_information.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/product_information.js)
+- [add_products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/add_products.js)
+- [edit_products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/edit_products.js)
+- [cart.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/static/cart/js/cart.js)
+- [stripe_elements.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/static/checkout/js/stripe_elements.js)
 
 #### Python Validation
 

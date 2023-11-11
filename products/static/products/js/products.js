@@ -31,3 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
     });
 });
+
+$(window).on('load', function(){
+    if ($('#refreshed').val() == "false") {
+    $('#refreshed').val("true"); 
+    }
+    else {
+    $('#refreshed').val("false");
+    location.reload();
+    }
+});
+$('#myModal').on('shown.bs.modal', function () {
+$('#myInput').trigger('focus')
+})

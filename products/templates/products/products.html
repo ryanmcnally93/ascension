@@ -186,18 +186,4 @@
 {% block postloadjs %}
 {{ block.super }}
     <script rel="text/javascript" src="{% static 'products/js/products.js' %}"></script>
-    <script type="text/javascript">
-        $(window).on('load', function(){
-            if ($('#refreshed').val() == "false") {
-            $('#refreshed').val("true"); 
-            }
-            else {
-            $('#refreshed').val("false");
-            location.reload();
-            }
-        });
-        $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-        })
-    </script>
 {% endblock %}
