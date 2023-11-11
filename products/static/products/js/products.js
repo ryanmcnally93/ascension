@@ -7,22 +7,22 @@ document.addEventListener("DOMContentLoaded", function () {
             var selectedValue = this.value;
             
             if (selectedValue == 'no_filter') {
-                console.log('No filter has been given')
+                console.log('No filter has been given');
             } else if (selectedValue != 'all') {
                 var sort = selectedValue.split("_")[0];
                 var direction = selectedValue.split("_")[1];
 
                 if(direction == 'high') {
-                    direction = 'desc'
+                    direction = 'desc';
                 } else if(direction == 'low') {
-                    direction = 'asc'
+                    direction = 'asc';
                 } else {
-                    console.log('You have entered an incorrect direction!')
+                    console.log('You have entered an incorrect direction!');
                 }
 
                 currentUrl.searchParams.set("sort", sort);
                 currentUrl.searchParams.set("direction", direction);
-                console.log(sort + direction)
+                console.log(sort + direction);
                 window.location.replace(currentUrl);
             } else {
                 currentUrl.searchParams.delete("sort");
@@ -42,5 +42,5 @@ $(window).on('load', function(){
     }
 });
 $('#myModal').on('shown.bs.modal', function () {
-$('#myInput').trigger('focus')
-})
+$('#myInput').trigger('focus');
+});

@@ -19,30 +19,30 @@ for (let radio of radios) {
     radio.addEventListener("click", function () {
         document.getElementById('chosen-time').value = radio.id;
     });
-};
+}
 function radioShow() {
     if (document.getElementById('no-radios') != null) {
         if (document.getElementById('date').value == "") {
-            let times = document.getElementsByClassName('radio')
+            let times = document.getElementsByClassName('radio');
             for (i = 0; i < times.length; i++) {
                 times[i].style.display = 'none';
             }
-            let para = document.getElementsByClassName('timeline-button')
+            let para = document.getElementsByClassName('timeline-button');
             for (i = 0; i < para.length; i++) {
                 para[i].style.display = 'none';
             }
-            let noRadios = document.getElementById('no-radios')
+            let noRadios = document.getElementById('no-radios');
             noRadios.style.display = 'block';
         } else if (document.getElementById('date').value != "") {
-            let times = document.getElementsByClassName('radio')
+            let times = document.getElementsByClassName('radio');
             for (i = 0; i < times.length; i++) {
                 times[i].style.display = 'inline';
             }
-            let para = document.getElementsByClassName('timeline-button')
+            let para = document.getElementsByClassName('timeline-button');
             for (i = 0; i < para.length; i++) {
                 para[i].style.display = 'inline';
             }
-            let noRadios = document.getElementById('no-radios')
+            let noRadios = document.getElementById('no-radios');
             noRadios.style.display = 'none';
         }
     }
@@ -65,8 +65,8 @@ showSlides(slideIndex = n);
 function showSlides(n) {
 let i;
 let slides = document.getElementsByClassName("mySlides");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
+if (n > slides.length) {slideIndex = 1;}
+if (n < 1) {slideIndex = slides.length;}
 for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
 }

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     if (document.getElementById('id_name').value != "") {
         document.getElementById('invisible-form').style.display = "flex";
-        document.getElementById('product-id').value = document.getElementById('id_name').value
+        document.getElementById('product-id').value = document.getElementById('id_name').value;
     } else {
         document.getElementById('invisible-form').style.display = "none";
     }
