@@ -84,17 +84,22 @@ The [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) came
 
 ### Javascript Validation
 
-I have tested all my JavaScript code using JSHint
-
-#### JSHint
+I have tested all my JavaScript code using JSHint.
 
 - [base.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/js/base.js)
+
 - [base_extra.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/js/base_extra.js)
+
 - [products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/products.js)
+
 - [product_information.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/product_information.js)
+
 - [add_products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/add_products.js)
+
 - [edit_products.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/js/edit_products.js)
+
 - [cart.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/static/cart/js/cart.js)
+
 - [stripe_elements.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/static/checkout/js/stripe_elements.js)
 
 #### Python Validation
