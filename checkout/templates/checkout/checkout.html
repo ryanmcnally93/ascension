@@ -38,8 +38,8 @@
                             <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
                         </div>
                     {% endif %}
-                    <span class="col-10 col-md-6 my-auto">{{ item.product.name }}<br><p class="small text-muted mb-2">Qty: {{ item.quantity }} <br class="d-none d-md-block">Rating: {{ item.product.rating }}</p></span>
-                    <span class="col-10 col-md-3 my-auto">£{{ item.item_subtotal|floatformat:2 }}<br><p class="small text-muted">£{{ item.product.price|floatformat:2 }} each</p></span>
+                    <div class="col-10 col-md-6 my-auto">{{ item.product.name }}<br><p class="small text-muted mb-2">Qty: {{ item.quantity }} <br class="d-none d-md-block">Rating: {{ item.product.rating }}</p></div>
+                    <div class="col-10 col-md-3 my-auto">£{{ item.item_subtotal|floatformat:2 }}<br><p class="small text-muted">£{{ item.product.price|floatformat:2 }} each</p></div>
                 </div>
             {% endfor %}
             <div class="d-flex checkout-price">
@@ -90,7 +90,7 @@
                 <!--Back to Cart and Submit Buttons-->
                 <div class="checkout-buttons mt-4 mb-3 mr-md-3">
                     <a class="p-1 px-2 bg-black rounded-0 text-white" href="{% url 'view_cart' %}"><p class="mb-1 d-inline">&#60;</p> <p id="back" class="d-inline mb-0">Back </p><p class="mb-0 d-none d-md-inline">to Cart</p> <i class="ml-1 fas fa-shopping-cart"></i></a>
-                    <button type="submit" id="submit-button" class="p-1 px-2 bg-darkblue rounded-0 text-white m-auto"><p class="mb-0 d-inline">Complete </p><p class="mb-0 d-none d-md-inline">Order</p> <i class="ml-1 fas fa-lock"></i></button>
+                    <button type="submit" id="submit-button" class="p-1 px-2 bg-darkblue rounded-0 text-white m-auto"><span class="mb-0 d-inline">Complete </span><span class="mb-0 d-none d-md-inline">Order</span> <i class="ml-1 fas fa-lock"></i></button>
                     <p class="small text-danger my-0 mt-1"><i class="small fas fa-exclamation-circle"></i>Your card will be charged <strong>£{{ total|floatformat:2 }}</strong></p>
                 </div>
             </form>
@@ -98,7 +98,7 @@
     </div>
 
     <div id="loading-overlay">
-        <h1><i class="fa-solid fa-spinner fa-spin"></i></h1>
+        <p class="spinner"><i class="fa-solid fa-spinner fa-spin"></i></p>
     </div>
 {% endblock %}
 

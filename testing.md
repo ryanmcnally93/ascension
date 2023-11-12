@@ -28,23 +28,19 @@ All the following HTML documents (which are written using Django templates), hav
 
 - [products.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/templates/products/products.html) was the hardest html document to check, as there are so many if statements involved. I have maticulously gone through the code and discovered an issue with the cards being anchor elements that contain inputs and forms. This wasn't allowed by the validator, so I instead made the anchor an individual element within the card that stretched across the height and width of it. This created an issue with the buttons section, which I decided to separate using border top on the art to cart and book buttons. I also needed to change the p elements within the buttons to span elements instead.
 
-##### Various All Auth Pages
+- [about.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/home/templates/home/about.html) returned no errors.
 
-- <!--Errors?-->
+- [index.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/home/templates/home/index.html) returned no errors.
 
-##### About
+- [checkout.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/templates/checkout/checkout.html) had an empty h1 tag that was being used for the spinner, I made this a p element and gave it a large font size. There was also a p element within a span, so I changed the span to a div. Lastly there was another p inside a button, so I changed the p element to a span.
 
-- <!--Errors?-->
-
-##### Checkout
-
-- <!--Errors?-->
-
-##### Checkout Success
-
-- <!--Errors?-->
+- [checkout_success.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/templates/checkout/checkout_success.html) returned no errors.
 
 ##### Cart
+
+- <!--Errors?-->
+
+##### Various All Auth Pages
 
 - <!--Errors?-->
 
