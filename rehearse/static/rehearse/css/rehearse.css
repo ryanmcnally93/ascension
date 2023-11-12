@@ -40,7 +40,7 @@
     height: 700px;
 }
 
-/* Mobile & Medium Screens */
+/* Medium Screens */
 
 @media (max-width: 991px) {
     .studio-image {
@@ -69,6 +69,8 @@
         font-size: 16px;
     }
 }
+
+/* Mobile Screens */
 
 @media (max-width: 767px) {
     .background-image {

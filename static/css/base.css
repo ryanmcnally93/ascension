@@ -10,26 +10,6 @@ footer {
     border-top: 1px solid white !important;
 }
 
-#signup-link {
-    color: #033A54;
-    font-weight: 700;
-}
-
-#small-logo-img {
-    height: 45px;
-    width: 45px;
-}
-
-.facebook-sign-in {
-    border: 2px solid white;
-    border-radius: 6px;
-}
-
-.facebook-sign-in:hover {
-    border: 2px solid #282C2E;
-    border-radius: 6px;
-}
-
 header {
     border-bottom: 1px solid white !important;
 }
@@ -43,16 +23,7 @@ header {
     padding-bottom: 72px;
 }
 
-@media (max-width: 991px) {
-    #navbar-nav {
-        width: 105px;
-        background-color: white;
-        padding: 0;
-        margin-left: 5px !important;
-        border: 1px solid #282C2E;
-    }
-}
-/* Get rid of arrows on number field */
+/* Get rid of arrows on number input fields */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -63,17 +34,16 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
 /*  Navbar */
+
+#small-logo-img {
+    height: 45px;
+    width: 45px;
+}
 
 .fa-bars {
     color: white;
-}
-
-@media (max-width: 991px) {
-    .navbar-collapse {
-        position: absolute;
-        top: 60px;
-    }
 }
 
 .logo {
@@ -91,15 +61,6 @@ input[type=number] {
 
 p#my-account-sm {
     white-space: nowrap;
-}
-
-@media (max-width: 991px) {
-    .dropdown-menu-right {
-        position: absolute !important;
-        left: 126px;
-        top: 0;
-        width: fit-content;
-    }
 }
 
 a#small-logo {
@@ -127,20 +88,6 @@ a#small-logo:hover {
     margin-bottom: 2px;
 }
 
-@media (min-width: 992px) {
-    .mobile-link {
-        color: white;
-    }
-}
-
-@media (max-width: 991px) {
-    .mobile-link {
-        color: #033A54;
-        width: 100%;
-        padding-left: 5px !important;
-    }
-}
-
 .navbar {
     height: 56px;
     padding: 0;
@@ -159,6 +106,61 @@ a#small-logo:hover {
     font-size: 32px;
 }
 
+/* Desktop Screens */
+
+@media (min-width: 992px) {
+    .mobile-link {
+        color: white;
+    }
+    a#user-options {
+        padding-left: 0;
+    }
+}
+
+/* Medium Screens */
+
+@media (max-width: 991px) {
+    #navbar-nav {
+        width: 105px;
+        background-color: white;
+        padding: 0;
+        margin-left: 5px !important;
+        border: 1px solid #282C2E;
+    }
+    .dropdown-menu-right {
+        position: absolute !important;
+        left: 126px;
+        top: 0;
+        width: fit-content;
+    }
+    .mobile-link {
+        color: #033A54;
+        width: 100%;
+        padding-left: 5px !important;
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 60px;
+    }
+    .navbar {
+        height: 72px;
+    }
+    #mobile-top-navbar {
+        background-color: #282C2E !important;
+    }
+    .list-inline-item:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    a#user-options {
+        padding-bottom: 10px;
+    }
+}
+
+/* Mobile Screens */
+
 @media (max-width: 430px) {
     .mobile-logo-box {
         height: 50px;
@@ -169,30 +171,6 @@ a#small-logo:hover {
     }
     .fa-bars {
         font-size: 24px !important;
-    }
-}
-
-@media (min-width 768px) and (max-width: 991px) {
-    a#user-options {
-        padding-bottom: 10px;
-    }
-}
-
-@media (min-width: 992px) {
-    a#user-options {
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 991px) {
-    .navbar {
-        height: 72px;
-    }
-    #mobile-top-navbar {
-        background-color: #282C2E !important;
-    }
-    .list-inline-item:not(:last-child) {
-        margin-right: 0;
     }
 }
 
@@ -216,6 +194,8 @@ hr {
     background-color: rgb(0, 0, 0, 0.3);
 }
 
+/* Medium and Mobile Screens */
+
 @media (max-width: 991px) {
     #top-row {
         padding-top: 75px;
@@ -223,6 +203,21 @@ hr {
 }
 
 /* All Auth Pages */
+
+#signup-link {
+    color: #033A54;
+    font-weight: 700;
+}
+
+.facebook-sign-in {
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+.facebook-sign-in:hover {
+    border: 2px solid #282C2E;
+    border-radius: 6px;
+}
 
 input {
     border-radius: 0 !important;
@@ -243,19 +238,6 @@ label.requiredField {
     top: 72px;
     right: 15px;
     z-index: 99999999999;
-}
-
-@media (max-width: 767px) {
-    .message-container {
-        max-width: 200px;
-    }
-    .message-itself {
-        font-size: 12px;
-    }
-    .message-body {
-        max-height: 130px;
-        overflow: scroll;
-    }
 }
 
 .custom-toast {
@@ -291,6 +273,21 @@ label.requiredField {
     max-height: 150px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Mobile Screens */
+
+@media (max-width: 767px) {
+    .message-container {
+        max-width: 200px;
+    }
+    .message-itself {
+        font-size: 12px;
+    }
+    .message-body {
+        max-height: 130px;
+        overflow: scroll;
+    }
 }
 
 /* Toast Icons */
@@ -400,16 +397,17 @@ button.bg-darkblue:hover,
     text-decoration: none;
 }
 
-@media (max-width: 991px) {
-    #record-link:hover,
-    #rehearse-link:hover,
-    #shop-link:hover,
-    #offers-link:hover,
-    #about-link:hover {
-        background-color: #033A54;
-        color: white !important;
-    }
+#about-link,
+#record-link,
+#rehearse-link,
+#shop-link,
+#offers-link {
+    padding-top: 16px;
+    height: 56px;
 }
+
+/* Desktop Screens */
+
 @media (min-width: 992px) {
     #record-link:hover,
     #rehearse-link:hover,
@@ -421,13 +419,17 @@ button.bg-darkblue:hover,
     }
 }
 
-#about-link,
-#record-link,
-#rehearse-link,
-#shop-link,
-#offers-link {
-    padding-top: 16px;
-    height: 56px;
+/* Medium Screens */
+
+@media (max-width: 991px) {
+    #record-link:hover,
+    #rehearse-link:hover,
+    #shop-link:hover,
+    #offers-link:hover,
+    #about-link:hover {
+        background-color: #033A54;
+        color: white !important;
+    }
 }
 
 /* Footer */
@@ -462,11 +464,12 @@ button.bg-darkblue:hover,
     cursor: pointer;
 }
 
-@media (max-width: 430px) {
-    .socials {
-        font-size: 20px;
-        margin-top: 10px;
-        padding: 0 5%;
+/* Medium Screens */
+
+@media (max-width: 991px) {
+    .footer-m {
+        font-size: 12px !important;
+        line-height: 15px !important;
     }
 }
 
@@ -476,10 +479,13 @@ button.bg-darkblue:hover,
     }
 }
 
-@media (max-width: 991px) {
-    .footer-m {
-        font-size: 12px !important;
-        line-height: 15px !important;
+/* Mobile Screens */
+
+@media (max-width: 430px) {
+    .socials {
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 0 5%;
     }
 }
 

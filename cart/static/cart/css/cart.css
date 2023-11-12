@@ -13,14 +13,6 @@
     max-height: 90%;
 }
 
-@media (max-width: 767px) {
-    .image-cont {
-        overflow: hidden;
-        justify-content: center;
-        display: flex;
-    }
-}
-
 .product-img {
     height: 234px;
 }
@@ -93,7 +85,6 @@ button.empty_cart:hover {
     vertical-align: middle;
 }
 
-/*Cart.html*/
 .total {
     padding-left: 50px;
 }
@@ -124,14 +115,12 @@ button.empty_cart:hover {
 }
 
 /* Remove Arrows on Input box */
-/* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-/* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -237,6 +226,11 @@ input[type=number] {
         -ms-flex: 0 0 46%;
         flex: 0 0 46%;
         max-width: 46%;
+    }
+    .image-cont {
+        overflow: hidden;
+        justify-content: center;
+        display: flex;
     }
 }
 
