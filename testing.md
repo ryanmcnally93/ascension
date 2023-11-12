@@ -72,15 +72,33 @@ All the following HTML documents (which are written using Django templates), hav
 
 #### CSS
 
-The [W3C Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) came back with - <!--Errors?-->
+I have tested all my CSS with the [W3C Validator.](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
-<!-- <p>
+- [base.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/static/css/base.css) had an error where a colon was missing from a min-width filter, which is now present.
+
+- [rehearse.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/rehearse/static/rehearse/css/rehearse.css) returned no errors.
+
+- [record_studio.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/record_studio/static/record_studio/css/record_studio.css) returned no errors.
+
+- [products.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/css/products.css) had 'margin: none;' halfway down. This has now been fixed to 'margin: 0;'
+
+- [add_products.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/static/products/css/add_products.css) returned no errors.
+
+- [home.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/home/static/home/css/home.css) returned no errors.
+
+- [about.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/home/static/home/css/about.css) returned no errors.
+
+- [checkout.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/static/checkout/css/checkout.css) returned no errors.
+
+- [cart.css](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/static/cart/css/cart.css) returned no errors.
+
+<p>
   <a href="http://jigsaw.w3.org/css-validator/check/referer">
     <img  style="border:0;width:88px;height:31px;margin:auto;display:flex;"
           src="http://jigsaw.w3.org/css-validator/images/vcss"
           alt="Valid css!" />
     </a>
-</p> -->
+</p>
 
 ### Javascript Validation
 

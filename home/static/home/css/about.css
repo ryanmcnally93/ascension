@@ -56,13 +56,6 @@
 
 /* Mobile Screens */
 
-@media (max-width: 768px) {
-    #contact-row {
-        flex-direction: column-reverse;
-        display: flex;
-    }
-}
-
 @media (max-width: 767px) {
     .background-image {
         background: url('/media/about-main.webp') no-repeat center center;
@@ -76,5 +69,9 @@
     }
     #about-box {
         font-size: 12px;
+    }
+    #contact-row {
+        flex-direction: column-reverse;
+        display: flex;
     }
 }

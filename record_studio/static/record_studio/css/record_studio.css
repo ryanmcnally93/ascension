@@ -103,9 +103,6 @@
     .engineers {
         width: 300px;
     }
-}
-
-@media (max-width: 767px) {
     .background-image {
         background: url('/media/recording-studio-main.webp') no-repeat center top;
         width: 100%;
