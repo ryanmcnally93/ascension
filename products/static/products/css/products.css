@@ -133,6 +133,22 @@
     border: 1px solid #033A54;
 }
 
+.studios-button {
+    border-top: 1px solid gold;
+}
+
+.products-add-qbox {
+    padding-top: 28px !important;
+}
+
+.rehearsals-button {
+    border-top: 1px solid lightblue;
+}
+
+.normal-button {
+    border-top: 1px solid #033A54;
+}
+
 .redirect {
     position: absolute;
     top: -600px;
@@ -242,6 +258,7 @@
     width: 100%;
     position: absolute;
     bottom: 0;
+    padding-top: 20px;
 }
 
 .add {
@@ -382,7 +399,7 @@ a:hover {
 .products-small {
     width: 100%;
     position: absolute;
-    bottom: 68px;
+    bottom: 67px;
     padding-right: 30px;
 }
 

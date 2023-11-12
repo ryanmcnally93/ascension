@@ -52,7 +52,7 @@
                     <img class="no-image my-1 pb-4" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
                 {% endif %}
             </div>
-            <small id="product-information-small" class="d-flex justify-content-center">
+            <div id="product-information-small" class="d-flex justify-content-center">
                 {% if request.user.is_superuser %}
                 <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
                 <button type="button" class="delete-button ml-2" data-toggle="modal" data-target="#deleteProduct">
@@ -79,7 +79,7 @@
                       </div>
                     </div>
                   </div>
-            </small>
+                </div>
             <div class="product-infopage-info px-3 col-12 col-lg-6">
                 <p class="product-small-central mb-0">{{ product.name }}</p>
                 <p class="mb-0 italic product-small-central">{{ product.category.friendly_name }}</p>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="timeline">
                             {% for time in sessions %}
-                                    <span class="span-no-break"><input id="{{ time }}" class="radio" type="radio" name="time" variable="1"><p class="timeline-button mb-0"> {{ time }}</p></span>
+                                    <span class="span-no-break"><input id="{{ time }}" class="radio" type="radio" name="time"><p class="timeline-button mb-0"> {{ time }}</p></span>
                             {% endfor %}
                             <p id="no-radios">Please choose a date within the next two weeks.</p>
                         </div>

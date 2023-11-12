@@ -61,11 +61,14 @@
                 <div class="col-10 col-sm-6 col-lg-4 col-xl-3 product">
             {% endif %}
                 {% if category == 'STUDIOS' %}
-                    <a href="{% url 'product_information' product_id=product.pk %}" class="card studios my-2 rounded-0">
+                    <div class="card studios my-2 rounded-0">
+                    <a href="{% url 'product_information' product_id=product.pk %}" class="w-100 h-100 position-absolute"></a>
                 {% elif category == 'REHEARSAL ROOMS' %}
-                    <a href="{% url 'product_information' product_id=product.pk %}" class="card rehearsals my-2 rounded-0">
+                    <div class="card rehearsals my-2 rounded-0">
+                    <a href="{% url 'product_information' product_id=product.pk %}" class="w-100 h-100 position-absolute"></a>
                 {% else %}
-                    <a href="{% url 'product_information' product_id=product.pk %}" class="card normal my-2 rounded-0">
+                    <div class="card normal my-2 rounded-0">
+                    <a href="{% url 'product_information' product_id=product.pk %}" class="w-100 h-100 position-absolute"></a>
                 {% endif %}
                     {% if product.main_image %}
                         <div class="product-image-box px-auto mx-auto">
@@ -89,7 +92,28 @@
                         <p class="mb-0">{{ product.rating }}/5 ({{ product.amount_of_reviews }})</p>
                     </div>
                     <br>
-                    <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add">
+                    
+                    <!-- This if statement checks to see if it should add the gold, lightblue or normal styling to the product cards -->
+                    {% if category == 'STUDIOS' %}
+                        <!-- The inner if statements are checking to see if more padding top is needed to allow for quantity box -->
+                        {% if cart_products|is_item_id_in_list:product.id %}
+                            <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add-qbox products-add studios-button">
+                        {% else %}
+                            <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add studios-button">
+                        {% endif %}
+                    {% elif category == 'REHEARSAL ROOMS' %}
+                        {% if cart_products|is_item_id_in_list:product.id %}
+                            <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add-qbox products-add rehearsals-button">
+                        {% else %}
+                            <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add rehearsals-button">
+                        {% endif %}
+                    {% else %}
+                        {% if cart_products|is_item_id_in_list:product.id %}
+                            <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add-qbox products-add normal-button">
+                        {% else %}
+                            <form action="{% url 'alter_cart' product.id %}" method="POST" class="products-add normal-button">
+                        {% endif %}
+                    {% endif %}
                         {% csrf_token %}
                         <div class="input-group">
                             <input type="text" class="redirect" id="{{ product.id }}redirect" name="redirect_url" value="{{ request.path }}#{{ product.id }}redirect" aria-label="{{ product.name }}">
@@ -123,12 +147,12 @@
                             {% if product.is_hire_room == True %}
                                 <button name="book" type="submit" class="btn bg-darkblue rounded-0 mb-3 mt-2 add">Book</button>
                             {% else %}
-                                <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 mb-3 mt-2 add">Add<p id="to-cart"> to cart</p></button>
+                                <button name="add-quantity" type="submit" class="btn bg-darkblue rounded-0 mb-3 mt-2 add">Add<span id="to-cart"> to cart</span></button>
                             {% endif %}
                         </div>
                     </form>
                     {% endif %}
-                </a>
+                </div>
                 {% if request.user.is_superuser %}
                     <small class="d-flex justify-content-center products-small">
                         <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
@@ -160,7 +184,7 @@
                 </div>
               </div>
             </div>
-          </div>
+        </div>
 
         {% endfor %}
         {% if request.user.is_superuser %}

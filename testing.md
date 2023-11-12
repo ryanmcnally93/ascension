@@ -8,53 +8,31 @@ I have tested my web application automatically and manually using Test Driven De
 
 #### HTML
 
-All the following HTML documents (which are written using Django templates), have been validated using the [W3C Validator.](https://validator.w3.org/nu/#textarea)
+All the following HTML documents (which are written using Django templates), have been validated using the [W3C Validator.](https://validator.w3.org/nu/#textarea). All django template lines were taken out to avoid confusion within the validator.
 
-##### Base
+- [base.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/base.html) returned no errors.
 
-- <!--Errors?-->
+- The rehearse app's [home.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/rehearse/templates/rehearse/home.html) returned no errors.
 
-##### Index
+- The record studio's app's [home.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/record_studio/templates/record_studio/home.html) returned no errors.
 
-- <!--Errors?-->
+- [meet_the_engineers.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/record_studio/templates/record_studio/meet_the_engineers.html) returned no errors.
+
+- [profile.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/profiles/templates/profiles/profile.html) returned no errors.
+
+- [add_products.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/templates/products/add_products.html) returned no errors.
+
+- [edit_products.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/templates/products/edit_products.html) returned no errors.
+
+- [product_information.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/templates/products/product_information.html) mentioned that the 'variable' attribute was present and not allowed on the radio inputs, this has now been removed. There was also a div within a 'small' element. I opted to change this to a div.
+
+- [products.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/templates/products/products.html) was the hardest html document to check, as there are so many if statements involved. I have maticulously gone through the code and discovered an issue with the cards being anchor elements that contain inputs and forms. This wasn't allowed by the validator, so I instead made the anchor an individual element within the card that stretched across the height and width of it. This created an issue with the buttons section, which I decided to separate using border top on the art to cart and book buttons. I also needed to change the p elements within the buttons to span elements instead.
 
 ##### Various All Auth Pages
 
 - <!--Errors?-->
 
 ##### About
-
-- <!--Errors?-->
-
-##### Rehearse
-
-- <!--Errors?-->
-
-##### Meet the Engineers
-
-- <!--Errors?-->
-
-##### Record
-
-- <!--Errors?-->
-
-##### Profile Page
-
-- <!--Errors?-->
-
-##### Products Page
-
-- <!--Errors?-->
-
-##### Product Information
-
-- <!--Errors?-->
-
-##### Add Product
-
-- <!--Errors?-->
-
-##### Edit Product
 
 - <!--Errors?-->
 
