@@ -46,7 +46,7 @@ class OrderLineItem(models.Model):
     quantity = models.IntegerField(null=False, blank=False, default=0)
     line_item_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
     date = models.CharField(max_length=15, blank=True, null=True)
-    time = models.CharField(max_length=5, blank=True, null=True)
+    time = models.CharField(max_length=254, blank=True, null=True)
 
     def save(self, *args, **kwargs):
         self.line_item_total = self.product.price * self.quantity
