@@ -42,9 +42,11 @@
     <div id="wrap">
         <div id="main">
 
+            <!-- Header -->
             <header class="container-fluid fixed-top">
                 <div id="top-head-bar" class="row bg-black pt-lg-2 d-none d-lg-flex border-bottom">
                     <div class="col-12 col-lg-3"></div>
+                    <!-- Main logo -->
                     <div class="col-12 col-lg-6 py-1 py-lg-0 my-1">
                         <a class="logo m-auto" href="{% url 'home' %}">
                             <h1 class="text-center mb-0">A S C E N S I O N</h1>
@@ -55,7 +57,7 @@
                             <li class="list-inline-item dropdown">
                                 <a onmouseover="mouseOverLg()" onmouseout="mouseOutLg()" class="nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="closeToast()">
                                     <i class="fa-solid fa-user fa-lg text-white"></i>
-                                    <!-- Change this to the profile image similar to what was done in last project, was really effective -->
+                                    <!-- Either provides username or 'my account'  -->
                                     {% if request.user.is_authenticated %}
                                         <p id="my-account-lg" class="my-0 text-white">{{ request.user.username }}</p>
                                     {% else %}
@@ -63,7 +65,7 @@
                                     {% endif %}
                                 </a>
                                 <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
-                                    <!-- Use jquery to make this slide down -->
+                                    <!-- Different options for different users permissions -->
                                     {% if request.user.is_authenticated %}
                                         {% if request.user.is_superuser %}
                                             <a href="{% url 'add_product' %}" class="dropdown-item">Add a Product</a>
@@ -94,13 +96,17 @@
                 </div>
                 <div id="mobile-top-navbar" class="row bg-darkblue border-bottom">
                     <nav class="navbar navbar-expand-lg w-100">
+                        <!-- This include is for the navbar on mobile devices -->
                         {% include 'includes/mobile-navbar.html' %}
+                        <!-- This include is for the navbar that contains all the more detailed site links -->
                         {% include 'includes/mainnavbar.html' %}
                     </nav>
                 </div>
             </header>
             {% if messages %}
                 <div class="message-container">
+                    <!-- These messages provide the toasts -->
+                    <!-- The different levels provide different types of messages -->
                     {% for message in messages %}
                         {% with message.level as level %}
                             {% if level == 40 %}
@@ -130,6 +136,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="container-fluid">
         <div id="footer" class="row bg-black pt-2 d-flex border-top">
             <div class="col-4 col-lg-3 d-none d-md-block">
