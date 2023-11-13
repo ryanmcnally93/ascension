@@ -50,6 +50,8 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
         }
+
+        print(form_data)
         # This code means the user cannot enter just spaces and save
         for field in form_data.values():
             if len(field.lstrip(' ')) == 0:
@@ -71,6 +73,7 @@ def checkout(request):
                                 order=order,
                                 product=product,
                                 date=keys,
+                                time=item_data['session_datetime'].values(),
                                 quantity=len(item_data['session_datetime'].values())
                             )
                             order_line_item.save()
