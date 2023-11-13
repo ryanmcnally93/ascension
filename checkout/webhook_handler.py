@@ -110,12 +110,23 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(cart).items():
                     product = Product.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                    order_line_item.save()
+                    if product.is_hire_room:
+                        for keys in item_data['session_datetime']:
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                                date=keys,
+                                quantity=len(item_data['session_datetime'].values())
+                            )
+                            order_line_item.save()
+                    else:
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
+
             except Exception as e:
                 if order:
                     order.delete()
