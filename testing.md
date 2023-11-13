@@ -36,13 +36,71 @@ All the following HTML documents (which are written using Django templates), hav
 
 - [checkout_success.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/templates/checkout/checkout_success.html) returned no errors.
 
-##### Cart
+- [cart.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/templates/cart/cart.html) returned no errors.
 
-- <!--Errors?-->
+- [mobile-navbar.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/includes/mobile-navbar.html) contained li elements within a div, changing them to divs made no difference to the visuals.
 
-##### Various All Auth Pages
+- [mainnavbar.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/includes/mainnavbar.html) returned no errors.
 
-- <!--Errors?-->
+- [toast_error.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/includes/toasts/toast_error.html) returned no errors.
+
+- [toast_info.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/includes/toasts/toast_info.html) returned no errors.
+
+- [toast_success.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/includes/toasts/toast_success.html) returned an error for using a strong element within a p element, removing the p element made no difference to the site visually.
+
+- [toast_warning.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/includes/toasts/toast_warning.html) returned no errors.
+
+#### All Auth HTML Templates
+
+- All auth's [base.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/base.html) returned no errors.
+
+- [already_logged_in.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/snippets/already_logged_in.html) returned no errors.
+
+- [account_incactive.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/account_inactive.html) returned no errors.
+
+- Account's [base.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/base.html) returned no errors.
+
+- [email_confirm.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/email_confirm.html) returned no errors.
+
+- [email.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/email.html) contained a trailing slash and type="text/javascript" on script element which was deemed unneccesary.
+
+- [login.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/login.html) returned no errors.
+
+- [logout.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/logout.html) returned no errors.
+
+- [password_change.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/password_change.html) returned no errors.
+
+- [password_reset_done.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/password_reset_done.html) returned no errors.
+
+- [password_reset_from_key_done.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/password_reset_from_key_done.html) returned no errors.
+
+- [password_reset_from_key.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/password_reset_from_key.html) had a trailing slash.
+
+- [password_reset.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/password_reset.html) had a duplicate attribute of class on an element, and a trailing slash.
+
+- [password_set.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/password_set.html) returned no errors.
+
+- [sifgnup_closed.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/signup_closed.html) returned no errors.
+
+- [signup.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/signup.html) returned no errors.
+
+- [verification_sent.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/verification_sent.html) returned no errors.
+
+- [verified_email_required.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/verified_email_required.html) returned no errors.
+
+- [login_extra.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/socialaccount/snippets/login_extra.html) returned no errors.
+
+- [provider_list.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/socialaccount/snippets/provider_list.html) returned an error for the li not being inside a list.
+
+- [authentication_error.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/socialaccount/authentication_error.html) returned no errors.
+
+- Social account's [base.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/socialaccount/base.html) returned no errors.
+
+- [connections.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/socialaccount/connections.html) had a stray end div tag.
+
+- [login_cancelled.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/socialaccount/login_cancelled.html) returned no errors.
+
+- [signup.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/socialaccount/signup.html) returned no errors.
 
 #### CSS
 

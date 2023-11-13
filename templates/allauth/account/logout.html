@@ -14,7 +14,7 @@
         <form class="mb-4" method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
         {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
         {% endif %}
         <a class="bg-black p-1 px-2" href="{% url 'home' %}">{% trans 'No' %}</a>
         <button class="bg-darkblue p-1 px-2" type="submit">{% trans 'Yes' %}</button>

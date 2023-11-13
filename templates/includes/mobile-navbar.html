@@ -9,7 +9,7 @@
     </a>
 </div>
 <div class="col-3 d-lg-none mt-1 d-flex justify-content-center">
-    <li class="list-inline-item dropdown align-items-center d-flex">
+    <div class="list-inline-item dropdown align-items-center d-flex">
         <a onmouseover="mouseOverSm()" onmouseout="mouseOutSm()" class="d-block d-lg-none nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="closeToast()">
             <i class="fa-solid fa-user fa-lg text-white"></i>
             <!-- Change this to the profile image similar to what was done in last project, was really effective -->
@@ -34,10 +34,10 @@
                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
             {% endif %}
         </div>
-    </li>
+    </div>
 </div>
 <div class="col-3 d-lg-none d-flex justify-content-end">
-    <li class="list-inline-item align-items-center d-flex pt-1">
+    <div class="list-inline-item align-items-center d-flex pt-1">
         <a id="cart-a-sm" onmouseover="mouseOverCartSm()" onmouseout="mouseOutCartSm()" class="d-block d-lg-none nav-link text-center" href="{% url 'view_cart' %}">
             <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
             <p id="cart-sm" class="my-0 text-white">
@@ -48,5 +48,5 @@
                 {% endif %}
             </p>
         </a>
-    </li>
+    </div>
 </div>
