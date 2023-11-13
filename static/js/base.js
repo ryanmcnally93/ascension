@@ -1,3 +1,5 @@
+// These functions give the user options, toggler and cart consistent hover effects
+
 function mouseOverLg() {
     document.getElementById('my-account-lg').style.borderBottom = '2px solid white';
 }

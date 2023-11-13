@@ -1,19 +1,21 @@
 <div class="col-3 pl-3 d-lg-none">
+    <!-- This function creates the underline hover effect -->
     <button onmouseover="mouseOverTg()" onmouseout="mouseOutTg()" id="toggler" class="navbar-toggler navbar-dark align-items-center d-flex" type="button" data-toggle="collapse" data-target="#mainnavbar" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fa-solid fa-bars" id="bars"></i>
     </button> 
 </div>
 <div class="col-3 d-lg-none mobile-logo-box d-flex justify-content-center">
+    <!-- The logo takes the user to the homepage -->
     <a href="{% url 'home' %}" id="small-logo">
         <img id="small-logo-img" src="{{ MEDIA_URL }}logo-small.png" alt="The Ascension Logo">
     </a>
 </div>
 <div class="col-3 d-lg-none mt-1 d-flex justify-content-center">
     <div class="list-inline-item dropdown align-items-center d-flex">
+        <!-- Same end result as earlier, sm stands for small -->
         <a onmouseover="mouseOverSm()" onmouseout="mouseOutSm()" class="d-block d-lg-none nav-link text-center" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="closeToast()">
             <i class="fa-solid fa-user fa-lg text-white"></i>
-            <!-- Change this to the profile image similar to what was done in last project, was really effective -->
-            <!-- Make same width and height as cart icon and text -->
+            <!-- Either show the users username, or my account for non-users -->
             {% if request.user.is_authenticated %}
                 <p id="my-account-sm" class="my-0 text-white">{{ request.user.username }}</p>
             {% else %}
@@ -21,7 +23,7 @@
             {% endif %}
         </a>
         <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
-            <!-- Use jquery to make this slide down -->
+            <!-- These options differ depending on whether the user is the superuser -->
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item">Add a Product</a>
@@ -38,6 +40,7 @@
 </div>
 <div class="col-3 d-lg-none d-flex justify-content-end">
     <div class="list-inline-item align-items-center d-flex pt-1">
+        <!-- Creates the hover effect again, this time on the cart -->
         <a id="cart-a-sm" onmouseover="mouseOverCartSm()" onmouseout="mouseOutCartSm()" class="d-block d-lg-none nav-link text-center" href="{% url 'view_cart' %}">
             <div><i class="fas fa-shopping-cart fa-lg text-white"></i></div>
             <p id="cart-sm" class="my-0 text-white">
