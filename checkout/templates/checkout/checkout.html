@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Page Header -->
     <div class="container">
         <div class="row" id="top-row">
             <hr>
@@ -18,6 +19,7 @@
         </div>
     </div>
 
+    <!-- Order Summary -->
     <div class="container m-auto row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <p class="summary font-weight-bold">Order Summary ({{ product_count }})</p>
@@ -25,23 +27,31 @@
 
             {% for item in cart_products %}
                 <div class="checkout-products">
+
+                    <!-- Main Image -->
                     {% if item.product.main_image %}
                         <div class="col-6 col-md-3 mb-2 img-col">
                             <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}{{ item.product.main_image }}" alt="{{ product.name }}">
                         </div>
+                    <!-- Image 1 -->
                     {% elif item.product.image %}
                         <div class="col-6 col-md-3 mb-2 img-col">
                             <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}{{ item.product.image }}" alt="{{ product.name }}">
                         </div>
+                    <!-- No Image -->
                     {% else %}
                         <div class="col-6 col-md-3 mb-2 img-col">
                             <img class="product-image my-1 w-100" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
                         </div>
                     {% endif %}
+
+                    <!-- Subtotal Info -->
                     <div class="col-10 col-md-6 my-auto">{{ item.product.name }}<br><p class="small text-muted mb-2">Qty: {{ item.quantity }} <br class="d-none d-md-block">Rating: {{ item.product.rating }}</p></div>
                     <div class="col-10 col-md-3 my-auto">£{{ item.item_subtotal|floatformat:2 }}<br><p class="small text-muted">£{{ item.product.price|floatformat:2 }} each</p></div>
                 </div>
             {% endfor %}
+
+            <!-- Total Cost Info -->
             <div class="d-flex checkout-price">
                 <div class="total">
                     <strong><p class="my-1">Total:</p></strong>
@@ -51,6 +61,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Billing Information -->
         <div class="col-12 col-lg-6">
             <p class="ml-3 font-weight-bold">Billing Information</p>
             <hr class="white-hr">
@@ -97,6 +109,7 @@
         </div>
     </div>
 
+    <!-- Loading Spinner -->
     <div id="loading-overlay">
         <p class="spinner"><i class="fa-solid fa-spinner fa-spin"></i></p>
     </div>

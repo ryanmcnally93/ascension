@@ -6,12 +6,15 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Page Header -->
     <div class="container header-container">
         <div class="row" id="top-row">
             <hr>
                 <div id="page-heading" class="col text-center">MY PROFILE</div>
             <hr>
         </div>
+
+        <!-- Default Billing Info -->
         <div class="row">
             <div class="col-lg-6">
                 <p class="mb-3 font-weight-bold">Default Billing</p>
@@ -24,6 +27,8 @@
                     </div>
                 </form>
             </div>
+
+            <!-- Order History -->
             <div class="col-lg-6">
                 <p class="hist font-weight-bold">Order History</p>
                 <table class="w-100 mb-4">
@@ -47,8 +52,4 @@
     </div>
 
 
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
 {% endblock %}

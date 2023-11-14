@@ -8,21 +8,27 @@ $(window).on('load', function(){
     }
 });
 
+// We need to make sure the radios are invisible when content is loaded
 document.addEventListener("DOMContentLoaded", function () {
     radioShow();
 });
+
+// Listener for changed within the page
 document.addEventListener("change", function () {
     radioShow();
 });
+
 var radios = document.getElementsByClassName('radio');
 for (let radio of radios) {
     radio.addEventListener("click", function () {
+        // Set value of hidden input to selected radio's name
         document.getElementById('chosen-time').value = radio.id;
     });
 }
 function radioShow() {
     if (document.getElementById('no-radios') != null) {
         if (document.getElementById('date').value == "") {
+            // Make dates invisible and message visible
             let times = document.getElementsByClassName('radio');
             for (i = 0; i < times.length; i++) {
                 times[i].style.display = 'none';
@@ -34,6 +40,7 @@ function radioShow() {
             let noRadios = document.getElementById('no-radios');
             noRadios.style.display = 'block';
         } else if (document.getElementById('date').value != "") {
+            // Make message invisible and radios visible
             let times = document.getElementsByClassName('radio');
             for (i = 0; i < times.length; i++) {
                 times[i].style.display = 'inline';
@@ -49,6 +56,7 @@ function radioShow() {
 }
 
 // Taken from W3Schools
+// This code is to make the Slideshow's work
 let slideIndex = 1;
 showSlides(slideIndex);
 

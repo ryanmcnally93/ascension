@@ -1,3 +1,4 @@
+// This if statement changes font-size of card element on different screen sizes
 if (window.innerWidth < 767) {
     style = {
         base: {
@@ -36,6 +37,7 @@ var elements = stripe.elements();
 var card = elements.create('card', {style: style});
 card.mount('#card-element');
 
+// This changes the font size of card element if the window changes size
 window.addEventListener('resize', function(event) {
     if (window.innerWidth < 767) {
       card.update({style: {base: {fontSize: '0.9em'}}});

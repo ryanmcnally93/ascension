@@ -20,6 +20,7 @@
     <div class="row prod-info-row">
             <div class="my-2 col-12 col-lg-6 justify-content-center product-image-box">
 
+                <!-- Slideshow -->
                 {% if images %}
                     <div class="slideshow-container">
                     {% for image in images %}
@@ -27,6 +28,8 @@
                             <img src="{{ MEDIA_URL }}{{ image }}" class="slideshow-image" alt="{{ product.name }}">
                         </div>
                     {% endfor %}
+
+                    <!-- We only want dots and buttons when there is more than one image -->
                     {% if images|length == 1 %}
                         </div>
                         <br>
@@ -53,6 +56,7 @@
                 {% endif %}
             </div>
             <div id="product-information-small" class="d-flex justify-content-center">
+                <!-- Superuser powers -->
                 {% if request.user.is_superuser %}
                 <a class="edit-button mr-2" href="{% url 'edit_product' %}?product={{ product.id }}">Edit</a>
                 <button type="button" class="delete-button ml-2" data-toggle="modal" data-target="#deleteProduct">
@@ -60,6 +64,7 @@
                 </button>
                 {% endif %}
                 
+                <!-- Modal -->
                 <div class="modal fade" id="deleteProduct" tabindex="-1" role="dialog" aria-labelledby="deleteProductLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
@@ -80,6 +85,8 @@
                     </div>
                   </div>
                 </div>
+
+            <!-- Product Information -->
             <div class="product-infopage-info px-3 col-12 col-lg-6">
                 <p class="product-small-central mb-0">{{ product.name }}</p>
                 <p class="mb-0 italic product-small-central">{{ product.category.friendly_name }}</p>

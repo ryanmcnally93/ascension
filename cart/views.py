@@ -27,7 +27,6 @@ def alter_cart(request, product_id):
             if product.is_hire_room:
                 date = request.POST.get('date')
                 if len(cart[product_id]['session_datetime'][date]) == 1:
-                    print('Were getting rid of the last of an item!')
                     # Sometimes we have more than one cart product with the same ID
                     # This is to nail down the date of the product and delete the right one
                     cart[product_id]['session_datetime'].pop(date)
@@ -35,9 +34,6 @@ def alter_cart(request, product_id):
                     request.session.modified = True
                     messages.success(request, 'Successfully removed item from cart')
                 else:
-                    print(cart[product_id]['session_datetime'][date])
-                    print('Were getting rid of one of an item!')
-                    print(cart[product_id]['session_datetime'][date])
                     cart[product_id]['session_datetime'][date].popitem()
                     request.session["cart"] = cart
                     request.session.modified = True
@@ -86,15 +82,11 @@ def alter_cart(request, product_id):
                         messages.error(request, 'Unfortunately, this session has already been booked.')
                         return redirect('product_information', product_id=product_id)
                     else:
-                        print('This product and date has another product in the bag')
                         cart[product_id]['session_datetime'][date][time] = quantity
                 else:
-                    print('This product is in bag but not date')
                     cart[product_id]['session_datetime'][date] = {time: 1}
             else:
-                print('This is the first of this product and date')
                 cart[product_id] = {'session_datetime': {date: {time: 1}}}
-                print(cart)
 
             request.session["cart"] = cart
             request.session.modified = True
@@ -143,7 +135,6 @@ def alter_cart(request, product_id):
         return redirect('product_information', product_id=product_id)
 
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect(redirect_url)
 
 
@@ -160,5 +151,4 @@ def empty_cart(request):
             return HttpResponse(status=500)
     
     request.session['cart'] = cart
-    print(request.session['cart'])
     return redirect('view_cart')

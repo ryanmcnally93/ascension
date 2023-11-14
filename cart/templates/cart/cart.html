@@ -5,12 +5,15 @@
 <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
 {% endblock %}
 {% block content %}
+<!-- Page Header -->
 <div class="container header-container">
   <div class="row" id="top-row">
     <hr>
     <div id="page-heading" class="col text-center">MY CART</div>
     <hr>
   </div>
+
+  <!-- Adds rows for each product -->
   {% if cart_products %}
   <table class="col-12 justify-content-center m-auto mb-2">
     <tr class="headings-tr">
@@ -54,6 +57,8 @@
           {% endif %}
         </div>
       </td>
+
+      <!-- Product Information -->
       <td class="medium-padding">
         <a
           class="product-image m-auto my-1"
@@ -74,6 +79,8 @@
             <p class="mb-0">{{ item.date }}</p>
           </div>
         </div>
+        
+        <!-- If more than one item, display differently -->
         <div class="row flex-row">
           {% if item.time|length == 1 %}
           <div class="col-5-5 col-md-2 text-center text-md-left p-0">
@@ -105,6 +112,8 @@
         <p class="mb-0 prices">£{{ item.product.price }}</p>
         {% endif %}
         <p class="d-md-none ml-2">x</p>
+
+        <!-- First Form -->
         <form
           action="{% url 'alter_cart' item.product.id %}"
           method="POST"
@@ -166,6 +175,8 @@
           </div>
         </form>
       </td>
+
+    <!-- Second Form -->
       <td>
         <form
           action="{% url 'alter_cart' item.product.id %}"
@@ -228,6 +239,8 @@
           </div>
         </form>
       </td>
+
+      <!-- Subtotal -->
       <td>
         <div class="d-flex justify-content-center">
           <p class="d-md-none mr-2">Subtotal:</p>
@@ -255,6 +268,7 @@
       Empty Cart
     </button>
 
+    <!-- Modal -->
     <div
       class="modal fade"
       id="emptyCart"
@@ -318,6 +332,7 @@
     </div>
   </div>
   {% else %}
+  <!-- Empty Cart -->
   <p>There are currently no products in your cart.</p>
   {% endif %}
 
