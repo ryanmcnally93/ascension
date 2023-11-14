@@ -116,6 +116,7 @@ class StripeWH_Handler:
                                 order=order,
                                 product=product,
                                 date=keys,
+                                time=', '.join(list(item_data['session_datetime'][keys].keys())),
                                 quantity=len(item_data['session_datetime'].values())
                             )
                             order_line_item.save()
