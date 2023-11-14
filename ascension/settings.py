@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'django_cleanup.apps.CleanupConfig',
     'allauth.socialaccount.providers.facebook',
     'storages',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'ascension.urls'
@@ -90,6 +92,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
@@ -104,6 +108,9 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 AUTHENTICATION_BACKENDS = (
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.github.GithubOAuth2',
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -250,3 +257,6 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+SOCIAL_AUTH_FACEBOOK_KEY = '353995280434359'  
+SOCIAL_AUTH_FACEBOOK_SECRET = '1b2671b087090fede909754d9cbd6cd5'
