@@ -74,7 +74,7 @@ def checkout(request):
                                 product=product,
                                 date=keys,
                                 time=', '.join(list(item_data['session_datetime'][keys].keys())),
-                                quantity=len(item_data['session_datetime'].values())
+                                quantity=len(item_data['session_datetime'][keys].keys())
                             )
                             order_line_item.save()
                     else:
