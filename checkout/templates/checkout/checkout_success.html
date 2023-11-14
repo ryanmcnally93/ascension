@@ -50,17 +50,17 @@
                 {% for item in order.lineitems.all %}
                     {% if item.product.is_hire_room %}
                         <div class="col-12 p-0">
-                            <p class="mb-0 product-tiny d-inline">{{ item.product.name }} <br class="d-md-none"> {{ item.date }} x {{ item.quantity }}</p><p class="mb-0 float-right product-tiny d-inline">{{ item.line_item_total }}</p>
+                            <p class="mb-0 product-tiny d-inline">{{ item.product.name }} <br class="d-md-none"> {{ item.date }} x {{ item.quantity }}</p><p class="mb-0 float-right product-tiny d-inline">£{{ item.line_item_total }}</p>
                         </div>
                     {% else %}
                         <div class="col-12 p-0">
-                            <p class="mb-0 d-inline">{{ item.product.name }} x {{ item.quantity }}</p><p class="mb-0 float-right d-inline">{{ item.line_item_total }}</p>
+                            <p class="mb-0 d-inline">{{ item.product.name }} x {{ item.quantity }}</p><p class="mb-0 float-right d-inline">£{{ item.line_item_total }}</p>
                         </div>
                     {% endif %}
                 {% endfor %}
             </div>
             <div class="d-block mt-2">
-                <p class="d-inline"><strong>Total cost: </strong></p><p class="d-inline float-right"><strong>{{ order.total_cost }}</strong></p>
+                <p class="d-inline"><strong>Total cost: </strong></p><p class="d-inline float-right"><strong>£{{ order.total_cost }}</strong></p>
             </div>
         </div>
         <div class="col-2"></div>
