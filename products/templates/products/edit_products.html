@@ -6,12 +6,15 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Page Header -->
     <div class="container header-container">
         <div class="row" id="top-row">
             <hr>
                 <div id="page-heading" class="col text-center">EDIT A PRODUCT</div>
             <hr>
         </div>
+
+        <!-- Edit a product form -->
         <div class="row">
             <form method="POST" action="{% url 'edit_product' %}" class="w-100">
                 {% csrf_token %}

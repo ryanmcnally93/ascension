@@ -6,15 +6,18 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Main Image -->
     <div class="background-image">
         <div class="container header-container">
 
+            <!-- Page Header -->
             <div class="row" id="top-row">
                 <hr class="white-hr">
                     <div id="page-heading" class="col white-heading text-center text-white">THANKS FOR YOUR ORDER!</div>
                 <hr class="white-hr">
             </div>
 
+            <!-- About Div -->
             <div id="check-succ-row" class="row justify-content-center position-relative align-items-center">
                 <div id="check-succ-box" class="pt-3 col-10 col-md-8 text-center text-white mx-auto pb-3">
                     <p class="mb-2 m-auto">Your order number is <strong id="order-number">{{ order.order_number }}</strong>.</p>
@@ -29,6 +32,7 @@
         </div>
     </div>
 
+    <!-- Order Information -->
     <div class="row mb-4">
         <div class="col-2"></div>
         <div class="col-8">

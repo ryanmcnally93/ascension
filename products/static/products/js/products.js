@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Listening for changes to the products filter
     document
         .getElementById("products-filter")
         .addEventListener("change", function () {
@@ -22,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 currentUrl.searchParams.set("sort", sort);
                 currentUrl.searchParams.set("direction", direction);
-                console.log(sort + direction);
                 window.location.replace(currentUrl);
             } else {
                 currentUrl.searchParams.delete("sort");

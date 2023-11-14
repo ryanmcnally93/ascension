@@ -51,7 +51,6 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
         }
 
-        print(form_data)
         # This code means the user cannot enter just spaces and save
         for field in form_data.values():
             if len(field.lstrip(' ')) == 0:
@@ -64,10 +63,15 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
+
+            # For each item
             for item_id, item_data in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
+
+                    # If it's a hire room
                     if product.is_hire_room:
+                        # For each date
                         for keys in item_data['session_datetime']:
                             order_line_item = OrderLineItem(
                                 order=order,
@@ -152,6 +156,7 @@ def checkout_success(request, order_number):
     order.user_profile = profile
     order.save()
 
+    # Save info if asked to
     if save_info:
         profile_data = {
             'full_name': order.full_name,

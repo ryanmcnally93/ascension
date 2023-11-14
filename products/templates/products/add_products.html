@@ -6,12 +6,15 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Page Header -->
     <div class="container header-container">
         <div class="row" id="top-row">
             <hr>
                 <div id="page-heading" class="col text-center">ADD A PRODUCT</div>
             <hr>
         </div>
+
+        <!-- Add a product form -->
         <div class="row">
             <div class="col-lg-6">
                 <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data" class="mb-3">

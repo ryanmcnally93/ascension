@@ -56,8 +56,10 @@ def product_information(request, product_id):
     else:
         item_quantity = ""
 
+    # This variable is used by the radio buttons
     sessions = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00"]
 
+    # This variable is used in the slideshow
     images = []
     if product.main_image:
         images.append(product.main_image)
@@ -144,8 +146,6 @@ def edit_product(request):
             return redirect(reverse('product_information', args=[product.id]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
-
-    print(form)
 
     template = 'products/edit_products.html'
     context = {
