@@ -672,6 +672,16 @@ I first had to decipher if the product was a hire room, then find the amount of 
 
 On the products page I needed to add that quantity to the other cases of the same product_id. This meant that on products page it showed the quantity of all the cases of this item currently in the cart.
 
+15). I had a bug where rehearsal 1's image wouldn't show in toasts. Checking the toast_success.html I realised I had an if statement for hire rooms. This if statement will always hit main image and go no further, except for this one hire room which doesn't have a main image. The image url had .url at the end. Removing this fixed the issue.
+
+16). Everytime I saved the details of the user when checking out, Stripe was adding brackets and commas to each field.
+
+This was tricky to figure out, but I solved the issue by adding .strip("(',)") to the end of each field when being saved.
+
+17). Finding the times of a hire room and displaying them in the admin was a pain. I have the time dictionary within a date dictionary within a session_datetime dictionary within a cart dictionary!
+
+I fixed this by using a for loop to go through the dates and using that date variable to drill into the times section. I then used ", ".join() around the answer to turn the dictionary keys into a list with commas in-between and no brackets. These display in the orders admin section nicely now.
+
 ### Unfixed Bugs
 
 1). I tried to create a session with booked sessions inside, this created massive issues. I had to save the product id, date and time within a dictionary and then try and access and manipulate this date throughout.

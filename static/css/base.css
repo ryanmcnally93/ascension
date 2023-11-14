@@ -231,6 +231,13 @@ label.requiredField {
     overflow: hidden;
 }
 
+@media(max-width: 767px) {
+    .facebook-sign-in {
+        width: 230px !important;
+        height: auto !important;
+    }
+}
+
 /* Messages */
 
 .message-container {
