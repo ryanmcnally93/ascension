@@ -253,6 +253,10 @@
     display: none;
 }
 
+.product-22 {
+    width: 150px !important;
+}
+
 .products-add {
     display: flex;
     width: 100%;
