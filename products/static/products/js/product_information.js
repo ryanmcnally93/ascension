@@ -108,6 +108,20 @@ document.addEventListener("DOMContentLoaded", function () {
             // If the dates match
             if (dates.item(i).id == updatedDate) {
 
+                // Lets set all the radios and text back to normal before we change for this item
+                document.getElementById('10:00p').innerHTML = ' 10:00';
+                document.getElementById('11:00p').innerHTML = ' 11:00';
+                document.getElementById('12:00p').innerHTML = ' 12:00';
+                document.getElementById('13:00p').innerHTML = ' 13:00';
+                document.getElementById('14:00p').innerHTML = ' 14:00';
+                document.getElementById('15:00p').innerHTML = ' 15:00';
+                document.getElementById('10:00').disabled = false;
+                document.getElementById('11:00').disabled = false;
+                document.getElementById('12:00').disabled = false;
+                document.getElementById('13:00').disabled = false;
+                document.getElementById('14:00').disabled = false;
+                document.getElementById('15:00').disabled = false;
+
                 // Lets create multiple items for each time and for loop through all the times provided
                 timearray = dates.item(i).innerText.split(', ')
                 for (i=0; i<timearray.length; i++) {
@@ -119,6 +133,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById(timearray[i]).disabled = true;
                 }
 
+            } else {
+                // If the times aren't booked, we need to make them all available
+                document.getElementById('10:00p').innerHTML = ' 10:00';
+                document.getElementById('11:00p').innerHTML = ' 11:00';
+                document.getElementById('12:00p').innerHTML = ' 12:00';
+                document.getElementById('13:00p').innerHTML = ' 13:00';
+                document.getElementById('14:00p').innerHTML = ' 14:00';
+                document.getElementById('15:00p').innerHTML = ' 15:00';
+                document.getElementById('10:00').disabled = false;
+                document.getElementById('11:00').disabled = false;
+                document.getElementById('12:00').disabled = false;
+                document.getElementById('13:00').disabled = false;
+                document.getElementById('14:00').disabled = false;
+                document.getElementById('15:00').disabled = false;
             }
         }
     });
