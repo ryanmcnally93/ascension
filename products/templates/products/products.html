@@ -74,20 +74,33 @@
                 {% endif %}
 
                     <!-- Main Images -->
-                    {% if product.main_image %}
-                        <div class="product-image-box px-auto mx-auto">
-                            <img class="product-image my-1" src="{{ MEDIA_URL }}{{ product.main_image }}" alt="{{ product.name }}">
-                        </div>
-                    <!-- Image 1 -->
-                    {% elif product.image %}
-                        <div class="product-image-box px-auto mx-auto">
-                            <img class="product-image my-1" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
-                        </div>
-                    <!-- No Image -->
+                    {% if product.id == 22 %}
+                        <!-- Product 22 has an awkward image I'd like to style differently -->
+                        {% if product.image %}
+                            <div class="product-image-box px-auto mx-auto">
+                                <img class="product-image product-22 my-1" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
+                            </div>
+                        {% else %}
+                            <!-- Incase the image is deleted -->
+                            <div class="product-image-box px-auto mx-auto">
+                                <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
+                            </div>
                     {% else %}
-                        <div class="product-image-box px-auto mx-auto">
-                            <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
-                        </div>
+                        {% if product.main_image %}
+                            <div class="product-image-box px-auto mx-auto">
+                                <img class="product-image my-1" src="{{ MEDIA_URL }}{{ product.main_image }}" alt="{{ product.name }}">
+                            </div>
+                        <!-- Image 1 -->
+                        {% elif product.image %}
+                            <div class="product-image-box px-auto mx-auto">
+                                <img class="product-image my-1" src="{{ MEDIA_URL }}{{ product.image }}" alt="{{ product.name }}">
+                            </div>
+                        <!-- No Image -->
+                        {% else %}
+                            <div class="product-image-box px-auto mx-auto">
+                                <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
+                            </div>
+                        {% endif %}
                     {% endif %}
 
                     <!-- Product Information -->
