@@ -682,9 +682,7 @@ This was tricky to figure out, but I solved the issue by adding .strip("(',)") t
 
 I fixed this by using a for loop to go through the dates and using that date variable to drill into the times section. I then used ", ".join() around the answer to turn the dictionary keys into a list with commas in-between and no brackets. These display in the orders admin section nicely now.
 
-### Unfixed Bugs
-
-1). I tried to create a session with booked sessions inside, this created massive issues. I had to save the product id, date and time within a dictionary and then try and access and manipulate this date throughout.
+18). I tried to create a session with booked sessions inside, this created massive issues. I had to save the product id, date and time within a dictionary and then try and access and manipulate this date throughout.
 
 <img src="/media/readme-images/unfixed-1.webp" width="70%" alt="The code I used" style="display: inherit; ">
 
@@ -692,7 +690,13 @@ I quickly realised this approach wouldn’t be practical in the real world as th
 
 <img src="/media/readme-images/unfixed-2.webp" width="70%" alt="The code I used" style="display: inherit; ">
 
-I instead have just allowed users to checkout with the selected dates and times added to their products, without checking for availability, but this would be a necessary future feature.
+I instead just allowed users to checkout with the selected dates and times added to their products, without checking for availability. I did add some functionality to check for past dates or dates that exceed two weeks, and returned an error for these.
+
+After giving this issue some time and waiting until the end of my project, I have decided to build on this and add some python and javascript to return all the orders to the template and sift through the dates and times to only allow users to select and book available times. This took a lot of thinkng and manipulating, but I have commented through the steps within the products views.py for product_information and the product_information.js file.
+
+### Unfixed Bugs
+
+1). I need to create a check as an order goes through to ensure that in the time it has taken for someone to book a session, somebody else hasn't already booked the same product, date and time. At the moment if two users book at the same time, they will have the same session!
 
 ### Responsive Design
 
