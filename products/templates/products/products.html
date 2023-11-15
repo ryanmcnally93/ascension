@@ -85,6 +85,7 @@
                             <div class="product-image-box px-auto mx-auto">
                                 <img class="product-image my-1 pb-4" src="{{ MEDIA_URL }}no-image.png" alt="{{ product.name }}">
                             </div>
+                        {% endif %}
                     {% else %}
                         {% if product.main_image %}
                             <div class="product-image-box px-auto mx-auto">
