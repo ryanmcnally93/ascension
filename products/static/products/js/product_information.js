@@ -88,3 +88,38 @@ if (document.getElementsByClassName("dot").length != 0) {
     dots[slideIndex-1].className += " active";
     }
 }
+
+// Grab all the elements provided by views
+dates = document.getElementsByClassName('dates')
+
+// Add event listeners for page load and changes being made
+document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("change", function () {
+
+        // Format the date in datepicker to match the dates in the elements id's
+        let chosenDate = document.getElementById('date').value.split("-");
+        let year = chosenDate[0];
+        let month = chosenDate[1];
+        let day = chosenDate[2];
+        let updatedDate = day + "-" + month + "-" + year
+
+        // Sift through all the dates
+        for (i = 0; i < dates.length; i++) {
+            // If the dates match
+            if (dates.item(i).id == updatedDate) {
+
+                // Lets create multiple items for each time and for loop through all the times provided
+                timearray = dates.item(i).innerText.split(', ')
+                for (i=0; i<timearray.length; i++) {
+                    // This is the p element of all the times we want to restrict, lets strike them out
+                    var restricted = document.getElementById(timearray[i] + 'p');
+                    restricted.innerHTML='<del> ' + timearray[i] + '</del>';
+                    restricted.setAttribute('aria-label', 'This session is taken');
+                    // And disable the radio button next to it
+                    document.getElementById(timearray[i]).disabled = true;
+                }
+
+            }
+        }
+    });
+});
