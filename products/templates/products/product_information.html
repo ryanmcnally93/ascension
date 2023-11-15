@@ -87,6 +87,9 @@
                 </div>
 
             <!-- Product Information -->
+            {% for item in takentimes %}
+                <p class="dates d-none" id="{{ item.date }}">{{ item.time }}</p>
+            {% endfor %}
             <div class="product-infopage-info px-3 col-12 col-lg-6">
                 <p class="product-small-central mb-0">{{ product.name }}</p>
                 <p class="mb-0 italic product-small-central">{{ product.category.friendly_name }}</p>
@@ -111,7 +114,7 @@
                         </div>
                         <div class="timeline">
                             {% for time in sessions %}
-                                    <span class="span-no-break"><input id="{{ time }}" class="radio" type="radio" name="time"><p class="timeline-button mb-0"> {{ time }}</p></span>
+                                    <span class="span-no-break"><input id="{{ time }}" class="radio" type="radio" name="time"><p class="timeline-button mb-0" id="{{ time }}p"> {{ time }}</p></span>
                             {% endfor %}
                             <p id="no-radios">Please choose a date within the next two weeks.</p>
                         </div>

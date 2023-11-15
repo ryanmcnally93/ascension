@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Product
+from checkout.models import Order, OrderLineItem
 from cart.contexts import cart_contents
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -48,6 +49,23 @@ def product_information(request, product_id):
     product = get_object_or_404(Product, pk=product_id)       
     stringed_product_id = str(product.id)
 
+    # This will be a list of all the saved purchases of this item
+    takentimes = []
+
+    # We want to look through all orders
+    orders = Order.objects.all()
+
+    # Only do this if we are on a session page
+    if product.is_hire_room:
+        # Look through every order
+        for order in orders:
+            # Look at every item
+            for item in order.lineitems.all():
+                # Only add to the list if they have the same product id
+                # As we are giving the item itself, we can manipulate the dates and times is a cool way
+                if item.product.id == product_id:
+                    takentimes.append(item)
+
     if 'cart' in request.session:
         if stringed_product_id in request.session['cart']:
             item_quantity = request.session['cart'][stringed_product_id]
@@ -76,6 +94,7 @@ def product_information(request, product_id):
         'item_quantity': item_quantity,
         'sessions': sessions,
         'images': images,
+        'takentimes': takentimes,
     }
     return render(request, 'products/product_information.html', context)
     
