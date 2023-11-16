@@ -21,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', 'fakestring')
 
-# DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = True
 
 ALLOWED_HOSTS = ['ascension-music-e0c178d908f4.herokuapp.com', 'localhost',
                  '8000-ryanmcnally93-project-fo-8diahml5kg.us2.codeanyapp.com']
