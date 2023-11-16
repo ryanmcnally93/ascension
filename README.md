@@ -22,6 +22,31 @@ The web application allows the creator to create more listings in the products s
 
 </p>
 
+## Contents
+
+- [Deployment](#deployment)
+- [UX](#ux)
+  * [Project Goals](#project-goal)
+  * [User Stories](#user-stories)
+  * [Design Choices](#design-choices)
+  * [Wireframes](#wireframes)
+  * [Prototype](#prototype)
+  * [App Setup](#app-setup)
+  * [Q and A of Potential Users](#q-and-a-of-potential-users)
+  * [Competitor Review](#competitor-review)
+  * [Roadmap](#roadmap)
+  * [Existing Features](#existing-features)
+  * [Features Left to Implement](#features-left-to-implement)
+- [Testing](#testing)
+  * [Fixed Bugs](#fixed-bugs)
+  * [Unfixed Bugs](#unfixed-bugs)
+  * [Responsive Design](#responsive-design)
+- [Credits](#credits)
+  * [Code](#code)
+  * [Web Tools](#web-tools)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
+
 ## Deployment
 
 To deploy my Heroku project, I followed the steps set by Code Institute.
