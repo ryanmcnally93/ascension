@@ -154,7 +154,15 @@ I have tested all my JavaScript code using JSHint.
 
 #### Python Validation
 
-<!-- DJANGO UNIT TESTS -->
+I have performed some unittests in this project for the following apps:
+
+- [Products](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/tests.py)
+- [Checkout](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/tests.py)
+- [Profiles](https://github.com/ryanmcnally93/project-four-ascension/blob/main/profiles/tests.py)
+
+Each of the Order and Products tests pass, 15 for Products, 11 for orders.
+
+Unfortunately I could not get the Profiles apps tests to pass as they needed a user_id, and when I tried to give one, they wanted an auth_user.id, and I don't have access to the auth_user model.
 
 #### Pep8 Compliancy
 
