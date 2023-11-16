@@ -27,14 +27,15 @@ class UserProfileTestCase(TestCase):
     def test_user_phone_number(self):
         user1 = UserProfile.objects.get(full_name="Ben Smith")
         user2 = UserProfile.objects.get(full_name="Andy Cole")
-        self.assertEqual(user1.default_phone_number, '07833928174')
-        self.assertEqual(user2.default_phone_number, '07983726184')
+        self.assertEqual(user1.default_phone_number, "07833928174")
+        self.assertEqual(user2.default_phone_number, "07983726184")
 
     # This test is going to check the phone numbers
     def test_user_street_address1(self):
         user1 = UserProfile.objects.get(full_name="Ben Smith")
         user2 = UserProfile.objects.get(full_name="Andy Cole")
-        self.assertEqual(user1.default_street_address1, '12 Oxford Street')
-        self.assertEqual(user2.default_street_address1, '16 New Street')
+        self.assertEqual(user1.default_street_address1, "12 Oxford Street")
+        self.assertEqual(user2.default_street_address1, "16 New Street")
+
 
 # These tests won't pass because I have no user ID
