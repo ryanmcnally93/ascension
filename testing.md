@@ -26,7 +26,7 @@ All the following HTML documents (which are written using Django templates), hav
 
 - [product_information.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/templates/products/product_information.html) mentioned that the 'variable' attribute was present and not allowed on the radio inputs, this has now been removed. There was also a div within a 'small' element. I opted to change this to a div.
 
-- [products.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/templates/products/products.html) was the hardest html document to check, as there are so many if statements involved. I have maticulously gone through the code and discovered an issue with the cards being anchor elements that contain inputs and forms. This wasn't allowed by the validator, so I instead made the anchor an individual element within the card that stretched across the height and width of it. This created an issue with the buttons section, which I decided to separate using border top on the art to cart and book buttons. I also needed to change the p elements within the buttons to span elements instead.
+- [products.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/templates/products/products.html) was the hardest html document to check, as there are so many if statements involved. I have meticulously gone through the code and discovered an issue with the cards being anchor elements that contain inputs and forms. This wasn't allowed by the validator, so I instead made the anchor an individual element within the card that stretched across the height and width of it. This created an issue with the buttons section, which I decided to separate using border top on the art to cart and book buttons. I also needed to change the p elements within the buttons to span elements instead.
 
 - [about.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/home/templates/home/about.html) returned no errors.
 
@@ -62,7 +62,7 @@ All the following HTML documents (which are written using Django templates), hav
 
 - [email_confirm.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/email_confirm.html) returned no errors.
 
-- [email.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/email.html) contained a trailing slash and type="text/javascript" on script element which was deemed unneccesary.
+- [email.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/email.html) contained a trailing slash and type="text/javascript" on script element which was deemed unnecessary.
 
 - [login.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/login.html) returned no errors.
 
@@ -80,7 +80,7 @@ All the following HTML documents (which are written using Django templates), hav
 
 - [password_set.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/password_set.html) returned no errors.
 
-- [sifgnup_closed.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/signup_closed.html) returned no errors.
+- [signup_closed.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/signup_closed.html) returned no errors.
 
 - [signup.html](https://github.com/ryanmcnally93/project-four-ascension/blob/main/templates/allauth/account/signup.html) returned no errors.
 
@@ -150,7 +150,7 @@ I have tested all my JavaScript code using JSHint.
 
 - [cart.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/static/cart/js/cart.js) returned no errors.
 
-- [stripe_elements.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/static/checkout/js/stripe_elements.js) returned some missing and uneccesary semicolons.
+- [stripe_elements.js](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/static/checkout/js/stripe_elements.js) returned some missing and unnecessary semicolons.
 
 #### Python Validation
 
@@ -379,7 +379,7 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Logo | Underlines on hover, reloads page | Hovered over and clicked | White underline added, reloads page | Pass |
 | User Options & Cart | Hover underline on all 3 screen sizes | Loaded on IPhone, IPad and desktop, hovered over | White underline added | Pass |
 | User Options | Two options, register and login | Click when not logged in | Register and login available only | Pass |
-| User Options | Five options, including adding and dditing products | Click when logged in as superuser | All five options available | Pass |
+| User Options | Five options, including adding and editing products | Click when logged in as superuser | All five options available | Pass |
 | User Options | Two options, profile and logout | Click when logged in as normal user | Correct two options available | Pass |
 | Cart | Takes user to cart page when clicked | Clicked on cart | Taken to cart page | Pass |
 | Cart | Price updates when product added | Travelled to products, added item | Item added to cart and price visible | Pass |
@@ -458,7 +458,7 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Header | Stays underneath image | Move window wider and smaller on dev tools | Stays in correct position | Pass |
 | IFrame | Moves underneath text on smaller devices | Opened on mobile | Correct position | Pass |
-| IFrame | Controls all work | click on all clickable links | Google links work, zoom in and out works by mouse and buttons, satelitte view works | Pass |
+| IFrame | Controls all work | click on all clickable links | Google links work, zoom in and out works by mouse and buttons, satellite view works | Pass |
 
 ### Record Main
 
@@ -492,11 +492,11 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
-| Price High to Low Select | Page refrshes, products view from highest price to lowest | Selected option | The page reloaded, with the correct sort and direction | Pass |
-| Price Low to High | Page refrshes, products view from lowest price to highest | Selected option | The page reloaded, with the correct sort and direction | Pass |
-| Rating Low to High Select | Page refrshes, products view from lowest rating to highest | Selected option | The page reloaded, with the correct sort and direction | Pass |
-| Rating High to Low Select | Page refrshes, products view from highest rating to lowest | Selected option | The page reloaded, with the correct sort and direction | Pass |
-| All Products Select | Page refrshes, all products view | Selected option | The page reloaded, with all products on | Pass |
+| Price High to Low Select | Page refreshes, products view from highest price to lowest | Selected option | The page reloaded, with the correct sort and direction | Pass |
+| Price Low to High | Page refreshes, products view from lowest price to highest | Selected option | The page reloaded, with the correct sort and direction | Pass |
+| Rating Low to High Select | Page refreshes, products view from lowest rating to highest | Selected option | The page reloaded, with the correct sort and direction | Pass |
+| Rating High to Low Select | Page refreshes, products view from highest rating to lowest | Selected option | The page reloaded, with the correct sort and direction | Pass |
+| All Products Select | Page refreshes, all products view | Selected option | The page reloaded, with all products on | Pass |
 | Choose Filter select | Nothing happens | Selected option | Nothing happened | Pass |
 
 #### Cards
@@ -508,7 +508,7 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Button | Clicking add to cart adds to the quantity and places item in cart | Click on add to cart | Item is added to cart, button changes to quantity box | Pass |
 | Quantity Box | Clicking increase adds another of the same item | Click on plus symbol | Another of the same item is in the cart | Pass |
 | Quantity Box | Decrease button works too | Click on minus button | Takes one of that item out of the cart, if last item, deletes the item from cart and original button is back | Pass |
-| Page reload | Clicking on the various card buttons reloads the aage, but directs user back to item they were just looking at | Click add to cart on several items | Kept returning back to that product | Pass |
+| Page reload | Clicking on the various card buttons reloads the page, but directs user back to item they were just looking at | Click add to cart on several items | Kept returning back to that product | Pass |
 | Hire Room button | Takes user to product-information | Click book | Takes user to product-information for that item | Pass |
 
 <img src="/media/readme-images/product-testing.webp" width="100%" alt="The Product page on desktop screens" style="display: inherit; ">
@@ -518,7 +518,7 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Layout | Information lists in a column on small screens | Open on mobile | All the product information is listed within a single column | Pass |
-| Edit Button | Takes user to Edit product page with this products infommation inserted, hover CSS change on text | Hover and click on edit | Underlines text, takes user to edit a product, information is pre-populated for that item | Pass |
+| Edit Button | Takes user to Edit product page with this products information inserted, hover CSS change on text | Hover and click on edit | Underlines text, takes user to edit a product, information is pre-populated for that item | Pass |
 | Delete Button | Opens a modal making sure the user is aware of this decision, hover CSS changes | Hover and click on Delete | Text is underlined, opens up modal | Pass |
 | Edit Button | Unregistered users cannot open page | Click on button | Clicked on button, received error on toast | Pass |
 | Back to Products button | Takes user back to products, hover CSS changes | Hover and click on back to products | Colours change and link takes user back to products | Pass |
@@ -558,10 +558,10 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Giving no image | Creates product with default no-media image | Added product without image | Was redirected to product-information, product had default no-media image | Pass |
 | Images | Not available on mobile devices | Opened page on mobile | Images were not visible | Pass |
 | Form | Should not POST without Name | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
-| Form | Should not POST without Decsription | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
+| Form | Should not POST without Description | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
 | Form | Should not POST without SKU | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
 | Form | Should not POST without Price | Attempt to fill in other fields and POST | Input warning shown, did not POST | Pass |
-| Form | Shouldn't be able to add antyhing other than text and numbers in field | Added pattern in forms.py, attempting to add '//' in field and POST | Did not accept | Pass |
+| Form | Shouldn't be able to add anything other than text and numbers in field | Added pattern in forms.py, attempting to add '//' in field and POST | Did not accept | Pass |
 | Form | Shouldn't be able to POST with just spaces | Added pattern in forms.py, attempting to add four spaces in field and POST | Did not accept | Pass |
 | Form | Shouldn't be able to POST with less than 4 characters | Added minlength in forms.py, attempting to add three characters in fields and POST | Did not accept | Pass |
 | Form | Two price fields should no  accept anything other than numbers with a potential decimal | Attempted to add other letters, also attempted three digits after decimal | Could not enter anything other than numbers and one decimal, three digit input gave error and didn't POST | Pass |
@@ -614,14 +614,14 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Whole page | Unregistered user is unable to load the page | logged out and attempted to secure payment | Taken back to login page | Pass |
 | Save info radio button | Information should save to profile page | Click button, fill in form | Billing information saves to profile. | Pass |
-| Payment | test card data sends through fake payment | Added fake dard details '4242 4242 4242 4242' to the card information and proceeded with payment | Payment went through | Pass |
+| Payment | test card data sends through fake payment | Added fake card details '4242 4242 4242 4242' to the card information and proceeded with payment | Payment went through | Pass |
 | Two buttons | Hover CSS changes and buttons work | Hover and click on both buttons | CSS changes for both, user taken to cart on first, and payment info sent on second | Pass |
 | Products and form | Display in a single column on smaller devices | Open page on mobile | Products first, the form underneath, all in a column | Pass |
 | Form | Only numbers should be able to be in phone_number field | Attempted to type letters and symbols into phone_number input | Could not type anything other than numbers | Pass |
 | Form | Email field should only accept valid emails | Attempted to POST with words and no @ symbol | Could not POST with incorrect format | Pass |
 | Form | Phone number should not accept any input that isn't 11 characters long | Attempted 10 and 12 characters | Could not POST | Pass |
 | Form | Should not be able to POST without required information | Attempted to send form without each required field set | Form wouldn't POST | Pass |
-| Form | Should not be able to POST with symbols in fields | Attempted to sdd // and "" from field to field | Form wouldn't POST | Pass |
+| Form | Should not be able to POST with symbols in fields | Attempted to add // and "" from field to field | Form wouldn't POST | Pass |
 | Form | Should not accept (in fields that aren't phone number and email) less than 4 characters | Attempted to add 3 characters to relevant fields | Form wouldn't POST | Pass |
 | Form | Should not be able to enter just spaces | Type 4 spaces into full name field and POST | Error message displays| Pass |
 
@@ -678,4 +678,4 @@ Both modals tested
 | Register Form | Will not accept spaces in username | Put name with space in between and POST | Did not accept, displayed error message | Pass |
 | Register page | Should not accept symbols in username | Tried to add '//' | Did not accept | Pass |
 
-This readme.md will be spellchecked using the spell checker extension for Chrome.
+This testing document has been spellchecked using the spell checker extension for Chrome.
