@@ -4,7 +4,7 @@
 
 This is a Django web application for Ascension, a music studio based in Birmingham. Languages used include HTML, CSS, JavaScript and Python, created using Django Crispy Forms, All Auth, Stripe, Pillow & Bootstrap.
 
-Thie project allows users to book studio time with engineers or rehearsal rooms for practicing musicians/bands. It also has a small shop which is situated in the foyer, where musicians can buy strings, capos, and other small instrument parts.
+This project allows users to book studio time with engineers or rehearsal rooms for practicing musicians/bands. It also has a small shop which is situated in the foyer, where musicians can buy strings, capos, and other small instrument parts.
 
 The web application allows the creator to create more listings in the products section, and more studios, sound engineers and rehearsal rooms.
 
@@ -87,7 +87,7 @@ I also need to be able to add, change and delete items myself.
 | :----------------------------------------------------------- | :--------------------- |
 | Site that has user authentication.                           | Using all auth templates and creating session cookies. |
 | Site that updates when products are bought/hired.            | Add to card buttons and quantity buttons add and subtract from cart cookie. |
-| Promote professional looking studios and engineers.          | Shadp edges, blues and dark silvers used, looks slick. |
+| Promote professional looking studios and engineers.          | Sharp edges, blues and dark silvers used, looks slick. |
 | Site with complete ease of use.                              | Every page has a choice of navbar options, back forward and back buttons. |
 | Complete CRUD functionality over the products I am offering. | Administrator can add, edit and delete products. User can add edit and delete cart products. |
 
@@ -139,7 +139,7 @@ As a soung engineer, I want my achievements to be there for users to see. I want
 
 #### Unregistered User
 
-- Should be able to view products and pages as norma.
+- Should be able to view products and pages as normal.
 - User-options should be 'login' or 'register' only.
 - Should be able to add to cart as normal.
 - Typing url for disallowed pages should take user to the login page.
@@ -148,7 +148,7 @@ As a soung engineer, I want my achievements to be there for users to see. I want
 #### Logged in User
 
 - Should extend all the same privileges as the unregistered user.
-- Should still not allow you to accees the Add and Edit product pages.
+- Should still not allow you to access the Add and Edit product pages.
 - Should be able to checkout using test card data.
 - Should be able to access Profile page, with order history.
 - Should be able to save billing info.
@@ -174,7 +174,7 @@ The website needs to look professional and high tech, we want customers to feel 
 
 - The user icon is used within the navbar for the user options, from logging in to viewing your profile.
 - The cart has a shopping-cart icon, as does the back to cart button on the checkout page.
-- The social media icone are within the footer, with the same styling as the rest of the site.
+- The social media icon are within the footer, with the same styling as the rest of the site.
 - Secure payment and complete order have the safety lock icon. So users know this is secure.
 - The toast messages have relevant ticks, x's, and warning and information icons.
 
@@ -184,10 +184,10 @@ The website needs to look professional and high tech, we want customers to feel 
 
 #### Colours
 
-- I wanted to use an electric blue initially, to give the page a more digital look. I settled in the end for a dark turqoise.
-- The main colours are #282C2E, a dark grey colour, and #033A54 the dark turqoise.
-- The navbar is turqoise and the footer grey, with the mobile navbar also being grey.
-- The primary buttons are turqoise and the secondary buttons are grey, the hover qualities change the buttons main colors with white and the white test to the main color. This is the same throughout.
+- I wanted to use an electric blue initially, to give the page a more digital look. I settled in the end for a dark turquoise.
+- The main colours are #282C2E, a dark grey colour, and #033A54 the dark turquoise.
+- The navbar is turquoise and the footer grey, with the mobile navbar also being grey.
+- The primary buttons are turquoise and the secondary buttons are grey, the hover qualities change the buttons main colors with white and the white test to the main color. This is the same throughout.
 
 <img src="/media/readme-images/colours.webp" width="50%" alt="Primary and Secondary coloured buttons" style="display: inherit; ">
 
@@ -396,7 +396,7 @@ Pro's
 
 Con's
 
-- The first thing I noticed is there is no favicon, seems like a small issue but this it what also appers on google search, which looks like an illegitimate site.
+- The first thing I noticed is there is no favicon, seems like a small issue but this it what also appears on google search, which looks like an illegitimate site.
 
 - Then I noticed the colour scheme throughout the site. All of it is black and white. Although this does look professional it's limiting itself on how welcoming it can be and how it could stand out with colour.
 
@@ -517,7 +517,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 #### Index Features
 
-- The homepage contains a main message for any user unsure about what the company does, the messgges explains the relation to music and how tihs application can be used to help elevate your music career.
+- The homepage contains a main message for any user unsure about what the company does, the messages explains the relation to music and how this application can be used to help elevate your music career.
 - The three main buttons allow the user to visit the homepage of the three main apps, record, rehearse and products.
 - The Little Strings section contains a link to my previous project, which is also musically themed.
 
@@ -525,14 +525,14 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 #### About Us
 
-- Main paragraph is within a turqoise container on the main image, this contains information of the origin of the company.
+- Main paragraph is within a turquoise container on the main image, this contains information of the origin of the company.
 - The contact us section contains the opening hours, email, phone number and address aswell as giving a visual image via iframe of where the studio is.
 
 <img src="/media/readme-images/about-us.webp" width="50%" alt="About Us Page" style="display: inherit; ">
 
 #### Record Main
 
-- Turqoise section same layout as about us information on about us page.
+- turquoise section same layout as about us information on about us page.
 - Artists we've worked with contains a little bio of three local-to-Birmingham artists, which re-organises when opened on mobile into a singular column design.
 - The meet the engineers page contains images of the three engineers and a bio with the same layout as the artists previously mentioned.
 
@@ -540,7 +540,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 #### Rehearsal Main
 
-- Turqoise section same layout as about us information on about us page.
+- turquoise section same layout as about us information on about us page.
 - Different types of rooms section contains information on the equipment provided in each room, aswell as an image of each one.
 
 <img src="/media/readme-images/rehearsals-main-1.webp" width="50%" alt="Rehearsals Page" style="display: inherit; ">
@@ -549,7 +549,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 - Each product has their own card, creating using a for loop these cards contain all the relevant information aswell as links to edit and delete them and add them to cart. The quantity boxes allow the user to select more or less of the same item.
 - The filters allow the user to list the same items currently being shown in a different order, by price or rating.
-- Entering this page from the links created accross the site views the page in different ways. For example, clicking record and then all studios will give the same products page with studios only. The page title will be STUDIOS and the colour will be gold. CLicking rehearsals instead provides lightblue and the relevant title. Arriving using the strings link will change the title but not the colours of the page.
+- Entering this page from the links created across the site views the page in different ways. For example, clicking record and then all studios will give the same products page with studios only. The page title will be STUDIOS and the colour will be gold. Clicking rehearsals instead provides lightblue and the relevant title. Arriving using the strings link will change the title but not the colours of the page.
 
 <img src="/media/readme-images/products.webp" width="50%" alt="Products Page" style="display: inherit; ">
 
@@ -589,14 +589,14 @@ This roadmap indicates the importance and viability of specific opportunities.
 #### Checkout page
 
 - The checkout page displays the pre-filled billing info on the right. If there is no pre-written info, updating this and selecting the radio at the bottom will store this information to the user.
-- The Order Summary section contains all the products you are about to order, along with the quantites.
+- The Order Summary section contains all the products you are about to order, along with the quantities.
 
 <img src="/media/readme-images/checkout.webp" width="70%" alt="Checkout Page" style="display: inherit; ">
 
 #### Checkout Success
 
 - There is a loading spinner that is displayed whilst the payment is going through.
-- The about section is similar to what has been used before, turqoise background on an image.
+- The about section is similar to what has been used before, turquoise background on an image.
 - Order information is displayed below, when we arrive here from the profile page, the toast message lets the user know this is an old order.
 
 <img src="/media/readme-images/check-succ.webp" width="50%" alt="Checkout Success Page" style="display: inherit; ">
@@ -604,7 +604,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 #### Profile page
 
 - Billing information is included on the left, previous orders on the right.
-- The order numbers are truncated so they don't take up too much uneccessary space, and they are links to the checkout success page for that order.
+- The order numbers are truncated so they don't take up too much unnecessary space, and they are links to the checkout success page for that order.
 
 <img src="/media/readme-images/profile.webp" width="70%" alt="User Profile Page" style="display: inherit; ">
 
@@ -621,7 +621,7 @@ You can view all testing in [this document.](https://github.com/ryanmcnally93/pr
 
 1). The first issue I had was linking my products CSS stylesheet. I wrote the URL for the static CSS file but could not locate it, I kept receiving a 404 error.
 
-I contacted tutor support and before they had a chance to help me I reloaded my workspace and the URL worked. I believe that Code Anywhere must have timed out in some way without letting me know, as refrshing the workspace completely fixed the issue.
+I contacted tutor support and before they had a chance to help me I reloaded my workspace and the URL worked. I believe that Code Anywhere must have timed out in some way without letting me know, as refreshing the workspace completely fixed the issue.
 
 2). I had an issue when creating the select element on the products page. Initially I attempted to change the content of the page only using javascript, but struggled with understanding how to find the sort and direction values and enter them into the URL. I fixed this by going back over the lessons and finding the tutorial on the postload js for the products page.
 
@@ -661,7 +661,7 @@ I found a piece of code by Richard Ash on Slack, that closes the toast and place
 
 Bootstrap4/uni_form.html template does not exist, after a lot of online searching I found the solution was to install 'bootstrap4crispyforms' and add it to installed apps, which worked.
 
-8). When setting up Stripe payments, I had the payments going through succesffully on the night, but the next day, they refused to work. I spent hours messing with the code and trying to work out why my payment intents and payment success webhooks were coming back with a red X rather than a green tick.
+8). When setting up Stripe payments, I had the payments going through succesfully on the night, but the next day, they refused to work. I spent hours messing with the code and trying to work out why my payment intents and payment success webhooks were coming back with a red X rather than a green tick.
 
 <img src="/media/readme-images/bug-8.webp" width="70%" alt="Payments failing in Stripe" style="display: inherit; ">
 
@@ -719,7 +719,7 @@ I quickly realised this approach wouldn’t be practical in the real world as th
 
 I instead just allowed users to checkout with the selected dates and times added to their products, without checking for availability. I did add some functionality to check for past dates or dates that exceed two weeks, and returned an error for these.
 
-After giving this issue some time and waiting until the end of my project, I have decided to build on this and add some python and javascript to return all the orders to the template and sift through the dates and times to only allow users to select and book available times. This took a lot of thinkng and manipulating, but I have commented through the steps within the products views.py for product_information and the product_information.js file.
+After giving this issue some time and waiting until the end of my project, I have decided to build on this and add some python and javascript to return all the orders to the template and sift through the dates and times to only allow users to select and book available times. This took a lot of thinking and manipulating, but I have commented through the steps within the products views.py for product_information and the product_information.js file.
 
 ### Unfixed Bugs
 
@@ -797,7 +797,7 @@ After giving this issue some time and waiting until the end of my project, I hav
 
 #### Code Institute's Boutique Ado
 
-Due to the fact I learnt how to integrate Stripe and create an E-Commerce site from Code Institute's lessons on their project 'Boutique Ado', there are a number of similarities and in some cases, the same code.
+Due to the fact I learned how to integrate Stripe and create an E-Commerce site from Code Institute's lessons on their project 'Boutique Ado', there are a number of similarities and in some cases, the same code.
 
 - Navbar design has similarities.
 - The if statement within base.html that renders the 'messages' is the same.
@@ -901,6 +901,6 @@ These images were obtained from pexels.com.
 - Jubril Akolade for mentoring me through the three stages of completion.
 - The Code Institute technical team for their help with some of the bigger issues I faced.
 
-This readme.md will be spellchecked using the spell checker extension for Chrome.
+This readme.md has been spellchecked using the spell checker extension for Chrome.
 
-All documents within this repository will be formatted using "Prettier".
+All documents within this repository have been formatted using "Prettier".
