@@ -87,6 +87,11 @@ def alter_cart(request, product_id):
                 messages.error(request, "You cannot select a date in the past")
                 return redirect("product_information", product_id=product_id)
 
+            # We don't want people booking for a time that has passed
+            if present.date() == date_as_date:
+                messages.error(request, "It is too late to book sessions for today")
+                return redirect("product_information", product_id=product_id)
+
             # This only allows users to pick up to two weeks in advance
             if datetime.datetime.strptime(
                 request.POST.get("date"), "%Y-%m-%d"

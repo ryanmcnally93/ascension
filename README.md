@@ -272,7 +272,7 @@ Drummer:
 
 Solo Artist: 
 
-- ""
+- "Products seem geared towards guitar players and drummers who I assume would be the biggest users of a music studio. I did wonder about Reeds for woodwind instruments but suppose you wouldn't get much call for them. Was surprised to see a box of pens for sale?"
 
 Engineer: 
 
@@ -286,7 +286,9 @@ Drummer:
 
 Solo Artist:
 
-- ""
+- "Easy navigation of the website including check out and editing my basket."
+
+* A comment was made regarding the sign up button on the login page, which has been changed.
 
 Engineer:
 
@@ -300,7 +302,7 @@ Drummer:
 
 Solo Artist:
 
-- ""
+- "Are there any refreshments on site to buy or free i.e. bottled water? Is there parking outside?"
 
 Engineer:
 
@@ -314,7 +316,7 @@ Drummer:
 
 Solo Artist:
 
-- ""
+- "Yes, definitely."
 
 Engineer:
 
@@ -328,7 +330,7 @@ Drummer:
 
 Solo Artist:
 
-- ""
+- "Suitable for musicians."
 
 Engineer:
 
@@ -342,7 +344,7 @@ Drummer:
 
 Solo Artist:
 
-- ""
+- "I would like a back button for the recording and rehearsal room info pages."
 
 Engineer:
 
@@ -356,7 +358,7 @@ Drummer:
 
 Solo Artist:
 
-- ""
+- "Seemed to work very well."
 
 Engineer:
 
@@ -370,7 +372,7 @@ Drummer:
 
 Solo Artist:
 
-- ""
+- "Yes and yes."
 
 Engineer:
 
