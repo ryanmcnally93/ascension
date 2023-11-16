@@ -1,53 +1,69 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
-
 {% block content %}
-    <!-- MainImage -->
-    <div class="background-image">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8 col-10 index-message-box mb-2 pt-3">
-                <!-- Main Message -->
-                <p class="text-white text-center">Finally hit that next level in music with us!</p>
-            </div>
-        </div>
-
-        <!-- Main 3 Buttons -->
-        <div id="homepage-buttons" class="row justify-content-center col-12 col-lg-8 m-auto">
-            <div class="col-6 col-md-7 col-lg-4 text-center h-100">
-                <div class="index-button-box m-auto">
-                    <a href="{% url 'record_studio_home' %}" class="h-100 w-100 d-block bg-darkblue">
-                        <p class="mb-2 pt-2">Record</p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-7 col-lg-4 text-center h-100">
-                <div class="index-button-box m-auto">
-                    <a href="{% url 'rehearse_home' %}" class="h-100 w-100 d-block bg-darkblue">
-                        <p class="mb-2 pt-2">Rehearse</p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-7 col-lg-4 text-center h-100">
-                <div class="index-button-box m-auto">
-                    <a href="{% url 'products' %}" class="h-100 w-100 d-block bg-darkblue">
-                        <p class="mb-2 pt-2">Shop</p>
-                    </a>
-                </div>
-            </div>
-        </div>
+<!-- MainImage -->
+<div class="background-image">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-10 index-message-box mb-2 pt-3">
+      <!-- Main Message -->
+      <p class="text-white text-center">
+        Finally hit that next level in music with us!
+      </p>
     </div>
+  </div>
 
-    <!-- Little Strings Section -->
-    <div class="row overflow-hidden">
-        <div class="little-strings bg-darkblue text-white col-12">
-            <h2 id="partnership" class="my-md-auto mt-3">In partnership with </h2>
-            <a class="ls-logo" href="https://ryanmcnally93.github.io/project-two-little-strings/">
-                <img id="ls-logo" src="{{ MEDIA_URL }}little-strings-logo.png" alt="Little Strings Logo">
-            </a>
-        </div>
+  <!-- Main 3 Buttons -->
+  <div
+    id="homepage-buttons"
+    class="row justify-content-center col-12 col-lg-8 m-auto"
+  >
+    <div class="col-6 col-md-7 col-lg-4 text-center h-100">
+      <div class="index-button-box m-auto">
+        <a
+          href="{% url 'record_studio_home' %}"
+          class="h-100 w-100 d-block bg-darkblue"
+        >
+          <p class="mb-2 pt-2">Record</p>
+        </a>
+      </div>
     </div>
+    <div class="col-6 col-md-7 col-lg-4 text-center h-100">
+      <div class="index-button-box m-auto">
+        <a
+          href="{% url 'rehearse_home' %}"
+          class="h-100 w-100 d-block bg-darkblue"
+        >
+          <p class="mb-2 pt-2">Rehearse</p>
+        </a>
+      </div>
+    </div>
+    <div class="col-6 col-md-7 col-lg-4 text-center h-100">
+      <div class="index-button-box m-auto">
+        <a href="{% url 'products' %}" class="h-100 w-100 d-block bg-darkblue">
+          <p class="mb-2 pt-2">Shop</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Little Strings Section -->
+<div class="row overflow-hidden">
+  <div class="little-strings bg-darkblue text-white col-12">
+    <h2 id="partnership" class="my-md-auto mt-3">In partnership with</h2>
+    <a
+      class="ls-logo"
+      href="https://ryanmcnally93.github.io/project-two-little-strings/"
+    >
+      <img
+        id="ls-logo"
+        src="{{ MEDIA_URL }}little-strings-logo.png"
+        alt="Little Strings Logo"
+     >
+    </a>
+  </div>
+</div>
 {% endblock %}
