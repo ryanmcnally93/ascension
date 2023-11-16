@@ -166,9 +166,63 @@ Unfortunately I could not get the Profiles apps tests to pass as they needed a u
 
 #### Pep8 Compliancy
 
-<!-- - To check if all my .py files were pep8 compliant, I used [Code Institutes pep8 linter](https://pep8ci.herokuapp.com/), This returned many issues with the lengths of my Python code lines.
+- I pip installed [Black](https://black.readthedocs.io/en/stable/getting_started.html), running the command "black -l 79 (name of python document)" on all my documents first.
 
-- To solve this I pip installed [Black](https://black.readthedocs.io/en/stable/getting_started.html), running the command "black -l 79 (name of python document)". -->
+- Then, to check if all my .py files were pep8 compliant, I used [Code Institutes pep8 linter](https://pep8ci.herokuapp.com/).
+
+##### Cart
+
+- [contexts.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/contexts.py) - returned with no errors.
+- [urls.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/urls.py) - returned with no errors.
+- [views.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/cart/views.py) - had three long strings which have been shortened.
+
+##### Checkout
+
+- [admin.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/admin.py) - returned with no errors.
+- [forms.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/forms.py) - returned with no errors.
+- [models.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/models.py) - returned with no errors.
+- [signals.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/signals.py) - returned with no errors.
+- [tests.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/tests.py) - returned long strings, I had to shorten comments.
+- [views.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/views.py) - I again had to reword the comments.
+- [webhook_handler.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/webhook_handler.py) - had two pieces of 'content' code too long, I am reluctant to shorten this as I don't want to cause further errors.
+- [webhooks.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/checkout/webhooks.py) - the same issue as on the webhook_handler, this time on line 41.
+
+##### Home
+
+- [urls.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/home/urls.py) - returned with no errors.
+- [views.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/home/views.py) - returned with no errors.
+
+##### Products
+
+- [forms.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/forms.py) - returned with no errors.
+- [models.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/models.py) - returned with no errors.
+- [urls.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/urls.py) - returned with no errors.
+- [widgets.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/widgets.py) - returned with no errors.
+- [tests.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/tests.py) - had some strings which needed to be shortened.
+- [views.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/products/views.py) - also had some strings which needed to be shortened.
+
+##### Profiles
+
+- [forms.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/profiles/forms.py) - returned with no errors.
+- [models.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/profiles/models.py) - returned with no errors.
+- [urls.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/profiles/urls.py) - returned with no errors.
+- [tests.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/profiles/tests.py) - returned with no errors.
+- [views.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/profiles/views.py) - had two lines (50, 51) of code that again, I'd rather not mess with.
+
+##### Record Studio
+
+- [urls.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/record_studio/urls.py) - returned with no errors.
+- [views.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/record_studio/views.py) - returned with no errors.
+
+##### Rehearse
+
+- [urls.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/rehearse/urls.py) - returned with no errors.
+- [views.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/rehearse/views.py) - returned with no errors.
+
+##### Base Python
+
+- [manage.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/manage.py) - returned with no errors.
+- [custom_storages.py](https://github.com/ryanmcnally93/project-four-ascension/blob/main/custom_storages.py) - returned with no errors.
 
 ### Lighthouse
 
@@ -467,12 +521,6 @@ Desktop Macbook, Ipad Air Simulator & IPhone 5/SE simulator
 | Edit Button | Takes user to Edit product page with this products infommation inserted, hover CSS change on text | Hover and click on edit | Underlines text, takes user to edit a product, information is pre-populated for that item | Pass |
 | Delete Button | Opens a modal making sure the user is aware of this decision, hover CSS changes | Hover and click on Delete | Text is underlined, opens up modal | Pass |
 | Edit Button | Unregistered users cannot open page | Click on button | Clicked on button, received error on toast | Pass |
-| Delete Button | Doesn't allow users who aren't superusers to open the modal to delete | Click delete | Opened up the modal | FAIL |
-
-- This will have to be rectified.
-
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-| --------------------------------------- | ------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- | --------- |
 | Back to Products button | Takes user back to products, hover CSS changes | Hover and click on back to products | Colours change and link takes user back to products | Pass |
 | Add to cart Button | Clicking add to cart adds to the quantity and places item in cart, hover CSS change | Hover and click on add to cart | Hover works, item is added to cart, button changes to quantity box | Pass |
 | Quantity Box | Clicking increase adds another of the same item | Click on plus symbol | Another of the same item is in the cart | Pass |
