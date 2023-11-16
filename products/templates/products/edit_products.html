@@ -1,55 +1,76 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'products/css/add_products.css' %}">
+<link rel="stylesheet" href="{% static 'products/css/add_products.css' %}">
 {% endblock %}
-
 {% block content %}
-    <!-- Page Header -->
-    <div class="container header-container">
-        <div class="row" id="top-row">
-            <hr>
-                <div id="page-heading" class="col text-center">EDIT A PRODUCT</div>
-            <hr>
-        </div>
+<!-- Page Header -->
+<div class="container header-container">
+  <div class="row" id="top-row">
+    <hr>
+    <div id="page-heading" class="col text-center">EDIT A PRODUCT</div>
+    <hr>
+  </div>
 
-        <!-- Edit a product form -->
-        <div class="row">
-            <form method="POST" action="{% url 'edit_product' %}" class="w-100">
-                {% csrf_token %}
-                <div id="searchbar" class="col-12 col-lg-6">
-                    <select name="product-id" id="product-id" class="mb-3 p-1 rounded-0 col-12 col-md-10">
-                        <option value="None">Pick an item</option>
-                        {% for item in products %}
-                            <option value="{{ item.name }}">{{ item.name }}</option>
-                        {% endfor %}
-                    </select>
-                    <div class="col-12 col-md-2 pr-0 pl-0">
-                        <button type="submit" id="search-button" class="bg-darkblue p-1 px-2">Search</button>
-                    </div>
-                </div>
-            </form>
+  <!-- Edit a product form -->
+  <div class="row">
+    <form method="POST" action="{% url 'edit_product' %}" class="w-100">
+      {% csrf_token %}
+      <div id="searchbar" class="col-12 col-lg-6">
+        <select
+          name="product-id"
+          id="product-id"
+          class="mb-3 p-1 rounded-0 col-12 col-md-10"
+        >
+          <option value="None">Pick an item</option>
+          {% for item in products %}
+          <option value="{{ item.name }}">{{ item.name }}</option>
+          {% endfor %}
+        </select>
+        <div class="col-12 col-md-2 pr-0 pl-0">
+          <button type="submit" id="search-button" class="bg-darkblue p-1 px-2">
+            Search
+          </button>
         </div>
-        <div class="row" id="invisible-form">
-            <div class="col-lg-6">
-                <form method="POST" action="{% url 'edit_product' %}" enctype="multipart/form-data" class="mb-3">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <a href="{% url 'products' %}" class="bg-black p-1 px-2">Cancel</a>
-                    <button type="submit" class="bg-darkblue p-1 px-2">Edit Product</button>
-                </form>
-            </div>
-            <div class="col-lg-6 mb-4" id="manage-products-image-box">
-                <img id="manage-image-one" src="{{ MEDIA_URL }}add-product-one.webp" class="w-100 mb-2 d-none d-lg-block" alt="Headphones on a microphone">
-                <img id="manage-image-two" src="{{ MEDIA_URL }}add-product-two.webp" class="w-100 mt-2 d-none d-lg-block" alt="Headphones on a microphone">
-            </div>
-        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row" id="invisible-form">
+    <div class="col-lg-6">
+      <form
+        method="POST"
+        action="{% url 'edit_product' %}"
+        enctype="multipart/form-data"
+        class="mb-3"
+      >
+        {% csrf_token %}
+        {{ form | crispy }}
+        <a href="{% url 'products' %}" class="bg-black p-1 px-2">Cancel</a>
+        <button type="submit" class="bg-darkblue p-1 px-2">Edit Product</button>
+      </form>
     </div>
+    <div class="col-lg-6 mb-4" id="manage-products-image-box">
+      <img
+        id="manage-image-one"
+        src="{{ MEDIA_URL }}add-product-one.webp"
+        class="w-100 mb-2 d-none d-lg-block"
+        alt="Headphones on a microphone"
+     >
+      <img
+        id="manage-image-two"
+        src="{{ MEDIA_URL }}add-product-two.webp"
+        class="w-100 mt-2 d-none d-lg-block"
+        alt="Headphones on a microphone"
+     >
+    </div>
+  </div>
+</div>
 
 {% endblock %}
-
 {% block postloadjs %}
 {{ block.super }}
-<script rel="text/javascript" src="{% static 'products/js/edit_products.js' %}"></script>
+<script
+  rel="text/javascript"
+  src="{% static 'products/js/edit_products.js' %}"
+></script>
 {% endblock %}
