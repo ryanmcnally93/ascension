@@ -268,7 +268,7 @@ I've asked the following questions to:
 
 Drummer: 
 
-- ""
+- "Considering the shop size there is a lot on offer."
 
 Solo Artist: 
 
@@ -276,13 +276,13 @@ Solo Artist:
 
 Engineer: 
 
-- ""
+- "I liked the products on offer and felt there was a good range of items. I couldn’t think of any items I would need which weren’t on offer"
 
 #### Q2 - What makes a great shopping experience?
 
 Drummer:
 
-- ""
+- "Being able to move from page to page smoothly and easily, and good products."
 
 Solo Artist:
 
@@ -292,13 +292,13 @@ Solo Artist:
 
 Engineer:
 
-- ""
+- "Being able to see a picture of each item when browsing. Being able to see other customers ratings of a product."
 
 #### Q3 - What other information might you be looking for?
 
 Drummer:
 
-- ""
+- "Songs recorded at that studio."
 
 Solo Artist:
 
@@ -306,13 +306,13 @@ Solo Artist:
 
 Engineer:
 
-- ""
+- "Filters to see if there are items on sale"
 
 #### Q4 - Would you use this site?
 
 Drummer:
 
-- ""
+- "Yes."
 
 Solo Artist:
 
@@ -320,13 +320,13 @@ Solo Artist:
 
 Engineer:
 
-- ""
+- "Yes, to book rehearsals and recording space, or buy new strings to record with."
 
 #### Q5 - Why?
 
 Drummer:
 
-- ""
+- "Rehearsal space is relatively cheap and local."
 
 Solo Artist:
 
@@ -334,13 +334,13 @@ Solo Artist:
 
 Engineer:
 
-- ""
+- "Rehearsing in the studio is great for practicing in peace without being disturbed. It’s also good to get used to playing inside a studio room before recording."
 
 #### Q6 - What changes could be made?
 
 Drummer:
 
-- ""
+- "Everything seemed fine as it was!"
 
 Solo Artist:
 
@@ -348,13 +348,13 @@ Solo Artist:
 
 Engineer:
 
-- ""
+- "If more variety of brands of strings, capo’s etc, it would be good to filter by brand."
 
 #### Q7 - How did you find the hiring of the sessions, and adding them to cart? Was it as smooth as it should be or were there anomalies?
 
 Drummer:
 
-- ""
+- "Seemed to work as expected."
 
 Solo Artist:
 
@@ -362,13 +362,13 @@ Solo Artist:
 
 Engineer:
 
-- ""
+- "Everything worked exactly as expected."
 
 #### Q8 - Did you receive an email? Did it contain the correct information?
 
 Drummer:
 
-- ""
+- "Yes to both."
 
 Solo Artist:
 
@@ -376,7 +376,7 @@ Solo Artist:
 
 Engineer:
 
-- ""
+- "I received and email and everything was correct."
 
 ### Competitor Review
 
