@@ -42,10 +42,7 @@ class OrderForm(forms.ModelForm):
         # And removes labels as we have placeholders
         # Comment out to see differences
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f"{placeholders[field]} *"
-            else:
-                placeholder = placeholders[field]
+            placeholder = f"{placeholders[field]} *"
             self.fields[field].widget.attrs["placeholder"] = placeholder
             self.fields[field].widget.attrs["class"] = "stripe-style-input"
             self.fields[field].label = False
