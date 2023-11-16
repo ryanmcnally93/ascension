@@ -371,6 +371,11 @@ input[type=number] {
 .timeline {
     width: 100%;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .card {
@@ -389,6 +394,12 @@ input[type=number] {
 
 .span-no-break {
     white-space: nowrap;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: lightgreen;
+    display: none;
+    margin: 5px;
+    width: 74px;
 }
 
 .product-title:hover {
@@ -445,6 +456,9 @@ a:hover {
     .prod-info-btns {
         float: right;
         padding-right: 1rem !important;
+    }
+    .timeline {
+        justify-content: start !important;
     }
 }
 

@@ -239,7 +239,21 @@ I've asked the following questions to:
 - A solo musician.
 - And a sound engineer.
 
-#### Q1 ?
+#### Q1 - What did you make of the products on offer? Where there any items you'd expect that weren't there?
+
+Drummer: 
+
+- ""
+
+Solo Artist: 
+
+- ""
+
+Engineer: 
+
+- ""
+
+#### Q2 - What makes a great shopping experience?
 
 Drummer:
 
@@ -253,7 +267,7 @@ Engineer:
 
 - ""
 
-#### Q2 ?
+#### Q3 - What other information might you be looking for?
 
 Drummer:
 
@@ -267,7 +281,7 @@ Engineer:
 
 - ""
 
-#### Q3 ?
+#### Q4 - Would you use this site?
 
 Drummer:
 
@@ -281,7 +295,7 @@ Engineer:
 
 - ""
 
-#### Q4 ?
+#### Q5 - Why?
 
 Drummer:
 
@@ -295,7 +309,7 @@ Engineer:
 
 - ""
 
-#### Q5 ?
+#### Q6 - What changes could be made?
 
 Drummer:
 
@@ -309,7 +323,7 @@ Engineer:
 
 - ""
 
-#### Q6 ?
+#### Q7 - How did you find the hiring of the sessions, and adding them to cart? Was it as smooth as it should be or were there anomalies?
 
 Drummer:
 
@@ -323,21 +337,7 @@ Engineer:
 
 - ""
 
-#### Q7 ?
-
-Drummer:
-
-- ""
-
-Solo Artist:
-
-- ""
-
-Engineer:
-
-- ""
-
-#### Q8 ?
+#### Q8 - Did you receive an email? Did it contain the correct information?
 
 Drummer:
 
@@ -697,6 +697,8 @@ After giving this issue some time and waiting until the end of my project, I hav
 ### Unfixed Bugs
 
 1). I need to create a check as an order goes through to ensure that in the time it has taken for someone to book a session, somebody else hasn't already booked the same product, date and time. At the moment if two users book at the same time, they will have the same session!
+
+2). By default if a user clicks on a date that is already in their cart, the sessions in their cart should also be disabled. We do have a block in place for after the form is submitted but for ease of use it should really be greyed out.
 
 ### Responsive Design
 
