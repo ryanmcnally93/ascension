@@ -18,13 +18,6 @@ document.addEventListener("change", function () {
     radioShow();
 });
 
-var radios = document.getElementsByClassName('radio');
-for (let radio of radios) {
-    radio.addEventListener("click", function () {
-        // Set value of hidden input to selected radio's name
-        document.getElementById('chosen-time').value = radio.id;
-    });
-}
 function radioShow() {
     if (document.getElementById('no-radios') != null) {
         if (document.getElementById('date').value == "") {
@@ -37,6 +30,10 @@ function radioShow() {
             for (i = 0; i < para.length; i++) {
                 para[i].style.display = 'none';
             }
+            let spans = document.getElementsByClassName('span-no-break');
+            for (i = 0; i < spans.length; i++) {
+                spans[i].style.display = 'none';
+            }
             let noRadios = document.getElementById('no-radios');
             noRadios.style.display = 'block';
         } else if (document.getElementById('date').value != "") {
@@ -48,6 +45,10 @@ function radioShow() {
             let para = document.getElementsByClassName('timeline-button');
             for (i = 0; i < para.length; i++) {
                 para[i].style.display = 'inline';
+            }
+            let spans = document.getElementsByClassName('span-no-break');
+            for (i = 0; i < spans.length; i++) {
+                spans[i].style.display = 'inline';
             }
             let noRadios = document.getElementById('no-radios');
             noRadios.style.display = 'none';
@@ -94,7 +95,8 @@ dates = document.getElementsByClassName('dates')
 
 // Add event listeners for page load and changes being made
 document.addEventListener("DOMContentLoaded", function () {
-    document.addEventListener("change", function () {
+    dateListener = document.getElementById('date');
+    dateListener.addEventListener("change", function () {
 
         // Format the date in datepicker to match the dates in the elements id's
         let chosenDate = document.getElementById('date').value.split("-");
@@ -121,6 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('13:00').disabled = false;
                 document.getElementById('14:00').disabled = false;
                 document.getElementById('15:00').disabled = false;
+                document.getElementById('10:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('11:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('12:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('13:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('14:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('15:00span').style.backgroundColor = 'lightgreen';
 
                 // Lets create multiple items for each time and for loop through all the times provided
                 timearray = dates.item(i).innerText.split(', ')
@@ -131,6 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     restricted.setAttribute('aria-label', 'This session is taken');
                     // And disable the radio button next to it
                     document.getElementById(timearray[i]).disabled = true;
+                    var restrictedSpan = document.getElementById(timearray[i] + 'span');
+                    restrictedSpan.style.backgroundColor = 'rgb(231, 133, 135)';
                 }
 
             } else {
@@ -147,7 +157,39 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('13:00').disabled = false;
                 document.getElementById('14:00').disabled = false;
                 document.getElementById('15:00').disabled = false;
+                document.getElementById('10:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('11:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('12:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('13:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('14:00span').style.backgroundColor = 'lightgreen';
+                document.getElementById('15:00span').style.backgroundColor = 'lightgreen';
             }
         }
     });
 });
+
+var radios = document.getElementsByClassName('radio');
+for (let radio of radios) {
+    radio.addEventListener("click", function () {
+        // Set value of hidden input to selected radio's name
+        document.getElementById('chosen-time').value = radio.id;
+    
+        let spans = document.getElementsByClassName('span-no-break');
+        for (let span of spans) {
+            if (span.id == radio.id + 'span') {
+
+                span.style.backgroundColor = 'gold';
+
+            } else if (span.style.backgroundColor == 'rgb(231, 133, 135)') {
+
+                console.log('This session is taken');
+
+            } else {
+
+                span.style.backgroundColor = 'lightgreen';
+
+            }
+        }
+
+    });
+}
