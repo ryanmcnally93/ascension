@@ -13,13 +13,6 @@ label.requiredField {
     display: none;
 }
 
-.hide-input-behind-custom-input {
-    position: absolute;
-    left: 36px;
-    z-index: -1;
-    height: 26px;
-} 
-
 #searchbar {
     display: flex;
     flex-direction: row;
@@ -43,6 +36,7 @@ label.requiredField {
 #loadFileXml {
     border-radius: 0;
     border: 2px solid #033A54 !important;
+    width: 119px;
 }
 
 #loadFileXml:hover {
