@@ -160,6 +160,12 @@ As a soung engineer, I want my achievements to be there for users to see. I want
 - Should be able to edit and delete products on products page and product information pages.
 - Should be able to delete products.
 
+### Model Schema
+
+Here is a diagram that explains the relationships between each model.
+
+[Ascension Model Schematics](/media/ascension-schema.drawio)
+
 ### Design Choices
 
 The website needs to look professional and high tech, we want customers to feel like this is a high end studio that knows their craft. We want thea dark blue environment associated with being in a studio, I'm going for electric blue to stay relative, with sharp edges.
