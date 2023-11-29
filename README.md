@@ -28,6 +28,7 @@ The web application allows the creator to create more listings in the products s
 - [UX](#ux)
   * [Project Goals](#project-goal)
   * [User Stories](#user-stories)
+  * [Model Schema](#model-schema)
   * [Design Choices](#design-choices)
   * [Wireframes](#wireframes)
   * [Prototype](#prototype)
@@ -164,7 +165,7 @@ As a soung engineer, I want my achievements to be there for users to see. I want
 
 Here is a diagram that explains the relationships between each model.
 
-[Ascension Model Schematics](/media/ascension-schema.drawio)
+<img src="/media/ascension-schema.png" width="80%" alt="The fonts used" style="display: inherit; ">
 
 ### Design Choices
 
