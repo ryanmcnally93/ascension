@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net" modified="2023-11-29T17:46:51.542Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="_69u0IY-gFffZAVAgWun" version="22.1.5" type="device">
+  <diagram name="Page-1" id="5ajCr7bDQrAhd4-9XIP-">
+    <mxGraphModel dx="879" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2" value="Order&#xa;&#xa;FK* user_profile&#xa;order_number&#xa;full_name&#xa;email&#xa;phone_number&#xa;street_address1&#xa;street_address2&#xa;town_or_city&#xa;postcode&#xa;date&#xa;total_cost&#xa;original_cart&#xa;stripe_pid" style="shape=table;startSize=280;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="320" y="440" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="OrderLineItem&#xa;&#xa;FK* order&#xa;FK* product&#xa;quantity&#xa;line_item_total&#xa;date&#xa;time" style="shape=table;startSize=180;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="200" y="800" width="160" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5" value="Product&#xa;&#xa;FK* category&#xa;sku&#xa;name&#xa;description&#xa;price&#xa;amount_sold&#xa;amount_of_reviews&#xa;rating&#xa;main_image&#xa;image&#xa;image_2&#xa;image_3&#xa;is_hire_room&#xa;is_offers_item&#xa;striked_price" style="shape=table;startSize=280;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="40" y="440" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BdWX4_Hwk6Y8oHxdA1Mx-10" target="2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-10" value="User Profile&#xa;&#xa;1-to-1* user&#xa;full_name&#xa;default_phone_number&#xa;default_street_address1&#xa;default_street_address2&#xa;default_town_or_city&#xa;default_postcode" style="shape=table;startSize=280;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-12" value="User Profile&#xa;&#xa;1-to-1* user&#xa;full_name&#xa;default_phone_number&#xa;default_street_address1&#xa;default_street_address2&#xa;default_town_or_city&#xa;default_postcode" style="shape=table;startSize=280;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" visible="0" parent="BdWX4_Hwk6Y8oHxdA1Mx-10">
+          <mxGeometry width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="BdWX4_Hwk6Y8oHxdA1Mx-11" target="BdWX4_Hwk6Y8oHxdA1Mx-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-11" value="django.contrib.auth.user&#xa;&#xa;1-to-1* user" style="shape=table;startSize=280;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="600" y="120" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="BdWX4_Hwk6Y8oHxdA1Mx-14" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-14" value="Category&#xa;&#xa;name&#xa;friendly_name" style="shape=table;startSize=280;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="BdWX4_Hwk6Y8oHxdA1Mx-15" value="User Profile&#xa;&#xa;1-to-1* user&#xa;full_name&#xa;default_phone_number&#xa;default_street_address1&#xa;default_street_address2&#xa;default_town_or_city&#xa;default_postcode" style="shape=table;startSize=280;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=1;fontStyle=1;align=center;resizeLast=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" visible="0" parent="BdWX4_Hwk6Y8oHxdA1Mx-14">
+          <mxGeometry width="200" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
