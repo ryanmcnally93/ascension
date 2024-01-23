@@ -10,15 +10,15 @@ The web application allows the creator to create more listings in the products s
 
 <p align="center">
 
-<img src="https://img.shields.io/github/stars/ryanmcnally93/project-four-ascension?style=social" style="max-width: 100%; margin: 0 10px 10px 0;" alt="Stars">
+<img src="https://img.shields.io/github/stars/ryanmcnally93/ascension?style=social" style="max-width: 100%; margin: 0 10px 10px 0;" alt="Stars">
 
-<img src="https://img.shields.io/github/repo-size/ryanmcnally93/project-four-ascension" style="max-width: 100%; height: 20px; margin: 0 0 10px 10px;" alt="Size of repo">
+<img src="https://img.shields.io/github/repo-size/ryanmcnally93/ascension" style="max-width: 100%; height: 20px; margin: 0 0 10px 10px;" alt="Size of repo">
 
 <br>
 
-<img src="https://img.shields.io/github/issues-raw/ryanmcnally93/project-four-ascension" style="max-width: 100%; height: 20px margin-right: 10px;" alt="Open issues">
+<img src="https://img.shields.io/github/issues-raw/ryanmcnally93/ascension" style="max-width: 100%; height: 20px margin-right: 10px;" alt="Open issues">
 
-<img src="https://img.shields.io/github/last-commit/ryanmcnally93/project-four-ascension?color=green&style=for-the-badge" style="max-width: 100%; height: 20px; margin-left: 10px;" alt="GitHub last commit">
+<img src="https://img.shields.io/github/last-commit/ryanmcnally93/ascension?color=green&style=for-the-badge" style="max-width: 100%; height: 20px; margin-left: 10px;" alt="GitHub last commit">
 
 </p>
 
@@ -622,7 +622,7 @@ This roadmap indicates the importance and viability of specific opportunities.
 
 ## Testing
 
-You can view all testing in [this document.](https://github.com/ryanmcnally93/project-four-ascension/blob/main/testing.md)
+You can view all testing in [this document.](https://github.com/ryanmcnally93/ascension/blob/main/testing.md)
 
 ### Fixed Bugs
 
